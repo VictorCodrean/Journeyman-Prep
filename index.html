@@ -216,28 +216,56 @@
     <main class="container">
         <!-- Landing -->
         <section aria-label="Landing" class="grid" id="landing">
+            <!-- General Knowledge Exams -->
             <div class="card">
-                <h2>General Knowledge Exam Practice</h2>
-                <p>31 exams, 25 questions each</p>
-                <div id="generalStats"
-                    style="margin: 1rem 0; color: var(--muted); font-size: 0.95rem; line-height: 1.6;"></div>
-                <button class="primary" onclick="startExam('general', 0)">Start Exam #1</button>
+                <h2>General Knowledge Exams</h2>
+                <p>Multiple timed practice sets • 30 minutes each</p>
+
+                <details style="margin-top: 1rem;">
+                    <summary
+                        style="font-weight: bold; color: var(--accent); cursor: pointer; list-style: none; padding: 0.5rem 0;">
+                        Show / Hide Practice Exams
+                    </summary>
+                    <div id="generalCardsContainer" class="grid" style="margin-top: 0.75rem; padding-top: 0.5rem;">
+                        <!-- dynamically inserted cards go here -->
+                    </div>
+                </details>
             </div>
 
+            <!-- Journeyman Open Book Exam -->
             <div class="card">
                 <h2>Journeyman Open Book Exam</h2>
                 <p>Exam #1 – 25 questions (2023 NEC)</p>
                 <div id="openbookStats"
                     style="margin: 1rem 0; color: var(--muted); font-size: 0.95rem; line-height: 1.6;"></div>
-                <button class="primary" onclick="startExam('openbook', 0)">Start Open Book Exam #1</button>
+
+                <details style="margin-top: 0.5rem;">
+                    <summary
+                        style="font-weight: bold; color: var(--accent); cursor: pointer; list-style: none; padding: 0.5rem 0;">
+                        Show / Hide Exam #1
+                    </summary>
+                    <div style="padding: 1rem 0 0.5rem;">
+                        <button class="primary" onclick="startExam('openbook', 0)">Start Open Book Exam #1</button>
+                    </div>
+                </details>
             </div>
 
+            <!-- Journeyman Open Book Final Exam -->
             <div class="card">
                 <h2>Journeyman Open Book Final Exam</h2>
                 <p>Full simulated exam – 100 questions (2023 NEC) • 180 minutes</p>
                 <div id="finalStats" style="margin: 1rem 0; color: var(--muted); font-size: 0.95rem; line-height: 1.6;">
                 </div>
-                <button class="primary" onclick="startExam('final', 0)">Start Final Exam</button>
+
+                <details style="margin-top: 0.5rem;">
+                    <summary
+                        style="font-weight: bold; color: var(--accent); cursor: pointer; list-style: none; padding: 0.5rem 0;">
+                        Show / Hide Final Exam
+                    </summary>
+                    <div style="padding: 1rem 0 0.5rem;">
+                        <button class="primary" onclick="startExam('final', 0)">Start Final Exam</button>
+                    </div>
+                </details>
             </div>
         </section>
 
@@ -279,573 +307,12 @@
     </main>
 
     <footer>Progress & attempts are saved in your browser (localStorage). Clear browser data to reset.</footer>
-
+    <script src="exams.js"></script>
     <script>
         // ────────────────────────────────────────────────
-        // EXAM DATA
+        // EXAM DATA IS IT IN EXAMS.JS
         // ────────────────────────────────────────────────
-        const REAL_EXAMS = {
-            general: [
-                {
-                    id: "general_1",
-                    title: "General Knowledge Exam #1",
-                    questions: [
-                        // Paste ALL your original General Knowledge questions here
-                        // (the long array from your original file)
-                        // Example placeholder:
-                        {
-                            text: "When a switch is closed, it has a total resistance of ______. ",
-                            options: ["infinity", "unstable value", "un-readable", "zero"],
-                            correctIndex: 3,
-                            explanation: "A closed switch ideally has zero resistance (perfect conductor)."
-                        },
-                        {
-                            text: "What is the function of the zero adjust control in a multimeter?",
-                            options: [
-                                "With this control, the sensitivity of the instrument can be changed",
-                                "The zero point is corrected with the help of this control",
-                                "It serves to conduct the current",
-                                "The moving parts can be tightened"
-                            ],
-                            correctIndex: 1,
-                            explanation: "The zero adjust compensates for lead resistance and sets the meter to zero ohms when probes are shorted."
-                        },
-                        {
-                            text: "The wattmeter ______. ",
-                            options: [
-                                "has three connections, two of which are used at a time",
-                                "can measure DC power but not 60 Hz AC power",
-                                "has voltage and current coils to measure real power",
-                                "measures apparent reactive power and resistance"
-                            ],
-                            correctIndex: 2,
-                            explanation: "A dynamometer wattmeter uses separate current and voltage coils to measure true (real) power."
-                        },
-                        {
-                            text: "Which of the following will not cause a major error in an ohmmeter reading?",
-                            options: [
-                                "A small change in the resistance to be measured",
-                                "A slight error in the range switch selection",
-                                "A small voltage between points under test",
-                                "A slight change in switchable internal resistance"
-                            ],
-                            correctIndex: 0,
-                            explanation: "Small resistance changes are normal; the other factors cause significant errors."
-                        },
-                        {
-                            text: "An open coil can be detected by a ______ reading.",
-                            options: ["high resistance", "potentiometer", "dynamometer", "high voltage"],
-                            correctIndex: 0,
-                            explanation: "An open circuit shows very high (essentially infinite) resistance."
-                        },
-                        {
-                            text: "In making a resistance test, remember that the resistance of a short circuit is ______. ",
-                            options: ["approximately zero", "midway between high and low", "infinite", "slightly above the midrange"],
-                            correctIndex: 0,
-                            explanation: "Short circuit = near-zero resistance."
-                        },
-                        {
-                            text: "An open resistor when checked with an ohmmeter reads ______. ",
-                            options: ["infinite", "zero", "low but not zero", "high but within the tolerance"],
-                            correctIndex: 0,
-                            explanation: "Open = broken path → infinite resistance."
-                        },
-                        {
-                            text: "The continuity of a coil winding may be determined by measuring the resistance of the coil. If the resistance measured is infinite, the coil winding is ______. ",
-                            options: ["partially shorted", "totally shorted", "open", "in good condition"],
-                            correctIndex: 2,
-                            explanation: "Infinite resistance = open circuit (broken winding)."
-                        },
-                        {
-                            text: "A/an ______ is a device actuated by the operation of some devices with which it is directly associated, to govern succeeding operations of some or allied devices.",
-                            options: ["interlock", "relay", "starter", "coil"],
-                            correctIndex: 0,
-                            explanation: "This matches the definition of an interlock in control systems."
-                        },
-                        {
-                            text: "Parallel battery cells have the same voltage as one cell but have ______. ",
-                            options: ["less current capacity", "more current capacity", "unstable resistance", "none of these"],
-                            correctIndex: 1,
-                            explanation: "Parallel increases total current (Ah) capacity; voltage stays the same."
-                        },
-                        {
-                            text: "In relation to a transformer, the ratio 20:1 indicates that ______. ",
-                            options: [
-                                "there are 20 turns in the primary and 1 turn in the secondary",
-                                "secondary voltage is 1/20 of the primary voltage",
-                                "for every 20 turns on the primary, there is one turn on the secondary",
-                                "all of these"
-                            ],
-                            correctIndex: 3,
-                            explanation: "All statements correctly describe a 20:1 step-down transformer."
-                        },
-                        {
-                            text: "In a DC generator, a ______ is used to convert AC output of the armature coils into DC.",
-                            options: ["rotor", "slip ring", "commutator", "magnetic field"],
-                            correctIndex: 2,
-                            explanation: "The commutator rectifies AC to DC mechanically."
-                        },
-                        {
-                            text: "A test lamp using a light bulb is used to test a/an ______. ",
-                            options: ["polarity check", "AC or DC check", "overload test", "ground check"],
-                            correctIndex: 3,
-                            explanation: "Commonly used for ground/continuity testing."
-                        },
-                        {
-                            text: "An exposed wiring method using cleats, knobs, tubes and flexible tubing for the protection and support of single insulated conductor run in or on a building and not concealed by the building structure is ______. ",
-                            options: ["armored cable wiring", "metal clad cable wiring", "open wiring on insulators", "concealed knob and tube wiring"],
-                            correctIndex: 2,
-                            explanation: "Describes classic open wiring on insulators."
-                        },
-                        {
-                            text: "Electrons on the outer shell are called ______ electrons.",
-                            options: ["conductor", "inside shell", "valence", "outside shell"],
-                            correctIndex: 2,
-                            explanation: "Valence electrons are in the outermost shell."
-                        },
-                        {
-                            text: "When the battery cells are in series, voltages add; while current capacity is ______. ",
-                            options: ["zero", "the same as one cell", "infinite", "the sum of each cell"],
-                            correctIndex: 1,
-                            explanation: "Series: voltage adds, current capacity remains that of a single cell."
-                        },
-                        {
-                            text: "A 6 volt lead-acid battery has an internal resistance of 0.01Ω. How much current will flow if the battery has a short circuit?",
-                            options: ["zero", "infinity", "6 amps", "600 amps"],
-                            correctIndex: 3,
-                            explanation: "I = E / R = 6 / 0.01 = 600 A (theoretical short-circuit current)."
-                        },
-                        {
-                            text: "An ion ______. ",
-                            options: ["is electrically neutral", "has a positive charge", "has a negative charge", "might have either a positive or negative charge"],
-                            correctIndex: 3,
-                            explanation: "Ions can be cations (+) or anions (−)."
-                        },
-                        {
-                            text: "In a parallel circuit, the voltage across each branch is ______ the source voltage.",
-                            options: ["equal to", "greater than", "less than", "none of these"],
-                            correctIndex: 0,
-                            explanation: "Voltage is the same across all parallel branches."
-                        },
-                        {
-                            text: "When a 60 watt bulb is connected in series with a 500 watt room heater and the bulb is replaced with a 25 watt bulb on a 120 volt circuit the ______. ",
-                            options: ["heater output will decrease", "heater output will increase", "bulb will not glow", "heater output will remain unchanged"],
-                            correctIndex: 0,
-                            explanation: "Lower wattage bulb → higher resistance → less current → less heater power."
-                        },
-                        {
-                            text: "The valence electron of a conductor is also called a ______. ",
-                            options: ["proton", "free electron", "bound electron", "positron"],
-                            correctIndex: 1,
-                            explanation: "In conductors, valence electrons move freely."
-                        },
-                        {
-                            text: "In a center-tapped circuit, ______ transformer secondary voltage is utilized.",
-                            options: ["one fourth", "one third", "one half", "full"],
-                            correctIndex: 2,
-                            explanation: "Each half provides half the full secondary voltage."
-                        },
-                        {
-                            text: "If the secondary voltage of a transformer is step-down, the primary will have ______. ",
-                            options: ["half as many turns as the secondary", "fewer turns than the secondary", "more turns than the secondary", "as many turns as the secondary"],
-                            correctIndex: 2,
-                            explanation: "Step-down requires more primary turns than secondary."
-                        },
-                        {
-                            text: "Capacitors are used in electric circuits to ______. ",
-                            options: ["store energy", "introduce a voltage drop", "produce a low opposition path to high frequencies", "all of these"],
-                            correctIndex: 3,
-                            explanation: "All are valid functions of capacitors."
-                        },
-                        {
-                            text: "In a parallel circuit with an unequal resistance on each branch ______. ",
-                            options: ["the power drawn on each branch is equal", "the current on each branch is equal", "the voltage across each branch is equal", "none of these"],
-                            correctIndex: 2,
-                            explanation: "Voltage remains constant across parallel branches."
-                        }
-                        // ... add the rest of your general questions ...
-                    ]
-                }
-                // You can add more general exams here later
-            ],
 
-            openbook: [
-                {
-                    id: "openbook_1",
-                    title: "Journeyman Open Book Exam #1 (2023 NEC)",
-                    questions: [
-                        {
-                            text: "Each multiwire branch circuit shall be provided with a means that will simultaneously disconnect all ______.",
-                            options: ["ungrounded", "neutral", "equipment grounding", "grounded"],
-                            correctIndex: 0,
-                            explanation: "210.4(B)"
-                        },
-                        {
-                            text: "The connection between the grounded circuit conductor and the equipment grounding conductor... at the service is recognized as the ______.",
-                            options: ["neutral conductor", "equipment bonding jumper", "main bonding jumper", "grounding electrode conductor"],
-                            correctIndex: 2,
-                            explanation: "250.24 / Art. 100"
-                        },
-                        {
-                            text: "When calculating floor area for branch circuit load calculations, the floor area is measured from the ______ dimensions...",
-                            options: ["drawing", "scale", "outside", "inside"],
-                            correctIndex: 2,
-                            explanation: "220.11"
-                        },
-                        {
-                            text: "NM cable shall be permitted to be laid in notches of wooden studs... protected by a steel plate at least ______ thick...",
-                            options: ["1/16\"", "3/32\"", "1/8\"", "3/16\""],
-                            correctIndex: 0,
-                            explanation: "300.4(A)(1)"
-                        },
-                        {
-                            text: "A motor control center in an equipment room requires GFCI protected 125-volt... receptacle outlet within ______ feet.",
-                            options: ["25", "30", "45", "50"],
-                            correctIndex: 0,
-                            explanation: "210.8(B)"
-                        },
-                        {
-                            text: "Alternating current snap switches shall be permitted for control of inductive loads not exceeding ______ of the ampere rating...",
-                            options: ["70%", "60%", "50%", "33%"],
-                            correctIndex: 2,
-                            explanation: "404.14(B)(2)"
-                        },
-                        {
-                            text: "Other than the required interconnections... only those conductors... shall be located in that ______ section of a switchboard...",
-                            options: ["isolated", "horizontal", "vertical", "dual"],
-                            correctIndex: 2,
-                            explanation: "408.3(A)(2)"
-                        },
-                        {
-                            text: "Plate electrodes shall be installed not less than ______ below the surface of earth.",
-                            options: ["2 feet", "2 1/2 feet", "3 feet", "4 feet"],
-                            correctIndex: 1,
-                            explanation: "250.53(A)(5)"
-                        },
-                        {
-                            text: "Each grounded conductor shall terminate within the panelboard in a/an ______ terminal that is not also used for another conductor.",
-                            options: ["single", "multiwire", "dual", "individual"],
-                            correctIndex: 3,
-                            explanation: "408.41"
-                        },
-                        {
-                            text: "In dwelling units, GFCI protection is required for all 15 and 20 ampere, 125 volt receptacles installed within ______ feet of the outside edge of a bathtub or shower stall.",
-                            options: ["4", "6", "8", "12"],
-                            correctIndex: 1,
-                            explanation: "210.8(A)(1)"
-                        },
-                        {
-                            text: "When normally enclosed live parts are exposed for inspection or servicing... shall be suitably ______ if in a passageway or general open space.",
-                            options: ["isolated", "locked", "guarded", "insulated"],
-                            correctIndex: 2,
-                            explanation: "110.26(B)"
-                        },
-                        {
-                            text: "All 125-volt through 250-volt receptacles supplied by single-phase branch circuits rated 150 volts or less to ground in kitchens... shall have GFCI protection for ______.",
-                            options: ["sink", "oven", "range", "fryer"],
-                            correctIndex: 0,
-                            explanation: "210.8(A)(7)"
-                        },
-                        {
-                            text: "As it relates to load calculations, calculations shall be permitted to be rounded to the nearest whole ampere, with decimal fractions smaller than ______ dropped.",
-                            options: ["0.5", "0.05", "0.6", "0.8"],
-                            correctIndex: 0,
-                            explanation: "220.5(B)"
-                        },
-                        {
-                            text: "GFCI protection shall be provided for lighting outlets not exceeding ______ volts installed in crawl spaces.",
-                            options: ["115", "120", "150", "300"],
-                            correctIndex: 1,
-                            explanation: "210.8(A)(5) – 120 V"
-                        },
-                        {
-                            text: "Each section of equipment that requires rear or side access... shall be so marked by the manufacturer on the ______.",
-                            options: ["front", "right side", "left side", "rear"],
-                            correctIndex: 0,
-                            explanation: "110.26(A)(3) – front"
-                        },
-                        {
-                            text: "In other than one- and two-family dwellings, a receptacle outlet for indoor service equipment shall be located within ______ of the service equipment.",
-                            options: ["25 feet", "50 feet", "75 feet", "the same room or area"],
-                            correctIndex: 3,
-                            explanation: "230.70 – same room or area"
-                        },
-                        {
-                            text: "Insulated conductors used inside switchgear or switchboards are required to be ______.",
-                            options: ["suitable", "labeled", "acceptable", "listed"],
-                            correctIndex: 3,
-                            explanation: "110.21 / 408.19"
-                        },
-                        {
-                            text: "GFCI protection shall be provided for ______ receptacles.",
-                            options: ["equipment requiring servicing", "permanently installed burglar alarm", "permanently installed fire alarm", "industrial laboratories"],
-                            correctIndex: 0,
-                            explanation: "210.8(B)(2)"
-                        },
-                        {
-                            text: "All lamps in temporary wiring installations shall be protected... by a suitable ______ or lampholder with a guard.",
-                            options: ["screen", "luminaire", "barrier", "guard"],
-                            correctIndex: 1,
-                            explanation: "590.4(F)"
-                        },
-                        {
-                            text: "In addition to the number of 120 volt, single-phase branch circuits... at least one additional ______ ampere branch circuit shall be provided to supply the laundry...",
-                            options: ["15", "20", "25", "30"],
-                            correctIndex: 1,
-                            explanation: "210.11(C)(2)"
-                        },
-                        {
-                            text: "Disregarding demand factors, the calculated lighting load for a 5,000 sq.ft. office building is ______ volt-amperes.",
-                            options: ["16,500", "15,400", "8,000", "6,500"],
-                            correctIndex: 3,
-                            explanation: "Table 220.42(A) – commonly 1.3 VA/ft² in prep → 6500 VA"
-                        },
-                        {
-                            text: "Appliance receptacle outlets... for specific appliances... shall be installed within ______ of the intended location of the appliance.",
-                            options: ["24\"", "36\"", "48\"", "72\""],
-                            correctIndex: 3,
-                            explanation: "210.50(C)"
-                        },
-                        {
-                            text: "Decorative lighting... used for holiday lighting... shall be listed and ______.",
-                            options: ["marked", "approved", "labeled", "stamped"],
-                            correctIndex: 2,
-                            explanation: "590.5 / 410.160"
-                        },
-                        {
-                            text: "Outlets supplying all pool motors on branch circuits rated 150 volts or less... and ______ amperes or less... shall be provided with Class A GFCI protection.",
-                            options: ["60", "50", "40", "30"],
-                            correctIndex: 0,
-                            explanation: "680.22(A)(4)"
-                        },
-                        {
-                            text: "Disconnecting means shall be located within sight from, and ______ from air-conditioning or refrigerating equipment.",
-                            options: ["serviceable", "isolated", "accessible", "readily accessible"],
-                            correctIndex: 3,
-                            explanation: "440.14"
-                        }
-                    ]
-                }
-            ],
-
-            final: [
-                {
-                    id: "final_1",
-                    title: "Journeyman Open Book Final Exam – 2023 NEC (Simulated)",
-                    questions: [
-                        {
-                            "text": "60% is equivalent to ______.",
-                            "options": ["5/8", "3/5", "2/5", "5/16"],
-                            "correctIndex": 1,
-                            "explanation": "3 ÷ 5 = 0.6 = 60% (3/5)"
-                        },
-                        {
-                            "text": "Each section of equipment that requires rear or side access to make field connections shall be so marked by the manufacturer on the ______.",
-                            "options": ["front", "right side", "left side", "rear"],
-                            "correctIndex": 0,
-                            "explanation": "408.18(C) – front"
-                        },
-                        {
-                            "text": "In other than one- and two-family dwellings, a receptacle outlet for indoor service equipment shall be located within ______ of the service equipment.",
-                            "options": ["25 feet", "50 feet", "75 feet", "the same room or area"],
-                            "correctIndex": 3,
-                            "explanation": "230.63(B)(1) – same room or area"
-                        },
-                        {
-                            "text": "Disregarding demand factors, the calculated lighting load for a 5,000 sq ft office building is ______ volt-amperes.",
-                            "options": ["16,500", "15,400", "8,000", "6,500"],
-                            "correctIndex": 0,
-                            "explanation": "Table 220.42 – 5,000 × 3.3 VA/ft² = 16,500 VA"
-                        },
-                        {
-                            "text": "Switch S1 is in the \"ON\" position, but the light does not come on. Voltage across L1 is 120 V. Voltage across S1 is 0 V. The light does not come on because ______.",
-                            "options": [
-                                "the light is open (bulb burned out)",
-                                "the light and switch are shorted out",
-                                "the light is good but the switch does not make contact",
-                                "there is a break in the wiring of the circuit"
-                            ],
-                            "correctIndex": 0,
-                            "explanation": "Full voltage across load + 0 V across switch = open load (burned-out bulb)"
-                        },
-                        {
-                            "text": "Decorative lighting and similar accessories used for holiday lighting and similar purposes shall be listed and ______.",
-                            "options": ["marked", "approved", "labeled", "stamped"],
-                            "correctIndex": 2,
-                            "explanation": "590.5 – listed and labeled"
-                        },
-                        {
-                            "text": "Insulated conductors used inside switchgear or switchboards are required to be ______.",
-                            "options": ["suitable", "labeled", "acceptable", "listed"],
-                            "correctIndex": 3,
-                            "explanation": "408.19 – listed"
-                        },
-                        {
-                            "text": "Balconies, decks, and porches that are accessible from inside the dwelling unit shall have at least one receptacle outlet accessible from the balcony, deck, or porch walking surface. The receptacle shall not be located more than ______ above the balcony, deck, or porch.",
-                            "options": ["36\"", "48\"", "60\"", "78\""],
-                            "correctIndex": 3,
-                            "explanation": "210.52(E)(3) – 78 inches"
-                        },
-                        {
-                            "text": "An acceptable color for ungrounded conductors is ______.",
-                            "options": ["green", "gray", "pink", "white"],
-                            "correctIndex": 2,
-                            "explanation": "200.6 / 310.110 / 215.12(C) – pink permitted"
-                        },
-                        {
-                            "text": "The calculated load of a 12 foot length of fixed multioutlet assembly in a commercial facility is ______ volt-amperes if the appliances it supplies are not likely to be used at the same time.",
-                            "options": ["1000", "720", "540", "380"],
-                            "correctIndex": 2,
-                            "explanation": "220.14(H) – 180 VA/ft × 3 ft (after first 5 ft free) = 540 VA"
-                        },
-                        {
-                            "text": "In a dwelling bedroom, any wall space ______ or more in width (including space measured around corners) and unbroken along the floor line by doorways and similar openings, fireplaces, and fixed cabinets that do not have countertops or similar work surfaces shall have a receptacle.",
-                            "options": ["18\"", "24\"", "30\"", "36\""],
-                            "correctIndex": 1,
-                            "explanation": "210.52(A)(1) – 24 inches or more"
-                        },
-                        {
-                            "text": "A wall-mounted central vacuum assembly connected to a single receptacle located in an attached garage shall be provided with ______ protection for personnel.",
-                            "options": ["LCDI", "GFCI", "AFCI", "both AFCI and GFCI"],
-                            "correctIndex": 1,
-                            "explanation": "210.8(A)(2) – GFCI"
-                        },
-                        {
-                            "text": "Which of the following is an ammeter?",
-                            "options": ["I only", "II only", "III only", "I, II or III"],
-                            "correctIndex": 1,
-                            "explanation": "Only symbol II shows current meter in series with load"
-                        },
-                        {
-                            "text": "What is the ampacity of a #12 THWN conductor installed in an ambient temperature of 86°F if the raceway contains four current-carrying conductors?",
-                            "options": ["17.5 A", "20 A", "23 A", "26 A"],
-                            "correctIndex": 1,
-                            "explanation": "Table 310.16 = 25 A at 86°F → derate 80% for 4 CCC → 20 A"
-                        },
-                        {
-                            "text": "If festoon lighting is installed without a messenger, the smallest allowable overhead conductor is ______ AWG.",
-                            "options": ["10", "12", "14", "16"],
-                            "correctIndex": 1,
-                            "explanation": "225.6(B) – #12 minimum without messenger"
-                        },
-                        {
-                            "text": "For temporary holiday lighting, trees shall be permitted for supporting overhead spans of conductors and cables if avoided damage from live vegetation with ______.",
-                            "options": ["fittings", "cable ties", "strain relief devices", "overhead clamps"],
-                            "correctIndex": 2,
-                            "explanation": "590.4(J) – strain relief devices or tension take-up devices"
-                        },
-                        {
-                            "text": "The Code requires branch circuits supplying combinations of lighting loads to be rated in accordance with the overcurrent protective device. Which of the following combinations are permitted for lighting branch circuits?",
-                            "options": ["20, 25, 40 and 50 amperes", "20, 25, 30, 40 and 50 amperes", "15, 25, 30, 40 and 50 amperes", "10, 15, 30, 40 and 50 amperes"],
-                            "correctIndex": 1,
-                            "explanation": "210.18 – 20, 25, 30, 40 and 50 amperes permitted"
-                        },
-                        {
-                            "text": "Duty on elevator and dumbwaiter driving machine motors and driving motors of motor-generators used with generator field control shall be rated as ______.",
-                            "options": ["intermittent", "lockable", "continuous", "varying"],
-                            "correctIndex": 0,
-                            "explanation": "620.13(B)(1) – intermittent"
-                        },
-                        {
-                            "text": "Where multiple driven ground rods are used to form the grounding electrode system, in order to maintain an effective grounding electrode system, they shall not be less than ______ apart.",
-                            "options": ["36\"", "48\"", "60\"", "72\""],
-                            "correctIndex": 3,
-                            "explanation": "250.53(A)(3) – 6 feet (72 inches)"
-                        },
-                        {
-                            "text": "The demand load for a 14 kW range installed in a dwelling unit is ______ kW.",
-                            "options": ["8", "8.4", "8.8", "12"],
-                            "correctIndex": 2,
-                            "explanation": "Table 220.55 – 8.8 kW for one range ≤ 12 kW"
-                        },
-                        {
-                            "text": "Where a dwelling has a two car attached garage, the Code requires a minimum of ______ receptacle outlet(s) shall be installed in the garage.",
-                            "options": ["none required", "one", "two", "three"],
-                            "correctIndex": 2,
-                            "explanation": "210.52(G)(1) – at least two"
-                        },
-                        {
-                            "text": "Where ungrounded conductors are run in parallel in multiple raceways, the equipment grounding conductor, where used, shall be ______.",
-                            "options": ["installed in one raceway only", "run in parallel in each raceway", "not required in one raceway", "bare"],
-                            "correctIndex": 1,
-                            "explanation": "250.122(F) – run in parallel in each raceway"
-                        },
-                        {
-                            "text": "All 15 or 20 amp, single-phase, 125 volt through 250 volt receptacles located within ______ feet of a fountain edge shall be provided with GFCI protection.",
-                            "options": ["20", "24", "25", "30"],
-                            "correctIndex": 0,
-                            "explanation": "680.6(A) – 20 feet"
-                        },
-                        {
-                            "text": "For an arc welder with an Imax rating of 43 amps, what is the maximum rating for the overcurrent protective device supplying the welder?",
-                            "options": ["85 amp", "90 amp", "95 amp", "100 amp"],
-                            "correctIndex": 0,
-                            "explanation": "630.12(A) – 200% × 43 A = 86 A → 85 A"
-                        },
-                        {
-                            "text": "The conductor is marked RHW-2 on the insulation, what does the -2 represent?",
-                            "options": ["The cable has two conductors.", "The conductor is double insulated.", "The conductor is thermoplastic.", "The conductor has a maximum operating temperature of 90°C."],
-                            "correctIndex": 3,
-                            "explanation": "Table 310.104(A) – RHW-2 = 90°C wet/dry"
-                        },
-                        {
-                            "text": "The ampacity of three #10 THWN-2 conductors installed in a raceway is ______ amps if the ambient temperature is 112°F.",
-                            "options": ["31.6", "34.8", "35", "37.2"],
-                            "correctIndex": 1,
-                            "explanation": "Table 310.15(B)(1) – 90°C column 40 A → derate for 112°F ≈ 87% → 34.8 A"
-                        },
-                        {
-                            "text": "Fuel dispensing systems shall be provided with one or more clearly identified emergency shutoff devices or electrical disconnects. Such disconnects or devices shall be installed in approved locations but not less than 20 feet or more than ______ feet from the fuel dispensing devices that they serve.",
-                            "options": ["50", "75", "80", "100"],
-                            "correctIndex": 3,
-                            "explanation": "514.11 – 100 feet"
-                        },
-                        {
-                            "text": "Where conduits enter a floor-standing switchboard, switchgear or panelboard at the bottom, the conduits, including their end fittings, shall not rise more than ______ inches above the bottom of the enclosure.",
-                            "options": ["2", "3", "4", "6"],
-                            "correctIndex": 2,
-                            "explanation": "408.5 – 4 inches"
-                        },
-                        {
-                            "text": "Thermostatically controlled switching devices serving both controllers and disconnecting means for fixed electric space heating equipment shall ______.",
-                            "options": ["not be permitted", "be located not more than 8 feet above floor level", "open all grounded conductors", "be designed so that the circuit when placed in the off position cannot be energized automatically after the device has been manually placed in the off position"],
-                            "correctIndex": 3,
-                            "explanation": "424.20(A)(3) – cannot be automatically re-energized"
-                        },
-                        {
-                            "text": "In dwelling units, hallways of ______ feet or more in length shall have at least one receptacle outlet.",
-                            "options": ["6", "8", "10", "12"],
-                            "correctIndex": 2,
-                            "explanation": "210.52(H) – 10 feet or more"
-                        },
-                        {
-                            "text": "For a feeder tap not exceeding 10 feet in length and field installation, the maximum overcurrent device rating supplying a tap conductor with an ampacity of 40 amps is ______.",
-                            "options": ["150 A", "200 A", "350 A", "400 A"],
-                            "correctIndex": 3,
-                            "explanation": "240.21(B)(1)(4) – 10× = 400 A"
-                        },
-                        {
-                            "text": "A three-way switch is equivalent to a ______ switch.",
-                            "options": ["DPST", "DPDT", "SPST", "SPDT"],
-                            "correctIndex": 3,
-                            "explanation": "SPDT (single pole double throw)"
-                        },
-                        {
-                            "text": "Which of the following cord types is permitted in wet location and is sunlight resistant?",
-                            "options": ["SPT-2", "STOOOW", "THWN", "XHHW"],
-                            "correctIndex": 1,
-                            "explanation": "Table 400.4 – STOOW (sunlight resistant, wet)"
-                        },
-                        {
-                            "text": "One or more metal in-ground support structure(s) in direct contact with the earth vertically for ______ feet or more, with or without concrete encasement is a permitted grounding electrode.",
-                            "options": ["6", "8", "10", "12"],
-                            "correctIndex": 2,
-                            "explanation": "250.52(A)(3) – 10 feet"
-                        }
-                    ]
-                }
-            ]
-        };
 
         // ────────────────────────────────────────────────
         // STATE & FUNCTIONS
@@ -1094,6 +561,75 @@
 
         // Init
         document.addEventListener('DOMContentLoaded', updateStats);
+        // ────────────────────────────────────────────────
+        // Dynamically create General exam buttons
+        // ────────────────────────────────────────────────
+
+        function createGeneralExamCards() {
+
+            const container = document.getElementById('generalCardsContainer');
+            if (!container) return;
+
+            container.innerHTML = ''; // clear if re-run
+
+            REAL_EXAMS.general.forEach((exam, index) => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.style.padding = '1rem';
+
+                const timeText = exam.timeMinutes ? `${exam.timeMinutes} min` : '30 min';
+
+                card.innerHTML = `
+            <h3 style="margin: 0.5rem 0;">${exam.title}</h3>
+            <p style="color: var(--muted); font-size: 0.9rem; margin: 0.5rem 0 1rem;">
+                ${exam.questions.length} questions • ${timeText}
+            </p>
+            <div id="generalStats_${index}" style="margin: 0.75rem 0; color: var(--muted); font-size: 0.9rem; line-height: 1.5;"></div>
+            <button class="primary" onclick="startExam('general', ${index})">
+                Start Exam #${index + 1}
+            </button>
+        `;
+
+                container.appendChild(card);
+
+                // Also generate stats row for this exam
+                updateSingleGeneralStats(index);
+            });
+        }
+
+        // Helper: update stats for one specific general exam
+        function updateSingleGeneralStats(examIndex) {
+            const el = document.getElementById(`generalStats_${examIndex}`);
+            if (!el) return;
+
+            const scores = getLastScores('general', examIndex, 10);
+            const { best, worst, avg } = getBestWorstAvg(scores);
+            const attempts = getAttempts('general', examIndex);
+
+            el.innerHTML = `
+        Attempts: ${attempts}<br>
+        Best: ${best}%<br>
+        Worst: ${worst}%<br>
+        Avg last 10: ${avg}%
+    `;
+        }
+
+        // Override / extend updateStats() to handle multiple generals
+        const originalUpdateStats = updateStats;
+        updateStats = function () {
+            originalUpdateStats.call(this); // call old function for openbook & final
+
+            // now update all general stats
+            REAL_EXAMS.general.forEach((_, index) => {
+                updateSingleGeneralStats(index);
+            });
+        };
+
+        // Call once on load
+        document.addEventListener('DOMContentLoaded', () => {
+            createGeneralExamCards();
+            updateStats(); // this will now also refresh general stats
+        });
     </script>
 </body>
 
