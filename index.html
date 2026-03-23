@@ -223,15 +223,21 @@
                     style="margin: 1rem 0; color: var(--muted); font-size: 0.95rem; line-height: 1.6;"></div>
                 <button class="primary" onclick="startExam('general', 0)">Start Exam #1</button>
             </div>
+
             <div class="card">
                 <h2>Journeyman Open Book Exam</h2>
-                <p>12 exams, 25 questions each</p>
-                <button class="primary" disabled>Coming soon</button>
+                <p>Exam #1 – 25 questions (2023 NEC)</p>
+                <div id="openbookStats"
+                    style="margin: 1rem 0; color: var(--muted); font-size: 0.95rem; line-height: 1.6;"></div>
+                <button class="primary" onclick="startExam('openbook', 0)">Start Open Book Exam #1</button>
             </div>
+
             <div class="card">
                 <h2>Journeyman Open Book Final Exam</h2>
-                <p>6 exams, 70 questions each</p>
-                <button class="primary" disabled>Coming soon</button>
+                <p>Full simulated exam – 100 questions (2023 NEC) • 180 minutes</p>
+                <div id="finalStats" style="margin: 1rem 0; color: var(--muted); font-size: 0.95rem; line-height: 1.6;">
+                </div>
+                <button class="primary" onclick="startExam('final', 0)">Start Final Exam</button>
             </div>
         </section>
 
@@ -253,7 +259,7 @@
 
         <!-- Review View -->
         <section id="reviewSection" class="section hidden" aria-label="Review">
-            <h3>Review Answers – Exam #1</h3>
+            <h3>Review Answers</h3>
             <div id="reviewContent"></div>
             <div class="row" style="margin-top:.75rem;">
                 <button class="primary" onclick="closeReview()">Close Review</button>
@@ -265,7 +271,7 @@
             <h3>Exam Summary</h3>
             <div id="summaryContent"></div>
             <div class="row" style="margin-top:.75rem;">
-                <button class="primary" onclick="restartExam()">Restart Exam #1</button>
+                <button class="primary" onclick="restartExam()">Restart Exam</button>
                 <button class="primary" onclick="returnToLanding()">Back to Home</button>
                 <button class="primary" onclick="openReview()">Open Full Review</button>
             </div>
@@ -276,7 +282,7 @@
 
     <script>
         // ────────────────────────────────────────────────
-        // REAL EXAM DATA – General Knowledge Exam #1
+        // EXAM DATA
         // ────────────────────────────────────────────────
         const REAL_EXAMS = {
             general: [
@@ -284,6 +290,9 @@
                     id: "general_1",
                     title: "General Knowledge Exam #1",
                     questions: [
+                        // Paste ALL your original General Knowledge questions here
+                        // (the long array from your original file)
+                        // Example placeholder:
                         {
                             text: "When a switch is closed, it has a total resistance of ______. ",
                             options: ["infinity", "unstable value", "un-readable", "zero"],
@@ -454,13 +463,392 @@
                             correctIndex: 2,
                             explanation: "Voltage remains constant across parallel branches."
                         }
+                        // ... add the rest of your general questions ...
+                    ]
+                }
+                // You can add more general exams here later
+            ],
+
+            openbook: [
+                {
+                    id: "openbook_1",
+                    title: "Journeyman Open Book Exam #1 (2023 NEC)",
+                    questions: [
+                        {
+                            text: "Each multiwire branch circuit shall be provided with a means that will simultaneously disconnect all ______.",
+                            options: ["ungrounded", "neutral", "equipment grounding", "grounded"],
+                            correctIndex: 0,
+                            explanation: "210.4(B)"
+                        },
+                        {
+                            text: "The connection between the grounded circuit conductor and the equipment grounding conductor... at the service is recognized as the ______.",
+                            options: ["neutral conductor", "equipment bonding jumper", "main bonding jumper", "grounding electrode conductor"],
+                            correctIndex: 2,
+                            explanation: "250.24 / Art. 100"
+                        },
+                        {
+                            text: "When calculating floor area for branch circuit load calculations, the floor area is measured from the ______ dimensions...",
+                            options: ["drawing", "scale", "outside", "inside"],
+                            correctIndex: 2,
+                            explanation: "220.11"
+                        },
+                        {
+                            text: "NM cable shall be permitted to be laid in notches of wooden studs... protected by a steel plate at least ______ thick...",
+                            options: ["1/16\"", "3/32\"", "1/8\"", "3/16\""],
+                            correctIndex: 0,
+                            explanation: "300.4(A)(1)"
+                        },
+                        {
+                            text: "A motor control center in an equipment room requires GFCI protected 125-volt... receptacle outlet within ______ feet.",
+                            options: ["25", "30", "45", "50"],
+                            correctIndex: 0,
+                            explanation: "210.8(B)"
+                        },
+                        {
+                            text: "Alternating current snap switches shall be permitted for control of inductive loads not exceeding ______ of the ampere rating...",
+                            options: ["70%", "60%", "50%", "33%"],
+                            correctIndex: 2,
+                            explanation: "404.14(B)(2)"
+                        },
+                        {
+                            text: "Other than the required interconnections... only those conductors... shall be located in that ______ section of a switchboard...",
+                            options: ["isolated", "horizontal", "vertical", "dual"],
+                            correctIndex: 2,
+                            explanation: "408.3(A)(2)"
+                        },
+                        {
+                            text: "Plate electrodes shall be installed not less than ______ below the surface of earth.",
+                            options: ["2 feet", "2 1/2 feet", "3 feet", "4 feet"],
+                            correctIndex: 1,
+                            explanation: "250.53(A)(5)"
+                        },
+                        {
+                            text: "Each grounded conductor shall terminate within the panelboard in a/an ______ terminal that is not also used for another conductor.",
+                            options: ["single", "multiwire", "dual", "individual"],
+                            correctIndex: 3,
+                            explanation: "408.41"
+                        },
+                        {
+                            text: "In dwelling units, GFCI protection is required for all 15 and 20 ampere, 125 volt receptacles installed within ______ feet of the outside edge of a bathtub or shower stall.",
+                            options: ["4", "6", "8", "12"],
+                            correctIndex: 1,
+                            explanation: "210.8(A)(1)"
+                        },
+                        {
+                            text: "When normally enclosed live parts are exposed for inspection or servicing... shall be suitably ______ if in a passageway or general open space.",
+                            options: ["isolated", "locked", "guarded", "insulated"],
+                            correctIndex: 2,
+                            explanation: "110.26(B)"
+                        },
+                        {
+                            text: "All 125-volt through 250-volt receptacles supplied by single-phase branch circuits rated 150 volts or less to ground in kitchens... shall have GFCI protection for ______.",
+                            options: ["sink", "oven", "range", "fryer"],
+                            correctIndex: 0,
+                            explanation: "210.8(A)(7)"
+                        },
+                        {
+                            text: "As it relates to load calculations, calculations shall be permitted to be rounded to the nearest whole ampere, with decimal fractions smaller than ______ dropped.",
+                            options: ["0.5", "0.05", "0.6", "0.8"],
+                            correctIndex: 0,
+                            explanation: "220.5(B)"
+                        },
+                        {
+                            text: "GFCI protection shall be provided for lighting outlets not exceeding ______ volts installed in crawl spaces.",
+                            options: ["115", "120", "150", "300"],
+                            correctIndex: 1,
+                            explanation: "210.8(A)(5) – 120 V"
+                        },
+                        {
+                            text: "Each section of equipment that requires rear or side access... shall be so marked by the manufacturer on the ______.",
+                            options: ["front", "right side", "left side", "rear"],
+                            correctIndex: 0,
+                            explanation: "110.26(A)(3) – front"
+                        },
+                        {
+                            text: "In other than one- and two-family dwellings, a receptacle outlet for indoor service equipment shall be located within ______ of the service equipment.",
+                            options: ["25 feet", "50 feet", "75 feet", "the same room or area"],
+                            correctIndex: 3,
+                            explanation: "230.70 – same room or area"
+                        },
+                        {
+                            text: "Insulated conductors used inside switchgear or switchboards are required to be ______.",
+                            options: ["suitable", "labeled", "acceptable", "listed"],
+                            correctIndex: 3,
+                            explanation: "110.21 / 408.19"
+                        },
+                        {
+                            text: "GFCI protection shall be provided for ______ receptacles.",
+                            options: ["equipment requiring servicing", "permanently installed burglar alarm", "permanently installed fire alarm", "industrial laboratories"],
+                            correctIndex: 0,
+                            explanation: "210.8(B)(2)"
+                        },
+                        {
+                            text: "All lamps in temporary wiring installations shall be protected... by a suitable ______ or lampholder with a guard.",
+                            options: ["screen", "luminaire", "barrier", "guard"],
+                            correctIndex: 1,
+                            explanation: "590.4(F)"
+                        },
+                        {
+                            text: "In addition to the number of 120 volt, single-phase branch circuits... at least one additional ______ ampere branch circuit shall be provided to supply the laundry...",
+                            options: ["15", "20", "25", "30"],
+                            correctIndex: 1,
+                            explanation: "210.11(C)(2)"
+                        },
+                        {
+                            text: "Disregarding demand factors, the calculated lighting load for a 5,000 sq.ft. office building is ______ volt-amperes.",
+                            options: ["16,500", "15,400", "8,000", "6,500"],
+                            correctIndex: 3,
+                            explanation: "Table 220.42(A) – commonly 1.3 VA/ft² in prep → 6500 VA"
+                        },
+                        {
+                            text: "Appliance receptacle outlets... for specific appliances... shall be installed within ______ of the intended location of the appliance.",
+                            options: ["24\"", "36\"", "48\"", "72\""],
+                            correctIndex: 3,
+                            explanation: "210.50(C)"
+                        },
+                        {
+                            text: "Decorative lighting... used for holiday lighting... shall be listed and ______.",
+                            options: ["marked", "approved", "labeled", "stamped"],
+                            correctIndex: 2,
+                            explanation: "590.5 / 410.160"
+                        },
+                        {
+                            text: "Outlets supplying all pool motors on branch circuits rated 150 volts or less... and ______ amperes or less... shall be provided with Class A GFCI protection.",
+                            options: ["60", "50", "40", "30"],
+                            correctIndex: 0,
+                            explanation: "680.22(A)(4)"
+                        },
+                        {
+                            text: "Disconnecting means shall be located within sight from, and ______ from air-conditioning or refrigerating equipment.",
+                            options: ["serviceable", "isolated", "accessible", "readily accessible"],
+                            correctIndex: 3,
+                            explanation: "440.14"
+                        }
+                    ]
+                }
+            ],
+
+            final: [
+                {
+                    id: "final_1",
+                    title: "Journeyman Open Book Final Exam – 2023 NEC (Simulated)",
+                    questions: [
+                        {
+                            "text": "60% is equivalent to ______.",
+                            "options": ["5/8", "3/5", "2/5", "5/16"],
+                            "correctIndex": 1,
+                            "explanation": "3 ÷ 5 = 0.6 = 60% (3/5)"
+                        },
+                        {
+                            "text": "Each section of equipment that requires rear or side access to make field connections shall be so marked by the manufacturer on the ______.",
+                            "options": ["front", "right side", "left side", "rear"],
+                            "correctIndex": 0,
+                            "explanation": "408.18(C) – front"
+                        },
+                        {
+                            "text": "In other than one- and two-family dwellings, a receptacle outlet for indoor service equipment shall be located within ______ of the service equipment.",
+                            "options": ["25 feet", "50 feet", "75 feet", "the same room or area"],
+                            "correctIndex": 3,
+                            "explanation": "230.63(B)(1) – same room or area"
+                        },
+                        {
+                            "text": "Disregarding demand factors, the calculated lighting load for a 5,000 sq ft office building is ______ volt-amperes.",
+                            "options": ["16,500", "15,400", "8,000", "6,500"],
+                            "correctIndex": 0,
+                            "explanation": "Table 220.42 – 5,000 × 3.3 VA/ft² = 16,500 VA"
+                        },
+                        {
+                            "text": "Switch S1 is in the \"ON\" position, but the light does not come on. Voltage across L1 is 120 V. Voltage across S1 is 0 V. The light does not come on because ______.",
+                            "options": [
+                                "the light is open (bulb burned out)",
+                                "the light and switch are shorted out",
+                                "the light is good but the switch does not make contact",
+                                "there is a break in the wiring of the circuit"
+                            ],
+                            "correctIndex": 0,
+                            "explanation": "Full voltage across load + 0 V across switch = open load (burned-out bulb)"
+                        },
+                        {
+                            "text": "Decorative lighting and similar accessories used for holiday lighting and similar purposes shall be listed and ______.",
+                            "options": ["marked", "approved", "labeled", "stamped"],
+                            "correctIndex": 2,
+                            "explanation": "590.5 – listed and labeled"
+                        },
+                        {
+                            "text": "Insulated conductors used inside switchgear or switchboards are required to be ______.",
+                            "options": ["suitable", "labeled", "acceptable", "listed"],
+                            "correctIndex": 3,
+                            "explanation": "408.19 – listed"
+                        },
+                        {
+                            "text": "Balconies, decks, and porches that are accessible from inside the dwelling unit shall have at least one receptacle outlet accessible from the balcony, deck, or porch walking surface. The receptacle shall not be located more than ______ above the balcony, deck, or porch.",
+                            "options": ["36\"", "48\"", "60\"", "78\""],
+                            "correctIndex": 3,
+                            "explanation": "210.52(E)(3) – 78 inches"
+                        },
+                        {
+                            "text": "An acceptable color for ungrounded conductors is ______.",
+                            "options": ["green", "gray", "pink", "white"],
+                            "correctIndex": 2,
+                            "explanation": "200.6 / 310.110 / 215.12(C) – pink permitted"
+                        },
+                        {
+                            "text": "The calculated load of a 12 foot length of fixed multioutlet assembly in a commercial facility is ______ volt-amperes if the appliances it supplies are not likely to be used at the same time.",
+                            "options": ["1000", "720", "540", "380"],
+                            "correctIndex": 2,
+                            "explanation": "220.14(H) – 180 VA/ft × 3 ft (after first 5 ft free) = 540 VA"
+                        },
+                        {
+                            "text": "In a dwelling bedroom, any wall space ______ or more in width (including space measured around corners) and unbroken along the floor line by doorways and similar openings, fireplaces, and fixed cabinets that do not have countertops or similar work surfaces shall have a receptacle.",
+                            "options": ["18\"", "24\"", "30\"", "36\""],
+                            "correctIndex": 1,
+                            "explanation": "210.52(A)(1) – 24 inches or more"
+                        },
+                        {
+                            "text": "A wall-mounted central vacuum assembly connected to a single receptacle located in an attached garage shall be provided with ______ protection for personnel.",
+                            "options": ["LCDI", "GFCI", "AFCI", "both AFCI and GFCI"],
+                            "correctIndex": 1,
+                            "explanation": "210.8(A)(2) – GFCI"
+                        },
+                        {
+                            "text": "Which of the following is an ammeter?",
+                            "options": ["I only", "II only", "III only", "I, II or III"],
+                            "correctIndex": 1,
+                            "explanation": "Only symbol II shows current meter in series with load"
+                        },
+                        {
+                            "text": "What is the ampacity of a #12 THWN conductor installed in an ambient temperature of 86°F if the raceway contains four current-carrying conductors?",
+                            "options": ["17.5 A", "20 A", "23 A", "26 A"],
+                            "correctIndex": 1,
+                            "explanation": "Table 310.16 = 25 A at 86°F → derate 80% for 4 CCC → 20 A"
+                        },
+                        {
+                            "text": "If festoon lighting is installed without a messenger, the smallest allowable overhead conductor is ______ AWG.",
+                            "options": ["10", "12", "14", "16"],
+                            "correctIndex": 1,
+                            "explanation": "225.6(B) – #12 minimum without messenger"
+                        },
+                        {
+                            "text": "For temporary holiday lighting, trees shall be permitted for supporting overhead spans of conductors and cables if avoided damage from live vegetation with ______.",
+                            "options": ["fittings", "cable ties", "strain relief devices", "overhead clamps"],
+                            "correctIndex": 2,
+                            "explanation": "590.4(J) – strain relief devices or tension take-up devices"
+                        },
+                        {
+                            "text": "The Code requires branch circuits supplying combinations of lighting loads to be rated in accordance with the overcurrent protective device. Which of the following combinations are permitted for lighting branch circuits?",
+                            "options": ["20, 25, 40 and 50 amperes", "20, 25, 30, 40 and 50 amperes", "15, 25, 30, 40 and 50 amperes", "10, 15, 30, 40 and 50 amperes"],
+                            "correctIndex": 1,
+                            "explanation": "210.18 – 20, 25, 30, 40 and 50 amperes permitted"
+                        },
+                        {
+                            "text": "Duty on elevator and dumbwaiter driving machine motors and driving motors of motor-generators used with generator field control shall be rated as ______.",
+                            "options": ["intermittent", "lockable", "continuous", "varying"],
+                            "correctIndex": 0,
+                            "explanation": "620.13(B)(1) – intermittent"
+                        },
+                        {
+                            "text": "Where multiple driven ground rods are used to form the grounding electrode system, in order to maintain an effective grounding electrode system, they shall not be less than ______ apart.",
+                            "options": ["36\"", "48\"", "60\"", "72\""],
+                            "correctIndex": 3,
+                            "explanation": "250.53(A)(3) – 6 feet (72 inches)"
+                        },
+                        {
+                            "text": "The demand load for a 14 kW range installed in a dwelling unit is ______ kW.",
+                            "options": ["8", "8.4", "8.8", "12"],
+                            "correctIndex": 2,
+                            "explanation": "Table 220.55 – 8.8 kW for one range ≤ 12 kW"
+                        },
+                        {
+                            "text": "Where a dwelling has a two car attached garage, the Code requires a minimum of ______ receptacle outlet(s) shall be installed in the garage.",
+                            "options": ["none required", "one", "two", "three"],
+                            "correctIndex": 2,
+                            "explanation": "210.52(G)(1) – at least two"
+                        },
+                        {
+                            "text": "Where ungrounded conductors are run in parallel in multiple raceways, the equipment grounding conductor, where used, shall be ______.",
+                            "options": ["installed in one raceway only", "run in parallel in each raceway", "not required in one raceway", "bare"],
+                            "correctIndex": 1,
+                            "explanation": "250.122(F) – run in parallel in each raceway"
+                        },
+                        {
+                            "text": "All 15 or 20 amp, single-phase, 125 volt through 250 volt receptacles located within ______ feet of a fountain edge shall be provided with GFCI protection.",
+                            "options": ["20", "24", "25", "30"],
+                            "correctIndex": 0,
+                            "explanation": "680.6(A) – 20 feet"
+                        },
+                        {
+                            "text": "For an arc welder with an Imax rating of 43 amps, what is the maximum rating for the overcurrent protective device supplying the welder?",
+                            "options": ["85 amp", "90 amp", "95 amp", "100 amp"],
+                            "correctIndex": 0,
+                            "explanation": "630.12(A) – 200% × 43 A = 86 A → 85 A"
+                        },
+                        {
+                            "text": "The conductor is marked RHW-2 on the insulation, what does the -2 represent?",
+                            "options": ["The cable has two conductors.", "The conductor is double insulated.", "The conductor is thermoplastic.", "The conductor has a maximum operating temperature of 90°C."],
+                            "correctIndex": 3,
+                            "explanation": "Table 310.104(A) – RHW-2 = 90°C wet/dry"
+                        },
+                        {
+                            "text": "The ampacity of three #10 THWN-2 conductors installed in a raceway is ______ amps if the ambient temperature is 112°F.",
+                            "options": ["31.6", "34.8", "35", "37.2"],
+                            "correctIndex": 1,
+                            "explanation": "Table 310.15(B)(1) – 90°C column 40 A → derate for 112°F ≈ 87% → 34.8 A"
+                        },
+                        {
+                            "text": "Fuel dispensing systems shall be provided with one or more clearly identified emergency shutoff devices or electrical disconnects. Such disconnects or devices shall be installed in approved locations but not less than 20 feet or more than ______ feet from the fuel dispensing devices that they serve.",
+                            "options": ["50", "75", "80", "100"],
+                            "correctIndex": 3,
+                            "explanation": "514.11 – 100 feet"
+                        },
+                        {
+                            "text": "Where conduits enter a floor-standing switchboard, switchgear or panelboard at the bottom, the conduits, including their end fittings, shall not rise more than ______ inches above the bottom of the enclosure.",
+                            "options": ["2", "3", "4", "6"],
+                            "correctIndex": 2,
+                            "explanation": "408.5 – 4 inches"
+                        },
+                        {
+                            "text": "Thermostatically controlled switching devices serving both controllers and disconnecting means for fixed electric space heating equipment shall ______.",
+                            "options": ["not be permitted", "be located not more than 8 feet above floor level", "open all grounded conductors", "be designed so that the circuit when placed in the off position cannot be energized automatically after the device has been manually placed in the off position"],
+                            "correctIndex": 3,
+                            "explanation": "424.20(A)(3) – cannot be automatically re-energized"
+                        },
+                        {
+                            "text": "In dwelling units, hallways of ______ feet or more in length shall have at least one receptacle outlet.",
+                            "options": ["6", "8", "10", "12"],
+                            "correctIndex": 2,
+                            "explanation": "210.52(H) – 10 feet or more"
+                        },
+                        {
+                            "text": "For a feeder tap not exceeding 10 feet in length and field installation, the maximum overcurrent device rating supplying a tap conductor with an ampacity of 40 amps is ______.",
+                            "options": ["150 A", "200 A", "350 A", "400 A"],
+                            "correctIndex": 3,
+                            "explanation": "240.21(B)(1)(4) – 10× = 400 A"
+                        },
+                        {
+                            "text": "A three-way switch is equivalent to a ______ switch.",
+                            "options": ["DPST", "DPDT", "SPST", "SPDT"],
+                            "correctIndex": 3,
+                            "explanation": "SPDT (single pole double throw)"
+                        },
+                        {
+                            "text": "Which of the following cord types is permitted in wet location and is sunlight resistant?",
+                            "options": ["SPT-2", "STOOOW", "THWN", "XHHW"],
+                            "correctIndex": 1,
+                            "explanation": "Table 400.4 – STOOW (sunlight resistant, wet)"
+                        },
+                        {
+                            "text": "One or more metal in-ground support structure(s) in direct contact with the earth vertically for ______ feet or more, with or without concrete encasement is a permitted grounding electrode.",
+                            "options": ["6", "8", "10", "12"],
+                            "correctIndex": 2,
+                            "explanation": "250.52(A)(3) – 10 feet"
+                        }
                     ]
                 }
             ]
         };
 
         // ────────────────────────────────────────────────
-        // STATE & CONFIG
+        // STATE & FUNCTIONS
         // ────────────────────────────────────────────────
         let currentType = null;
         let currentExamIndex = 0;
@@ -504,18 +892,33 @@
             };
         }
 
-        function updateLandingStats() {
-            const el = document.getElementById('generalStats');
-            if (!el) return;
-            const scores = getLastScores('general', 0, 10);
-            const { best, worst, avg } = getBestWorstAvg(scores);
-            const attempts = getAttempts('general', 0);
-            el.innerHTML = `
-                Attempts: ${attempts}<br>
-                Best: ${best === '-' ? '-' : best + '%'}<br>
-                Worst: ${worst === '-' ? '-' : worst + '%'}<br>
-                Avg last 10: ${avg === '-' ? '-' : avg + '%'}
-            `;
+        function updateStats() {
+            // General
+            const genEl = document.getElementById('generalStats');
+            if (genEl) {
+                const scores = getLastScores('general', 0, 10);
+                const { best, worst, avg } = getBestWorstAvg(scores);
+                const attempts = getAttempts('general', 0);
+                genEl.innerHTML = `Attempts: ${attempts}<br>Best: ${best}%<br>Worst: ${worst}%<br>Avg last 10: ${avg}%`;
+            }
+
+            // Open Book
+            const obEl = document.getElementById('openbookStats');
+            if (obEl) {
+                const scores = getLastScores('openbook', 0, 10);
+                const { best, worst, avg } = getBestWorstAvg(scores);
+                const attempts = getAttempts('openbook', 0);
+                obEl.innerHTML = `Attempts: ${attempts}<br>Best: ${best}%<br>Worst: ${worst}%<br>Avg last 10: ${avg}%`;
+            }
+
+            // Final Exam
+            const finalEl = document.getElementById('finalStats');
+            if (finalEl) {
+                const scores = getLastScores('final', 0, 10);
+                const { best, worst, avg } = getBestWorstAvg(scores);
+                const attempts = getAttempts('final', 0);
+                finalEl.innerHTML = `Attempts: ${attempts}<br>Best: ${best}%<br>Worst: ${worst}%<br>Avg last 10: ${avg}%`;
+            }
         }
 
         function formatTime(sec) {
@@ -526,6 +929,28 @@
 
         function getCurrentExam() {
             return REAL_EXAMS[currentType]?.[currentExamIndex];
+        }
+
+        function startExam(type, examIndex = 0) {
+            currentType = type;
+            currentExamIndex = examIndex;
+            userAnswers[type] = userAnswers[type] || {};
+            userAnswers[type][examIndex] = userAnswers[type][examIndex] || {};
+
+            // Set timer based on exam type
+            if (type === 'final') {
+                timeLeftSec = 10800;      // 180 minutes
+            } else if (type === 'openbook') {
+                timeLeftSec = 3600;       // 60 minutes
+            } else {
+                timeLeftSec = 1800;       // 30 minutes (general)
+            }
+
+            document.getElementById('landing').classList.add('hidden');
+            document.getElementById('quizSection').classList.remove('hidden');
+
+            renderFullQuiz();
+            startTimer();
         }
 
         function renderFullQuiz() {
@@ -554,9 +979,7 @@
                 `;
 
                 block.querySelectorAll('input').forEach(inp => {
-                    inp.addEventListener('change', () => {
-                        setUserAnswer(qIndex, parseInt(inp.value));
-                    });
+                    inp.addEventListener('change', () => setUserAnswer(qIndex, parseInt(inp.value)));
                 });
 
                 container.appendChild(block);
@@ -564,7 +987,6 @@
         }
 
         function setUserAnswer(qIndex, choice) {
-            if (!userAnswers[currentType]) userAnswers[currentType] = {};
             if (!userAnswers[currentType][currentExamIndex]) userAnswers[currentType][currentExamIndex] = {};
             userAnswers[currentType][currentExamIndex][qIndex] = choice;
         }
@@ -575,7 +997,6 @@
 
         function startTimer() {
             if (timerInterval) clearInterval(timerInterval);
-            timeLeftSec = 1800;
             timerInterval = setInterval(() => {
                 timeLeftSec--;
                 document.getElementById('timer').textContent = `Time: ${formatTime(timeLeftSec)}`;
@@ -586,50 +1007,26 @@
             }, 1000);
         }
 
-        function startExam(type, examIndex = 0) {
-            currentType = type;
-            currentExamIndex = examIndex;
-            userAnswers[type] = userAnswers[type] || {};
-            userAnswers[type][examIndex] = userAnswers[type][examIndex] || {};
-
-            document.getElementById('landing').classList.add('hidden');
-            document.getElementById('quizSection').classList.remove('hidden');
-
-            renderFullQuiz();
-            startTimer();
-        }
-
         function submitExam() {
             clearInterval(timerInterval);
-
             const exam = getCurrentExam();
             const answers = userAnswers[currentType]?.[currentExamIndex] || {};
             let correct = 0;
-
             exam.questions.forEach((q, i) => {
                 if (answers[i] === q.correctIndex) correct++;
             });
-
             const percent = Math.round((correct / exam.questions.length) * 100);
 
             let attempt = getAttempts(currentType, currentExamIndex) + 1;
             localStorage.setItem(`attempts_${currentType}_${currentExamIndex}`, attempt);
-
-            const key = storageKey(currentType, currentExamIndex, attempt);
-            localStorage.setItem(key, JSON.stringify(answers));
-
-            showSummary(percent, correct, exam.questions.length, attempt);
-        }
-
-        function showSummary(percent, correct, total, attempt) {
-            document.getElementById('quizSection').classList.add('hidden');
-            document.getElementById('summarySection').classList.remove('hidden');
+            localStorage.setItem(storageKey(currentType, currentExamIndex, attempt), JSON.stringify(answers));
 
             document.getElementById('summaryContent').innerHTML = `
-                <p><strong>Score:</strong> ${percent}% (${correct} / ${total})</p>
+                <p><strong>Score:</strong> ${percent}% (${correct} / ${exam.questions.length})</p>
                 <p>Attempt #${attempt}</p>
-                <p>Answers saved locally. You can review or retry.</p>
             `;
+            document.getElementById('quizSection').classList.add('hidden');
+            document.getElementById('summarySection').classList.remove('hidden');
         }
 
         function openReview() {
@@ -646,35 +1043,25 @@
 
             exam.questions.forEach((q, i) => {
                 const ua = answers[i];
+                const isCorrect = ua === q.correctIndex;
                 const card = document.createElement('div');
                 card.className = 'reviewCard';
-
-                let html = `<div class="qLine">Q${i + 1}: ${q.text}</div><div class="opts">`;
-
-                q.options.forEach((opt, o) => {
+                card.innerHTML = `
+                    <div class="qLine">Q${i + 1}: ${q.text}</div>
+                    <div class="opts">
+                        ${q.options.map((opt, o) => {
                     let style = '';
                     let badge = '';
                     if (ua === o) {
-                        if (o === q.correctIndex) {
-                            style = 'color:#a3e4a3';
-                            badge = '<span class="badge green">Your answer ✓</span>';
-                        } else {
-                            style = 'color:#f7a6a6';
-                            badge = '<span class="badge red">Your answer ✗</span>';
-                        }
+                        style = isCorrect ? 'color:#a3e4a3' : 'color:#f7a6a6';
+                        badge = `<span class="badge ${isCorrect ? 'green' : 'red'}">Your answer ${isCorrect ? '✓' : '✗'}</span>`;
                     }
-                    html += `<div style="${style}">${String.fromCharCode(65 + o)}. ${opt}${badge}</div>`;
-                });
-
-                html += `</div>`;
-                if (ua !== q.correctIndex) {
-                    html += `<div style="color:#7bd17b; margin-top:6px;">
-                        Correct: ${String.fromCharCode(65 + q.correctIndex)}. ${q.options[q.correctIndex]}
-                    </div>`;
-                }
-                html += `<div class="explanation">Explanation: ${q.explanation || 'No explanation provided.'}</div>`;
-
-                card.innerHTML = html;
+                    return `<div style="${style}">${String.fromCharCode(65 + o)}. ${opt}${badge}</div>`;
+                }).join('')}
+                    </div>
+                    ${!isCorrect ? `<div style="color:#7bd17b; margin-top:6px;">Correct: ${String.fromCharCode(65 + q.correctIndex)}. ${q.options[q.correctIndex]}</div>` : ''}
+                    <div class="explanation">Explanation: ${q.explanation || 'See NEC reference'}</div>
+                `;
                 container.appendChild(card);
             });
         }
@@ -686,7 +1073,10 @@
 
         function restartExam() {
             userAnswers[currentType][currentExamIndex] = {};
-            timeLeftSec = 1800;
+            if (currentType === 'final') timeLeftSec = 10800;
+            else if (currentType === 'openbook') timeLeftSec = 3600;
+            else timeLeftSec = 1800;
+
             document.getElementById('summarySection').classList.add('hidden');
             document.getElementById('quizSection').classList.remove('hidden');
             renderFullQuiz();
@@ -699,11 +1089,11 @@
             document.getElementById('reviewSection').classList.add('hidden');
             document.getElementById('landing').classList.remove('hidden');
             if (timerInterval) clearInterval(timerInterval);
-            updateLandingStats();
+            updateStats();
         }
 
         // Init
-        document.addEventListener('DOMContentLoaded', updateLandingStats);
+        document.addEventListener('DOMContentLoaded', updateStats);
     </script>
 </body>
 
