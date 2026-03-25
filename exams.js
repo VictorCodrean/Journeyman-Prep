@@ -830,8 +830,8 @@ const REAL_EXAMS = {
             questions: [
                 {
                     text: "Electrical appliances are not connected in series because _____.",
-                    options: ["series circuits are complicated", "the power loss is too great", "appliances have different current ratings", "the voltage is the same"],
-                    correctIndex: 2,
+                    options: ["series circuits are complicated", "appliances have different current ratings", "the power loss is too great", "the voltage is the same"],
+                    correctIndex: 1,
                     explanation: "Appliances are designed for the same voltage but draw different currents. Series connection would cause unequal voltage drops and improper operation (NEC 210.3 and basic circuit theory)."
                 },
                 {
@@ -937,10 +937,10 @@ const REAL_EXAMS = {
                     explanation: "Total CMA = number of strands × CMA of one strand (NEC Chapter 9, Table 8)."
                 },
                 {
-                    text: "What is the total wattage of the circuit? [20 Ω series with parallel 12 Ω loads]",
+                    text: "What is the total wattage of the circuit? [20 Ω series with parallel 3-12 Ω loads, each 12 Ω load has 2ampers]",
                     options: ["1536 watts", "864 watts", "336 watts", "192 watts"],
                     correctIndex: 1,
-                    explanation: "Parallel 12 Ω loads = 4 Ω equivalent. Total R = 24 Ω. Current = 10 A. Power = I²R = 864 W (matches official book calculation)."
+                    explanation: "Parallel 12 Ω loads = 4 Ω equivalent. Total R = 24 Ω. Current = 6 A. Power = I²R = 864 W (matches official book calculation)."
                 },
                 {
                     text: "Which of the following statements is not an advantage of using an autotransformer?",
@@ -1089,8 +1089,8 @@ const REAL_EXAMS = {
                 },
                 {
                     text: "On a multi-wire, three-wire branch-circuit the maximum unbalanced load on the neutral conductor at anytime would be when _____.",
-                    options: ["the neutral is disconnected", "one hot leg is shut off", "both circuits are fully loaded", "both circuits are off"],
-                    correctIndex: 1,
+                    options: ["the neutral is disconnected", "both circuits are fully loaded", "one hot leg is shut off", "both circuits are off"],
+                    correctIndex: 2,
                     explanation: "When one leg is off, the neutral carries the full current of the remaining leg (NEC 210.4 and 220.61)."
                 },
                 {
