@@ -48,6 +48,9 @@
             color: var(--muted);
             font-size: 0.95rem;
         }
+        #progressBar {
+    box-shadow: 0 0 8px rgba(76, 201, 240, 0.6);
+}
 
         .container {
             padding: 1.25rem;
@@ -375,10 +378,26 @@
 
         <!-- Quiz View -->
         <section id="quizSection" class="section hidden">
-            <div class="row" style="margin-bottom:.5rem;">
+        <!-- Sticky Header with Timer + Smart Progress Bar -->
+        <div
+            style="position: sticky; top: 0; z-index: 100; background: var(--bg); padding: 12px 0 16px 0; margin-bottom: 1rem; border-bottom: 1px solid #334155;">
+            <div class="row">
                 <div id="quizTitle" style="font-weight:600;"></div>
                 <div class="timer" id="timer">Time: 30:00</div>
             </div>
+        
+            <!-- Smart Progress Bar -->
+            <div
+                style="margin-top: 14px; background: #334155; border-radius: 9999px; height: 12px; overflow: hidden; position: relative;">
+                <div id="progressBar" style="height: 100%; width: 0%; background: linear-gradient(90deg, #4cc9f0, #1e90ff); 
+                            transition: width 0.4s ease, background 0.4s ease;">
+                </div>
+                <span id="progressText" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); 
+                             font-size: 0.85rem; font-weight: 700; color: white; text-shadow: 0 1px 3px rgba(0,0,0,0.7); 
+                             pointer-events: none;">
+                </span>
+            </div>
+        </div>
             <div id="quizContent" class="quiz"></div>
             <div class="row" style="margin-top:1.5rem; justify-content: center;">
                 <button class="primary" onclick="submitExam()" style="padding: 0.8rem 2rem; font-size: 1.1rem;">
@@ -413,6 +432,7 @@
     <script src="exams.js"></script>
     <script>
         // ====================== STATE ======================
+        let totalQuestions = 0;
         let currentType = null;
         let currentExamIndex = 0;
         let userAnswers = {};
@@ -420,6 +440,28 @@
         let timeLeftSec = 1800;
         let isPaused = false;
         let wasPausedByBlur = false;
+
+       // Auto-save current exam answers every 5 seconds
+        let autoSaveInterval = null;
+
+        function startAutoSave() {
+            if (autoSaveInterval) clearInterval(autoSaveInterval);
+
+            autoSaveInterval = setInterval(() => {
+                if (currentType !== null && currentExamIndex !== undefined) {
+                    const currentAnswers = userAnswers[currentType]?.[currentExamIndex] || {};
+                    localStorage.setItem(`currentExam_${currentType}_${currentExamIndex}`,
+                        JSON.stringify(currentAnswers));
+                }
+            }, 5000); // every 5 seconds
+        }
+
+        function stopAutoSave() {
+            if (autoSaveInterval) {
+                clearInterval(autoSaveInterval);
+                autoSaveInterval = null;
+            }
+        }
 
         // New: Track missed questions globally
         let missedQuestions = {}; // key: "general_0_5" → {text, options, correctIndex, explanation, missCount}
@@ -521,59 +563,103 @@
         }
 
         function startExam(type, examIndex = 0) {
-            currentType = type;
-            currentExamIndex = examIndex;
-            userAnswers[currentType] = userAnswers[currentType] || {};
-            userAnswers[currentType][examIndex] = userAnswers[currentType][examIndex] || {};
+                currentType = type;
+                currentExamIndex = examIndex;
 
-            if (type === 'final') timeLeftSec = 10800;
-            else if (type === 'openbook') timeLeftSec = 3600;
-            else timeLeftSec = 1800;
+                // Initialize userAnswers structure if it doesn't exist
+                if (!userAnswers[currentType]) userAnswers[currentType] = {};
+                if (!userAnswers[currentType][currentExamIndex]) {
+                    userAnswers[currentType][currentExamIndex] = {};
+                }
 
-            isPaused = false;
-            wasPausedByBlur = false;
+                // === RESUME SAVED ANSWERS IF THEY EXIST ===
+                const savedKey = `currentExam_${type}_${examIndex}`;
+                const savedAnswers = localStorage.getItem(savedKey);
 
-            document.getElementById('landing').classList.add('hidden');
-            document.getElementById('quizSection').classList.remove('hidden');
+                if (savedAnswers) {
+                    try {
+                        const parsed = JSON.parse(savedAnswers);
+                        userAnswers[currentType][currentExamIndex] = parsed;
+                        console.log(`Resumed ${Object.keys(parsed).length} saved answers for this exam`);
+                    } catch (e) {
+                        console.warn("Failed to parse saved answers, starting fresh");
+                    }
+                }
 
-            renderFullQuiz();
-            startTimer();
-        }
+                // Set timer
+                if (type === 'final') timeLeftSec = 10800;
+                else if (type === 'openbook') timeLeftSec = 3600;
+                else timeLeftSec = 1800;
+
+                isPaused = false;
+                wasPausedByBlur = false;
+
+                document.getElementById('landing').classList.add('hidden');
+                document.getElementById('quizSection').classList.remove('hidden');
+
+                renderFullQuiz();
+                startTimer();
+                startAutoSave();        // ← Start auto-saving
+            }
 
         function renderFullQuiz() {
-            const exam = getCurrentExam();
-            if (!exam) return;
+                const exam = getCurrentExam();
+                if (!exam) return;
 
-            document.getElementById('quizTitle').textContent = exam.title;
-            const container = document.getElementById('quizContent');
-            container.innerHTML = '';
+                document.getElementById('quizTitle').textContent = exam.title;
+                const container = document.getElementById('quizContent');
+                container.innerHTML = '';
 
-            exam.questions.forEach((q, qIndex) => {
-                const block = document.createElement('div');
-                block.innerHTML = `
-                    <div class="question">Q${qIndex + 1}. ${q.text}</div>
-                    <div class="options">
-                        ${q.options.map((opt, i) => `
-                            <label class="option">
-                                <input type="radio" name="q_${qIndex}" value="${i}"
-                                    ${userAnswers[currentType]?.[currentExamIndex]?.[qIndex] === i ? 'checked' : ''}>
-                                <span>${String.fromCharCode(65 + i)}. ${opt}</span>
-                            </label>
-                        `).join('')}
-                    </div>
-                `;
+                totalQuestions = exam.questions.length;
 
-                block.querySelectorAll('input').forEach(inp => {
-                    inp.addEventListener('change', () => {
-                        if (!userAnswers[currentType][currentExamIndex])
-                            userAnswers[currentType][currentExamIndex] = {};
-                        userAnswers[currentType][currentExamIndex][qIndex] = parseInt(inp.value);
+                exam.questions.forEach((q, qIndex) => {
+                    const block = document.createElement('div');
+                    block.innerHTML = `
+            <div class="question">Q${qIndex + 1}. ${q.text}</div>
+            <div class="options">
+                ${q.options.map((opt, i) => `
+                    <label class="option">
+                        <input type="radio" name="q_${qIndex}" value="${i}"
+                            ${userAnswers[currentType]?.[currentExamIndex]?.[qIndex] === i ? 'checked' : ''}>
+                        <span>${String.fromCharCode(65 + i)}. ${opt}</span>
+                    </label>
+                `).join('')}
+            </div>
+        `;
+
+                    block.querySelectorAll('input').forEach(inp => {
+                        inp.addEventListener('change', () => {
+                            if (!userAnswers[currentType][currentExamIndex])
+                                userAnswers[currentType][currentExamIndex] = {};
+                            userAnswers[currentType][currentExamIndex][qIndex] = parseInt(inp.value);
+                            updateProgressBar();
+                        });
                     });
+
+                    container.appendChild(block);
                 });
 
-                container.appendChild(block);
-            });
-        }
+                updateProgressBar();   // Initial call
+            }
+         function updateProgressBar() {
+                const answered = Object.keys(userAnswers[currentType]?.[currentExamIndex] || {}).length;
+                const percent = totalQuestions > 0 ? Math.round((answered / totalQuestions) * 100) : 0;
+
+                const progressBar = document.getElementById('progressBar');
+                const progressText = document.getElementById('progressText');
+
+                if (!progressBar) return;
+
+                progressBar.style.width = `${percent}%`;
+                progressText.textContent = `${percent}%`;
+
+                // Change color when reaching 70%+
+                if (percent >= 70) {
+                    progressBar.style.background = 'linear-gradient(90deg, #28a745, #4ade80)';   // Green gradient
+                } else {
+                    progressBar.style.background = 'linear-gradient(90deg, #4cc9f0, #1e90ff)';   // Original blue
+                }
+            }
 
         function startTimer() {
             if (timerInterval) clearInterval(timerInterval);
@@ -620,48 +706,97 @@
         }
 
         function submitExam() {
-            if (timerInterval) clearInterval(timerInterval);
+                if (timerInterval) clearInterval(timerInterval);
+                stopAutoSave();
 
-            const exam = getCurrentExam();
-            if (!exam) return;
+                const exam = getCurrentExam();
+                if (!exam) return;
 
-            const answers = userAnswers[currentType]?.[currentExamIndex] || {};
-            let correctCount = 0;
+                const answers = userAnswers[currentType]?.[currentExamIndex] || {};
+                let correctCount = 0;
+                let answeredCount = 0;
 
-            exam.questions.forEach((q, i) => {
-                const userAns = answers[i];
+                exam.questions.forEach((q, i) => {
+                    const userAns = answers[i];
+                    if (userAns !== undefined) {
+                        answeredCount++;
+                        if (userAns === q.correctIndex) {
+                            correctCount++;
+                        } else {
+                            recordMissedQuestion(currentType, currentExamIndex, i, q);
+                        }
+                    } else {
+                        // Optional: record unanswered as missed
+                        recordMissedQuestion(currentType, currentExamIndex, i, q);
+                    }
+                    if (currentType !== null) {
+                        localStorage.removeItem(`currentExam_${currentType}_${currentExamIndex}`);
+                    }
+                });
 
-                if (userAns === q.correctIndex) {
-                    correctCount++;
-                } else if (userAns !== undefined) {   // Only record if user actually answered the question
-                    recordMissedQuestion(currentType, currentExamIndex, i, q);
-                }
-            });
+                const percent = Math.round((correctCount / exam.questions.length) * 100);
+                const passed = percent >= 70;
 
-            const percent = Math.round((correctCount / exam.questions.length) * 100);
-            let attempt = getAttempts(currentType, currentExamIndex) + 1;
+                let attempt = getAttempts(currentType, currentExamIndex) + 1;
 
-            localStorage.setItem(`attempts_${currentType}_${currentExamIndex}`, attempt);
-            localStorage.setItem(storageKey(currentType, currentExamIndex, attempt), JSON.stringify(answers));
+                localStorage.setItem(`attempts_${currentType}_${currentExamIndex}`, attempt);
+                localStorage.setItem(storageKey(currentType, currentExamIndex, attempt), JSON.stringify(answers));
 
-            document.getElementById('summaryContent').innerHTML = `
-        <p><strong>Score:</strong> ${percent}% (${correctCount} / ${exam.questions.length})</p>
-        <p>Attempt #${attempt}</p>
+                // Summary with Pass/Fail
+                document.getElementById('summaryContent').innerHTML = `
+        <p style="font-size: 1.4rem; margin: 1rem 0;">
+            <strong>Score:</strong> ${percent}% 
+            <span style="color: ${passed ? 'var(--green)' : 'var(--red)'}; font-weight: bold;">
+                (${passed ? '✅ PASS' : '❌ FAIL'})
+            </span>
+        </p>
+        <p><strong>Correct Answers:</strong> ${correctCount} / ${exam.questions.length}</p>
+        <p><strong>Attempt #${attempt}</strong></p>
+        ${answeredCount < exam.questions.length ?
+                        `<p style="color: var(--warning);">⚠️ ${exam.questions.length - answeredCount} question(s) were left unanswered.</p>` : ''}
+        ${!passed ? `<p style="color: var(--muted);">You need at least 70% to pass.</p>` : ''}
     `;
 
-            document.getElementById('quizSection').classList.add('hidden');
-            document.getElementById('summarySection').classList.remove('hidden');
-        }
+                document.getElementById('quizSection').classList.add('hidden');
+                document.getElementById('summarySection').classList.remove('hidden');
+
+                // Refresh missed questions and stats
+                renderMissedQuestionsGroup();
+                updateAllStats();
+                createGeneralExamCards();
+            createOpenBookCards();
+            createFinalCards();
+            }
+            function startFreshExam(type, examIndex) {
+                    if (confirm("This will clear all saved answers for this exam and start fresh.\n\nContinue?")) {
+                        localStorage.removeItem(`currentExam_${type}_${examIndex}`);
+                        startExam(type, examIndex);   // Now starts completely fresh
+                    }
+                }
 
         function returnToLanding() {
-            if (timerInterval) clearInterval(timerInterval);
-            document.getElementById('quizSection').classList.add('hidden');
-            document.getElementById('summarySection').classList.add('hidden');
-            document.getElementById('reviewSection').classList.add('hidden');
-            document.getElementById('landing').classList.remove('hidden');
-            updateAllStats();
-            renderMissedQuestionsGroup();   // Refresh missed questions
-        }
+                stopAutoSave();                    // ← Add this
+                if (timerInterval) clearInterval(timerInterval);
+
+                // Optional: clear temporary currentExam save when going back to home
+                if (currentType !== null) {
+                    localStorage.removeItem(`currentExam_${currentType}_${currentExamIndex}`);
+                }
+
+                document.getElementById('quizSection').classList.add('hidden');
+                document.getElementById('summarySection').classList.add('hidden');
+                document.getElementById('reviewSection').classList.add('hidden');
+                document.getElementById('landing').classList.remove('hidden');
+
+                updateAllStats();
+                renderMissedQuestionsGroup();
+                createGeneralExamCards();
+            createOpenBookCards();
+            createFinalCards();
+
+                currentType = null;
+                currentExamIndex = 0;
+            }
 
         function updateAllStats() {
             REAL_EXAMS.general.forEach((_, i) => updateSingleStats('general', i, `generalStats_${i}`));
@@ -739,59 +874,107 @@
             }
         }
         // ====================== CREATE CARDS ======================
-        function createGeneralExamCards() {
+     function createGeneralExamCards() {
             const container = document.getElementById('generalCardsContainer');
             container.innerHTML = '';
+
             REAL_EXAMS.general.forEach((exam, index) => {
+                const savedKey = `currentExam_general_${index}`;
+                const hasSave = localStorage.getItem(savedKey) !== null;
+
                 const card = document.createElement('div');
                 card.className = 'card';
+
                 card.innerHTML = `
-                    <h3 style="margin: 0.5rem 0;">${exam.title}</h3>
-                    <p style="color: var(--muted); font-size: 0.9rem; margin: 0.5rem 0 1rem;">
-                        ${exam.questions.length} questions • ${exam.timeMinutes || 30} min
-                    </p>
-                    <div id="generalStats_${index}" style="margin: 0.75rem 0; color: var(--muted); font-size: 0.9rem; line-height: 1.5;"></div>
-                    <button class="primary" onclick="startExam('general', ${index})">Start Exam #${index + 1}</button>
-                `;
+            <h3 style="margin: 0.5rem 0;">${exam.title}</h3>
+            <p style="color: var(--muted); font-size: 0.9rem; margin: 0.5rem 0 1rem;">
+                ${exam.questions.length} questions • ${exam.timeMinutes || 30} min
+            </p>
+            <div id="generalStats_${index}" style="margin: 0.75rem 0; color: var(--muted); font-size: 0.9rem; line-height: 1.5;"></div>
+            
+            <button class="primary" onclick="startExam('general', ${index})" 
+                    style="width:100%; margin-bottom: ${hasSave ? '8px' : '0'};">
+                ${hasSave ? '▶ Resume' : 'Start'} Exam #${index + 1}
+            </button>
+            
+            ${hasSave ? `
+            <button class="primary" onclick="startFreshExam('general', ${index})" 
+                    style="width:100%; background:#e11d48;">
+                Start Fresh (Clear Saved Answers)
+            </button>` : ''}
+        `;
+
                 container.appendChild(card);
             });
         }
 
-        function createOpenBookCards() {
+       function createOpenBookCards() {
             const container = document.getElementById('openbookCardsContainer');
             container.innerHTML = '';
+
             REAL_EXAMS.openbook.forEach((exam, index) => {
+                const savedKey = `currentExam_openbook_${index}`;
+                const hasSave = localStorage.getItem(savedKey) !== null;
+
                 const card = document.createElement('div');
                 card.className = 'card';
+
                 card.innerHTML = `
-                    <h3 style="margin: 0.5rem 0;">${exam.title}</h3>
-                    <p style="color: var(--muted); font-size: 0.9rem; margin: 0.5rem 0 1rem;">
-                        ${exam.questions.length} questions • 60 min
-                    </p>
-                    <div id="openbookStats_${index}" style="margin: 0.75rem 0; color: var(--muted); font-size: 0.9rem; line-height: 1.5;"></div>
-                    <button class="primary" onclick="startExam('openbook', ${index})">Start Open Book Exam #${index + 1}</button>
-                `;
+            <h3 style="margin: 0.5rem 0;">${exam.title}</h3>
+            <p style="color: var(--muted); font-size: 0.9rem; margin: 0.5rem 0 1rem;">
+                ${exam.questions.length} questions • 60 min
+            </p>
+            <div id="openbookStats_${index}" style="margin: 0.75rem 0; color: var(--muted); font-size: 0.9rem; line-height: 1.5;"></div>
+            
+            <button class="primary" onclick="startExam('openbook', ${index})" 
+                    style="width:100%; margin-bottom: ${hasSave ? '8px' : '0'};">
+                ${hasSave ? '▶ Resume' : 'Start'} Open Book Exam #${index + 1}
+            </button>
+            
+            ${hasSave ? `
+            <button class="primary" onclick="startFreshExam('openbook', ${index})" 
+                    style="width:100%; background:#e11d48;">
+                Start Fresh (Clear Saved Answers)
+            </button>` : ''}
+        `;
+
                 container.appendChild(card);
             });
         }
 
         function createFinalCards() {
-            const container = document.getElementById('finalCardsContainer');
-            container.innerHTML = '';
-            REAL_EXAMS.final.forEach((exam, index) => {
-                const card = document.createElement('div');
-                card.className = 'card';
-                card.innerHTML = `
-                    <h3 style="margin: 0.5rem 0;">${exam.title}</h3>
-                    <p style="color: var(--muted); font-size: 0.9rem; margin: 0.5rem 0 1rem;">
-                        ${exam.questions.length} questions • 180 min
-                    </p>
-                    <div id="finalStats_${index}" style="margin: 0.75rem 0; color: var(--muted); font-size: 0.9rem; line-height: 1.5;"></div>
-                    <button class="primary" onclick="startExam('final', ${index})">Start Final Exam</button>
-                `;
-                container.appendChild(card);
-            });
-        }
+                const container = document.getElementById('finalCardsContainer');
+                container.innerHTML = '';
+
+                REAL_EXAMS.final.forEach((exam, index) => {
+                    const savedKey = `currentExam_final_${index}`;
+                    const hasSave = localStorage.getItem(savedKey) !== null;
+
+                    const card = document.createElement('div');
+                    card.className = 'card';
+
+                    card.innerHTML = `
+            <h3 style="margin: 0.5rem 0;">${exam.title}</h3>
+            <p style="color: var(--muted); font-size: 0.9rem; margin: 0.5rem 0 1rem;">
+                ${exam.questions.length} questions • 180 min
+            </p>
+            <div id="finalStats_${index}" style="margin: 0.75rem 0; color: var(--muted); font-size: 0.9rem; line-height: 1.5;"></div>
+            
+            <button class="primary" onclick="startExam('final', ${index})" 
+                    style="width:100%; margin-bottom: ${hasSave ? '8px' : '0'};">
+                ${hasSave ? '▶ Resume' : 'Start'} Final Exam
+            </button>
+            
+            ${hasSave ? `
+            <button class="primary" onclick="startFreshExam('final', ${index})" 
+                    style="width:100%; background:#e11d48;">
+                Start Fresh (Clear Saved Answers)
+            </button>` : ''}
+        `;
+
+                    container.appendChild(card);
+                });
+            }
 
         function clearAllMissedQuestions() {
             if (confirm("Are you sure you want to clear ALL missed questions history?\n\nThis cannot be undone.")) {
@@ -843,5 +1026,6 @@
         function closeReview() {
             document.getElementById('reviewSection').classList.add('hidden');
         }
-
+        //Pass/Fail (70% validation like you asked)//
+        //  Progress bar during exam//
     </script>
