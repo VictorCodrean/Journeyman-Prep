@@ -1452,316 +1452,316 @@ const REAL_EXAMS = {
             ]
         },
         {
-            "id": "general_30",
-            "title": "General Knowledge Exam #30",
-            "timeMinutes": 30,
-            "questions": [
+            id: "general_30",
+            title: "General Knowledge Exam #30",
+            timeMinutes: 30,
+            questions: [
                 {
-                    "text": "Solenoids are made of what type of magnets?",
-                    "options": ["reverse", "permanent", "electro", "copper"],
-                    "correctIndex": 2,
-                    "explanation": "Solenoids use electromagnets (electro) — a coil around a core that becomes magnetic only when current flows (NEC 430.3 and electromagnetic device theory)."
+                    text: "Solenoids are made of what type of magnets?",
+                    options: ["reverse", "permanent", "electro", "copper"],
+                    correctIndex: 2,
+                    explanation: "Solenoids use electromagnets (electro) — a coil around a core that becomes magnetic only when current flows (NEC 430.3 and electromagnetic device theory)."
                 },
                 {
-                    "text": "To measure the RPM speed of a motor, you would use a/an _____.",
-                    "options": ["hydrometer", "bolometer", "tachometer", "odometer"],
-                    "correctIndex": 2,
-                    "explanation": "Tachometer measures rotational speed (RPM) of motors/shafts (standard instrumentation in NEC motor testing contexts)."
+                    text: "To measure the RPM speed of a motor, you would use a/an _____.",
+                    options: ["hydrometer", "bolometer", "tachometer", "odometer"],
+                    correctIndex: 2,
+                    explanation: "Tachometer measures rotational speed (RPM) of motors/shafts (standard instrumentation in NEC motor testing contexts)."
                 },
                 {
-                    "text": "Which of the following is not a factor in calculating the feeder conductor size?",
-                    "options": ["ambient temperature", "branch-circuit protection", "voltage drop", "demand factors"],
-                    "correctIndex": 1,
-                    "explanation": "Feeder sizing (NEC 215.2, 220) considers ambient temp, voltage drop, demand factors. Branch-circuit protection applies to branch circuits (210), not feeders."
+                    text: "Which of the following is not a factor in calculating the feeder conductor size?",
+                    options: ["ambient temperature", "branch-circuit protection", "voltage drop", "demand factors"],
+                    correctIndex: 1,
+                    explanation: "Feeder sizing (NEC 215.2, 220) considers ambient temp, voltage drop, demand factors. Branch-circuit protection applies to branch circuits (210), not feeders."
                 },
                 {
-                    "text": "_____ is a synthetic non-flammable insulating liquid, which when decomposed by electrical arcs, involves non-flammable gases.",
-                    "options": ["Prynol", "Askarel", "Electrolyte", "Hermetic"],
-                    "correctIndex": 1,
-                    "explanation": "Askarel (PCB-based) was a non-flammable insulating liquid in older transformers; decomposes to non-flammable gases (historical reference; modern use restricted)."
+                    text: "_____ is a synthetic non-flammable insulating liquid, which when decomposed by electrical arcs, involves non-flammable gases.",
+                    options: ["Prynol", "Askarel", "Electrolyte", "Hermetic"],
+                    correctIndex: 1,
+                    explanation: "Askarel (PCB-based) was a non-flammable insulating liquid in older transformers; decomposes to non-flammable gases (historical reference; modern use restricted)."
                 },
                 {
-                    "text": "Voltage drop in a conductor is _____.",
-                    "options": ["the conductor resistance times the voltage", "a function of insulation", "part of the load voltage", "a percentage of the applied voltage"],
-                    "correctIndex": 3,
-                    "explanation": "Voltage drop is expressed as a percentage of supply voltage (NEC 210.19(A) Informational Note, 215.2(A) Informational Note)."
+                    text: "Voltage drop in a conductor is _____.",
+                    options: ["the conductor resistance times the voltage", "a function of insulation", "part of the load voltage", "a percentage of the applied voltage"],
+                    correctIndex: 3,
+                    explanation: "Voltage drop is expressed as a percentage of supply voltage (NEC 210.19(A) Informational Note, 215.2(A) Informational Note)."
                 },
                 {
-                    "text": "The ratio of the maximum demand of the system to the total connected load of the system is called the _____ of the system.",
-                    "options": ["connected load", "nameplate", "demand factor", "turns-ratio"],
-                    "correctIndex": 2,
-                    "explanation": "Exact NEC Article 100 definition: Demand factor = Maximum demand / Total connected load."
+                    text: "The ratio of the maximum demand of the system to the total connected load of the system is called the _____ of the system.",
+                    options: ["connected load", "nameplate", "demand factor", "turns-ratio"],
+                    correctIndex: 2,
+                    explanation: "Exact NEC Article 100 definition: Demand factor = Maximum demand / Total connected load."
                 },
                 {
-                    "text": "Piezoelectric is caused by crystals or binding _____.",
-                    "options": ["heat", "pressure", "static", "chemical"],
-                    "correctIndex": 1,
-                    "explanation": "Piezoelectric effect generates voltage from mechanical pressure/stress on certain crystals (not heat or static)."
+                    text: "Piezoelectric is caused by crystals or binding _____.",
+                    options: ["heat", "pressure", "static", "chemical"],
+                    correctIndex: 1,
+                    explanation: "Piezoelectric effect generates voltage from mechanical pressure/stress on certain crystals (not heat or static)."
                 },
                 {
-                    "text": "Light fixtures hung by chains should be wired so that the _____.",
-                    "options": ["chain is not grounded", "wires support the light", "wires do not support the light", "light is insulated from the chain"],
-                    "correctIndex": 2,
-                    "explanation": "NEC 410.10(D) and 410.136 require mechanical support (chain) to bear weight; wires must not support fixture (strain relief)."
+                    text: "Light fixtures hung by chains should be wired so that the _____.",
+                    options: ["chain is not grounded", "wires support the light", "wires do not support the light", "light is insulated from the chain"],
+                    correctIndex: 2,
+                    explanation: "NEC 410.10(D) and 410.136 require mechanical support (chain) to bear weight; wires must not support fixture (strain relief)."
                 },
                 {
-                    "text": "When three equal resistors are connected in parallel, the total resistance is _____.",
-                    "options": ["the sum of the three resistors", "one-half of the sum of the three resistors", "less than any one resistor", "greater than any two equal resistors"],
-                    "correctIndex": 2,
-                    "explanation": "Parallel: 1/R_total = 1/R + 1/R + 1/R → R_total = R/3 (less than any single R) — fundamental circuit theory."
+                    text: "When three equal resistors are connected in parallel, the total resistance is _____.",
+                    options: ["the sum of the three resistors", "one-half of the sum of the three resistors", "less than any one resistor", "greater than any two equal resistors"],
+                    correctIndex: 2,
+                    explanation: "Parallel: 1/R_total = 1/R + 1/R + 1/R → R_total = R/3 (less than any single R) — fundamental circuit theory."
                 },
                 {
-                    "text": "A switch or breaker should disconnect the grounded conductors of a circuit _____.",
-                    "options": ["only with an isolating switch", "before disconnecting the hot conductors", "simultaneously as it disconnects the ungrounded conductors", "the grounded conductor can never be switched"],
-                    "correctIndex": 2,
-                    "explanation": "NEC 404.2(B): Switches/breakers shall disconnect grounded conductor simultaneously with ungrounded, or ensure grounded cannot open first (prevents neutral hazards)."
+                    text: "A switch or breaker should disconnect the grounded conductors of a circuit _____.",
+                    options: ["only with an isolating switch", "before disconnecting the hot conductors", "simultaneously as it disconnects the ungrounded conductors", "the grounded conductor can never be switched"],
+                    correctIndex: 2,
+                    explanation: "NEC 404.2(B): Switches/breakers shall disconnect grounded conductor simultaneously with ungrounded, or ensure grounded cannot open first (prevents neutral hazards)."
                 },
                 {
-                    "text": "The definition of ambient temperature is _____.",
-                    "options": ["the temperature of the conductor", "the insulation rating of the conductor", "the temperature of the area surrounding the conductor", "the maximum heat the insulation can be used within"],
-                    "correctIndex": 2,
-                    "explanation": "NEC 310.15(B) and Article 100: Ambient = temperature of surrounding medium (air/earth) where conductor is installed."
+                    text: "The definition of ambient temperature is _____.",
+                    options: ["the temperature of the conductor", "the insulation rating of the conductor", "the temperature of the area surrounding the conductor", "the maximum heat the insulation can be used within"],
+                    correctIndex: 2,
+                    explanation: "NEC 310.15(B) and Article 100: Ambient = temperature of surrounding medium (air/earth) where conductor is installed."
                 },
                 {
-                    "text": "For voltage and current to be in phase, _____.",
-                    "options": ["voltage and current appear at their zero and peak values at the same time", "the circuit impedance has only resistance", "neither (a) nor (b)", "both (a) and (b)"],
-                    "correctIndex": 3,
-                    "explanation": "Unity power factor (in phase) requires purely resistive impedance (no reactance) and simultaneous peaks/zeros (NEC power factor concepts)."
+                    text: "For voltage and current to be in phase, _____.",
+                    options: ["voltage and current appear at their zero and peak values at the same time", "the circuit impedance has only resistance", "neither (a) nor (b)", "both (a) and (b)"],
+                    correctIndex: 3,
+                    explanation: "Unity power factor (in phase) requires purely resistive impedance (no reactance) and simultaneous peaks/zeros (NEC power factor concepts)."
                 },
                 {
-                    "text": "Which of the following instruments would you use to indicate the phase relationship between the voltage and the current of an AC circuit?",
-                    "options": ["KWH meter", "power factor meter", "manometer", "growler"],
-                    "correctIndex": 1,
-                    "explanation": "Power factor meter measures phase angle between V and I (cos θ) directly."
+                    text: "Which of the following instruments would you use to indicate the phase relationship between the voltage and the current of an AC circuit?",
+                    options: ["KWH meter", "power factor meter", "manometer", "growler"],
+                    correctIndex: 1,
+                    explanation: "Power factor meter measures phase angle between V and I (cos θ) directly."
                 },
                 {
-                    "text": "A/an _____ conductor is one having one or more layers of non-conducting materials that are not recognized as electrical insulation.",
-                    "options": ["wrapped", "bare", "covered", "insulated"],
-                    "correctIndex": 2,
-                    "explanation": "NEC Article 100: Covered conductor = non-conducting layers not recognized as insulation (e.g., weatherproof covering; not certified for voltage like THWN)."
+                    text: "A/an _____ conductor is one having one or more layers of non-conducting materials that are not recognized as electrical insulation.",
+                    options: ["wrapped", "bare", "covered", "insulated"],
+                    correctIndex: 2,
+                    explanation: "NEC Article 100: Covered conductor = non-conducting layers not recognized as insulation (e.g., weatherproof covering; not certified for voltage like THWN)."
                 },
                 {
-                    "text": "_____ duty is a type of service where both the load and the time intervals may have wide variations.",
-                    "options": ["Continuous", "Periodic", "Intermittent", "Varying"],
-                    "correctIndex": 3,
-                    "explanation": "NEC Article 100: Varying Duty = loads and time intervals subject to wide variation."
+                    text: "_____ duty is a type of service where both the load and the time intervals may have wide variations.",
+                    options: ["Continuous", "Periodic", "Intermittent", "Varying"],
+                    correctIndex: 3,
+                    explanation: "NEC Article 100: Varying Duty = loads and time intervals subject to wide variation."
                 },
                 {
-                    "text": "A/an _____ overcurrent device is not designated to interrupt short-circuit current.",
-                    "options": ["inverse breaker", "dual-element fuse", "type S fuse", "thermal cutout"],
-                    "correctIndex": 3,
-                    "explanation": "Thermal cutouts protect via heat (overload) but lack short-circuit interrupting capability (NEC 240 series)."
+                    text: "A/an _____ overcurrent device is not designated to interrupt short-circuit current.",
+                    options: ["inverse breaker", "dual-element fuse", "type S fuse", "thermal cutout"],
+                    correctIndex: 3,
+                    explanation: "Thermal cutouts protect via heat (overload) but lack short-circuit interrupting capability (NEC 240 series)."
                 },
                 {
-                    "text": "Root-mean-square is also called the _____ voltage.",
-                    "options": ["average", "peak", "effective", "maximum"],
-                    "correctIndex": 2,
-                    "explanation": "RMS = effective value (produces same heating as DC in resistor) — used in NEC voltage/ampacity calcs."
+                    text: "Root-mean-square is also called the _____ voltage.",
+                    options: ["average", "peak", "effective", "maximum"],
+                    correctIndex: 2,
+                    explanation: "RMS = effective value (produces same heating as DC in resistor) — used in NEC voltage/ampacity calcs."
                 },
                 {
-                    "text": "Impedance is measured in _____.",
-                    "options": ["farads", "henrys", "ohms", "coulombs"],
-                    "correctIndex": 2,
-                    "explanation": "Impedance (Z) unit = ohms (Ω) — total opposition in AC (R + reactance)."
+                    text: "Impedance is measured in _____.",
+                    options: ["farads", "henrys", "ohms", "coulombs"],
+                    correctIndex: 2,
+                    explanation: "Impedance (Z) unit = ohms (Ω) — total opposition in AC (R + reactance)."
                 },
                 {
-                    "text": "The standard unit of electrical pressure is the _____.",
-                    "options": ["ampere", "watt", "volt", "watt-hour"],
-                    "correctIndex": 2,
-                    "explanation": "Volt (V) = unit of electromotive force/pressure (NEC Article 100)."
+                    text: "The standard unit of electrical pressure is the _____.",
+                    options: ["ampere", "watt", "volt", "watt-hour"],
+                    correctIndex: 2,
+                    explanation: "Volt (V) = unit of electromotive force/pressure (NEC Article 100)."
                 },
                 {
-                    "text": "The common fuse depends on the principle that the _____.",
-                    "options": ["current flow develops heat", "overvoltage will expand the link", "increase of resistance will occur", "voltage develops heat"],
-                    "correctIndex": 0,
-                    "explanation": "Fuses operate on I²R heating — current produces heat to melt link (NEC 240.4)."
+                    text: "The common fuse depends on the principle that the _____.",
+                    options: ["current flow develops heat", "overvoltage will expand the link", "increase of resistance will occur", "voltage develops heat"],
+                    correctIndex: 0,
+                    explanation: "Fuses operate on I²R heating — current produces heat to melt link (NEC 240.4)."
                 },
                 {
-                    "text": "Electro-magnetic devices usually have a/an _____ core.",
-                    "options": ["aluminum", "soft iron", "hard iron", "hard steel"],
-                    "correctIndex": 1,
-                    "explanation": "Soft iron minimizes hysteresis/eddy losses in electromagnets (relays, solenoids)."
+                    text: "Electro-magnetic devices usually have a/an _____ core.",
+                    options: ["aluminum", "soft iron", "hard iron", "hard steel"],
+                    correctIndex: 1,
+                    explanation: "Soft iron minimizes hysteresis/eddy losses in electromagnets (relays, solenoids)."
                 },
                 {
-                    "text": "When a current leaves its intended path and returns to the source, bypassing the load, the circuit is _____.",
-                    "options": ["broken", "open", "shorted", "incomplete"],
-                    "correctIndex": 2,
-                    "explanation": "Short circuit: low-resistance path bypasses load (high current) — NEC requires protection."
+                    text: "When a current leaves its intended path and returns to the source, bypassing the load, the circuit is _____.",
+                    options: ["broken", "open", "shorted", "incomplete"],
+                    correctIndex: 2,
+                    explanation: "Short circuit: low-resistance path bypasses load (high current) — NEC requires protection."
                 },
                 {
-                    "text": "The greater number of free electrons, the better the _____ of a metal.",
-                    "options": ["voltage drop", "resistance", "conductivity", "insulation value"],
-                    "correctIndex": 2,
-                    "explanation": "More free electrons → higher conductivity (lower resistance) — basis for conductor selection."
+                    text: "The greater number of free electrons, the better the _____ of a metal.",
+                    options: ["voltage drop", "resistance", "conductivity", "insulation value"],
+                    correctIndex: 2,
+                    explanation: "More free electrons → higher conductivity (lower resistance) — basis for conductor selection."
                 },
                 {
-                    "text": "The heating of two different metals will cause _____.",
-                    "options": ["corrosion", "electron flow", "galvanic action", "fusion"],
-                    "correctIndex": 2,
-                    "explanation": "Dissimilar metals → galvanic corrosion (voltaic cell) — NEC 250.70 warns of this in connections."
+                    text: "The heating of two different metals will cause _____.",
+                    options: ["corrosion", "electron flow", "galvanic action", "fusion"],
+                    correctIndex: 2,
+                    explanation: "Dissimilar metals → galvanic corrosion (voltaic cell) — NEC 250.70 warns of this in connections."
                 },
                 {
-                    "text": "The switches to be closed in order to obtain a combined resistance of 5 ohms are _____.",
-                    "options": ["1 and 3", "2 and 3", "1 and 2", "1 and 4"],
-                    "correctIndex": 0,
-                    "explanation": "SW1 closes two 10Ω in parallel = 5Ω. SW3 places it in path (total 5Ω). Matches diagram and book explanation."
+                    text: "The switches to be closed in order to obtain a combined resistance of 5 ohms are _____.",
+                    options: ["1 and 3", "2 and 3", "1 and 2", "1 and 4"],
+                    correctIndex: 0,
+                    explanation: "SW1 closes two 10Ω in parallel = 5Ω. SW3 places it in path (total 5Ω). Matches diagram and book explanation."
                 }
             ]
         },
         {
-            "id": "general_31",
-            "title": "General Knowledge Exam #31",
-            "timeMinutes": 30,
-            "questions": [
+            id: "general_31",
+            title: "General Knowledge Exam #31",
+            timeMinutes: 30,
+            questions: [
                 {
-                    "text": "An autotransformer is generally used rather than an isolation transformer _____.",
-                    "options": ["when cost is a factor", "where the ratio of transformation is low", "when you have several branch-circuits", "when safety is a factor"],
-                    "correctIndex": 1,
-                    "explanation": "Autotransformers are preferred when the turns ratio is low (small voltage change) because they are cheaper, smaller, and more efficient than isolation transformers (which provide full galvanic isolation). NEC 450.3 requires isolation for certain hazardous locations, but autotransformers are allowed elsewhere when cost and space are factors."
+                    text: "An autotransformer is generally used rather than an isolation transformer _____.",
+                    options: ["when cost is a factor", "where the ratio of transformation is low", "when you have several branch-circuits", "when safety is a factor"],
+                    correctIndex: 1,
+                    explanation: "Autotransformers are preferred when the turns ratio is low (small voltage change) because they are cheaper, smaller, and more efficient than isolation transformers (which provide full galvanic isolation). NEC 450.3 requires isolation for certain hazardous locations, but autotransformers are allowed elsewhere when cost and space are factors."
                 },
                 {
-                    "text": "The vector sum of the phase currents is equal to what in a balanced, resistive three-phase system?",
-                    "options": ["Phase current x power factor", "Zero", "1.732 x phase current", "Three x phase current"],
-                    "correctIndex": 1,
-                    "explanation": "In a balanced three-phase resistive (unity PF) system, the vector sum of the three phase currents is zero because they are 120° apart and equal in magnitude (phasor addition cancels out). This is fundamental three-phase theory (NEC 220.61 for neutral calculations in balanced loads)."
+                    text: "The vector sum of the phase currents is equal to what in a balanced, resistive three-phase system?",
+                    options: ["Phase current x power factor", "Zero", "1.732 x phase current", "Three x phase current"],
+                    correctIndex: 1,
+                    explanation: "In a balanced three-phase resistive (unity PF) system, the vector sum of the three phase currents is zero because they are 120° apart and equal in magnitude (phasor addition cancels out). This is fundamental three-phase theory (NEC 220.61 for neutral calculations in balanced loads)."
                 },
                 {
-                    "text": "When referring to an \"8-32\" machine bolt, the \"32\" refers to the _____.",
-                    "options": ["threads per inch", "length of the bolt", "diameter", "strength"],
-                    "correctIndex": 0,
-                    "explanation": "In standard machine screw/bolt nomenclature (Unified Inch Series), the second number (e.g., 32) indicates threads per inch (TPI). The first number (8) is the diameter size. NEC 314.28 and 110.12 require secure fastening hardware in boxes/enclosures."
+                    text: "When referring to an \"8-32\" machine bolt, the \"32\" refers to the _____.",
+                    options: ["threads per inch", "length of the bolt", "diameter", "strength"],
+                    correctIndex: 0,
+                    explanation: "In standard machine screw/bolt nomenclature (Unified Inch Series), the second number (e.g., 32) indicates threads per inch (TPI). The first number (8) is the diameter size. NEC 314.28 and 110.12 require secure fastening hardware in boxes/enclosures."
                 },
                 {
-                    "text": "A motor works on the principles of _____.",
-                    "options": ["magnetism", "mechanical force", "residual force", "chemical action"],
-                    "correctIndex": 0,
-                    "explanation": "Electric motors operate on electromagnetic principles — current in conductors produces magnetic fields that interact to create torque (Lorentz force). NEC Article 430 covers motor circuits and protection based on this."
+                    text: "A motor works on the principles of _____.",
+                    options: ["magnetism", "mechanical force", "residual force", "chemical action"],
+                    correctIndex: 0,
+                    explanation: "Electric motors operate on electromagnetic principles — current in conductors produces magnetic fields that interact to create torque (Lorentz force). NEC Article 430 covers motor circuits and protection based on this."
                 },
                 {
-                    "text": "The current used for charging storage batteries is _____.",
-                    "options": ["direct", "positive", "alternating", "negative"],
-                    "correctIndex": 0,
-                    "explanation": "Storage batteries (lead-acid, etc.) require direct current (DC) for charging to reverse the chemical reaction properly. Alternating current would cause gassing and damage. NEC 480 covers stationary storage batteries and charging systems."
+                    text: "The current used for charging storage batteries is _____.",
+                    options: ["direct", "positive", "alternating", "negative"],
+                    correctIndex: 0,
+                    explanation: "Storage batteries (lead-acid, etc.) require direct current (DC) for charging to reverse the chemical reaction properly. Alternating current would cause gassing and damage. NEC 480 covers stationary storage batteries and charging systems."
                 },
                 {
-                    "text": "Lubrication would never be applied to a _____.",
-                    "options": ["bearing", "knife switch", "controller drum", "commutator"],
-                    "correctIndex": 3,
-                    "explanation": "Commutators on DC motors must remain clean and dry — lubricant would cause arcing, poor contact, and rapid wear. Bearings, knife switches, and controller drums require lubrication per manufacturer instructions (NEC 430.14 for motor maintenance)."
+                    text: "Lubrication would never be applied to a _____.",
+                    options: ["bearing", "knife switch", "controller drum", "commutator"],
+                    correctIndex: 3,
+                    explanation: "Commutators on DC motors must remain clean and dry — lubricant would cause arcing, poor contact, and rapid wear. Bearings, knife switches, and controller drums require lubrication per manufacturer instructions (NEC 430.14 for motor maintenance)."
                 },
                 {
-                    "text": "When the power factor in a given circuit is unity, the reactive power is _____.",
-                    "options": ["at maximum", "1.1414", "zero", "a negative quantity"],
-                    "correctIndex": 2,
-                    "explanation": "Power factor = 1 (unity) means purely resistive circuit — no reactive power (VARs = 0). All apparent power (VA) is real power (W). NEC uses PF in motor and load calculations (e.g., 220.14, 430.6)."
+                    text: "When the power factor in a given circuit is unity, the reactive power is _____.",
+                    options: ["at maximum", "1.1414", "zero", "a negative quantity"],
+                    correctIndex: 2,
+                    explanation: "Power factor = 1 (unity) means purely resistive circuit — no reactive power (VARs = 0). All apparent power (VA) is real power (W). NEC uses PF in motor and load calculations (e.g., 220.14, 430.6)."
                 },
                 {
-                    "text": "Materials containing numerous free electrons are _____.",
-                    "options": ["good insulators", "ferrous alloys", "good conductors", "carbons"],
-                    "correctIndex": 2,
-                    "explanation": "High free electron density = high electrical conductivity (e.g., copper, silver, gold). Insulators have few free electrons. NEC conductor tables (Chapter 9, Table 8) base ampacity/resistance on this property."
+                    text: "Materials containing numerous free electrons are _____.",
+                    options: ["good insulators", "ferrous alloys", "good conductors", "carbons"],
+                    correctIndex: 2,
+                    explanation: "High free electron density = high electrical conductivity (e.g., copper, silver, gold). Insulators have few free electrons. NEC conductor tables (Chapter 9, Table 8) base ampacity/resistance on this property."
                 },
                 {
-                    "text": "If frequency is constant regardless of voltage or current change, the inductive reactance of a circuit will _____.",
-                    "options": ["remain constant regardless of voltage or current change", "vary with voltage", "vary with current", "vary directly with impedance"],
-                    "correctIndex": 0,
-                    "explanation": "Inductive reactance XL = 2πfL — depends only on frequency (f) and inductance (L), not voltage or current. Constant frequency → constant XL (fundamental AC theory)."
+                    text: "If frequency is constant regardless of voltage or current change, the inductive reactance of a circuit will _____.",
+                    options: ["remain constant regardless of voltage or current change", "vary with voltage", "vary with current", "vary directly with impedance"],
+                    correctIndex: 0,
+                    explanation: "Inductive reactance XL = 2πfL — depends only on frequency (f) and inductance (L), not voltage or current. Constant frequency → constant XL (fundamental AC theory)."
                 },
                 {
-                    "text": "An isolating switch is one that is _____.",
-                    "options": ["intended for cutting off an electrical circuit from its source of power", "required to have a padlock", "primarily used with an isolation transformer", "used only for heavy motor overloads"],
-                    "correctIndex": 0,
-                    "explanation": "NEC Article 100 defines isolating switch as a device to disconnect a circuit from its power source (no load-breaking required). Often padlockable for safety (NEC 408.22), but primary purpose is isolation."
+                    text: "An isolating switch is one that is _____.",
+                    options: ["intended for cutting off an electrical circuit from its source of power", "required to have a padlock", "primarily used with an isolation transformer", "used only for heavy motor overloads"],
+                    correctIndex: 0,
+                    explanation: "NEC Article 100 defines isolating switch as a device to disconnect a circuit from its power source (no load-breaking required). Often padlockable for safety (NEC 408.22), but primary purpose is isolation."
                 },
                 {
-                    "text": "If the maximum current on a circuit is 70 amperes, the ammeter will read _____.",
-                    "options": ["70 amps", "60.4 amperes", "49.49 amperes", "40.62 amperes"],
-                    "correctIndex": 2,
-                    "explanation": "Ammeter reads RMS current in AC. For peak = 70 A, RMS = peak / √2 ≈ 70 / 1.414 ≈ 49.49 A (standard AC measurement per NEC instrumentation)."
+                    text: "If the maximum current on a circuit is 70 amperes, the ammeter will read _____.",
+                    options: ["70 amps", "60.4 amperes", "49.49 amperes", "40.62 amperes"],
+                    correctIndex: 2,
+                    explanation: "Ammeter reads RMS current in AC. For peak = 70 A, RMS = peak / √2 ≈ 70 / 1.414 ≈ 49.49 A (standard AC measurement per NEC instrumentation)."
                 },
                 {
-                    "text": "Two 500 watt lamps connected in series across a 120 volt, the total wattage consumed is _____.",
-                    "options": ["1000 watts", "500 watts", "250 watts", "200 watts"],
-                    "correctIndex": 2,
-                    "explanation": "In series, each lamp sees 60 V (120/2). At half voltage, power = (V/2)^2 / R = 1/4 original → 500/4 = 125 W each → total 250 W. (Ohm’s Law + series circuit)."
+                    text: "Two 500 watt lamps connected in series across a 120 volt, the total wattage consumed is _____.",
+                    options: ["1000 watts", "500 watts", "250 watts", "200 watts"],
+                    correctIndex: 2,
+                    explanation: "In series, each lamp sees 60 V (120/2). At half voltage, power = (V/2)^2 / R = 1/4 original → 500/4 = 125 W each → total 250 W. (Ohm’s Law + series circuit)."
                 },
                 {
-                    "text": "A substance that would be good as an electrical insulation is which of the following?",
-                    "options": ["carbon", "oil", "lead", "iron"],
-                    "correctIndex": 1,
-                    "explanation": "Oil (mineral/transformer oil) is an excellent dielectric insulator (high breakdown voltage). Carbon, lead, and iron are conductors. NEC 110.11 and 450.26 reference insulating oils in transformers."
+                    text: "A substance that would be good as an electrical insulation is which of the following?",
+                    options: ["carbon", "oil", "lead", "iron"],
+                    correctIndex: 1,
+                    explanation: "Oil (mineral/transformer oil) is an excellent dielectric insulator (high breakdown voltage). Carbon, lead, and iron are conductors. NEC 110.11 and 450.26 reference insulating oils in transformers."
                 },
                 {
-                    "text": "High AC voltages are usually measured using a _____.",
-                    "options": ["potential transformer and voltmeter", "current transformer and a voltmeter", "galvanometer in parallel", "manometer in series with a voltmeter"],
-                    "correctIndex": 0,
-                    "explanation": "Potential transformers (PTs) step down high voltage for safe measurement with a standard voltmeter (NEC 110.27 for guarding live parts >600 V)."
+                    text: "High AC voltages are usually measured using a _____.",
+                    options: ["potential transformer and voltmeter", "current transformer and a voltmeter", "galvanometer in parallel", "manometer in series with a voltmeter"],
+                    correctIndex: 0,
+                    explanation: "Potential transformers (PTs) step down high voltage for safe measurement with a standard voltmeter (NEC 110.27 for guarding live parts >600 V)."
                 },
                 {
-                    "text": "The decimal equivalent of 5/8\" is _____.",
-                    "options": ["0.652", "0.500", "0.875", "0.625"],
-                    "correctIndex": 3,
-                    "explanation": "5 ÷ 8 = 0.625 (direct division). Common in conduit/bending measurements (NEC Chapter 9 Tables)."
+                    text: "The decimal equivalent of 5/8\" is _____.",
+                    options: ["0.652", "0.500", "0.875", "0.625"],
+                    correctIndex: 3,
+                    explanation: "5 ÷ 8 = 0.625 (direct division). Common in conduit/bending measurements (NEC Chapter 9 Tables)."
                 },
                 {
-                    "text": "If a 10Ω, a 20Ω and a 30Ω resistor are connected in series across a 120 volt source, the voltage across the 20Ω resistor will be _____ volts.",
-                    "options": ["20", "40", "60", "none of these"],
-                    "correctIndex": 1,
-                    "explanation": "Total R = 10 + 20 + 30 = 60 Ω. I = 120 / 60 = 2 A. V across 20 Ω = I × R = 2 × 20 = 40 V (Ohm’s Law, series voltage division)."
+                    text: "If a 10Ω, a 20Ω and a 30Ω resistor are connected in series across a 120 volt source, the voltage across the 20Ω resistor will be _____ volts.",
+                    options: ["20", "40", "60", "none of these"],
+                    correctIndex: 1,
+                    explanation: "Total R = 10 + 20 + 30 = 60 Ω. I = 120 / 60 = 2 A. V across 20 Ω = I × R = 2 × 20 = 40 V (Ohm’s Law, series voltage division)."
                 },
                 {
-                    "text": "A one-eighth bend in a conduit is equivalent to an angle of _____ degrees.",
-                    "options": ["33", "45", "18", "22"],
-                    "correctIndex": 1,
-                    "explanation": "One-eighth bend = 360° / 8 = 45°. Standard in conduit bending (NEC 344.24, 358.24 for field bends)."
+                    text: "A one-eighth bend in a conduit is equivalent to an angle of _____ degrees.",
+                    options: ["33", "45", "18", "22"],
+                    correctIndex: 1,
+                    explanation: "One-eighth bend = 360° / 8 = 45°. Standard in conduit bending (NEC 344.24, 358.24 for field bends)."
                 },
                 {
-                    "text": "Which one of the following is known as an actuating control?",
-                    "options": ["thermostat", "relay", "manometer", "galvanometer"],
-                    "correctIndex": 1,
-                    "explanation": "Relay is an electromechanical actuating device — uses small current to control larger load (NEC Article 100 definition of controller/relay)."
+                    text: "Which one of the following is known as an actuating control?",
+                    options: ["thermostat", "relay", "manometer", "galvanometer"],
+                    correctIndex: 1,
+                    explanation: "Relay is an electromechanical actuating device — uses small current to control larger load (NEC Article 100 definition of controller/relay)."
                 },
                 {
-                    "text": "A cycle counter would be used in testing _____.",
-                    "options": ["motors", "transformers", "ammeters", "relays"],
-                    "correctIndex": 3,
-                    "explanation": "Cycle counters track contact operations in relays/contactors to monitor wear/life (common in control testing)."
+                    text: "A cycle counter would be used in testing _____.",
+                    options: ["motors", "transformers", "ammeters", "relays"],
+                    correctIndex: 3,
+                    explanation: "Cycle counters track contact operations in relays/contactors to monitor wear/life (common in control testing)."
                 },
                 {
-                    "text": "The electrolyte of a storage battery is formed by the dissolving of _____ in water.",
-                    "options": ["sulphuric acid", "hydrochloric acid", "lye", "soda"],
-                    "correctIndex": 0,
-                    "explanation": "Lead-acid batteries use sulfuric acid (H₂SO₄) diluted in water as electrolyte. NEC 480.4 requires proper handling of battery electrolytes."
+                    text: "The electrolyte of a storage battery is formed by the dissolving of _____ in water.",
+                    options: ["sulphuric acid", "hydrochloric acid", "lye", "soda"],
+                    correctIndex: 0,
+                    explanation: "Lead-acid batteries use sulfuric acid (H₂SO₄) diluted in water as electrolyte. NEC 480.4 requires proper handling of battery electrolytes."
                 },
                 {
-                    "text": "Orangeburg pipe is _____.",
-                    "options": ["nonmetallic of fiber", "cast iron", "galvanized steel", "lead coated"],
-                    "correctIndex": 0,
-                    "explanation": "Orangeburg = bituminized fiber pipe (nonmetallic, historical underground conduit). Not permitted in modern NEC for most uses (deprecated)."
+                    text: "Orangeburg pipe is _____.",
+                    options: ["nonmetallic of fiber", "cast iron", "galvanized steel", "lead coated"],
+                    correctIndex: 0,
+                    explanation: "Orangeburg = bituminized fiber pipe (nonmetallic, historical underground conduit). Not permitted in modern NEC for most uses (deprecated)."
                 },
                 {
-                    "text": "Which of the following will have the least effect on the voltage drop of a branch circuit?",
-                    "options": ["the size of the conductors", "the amount of the load", "whether the source is 50 hz or 60 hz", "the length of the conductors"],
-                    "correctIndex": 2,
-                    "explanation": "Voltage drop (VD = I × R × L) is DC/resistive in nature; frequency (50/60 Hz) has negligible effect on resistive circuits (no significant reactance in typical branch circuits). NEC 210.19(A) Informational Note."
+                    text: "Which of the following will have the least effect on the voltage drop of a branch circuit?",
+                    options: ["the size of the conductors", "the amount of the load", "whether the source is 50 hz or 60 hz", "the length of the conductors"],
+                    correctIndex: 2,
+                    explanation: "Voltage drop (VD = I × R × L) is DC/resistive in nature; frequency (50/60 Hz) has negligible effect on resistive circuits (no significant reactance in typical branch circuits). NEC 210.19(A) Informational Note."
                 },
                 {
-                    "text": "A low value of reactive volt-amperes in an AC circuit compared with the wattage would indicate _____.",
-                    "options": ["unity power factor", "high power factor", "maximum current for the load", "very low efficiency"],
-                    "correctIndex": 1,
-                    "explanation": "Low VARs relative to watts → high power factor (PF close to 1). PF = W / VA; high PF = low reactive component."
+                    text: "A low value of reactive volt-amperes in an AC circuit compared with the wattage would indicate _____.",
+                    options: ["unity power factor", "high power factor", "maximum current for the load", "very low efficiency"],
+                    correctIndex: 1,
+                    explanation: "Low VARs relative to watts → high power factor (PF close to 1). PF = W / VA; high PF = low reactive component."
                 },
                 {
-                    "text": "If a light bulb rated 100 watts @ 120 volts is connected across a 240 volt source, the wattage would be _____.",
-                    "options": ["100 watts", "200 watts", "300 watts", "400 watts"],
-                    "correctIndex": 3,
-                    "explanation": "Power scales with V². At double voltage, power = 100 × (240/120)² = 100 × 4 = 400 W (bulb would burn out quickly)."
+                    text: "If a light bulb rated 100 watts @ 120 volts is connected across a 240 volt source, the wattage would be _____.",
+                    options: ["100 watts", "200 watts", "300 watts", "400 watts"],
+                    correctIndex: 3,
+                    explanation: "Power scales with V². At double voltage, power = 100 × (240/120)² = 100 × 4 = 400 W (bulb would burn out quickly)."
                 },
                 {
-                    "text": "With only switch 4 closed and a line voltage of 225 volts, the drop across one of the 10 ohm resistors is _____ volts.",
-                    "options": ["225", "90", "64.3", "56.3"],
-                    "correctIndex": 1,
-                    "explanation": "SW4 closed: 20 Ω in series with parallel (10 Ω || 5 Ω + 10 Ω) = 20 Ω + (5 Ω || 20 Ω) wait—diagram shows SW4 shorts to place 20 Ω across part. Per book: total R = 25 Ω, I = 225 / 25 = 9 A, V across 10 Ω = 9 × 10 = 90 V."
+                    text: "With only switch 4 closed and a line voltage of 225 volts, the drop across one of the 10 ohm resistors is _____ volts.",
+                    options: ["225", "90", "64.3", "56.3"],
+                    correctIndex: 1,
+                    explanation: "SW4 closed: 20 Ω in series with parallel (10 Ω || 5 Ω + 10 Ω) = 20 Ω + (5 Ω || 20 Ω) wait—diagram shows SW4 shorts to place 20 Ω across part. Per book: total R = 25 Ω, I = 225 / 25 = 9 A, V across 10 Ω = 9 × 10 = 90 V."
                 }
             ]
         }
@@ -2095,213 +2095,213 @@ const REAL_EXAMS = {
             title: "Journeyman Open Book Final Exam – 2023 NEC (Simulated)",
             questions: [
                 {
-                    "text": "60% is equivalent to ______.",
-                    "options": ["5/8", "3/5", "2/5", "5/16"],
-                    "correctIndex": 1,
-                    "explanation": "3 ÷ 5 = 0.6 = 60% (3/5)"
+                    text: "60% is equivalent to ______.",
+                    options: ["5/8", "3/5", "2/5", "5/16"],
+                    correctIndex: 1,
+                    explanation: "3 ÷ 5 = 0.6 = 60% (3/5)"
                 },
                 {
-                    "text": "Each section of equipment that requires rear or side access to make field connections shall be so marked by the manufacturer on the ______.",
-                    "options": ["front", "right side", "left side", "rear"],
-                    "correctIndex": 0,
-                    "explanation": "408.18(C) – front"
+                    text: "Each section of equipment that requires rear or side access to make field connections shall be so marked by the manufacturer on the ______.",
+                    options: ["front", "right side", "left side", "rear"],
+                    correctIndex: 0,
+                    explanation: "408.18(C) – front"
                 },
                 {
-                    "text": "In other than one- and two-family dwellings, a receptacle outlet for indoor service equipment shall be located within ______ of the service equipment.",
-                    "options": ["25 feet", "50 feet", "75 feet", "the same room or area"],
-                    "correctIndex": 3,
-                    "explanation": "230.63(B)(1) – same room or area"
+                    text: "In other than one- and two-family dwellings, a receptacle outlet for indoor service equipment shall be located within ______ of the service equipment.",
+                    options: ["25 feet", "50 feet", "75 feet", "the same room or area"],
+                    correctIndex: 3,
+                    explanation: "230.63(B)(1) – same room or area"
                 },
                 {
-                    "text": "Disregarding demand factors, the calculated lighting load for a 5,000 sq ft office building is ______ volt-amperes.",
-                    "options": ["16,500", "15,400", "8,000", "6,500"],
-                    "correctIndex": 0,
-                    "explanation": "Table 220.42 – 5,000 × 3.3 VA/ft² = 16,500 VA"
+                    text: "Disregarding demand factors, the calculated lighting load for a 5,000 sq ft office building is ______ volt-amperes.",
+                    options: ["16,500", "15,400", "8,000", "6,500"],
+                    correctIndex: 0,
+                    explanation: "Table 220.42 – 5,000 × 3.3 VA/ft² = 16,500 VA"
                 },
                 {
-                    "text": "Switch S1 is in the \"ON\" position, but the light does not come on. Voltage across L1 is 120 V. Voltage across S1 is 0 V. The light does not come on because ______.",
-                    "options": [
+                    text: "Switch S1 is in the \"ON\" position, but the light does not come on. Voltage across L1 is 120 V. Voltage across S1 is 0 V. The light does not come on because ______.",
+                    options: [
                         "the light is open (bulb burned out)",
                         "the light and switch are shorted out",
                         "the light is good but the switch does not make contact",
                         "there is a break in the wiring of the circuit"
                     ],
-                    "correctIndex": 0,
-                    "explanation": "Full voltage across load + 0 V across switch = open load (burned-out bulb)"
+                    correctIndex: 0,
+                    explanation: "Full voltage across load + 0 V across switch = open load (burned-out bulb)"
                 },
                 {
-                    "text": "Decorative lighting and similar accessories used for holiday lighting and similar purposes shall be listed and ______.",
-                    "options": ["marked", "approved", "labeled", "stamped"],
-                    "correctIndex": 2,
-                    "explanation": "590.5 – listed and labeled"
+                    text: "Decorative lighting and similar accessories used for holiday lighting and similar purposes shall be listed and ______.",
+                    options: ["marked", "approved", "labeled", "stamped"],
+                    correctIndex: 2,
+                    explanation: "590.5 – listed and labeled"
                 },
                 {
-                    "text": "Insulated conductors used inside switchgear or switchboards are required to be ______.",
-                    "options": ["suitable", "labeled", "acceptable", "listed"],
-                    "correctIndex": 3,
-                    "explanation": "408.19 – listed"
+                    text: "Insulated conductors used inside switchgear or switchboards are required to be ______.",
+                    options: ["suitable", "labeled", "acceptable", "listed"],
+                    correctIndex: 3,
+                    explanation: "408.19 – listed"
                 },
                 {
-                    "text": "Balconies, decks, and porches that are accessible from inside the dwelling unit shall have at least one receptacle outlet accessible from the balcony, deck, or porch walking surface. The receptacle shall not be located more than ______ above the balcony, deck, or porch.",
-                    "options": ["36\"", "48\"", "60\"", "78\""],
-                    "correctIndex": 3,
-                    "explanation": "210.52(E)(3) – 78 inches"
+                    text: "Balconies, decks, and porches that are accessible from inside the dwelling unit shall have at least one receptacle outlet accessible from the balcony, deck, or porch walking surface. The receptacle shall not be located more than ______ above the balcony, deck, or porch.",
+                    options: ["36\"", "48\"", "60\"", "78\""],
+                    correctIndex: 3,
+                    explanation: "210.52(E)(3) – 78 inches"
                 },
                 {
-                    "text": "An acceptable color for ungrounded conductors is ______.",
-                    "options": ["green", "gray", "pink", "white"],
-                    "correctIndex": 2,
-                    "explanation": "200.6 / 310.110 / 215.12(C) – pink permitted"
+                    text: "An acceptable color for ungrounded conductors is ______.",
+                    options: ["green", "gray", "pink", "white"],
+                    correctIndex: 2,
+                    explanation: "200.6 / 310.110 / 215.12(C) – pink permitted"
                 },
                 {
-                    "text": "The calculated load of a 12 foot length of fixed multioutlet assembly in a commercial facility is ______ volt-amperes if the appliances it supplies are not likely to be used at the same time.",
-                    "options": ["1000", "720", "540", "380"],
-                    "correctIndex": 2,
-                    "explanation": "220.14(H) – 180 VA/ft × 3 ft (after first 5 ft free) = 540 VA"
+                    text: "The calculated load of a 12 foot length of fixed multioutlet assembly in a commercial facility is ______ volt-amperes if the appliances it supplies are not likely to be used at the same time.",
+                    options: ["1000", "720", "540", "380"],
+                    correctIndex: 2,
+                    explanation: "220.14(H) – 180 VA/ft × 3 ft (after first 5 ft free) = 540 VA"
                 },
                 {
-                    "text": "In a dwelling bedroom, any wall space ______ or more in width (including space measured around corners) and unbroken along the floor line by doorways and similar openings, fireplaces, and fixed cabinets that do not have countertops or similar work surfaces shall have a receptacle.",
-                    "options": ["18\"", "24\"", "30\"", "36\""],
-                    "correctIndex": 1,
-                    "explanation": "210.52(A)(1) – 24 inches or more"
+                    text: "In a dwelling bedroom, any wall space ______ or more in width (including space measured around corners) and unbroken along the floor line by doorways and similar openings, fireplaces, and fixed cabinets that do not have countertops or similar work surfaces shall have a receptacle.",
+                    options: ["18\"", "24\"", "30\"", "36\""],
+                    correctIndex: 1,
+                    explanation: "210.52(A)(1) – 24 inches or more"
                 },
                 {
-                    "text": "A wall-mounted central vacuum assembly connected to a single receptacle located in an attached garage shall be provided with ______ protection for personnel.",
-                    "options": ["LCDI", "GFCI", "AFCI", "both AFCI and GFCI"],
-                    "correctIndex": 1,
-                    "explanation": "210.8(A)(2) – GFCI"
+                    text: "A wall-mounted central vacuum assembly connected to a single receptacle located in an attached garage shall be provided with ______ protection for personnel.",
+                    options: ["LCDI", "GFCI", "AFCI", "both AFCI and GFCI"],
+                    correctIndex: 1,
+                    explanation: "210.8(A)(2) – GFCI"
                 },
                 {
-                    "text": "Which of the following is an ammeter?",
-                    "options": ["I only", "II only", "III only", "I, II or III"],
-                    "correctIndex": 1,
-                    "explanation": "Only symbol II shows current meter in series with load"
+                    text: "Which of the following is an ammeter?",
+                    options: ["I only", "II only", "III only", "I, II or III"],
+                    correctIndex: 1,
+                    explanation: "Only symbol II shows current meter in series with load"
                 },
                 {
-                    "text": "What is the ampacity of a #12 THWN conductor installed in an ambient temperature of 86°F if the raceway contains four current-carrying conductors?",
-                    "options": ["17.5 A", "20 A", "23 A", "26 A"],
-                    "correctIndex": 1,
-                    "explanation": "Table 310.16 = 25 A at 86°F → derate 80% for 4 CCC → 20 A"
+                    text: "What is the ampacity of a #12 THWN conductor installed in an ambient temperature of 86°F if the raceway contains four current-carrying conductors?",
+                    options: ["17.5 A", "20 A", "23 A", "26 A"],
+                    correctIndex: 1,
+                    explanation: "Table 310.16 = 25 A at 86°F → derate 80% for 4 CCC → 20 A"
                 },
                 {
-                    "text": "If festoon lighting is installed without a messenger, the smallest allowable overhead conductor is ______ AWG.",
-                    "options": ["10", "12", "14", "16"],
-                    "correctIndex": 1,
-                    "explanation": "225.6(B) – #12 minimum without messenger"
+                    text: "If festoon lighting is installed without a messenger, the smallest allowable overhead conductor is ______ AWG.",
+                    options: ["10", "12", "14", "16"],
+                    correctIndex: 1,
+                    explanation: "225.6(B) – #12 minimum without messenger"
                 },
                 {
-                    "text": "For temporary holiday lighting, trees shall be permitted for supporting overhead spans of conductors and cables if avoided damage from live vegetation with ______.",
-                    "options": ["fittings", "cable ties", "strain relief devices", "overhead clamps"],
-                    "correctIndex": 2,
-                    "explanation": "590.4(J) – strain relief devices or tension take-up devices"
+                    text: "For temporary holiday lighting, trees shall be permitted for supporting overhead spans of conductors and cables if avoided damage from live vegetation with ______.",
+                    options: ["fittings", "cable ties", "strain relief devices", "overhead clamps"],
+                    correctIndex: 2,
+                    explanation: "590.4(J) – strain relief devices or tension take-up devices"
                 },
                 {
-                    "text": "The Code requires branch circuits supplying combinations of lighting loads to be rated in accordance with the overcurrent protective device. Which of the following combinations are permitted for lighting branch circuits?",
-                    "options": ["20, 25, 40 and 50 amperes", "20, 25, 30, 40 and 50 amperes", "15, 25, 30, 40 and 50 amperes", "10, 15, 30, 40 and 50 amperes"],
-                    "correctIndex": 1,
-                    "explanation": "210.18 – 20, 25, 30, 40 and 50 amperes permitted"
+                    text: "The Code requires branch circuits supplying combinations of lighting loads to be rated in accordance with the overcurrent protective device. Which of the following combinations are permitted for lighting branch circuits?",
+                    options: ["20, 25, 40 and 50 amperes", "20, 25, 30, 40 and 50 amperes", "15, 25, 30, 40 and 50 amperes", "10, 15, 30, 40 and 50 amperes"],
+                    correctIndex: 1,
+                    explanation: "210.18 – 20, 25, 30, 40 and 50 amperes permitted"
                 },
                 {
-                    "text": "Duty on elevator and dumbwaiter driving machine motors and driving motors of motor-generators used with generator field control shall be rated as ______.",
-                    "options": ["intermittent", "lockable", "continuous", "varying"],
-                    "correctIndex": 0,
-                    "explanation": "620.13(B)(1) – intermittent"
+                    text: "Duty on elevator and dumbwaiter driving machine motors and driving motors of motor-generators used with generator field control shall be rated as ______.",
+                    options: ["intermittent", "lockable", "continuous", "varying"],
+                    correctIndex: 0,
+                    explanation: "620.13(B)(1) – intermittent"
                 },
                 {
-                    "text": "Where multiple driven ground rods are used to form the grounding electrode system, in order to maintain an effective grounding electrode system, they shall not be less than ______ apart.",
-                    "options": ["36\"", "48\"", "60\"", "72\""],
-                    "correctIndex": 3,
-                    "explanation": "250.53(A)(3) – 6 feet (72 inches)"
+                    text: "Where multiple driven ground rods are used to form the grounding electrode system, in order to maintain an effective grounding electrode system, they shall not be less than ______ apart.",
+                    options: ["36\"", "48\"", "60\"", "72\""],
+                    correctIndex: 3,
+                    explanation: "250.53(A)(3) – 6 feet (72 inches)"
                 },
                 {
-                    "text": "The demand load for a 14 kW range installed in a dwelling unit is ______ kW.",
-                    "options": ["8", "8.4", "8.8", "12"],
-                    "correctIndex": 2,
-                    "explanation": "Table 220.55 – 8.8 kW for one range ≤ 12 kW"
+                    text: "The demand load for a 14 kW range installed in a dwelling unit is ______ kW.",
+                    options: ["8", "8.4", "8.8", "12"],
+                    correctIndex: 2,
+                    explanation: "Table 220.55 – 8.8 kW for one range ≤ 12 kW"
                 },
                 {
-                    "text": "Where a dwelling has a two car attached garage, the Code requires a minimum of ______ receptacle outlet(s) shall be installed in the garage.",
-                    "options": ["none required", "one", "two", "three"],
-                    "correctIndex": 2,
-                    "explanation": "210.52(G)(1) – at least two"
+                    text: "Where a dwelling has a two car attached garage, the Code requires a minimum of ______ receptacle outlet(s) shall be installed in the garage.",
+                    options: ["none required", "one", "two", "three"],
+                    correctIndex: 2,
+                    explanation: "210.52(G)(1) – at least two"
                 },
                 {
-                    "text": "Where ungrounded conductors are run in parallel in multiple raceways, the equipment grounding conductor, where used, shall be ______.",
-                    "options": ["installed in one raceway only", "run in parallel in each raceway", "not required in one raceway", "bare"],
-                    "correctIndex": 1,
-                    "explanation": "250.122(F) – run in parallel in each raceway"
+                    text: "Where ungrounded conductors are run in parallel in multiple raceways, the equipment grounding conductor, where used, shall be ______.",
+                    options: ["installed in one raceway only", "run in parallel in each raceway", "not required in one raceway", "bare"],
+                    correctIndex: 1,
+                    explanation: "250.122(F) – run in parallel in each raceway"
                 },
                 {
-                    "text": "All 15 or 20 amp, single-phase, 125 volt through 250 volt receptacles located within ______ feet of a fountain edge shall be provided with GFCI protection.",
-                    "options": ["20", "24", "25", "30"],
-                    "correctIndex": 0,
-                    "explanation": "680.6(A) – 20 feet"
+                    text: "All 15 or 20 amp, single-phase, 125 volt through 250 volt receptacles located within ______ feet of a fountain edge shall be provided with GFCI protection.",
+                    options: ["20", "24", "25", "30"],
+                    correctIndex: 0,
+                    explanation: "680.6(A) – 20 feet"
                 },
                 {
-                    "text": "For an arc welder with an Imax rating of 43 amps, what is the maximum rating for the overcurrent protective device supplying the welder?",
-                    "options": ["85 amp", "90 amp", "95 amp", "100 amp"],
-                    "correctIndex": 0,
-                    "explanation": "630.12(A) – 200% × 43 A = 86 A → 85 A"
+                    text: "For an arc welder with an Imax rating of 43 amps, what is the maximum rating for the overcurrent protective device supplying the welder?",
+                    options: ["85 amp", "90 amp", "95 amp", "100 amp"],
+                    correctIndex: 0,
+                    explanation: "630.12(A) – 200% × 43 A = 86 A → 85 A"
                 },
                 {
-                    "text": "The conductor is marked RHW-2 on the insulation, what does the -2 represent?",
-                    "options": ["The cable has two conductors.", "The conductor is double insulated.", "The conductor is thermoplastic.", "The conductor has a maximum operating temperature of 90°C."],
-                    "correctIndex": 3,
-                    "explanation": "Table 310.104(A) – RHW-2 = 90°C wet/dry"
+                    text: "The conductor is marked RHW-2 on the insulation, what does the -2 represent?",
+                    options: ["The cable has two conductors.", "The conductor is double insulated.", "The conductor is thermoplastic.", "The conductor has a maximum operating temperature of 90°C."],
+                    correctIndex: 3,
+                    explanation: "Table 310.104(A) – RHW-2 = 90°C wet/dry"
                 },
                 {
-                    "text": "The ampacity of three #10 THWN-2 conductors installed in a raceway is ______ amps if the ambient temperature is 112°F.",
-                    "options": ["31.6", "34.8", "35", "37.2"],
-                    "correctIndex": 1,
-                    "explanation": "Table 310.15(B)(1) – 90°C column 40 A → derate for 112°F ≈ 87% → 34.8 A"
+                    text: "The ampacity of three #10 THWN-2 conductors installed in a raceway is ______ amps if the ambient temperature is 112°F.",
+                    options: ["31.6", "34.8", "35", "37.2"],
+                    correctIndex: 1,
+                    explanation: "Table 310.15(B)(1) – 90°C column 40 A → derate for 112°F ≈ 87% → 34.8 A"
                 },
                 {
-                    "text": "Fuel dispensing systems shall be provided with one or more clearly identified emergency shutoff devices or electrical disconnects. Such disconnects or devices shall be installed in approved locations but not less than 20 feet or more than ______ feet from the fuel dispensing devices that they serve.",
-                    "options": ["50", "75", "80", "100"],
-                    "correctIndex": 3,
-                    "explanation": "514.11 – 100 feet"
+                    text: "Fuel dispensing systems shall be provided with one or more clearly identified emergency shutoff devices or electrical disconnects. Such disconnects or devices shall be installed in approved locations but not less than 20 feet or more than ______ feet from the fuel dispensing devices that they serve.",
+                    options: ["50", "75", "80", "100"],
+                    correctIndex: 3,
+                    explanation: "514.11 – 100 feet"
                 },
                 {
-                    "text": "Where conduits enter a floor-standing switchboard, switchgear or panelboard at the bottom, the conduits, including their end fittings, shall not rise more than ______ inches above the bottom of the enclosure.",
-                    "options": ["2", "3", "4", "6"],
-                    "correctIndex": 2,
-                    "explanation": "408.5 – 4 inches"
+                    text: "Where conduits enter a floor-standing switchboard, switchgear or panelboard at the bottom, the conduits, including their end fittings, shall not rise more than ______ inches above the bottom of the enclosure.",
+                    options: ["2", "3", "4", "6"],
+                    correctIndex: 2,
+                    explanation: "408.5 – 4 inches"
                 },
                 {
-                    "text": "Thermostatically controlled switching devices serving both controllers and disconnecting means for fixed electric space heating equipment shall ______.",
-                    "options": ["not be permitted", "be located not more than 8 feet above floor level", "open all grounded conductors", "be designed so that the circuit when placed in the off position cannot be energized automatically after the device has been manually placed in the off position"],
-                    "correctIndex": 3,
-                    "explanation": "424.20(A)(3) – cannot be automatically re-energized"
+                    text: "Thermostatically controlled switching devices serving both controllers and disconnecting means for fixed electric space heating equipment shall ______.",
+                    options: ["not be permitted", "be located not more than 8 feet above floor level", "open all grounded conductors", "be designed so that the circuit when placed in the off position cannot be energized automatically after the device has been manually placed in the off position"],
+                    correctIndex: 3,
+                    explanation: "424.20(A)(3) – cannot be automatically re-energized"
                 },
                 {
-                    "text": "In dwelling units, hallways of ______ feet or more in length shall have at least one receptacle outlet.",
-                    "options": ["6", "8", "10", "12"],
-                    "correctIndex": 2,
-                    "explanation": "210.52(H) – 10 feet or more"
+                    text: "In dwelling units, hallways of ______ feet or more in length shall have at least one receptacle outlet.",
+                    options: ["6", "8", "10", "12"],
+                    correctIndex: 2,
+                    explanation: "210.52(H) – 10 feet or more"
                 },
                 {
-                    "text": "For a feeder tap not exceeding 10 feet in length and field installation, the maximum overcurrent device rating supplying a tap conductor with an ampacity of 40 amps is ______.",
-                    "options": ["150 A", "200 A", "350 A", "400 A"],
-                    "correctIndex": 3,
-                    "explanation": "240.21(B)(1)(4) – 10× = 400 A"
+                    text: "For a feeder tap not exceeding 10 feet in length and field installation, the maximum overcurrent device rating supplying a tap conductor with an ampacity of 40 amps is ______.",
+                    options: ["150 A", "200 A", "350 A", "400 A"],
+                    correctIndex: 3,
+                    explanation: "240.21(B)(1)(4) – 10× = 400 A"
                 },
                 {
-                    "text": "A three-way switch is equivalent to a ______ switch.",
-                    "options": ["DPST", "DPDT", "SPST", "SPDT"],
-                    "correctIndex": 3,
-                    "explanation": "SPDT (single pole double throw)"
+                    text: "A three-way switch is equivalent to a ______ switch.",
+                    options: ["DPST", "DPDT", "SPST", "SPDT"],
+                    correctIndex: 3,
+                    explanation: "SPDT (single pole double throw)"
                 },
                 {
-                    "text": "Which of the following cord types is permitted in wet location and is sunlight resistant?",
-                    "options": ["SPT-2", "STOOOW", "THWN", "XHHW"],
-                    "correctIndex": 1,
-                    "explanation": "Table 400.4 – STOOW (sunlight resistant, wet)"
+                    text: "Which of the following cord types is permitted in wet location and is sunlight resistant?",
+                    options: ["SPT-2", "STOOOW", "THWN", "XHHW"],
+                    correctIndex: 1,
+                    explanation: "Table 400.4 – STOOW (sunlight resistant, wet)"
                 },
                 {
-                    "text": "One or more metal in-ground support structure(s) in direct contact with the earth vertically for ______ feet or more, with or without concrete encasement is a permitted grounding electrode.",
-                    "options": ["6", "8", "10", "12"],
-                    "correctIndex": 2,
-                    "explanation": "250.52(A)(3) – 10 feet"
+                    text: "One or more metal in-ground support structure(s) in direct contact with the earth vertically for ______ feet or more, with or without concrete encasement is a permitted grounding electrode.",
+                    options: ["6", "8", "10", "12"],
+                    correctIndex: 2,
+                    explanation: "250.52(A)(3) – 10 feet"
                 }
             ]
         }
