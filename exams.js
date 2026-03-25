@@ -186,6 +186,5311 @@ const REAL_EXAMS = {
             ]
         },
         {
+            id: "general_2",
+            title: "General Knowledge Exam #2",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "An advantage of an electromagnet over a permanent magnet is that ______.",
+                    options: [
+                        "an electromagnet can be switched on and off",
+                        "permanent magnets must always be cylindrical",
+                        "an electromagnet requires no power source",
+                        "an electromagnet does not have specific polarity"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC does not directly address this comparison, but Article 430 (motors) and Article 725 (Class 1, 2, and 3 remote-control circuits) reference electromagnets in relays and contactors that must be capable of being energized/de-energized. Theory: An electromagnet produces a magnetic field only when current flows through its coil; interrupting the current collapses the field, allowing easy on/off control. Permanent magnets have fixed fields that cannot be switched."
+                },
+                {
+                    text: "An excellent diffuser surface is one that ______.",
+                    options: [
+                        "diffuses all the incident light",
+                        "scatters light uniformly in all directions",
+                        "absorbs all the incident light",
+                        "transmits all the incident light"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 410.2 and 410.130 address lighting fixtures and diffusers for uniform illumination and safety, but no exact definition. Theory: A true diffuser scatters incident light equally in all directions (Lambertian reflection), reducing glare and providing even lighting without specular highlights."
+                },
+                {
+                    text: "The rotating part of a DC motor is known as ______.",
+                    options: [
+                        "armature",
+                        "pole",
+                        "stator",
+                        "winding"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 430.7(A) requires nameplate marking of motors, including construction details. Theory: In a DC motor, the armature is the rotating member containing the windings that carry current and interact with the stationary magnetic field to produce torque."
+                },
+                {
+                    text: "To increase current capacity, battery cells are connected in ______.",
+                    options: [
+                        "series",
+                        "parallel",
+                        "series-parallel",
+                        "parallel-series"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 480.4 and 706.4 (Energy Storage Systems) require proper interconnection of cells/batteries. Theory: Parallel connection keeps voltage the same while adding amp-hour capacities, increasing total current delivery capability."
+                },
+                {
+                    text: "The voltage per turn of the primary of a transformer is ______ the voltage per turn of the secondary.",
+                    options: [
+                        "more than",
+                        "less than",
+                        "twice",
+                        "the same as"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 450.3 and 450.9 cover transformer protection and markings. Theory: In an ideal transformer, the volts-per-turn ratio is identical on primary and secondary because the same magnetic flux links both windings (Faraday’s law: induced voltage ∝ turns × rate of change of flux)."
+                },
+                {
+                    text: "Type TW conductor is a ______ type.",
+                    options: [
+                        "heat resistant and thermoplastic",
+                        "moisture and heat resistant thermoplastic",
+                        "moisture and heat resistant",
+                        "moisture resistant and thermoplastic"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Table 310.104(A) (formerly 310.104) lists conductor applications: Type TW is Moisture-Resistant Thermoplastic. Theory: The 'T' indicates thermoplastic insulation; 'W' adds moisture resistance for wet locations."
+                },
+                {
+                    text: "Steel is hard to magnetize because of its ______.",
+                    options: [
+                        "high density",
+                        "high permeability",
+                        "high retentivity",
+                        "low permeability"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 250.102 and Annex C reference magnetic materials indirectly through raceway and enclosure properties. Theory: Steel (especially hard or high-carbon) has low relative permeability compared to soft iron, requiring a stronger magnetizing force (higher H) to achieve the same flux density (B)."
+                },
+                {
+                    text: "The ______ is defined as the shortest distance measured between a point on the top surface of direct buried conductor, cable, conduit and the top surface of finish grade.",
+                    options: [
+                        "duct",
+                        "grade",
+                        "cover",
+                        "depth"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 300.5 and Table 300.5: Cover is defined as the shortest distance in inches (mm) measured between a point on the top surface of any direct-buried conductor, cable, conduit, or other raceway and the top surface of finished grade. Theory: Adequate cover protects wiring from mechanical damage, frost, and accidental excavation."
+                },
+                {
+                    text: "A repulsion motor is equipped with a/an ______.",
+                    options: [
+                        "rectifier",
+                        "commutator",
+                        "repeller",
+                        "emitter"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 430.7 and motor theory sections reference commutators in DC and repulsion machines. Theory: The commutator reverses current in the armature windings to maintain torque direction as the rotor turns."
+                },
+                {
+                    text: "The capacitor in a capacitor-start induction-run AC motor is connected in series with the ______ winding.",
+                    options: [
+                        "running",
+                        "starting",
+                        "compensating",
+                        "field"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 430.7 and 430.53 cover motor controllers and auxiliary windings. Theory: The starting capacitor provides a phase shift (leading current) in the starting winding to create a rotating magnetic field for high starting torque; a centrifugal switch disconnects it once the motor reaches ~75% speed."
+                },
+                {
+                    text: "A circuit with a lagging current means the circuit is ______.",
+                    options: [
+                        "capacitive",
+                        "reactive",
+                        "inductive",
+                        "at resonance"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC does not define phase directly, but Article 220 and motor calculations (430) assume inductive loads. Theory: In inductive circuits (XL > XC), current lags voltage by up to 90° (ELI mnemonic: Voltage leads current in inductive circuits)."
+                },
+                {
+                    text: "The main reason that electrical appliances are connected in parallel rather than series is ______.",
+                    options: [
+                        "appliances connected in series are too noisy",
+                        "parallel connection is simpler than a series connection",
+                        "each appliance will draw more current if connected in series",
+                        "it makes the operation of each appliance independent with each other"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 210.23 and 422.10 address branch circuits and appliance loads. Theory: Parallel connection ensures each appliance receives full line voltage independently; failure or switching of one does not affect others (unlike series, where current is the same through all)."
+                },
+                {
+                    text: "A step-up transformer increases ______.",
+                    options: [
+                        "power",
+                        "current",
+                        "frequency",
+                        "voltage"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 450.3 and transformer markings. Theory: A step-up transformer has more turns on the secondary than the primary, increasing secondary voltage while decreasing current (power ≈ constant, neglecting losses)."
+                },
+                {
+                    text: "If a conductor has a resistance of 0.2Ω and the length is doubled, the resistance becomes ______.",
+                    options: [
+                        "0.20Ω",
+                        "0.02Ω",
+                        "0.40Ω",
+                        "0.04Ω"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Chapter 9, Table 8 (conductor properties) and 310.15. Theory: Resistance R = ρL/A; doubling length (L) doubles resistance when resistivity (ρ) and area (A) remain constant."
+                },
+                {
+                    text: "The condition of a liquid electrolyte in a battery is measured in terms of its ______.",
+                    options: [
+                        "acidity",
+                        "specific gravity",
+                        "viscosity",
+                        "water content"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 480.7 and 706.4 (Energy Storage). Theory: Specific gravity (measured with a hydrometer) indicates the concentration of sulfuric acid in the electrolyte; it decreases as the battery discharges."
+                },
+                {
+                    text: "In a parallel circuit, the total resistance is ______.",
+                    options: [
+                        "the sum of all resistances",
+                        "the reciprocal of all the resistances",
+                        "larger than the largest resistance in the combination",
+                        "smaller than the smallest resistance in the combination"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC calculations in 220.42 and branch-circuit rules assume parallel loads. Theory: 1/R_total = Σ(1/R_i); adding paths always reduces total resistance below the smallest individual branch."
+                },
+                {
+                    text: "In magnetic and electric circuit analogy, magnetic flux is the analog of ______.",
+                    options: [
+                        "conductance",
+                        "resistance",
+                        "voltage",
+                        "current"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 250 and Annex D reference magnetic effects indirectly. Theory: Magnetic circuit analogy: Flux (Φ) ↔ Current (I), Magnetomotive Force (MMF) ↔ Voltage (E), Reluctance ↔ Resistance."
+                },
+                {
+                    text: "The resistance of a wire is directly proportional to the ______ and inversely proportional to the cross-sectional area.",
+                    options: [
+                        "resistivity",
+                        "volume",
+                        "length",
+                        "permeability"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Chapter 9, Table 8. Theory: R = ρL/A — directly proportional to length (L) and resistivity (ρ), inversely to cross-sectional area (A)."
+                },
+                {
+                    text: "The energy in a battery cell depends mainly on ______.",
+                    options: [
+                        "its physical size",
+                        "its voltage",
+                        "the density",
+                        "the current drawn from it"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 480.9 and energy storage rules. Theory: Stored energy (watt-hours) is primarily a function of the active material volume (physical size), which determines ampere-hour capacity at a given voltage."
+                },
+                {
+                    text: "An automatic device that operates at preset values is known as a ______.",
+                    options: [
+                        "fuse",
+                        "relay",
+                        "contactor",
+                        "mercury switch"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 430.83 and Article 725 for control devices. Theory: A relay is an electromagnetically or thermally operated automatic switch that opens or closes contacts at preset voltage, current, or temperature values."
+                },
+                {
+                    text: "A step-down transformer ______.",
+                    options: [
+                        "increases both the voltage and current",
+                        "lowers the current and increases the voltage",
+                        "lowers the voltage and increases the current",
+                        "lowers both the voltage and current"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 450.3. Theory: Fewer turns on the secondary reduce voltage and increase current (power ≈ constant)."
+                },
+                {
+                    text: "Two resistors of resistances of 5 ohms and 7 ohms are connected in series across a 60 volt source. The power absorbed in the 5 ohm resistor is ______ watts.",
+                    options: [
+                        "125",
+                        "250",
+                        "25",
+                        "50"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 210.19 and 310.15 for conductor sizing calculations. Theory: R_total = 5 + 7 = 12 Ω; I = 60 V / 12 Ω = 5 A; P_5Ω = I²R = 25 × 5 = 125 W."
+                },
+                {
+                    text: "What kind of instrument is an ammeter?",
+                    options: [
+                        "A recording",
+                        "A DC meter",
+                        "An indicating",
+                        "An integrating"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 110.9 and metering references. Theory: An ammeter is an indicating instrument that displays instantaneous current value."
+                },
+                {
+                    text: "The purpose of battery cells connected in parallel is to ______.",
+                    options: [
+                        "increase internal resistance",
+                        "increase in voltage output",
+                        "increase in current capacity",
+                        "decrease in current capacity"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 480.4. Theory: Parallel cells maintain the same voltage while adding their ampere-hour ratings, increasing total current capacity."
+                },
+                {
+                    text: "The ______ value is considered as the most important value of a sine wave.",
+                    options: [
+                        "peak",
+                        "instantaneous",
+                        "effective",
+                        "average"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC calculations in 220.14 and motor nameplates use effective values. Theory: The effective (RMS) value produces the same heating effect in a resistive load as an equivalent DC value; it is the value used for power, voltage, and current ratings."
+                }
+            ]
+        },
+        {
+            id: "general_3",
+            title: "General Knowledge Exam #3",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "When two resistances are connected in series, ______.",
+                    options: [
+                        "voltage across them must be the same",
+                        "current in each resistor will be the same",
+                        "there will be no current in the circuit",
+                        "they will become inductive"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 210.19 and 220.42 use series/parallel rules for branch circuit calculations. Theory: In a series circuit, the same current flows through all components (Kirchhoff’s Current Law); total voltage is the sum of individual voltage drops."
+                },
+                {
+                    text: "When one resistance in a series circuit is open ______.",
+                    options: [
+                        "the voltage is zero across the open resistance",
+                        "the current is zero in all the resistances",
+                        "the current is maximum in the normal resistances",
+                        "the current increases in the voltage source"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 240.4 and overcurrent protection principles. Theory: An open circuit breaks the only path for current; by Kirchhoff’s Current Law, current becomes zero everywhere in the series loop."
+                },
+                {
+                    text: "A wire has a resistance of 5 ohms. What will be the resistance of another wire of the same material three times as long and half the cross sectional area?",
+                    options: [
+                        "7.5Ω",
+                        "15Ω",
+                        "30Ω",
+                        "50Ω"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Chapter 9, Table 8 (conductor resistance). Theory: R = ρL/A. New R = 5 × (3) / (0.5) = 30 Ω."
+                },
+                {
+                    text: "A cell that cannot be recharged is a ______.",
+                    options: [
+                        "dry cell",
+                        "wet cell",
+                        "secondary cell",
+                        "primary cell"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 480.2 and Article 706 definitions for batteries. Theory: Primary cells (e.g., alkaline, zinc-carbon) are not designed for recharging; secondary cells (lead-acid, NiMH, lithium) are rechargeable."
+                },
+                {
+                    text: "The presence of current is only made known by the effect it produces. Three important effects are ______.",
+                    options: [
+                        "heating, magnetic and chemical",
+                        "generation, chemical and electric shock",
+                        "heating, magnetic and electric shock",
+                        "heating, electric shock and generation"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 110.9 and basic electrical safety. Theory: Current produces three main observable effects — thermal (heating), electromagnetic (magnetic), and electrochemical (chemical)."
+                },
+                {
+                    text: "A ______ is not a standard size fuse.",
+                    options: [
+                        "45 amp",
+                        "75 amp",
+                        "80 amp",
+                        "125 amp"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 240.6(A) lists standard ampere ratings for fuses and circuit breakers. 75 A is not a standard rating."
+                },
+                {
+                    text: "In electricity, the positive electric charge refers to ______.",
+                    options: [
+                        "atoms",
+                        "electrons",
+                        "neutrons",
+                        "protons"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC does not define subatomic particles, but Article 100 and safety grounding reference charge. Theory: Protons carry a positive charge (+1), electrons carry negative charge (−1), neutrons are neutral."
+                },
+                {
+                    text: "The rate of doing work is ______.",
+                    options: [
+                        "power",
+                        "current",
+                        "energy",
+                        "force"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 220.14 and power calculations throughout the code. Theory: Power (P) = Work / Time (or P = VI); it is the rate at which energy is transferred or work is done."
+                },
+                {
+                    "text": "The effect of a discharge of electricity due to ionization of surrounding air by high voltage is ______.",
+                    options: [
+                        "Corona effect",
+                        "Hall effect",
+                        "Compton effect",
+                        "Miller effect"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 110.27 and high-voltage rules reference corona. Theory: Corona discharge occurs when high voltage ionizes air around a conductor, producing a glowing bluish light and ozone."
+                },
+                {
+                    text: "A meter used to test the armatures and stators of electric motors, generators, and other equipment for a short circuit is called a ______.",
+                    options: [
+                        "multimeter",
+                        "megohmmeter",
+                        "bolometer",
+                        "growler"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 430.7 motor testing references. Theory: A growler is a specialized AC electromagnet tool that induces voltage in motor windings to detect shorts via vibration or buzzing."
+                },
+                {
+                    text: "______ is the process by which one conductor produces or induces a voltage in another conductor even though there is no mechanical coupling between the two conductors.",
+                    options: [
+                        "Cutting of fluxes",
+                        "Short circuit",
+                        "Induction",
+                        "Eddy current"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 300.20 and transformer/motor rules. Theory: Electromagnetic induction (Faraday’s law) — a changing magnetic field through one conductor induces voltage in another."
+                },
+                {
+                    text: "To increase voltage output, battery cells are connected in ______.",
+                    options: [
+                        "series",
+                        "parallel",
+                        "series-parallel",
+                        "parallel-series"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 480.4 and 706.4 battery interconnections. Theory: Series connection adds individual cell voltages while current capacity remains the same."
+                },
+                {
+                    text: "If a low resistance is connected in parallel with a higher resistance, the combined resistance is ______.",
+                    options: [
+                        "always less than the low resistance",
+                        "always more than the high resistance",
+                        "always between the values of high and low resistance",
+                        "higher or lower than the low resistance depending on the value of the higher resistance"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC branch-circuit calculations (210.19, 220.42). Theory: In parallel, total resistance is always less than the smallest individual resistance (1/R_total = Σ1/R_i)."
+                },
+                {
+                    text: "Branch circuits are classified according to the maximum ______.",
+                    options: [
+                        "power consumed",
+                        "voltage across it",
+                        "load being served",
+                        "setting of the overcurrent device"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Article 210.3 and 210.20. Theory: Branch circuits are officially classified by the rating of the overcurrent protective device (fuse or breaker) supplying them."
+                },
+                {
+                    text: "A capacitor opposes change in ______.",
+                    options: [
+                        "current",
+                        "voltage",
+                        "voltage and current",
+                        "neither voltage nor current"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 460 capacitor rules. Theory: Capacitors oppose changes in voltage (I = C dV/dt); they pass AC and block DC."
+                },
+                {
+                    text: "On a simple ohmmeter, the 0 Ω mark is located ______.",
+                    options: [
+                        "in the middle",
+                        "at the far left",
+                        "at the far right",
+                        "anywhere"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 110.9 test instrument safety. Theory: Analog ohmmeters are series-type; zero ohms (full-scale deflection/short circuit) is at the right side of the scale."
+                },
+                {
+                    text: "Galvanized conduit has a finish exterior and interior of ______.",
+                    options: [
+                        "lead",
+                        "copper",
+                        "nickel",
+                        "zinc"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 344.10, 358.10, and 300.6 corrosion protection. Theory: Galvanizing applies a zinc coating that sacrificially protects steel from rust."
+                },
+                {
+                    text: "For a single phase 5 hp motor supplied by a two-wire circuit 120 volts, with one conductor grounded how many overloads are required?",
+                    options: [
+                        "One, in the grounded conductor",
+                        "Two, one in both conductors",
+                        "One, in the ungrounded conductor",
+                        "none are required"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 430.32 and 430.37 overload protection. Theory: Overload protection is required only in the ungrounded (hot) conductor for single-phase motors on 120 V circuits."
+                },
+                {
+                    text: "When a switch is closed it has a total resistance of ______.",
+                    options: [
+                        "zero",
+                        "infinity",
+                        "unstable",
+                        "1500Ω"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 404.14 and switch ratings. Theory: An ideal closed switch has near-zero resistance (short circuit); practical switches have very low contact resistance."
+                },
+                {
+                    text: "Bonding provides electrical continuity and safely conducts any ______.",
+                    options: [
+                        "unbalanced current",
+                        "fault current that may occur",
+                        "load of the system",
+                        "voltage on the system"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 250.4(A)(3) and Article 100 definition of Bonding. Theory: Bonding creates a low-impedance path for fault current to facilitate operation of overcurrent devices."
+                },
+                {
+                    text: "A length of wire has a resistance of 10 ohms. What is the resistance of a wire of the same material three times as long and twice the cross-sectional area?",
+                    options: [
+                        "5 Ω",
+                        "15 Ω",
+                        "20 Ω",
+                        "30 Ω"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Chapter 9, Table 8. Theory: R = ρL/A → New R = 10 × 3 / 2 = 15 Ω."
+                },
+                {
+                    text: "______ is the type letter for conductors that are moisture and heat resistant rubber.",
+                    options: [
+                        "THHN",
+                        "RHW",
+                        "THW",
+                        "XHHW"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Table 310.104(A). Theory: RHW insulation is thermoset, moisture- and heat-resistant rubber (75°C wet/dry)."
+                },
+                {
+                    text: "The ______ is used in a DC motor to control the speed.",
+                    options: [
+                        "commutator",
+                        "field winding",
+                        "armature winding",
+                        "carbon brush"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 430.7 and DC motor rules. Theory: Adjusting field current (field weakening) in a shunt or compound DC motor increases speed above base speed."
+                },
+                {
+                    text: "Dielectric is another name for ______.",
+                    options: [
+                        "a conductor",
+                        "an element",
+                        "an insulator",
+                        "a capacitor"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 460.2 and capacitor definitions. Theory: Dielectric refers to the insulating material placed between the plates of a capacitor."
+                },
+                {
+                    text: "An open fuse has a resistance of ______.",
+                    options: [
+                        "infinity",
+                        "zero",
+                        "approximately 1000Ω",
+                        "at least 300Ω"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 240.60 and fuse operation. Theory: An open (blown) fuse creates an open circuit; resistance approaches infinity."
+                }
+            ]
+        },
+        {
+            id: "general_4",
+            title: "General Knowledge Exam #4",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "______ are sheet metal troughs with hinged or removable covers for housing and protecting conductors and cables which are laid in place after this object has been installed as a complete system.",
+                    options: [
+                        "Wireways",
+                        "Cable trays",
+                        "Busways",
+                        "Non-metallic extensions"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 376.2 defines Wireways as sheet-metal troughs with hinged or removable covers for housing and protecting conductors and cables. Theory: Wireways allow conductors to be laid in after installation, unlike raceways that are pulled through."
+                },
+                {
+                    text: "In a series circuit with unequal resistances the ______.",
+                    options: [
+                        "highest resistance has the highest current",
+                        "lowest resistance has the highest current",
+                        "lowest resistance has the highest voltage",
+                        "highest resistance has the highest voltage"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 210.19 and branch-circuit calculations. Theory: In series, current is the same through all resistors (Kirchhoff’s Current Law); voltage drop is proportional to resistance (V = IR), so the highest resistance gets the highest voltage drop."
+                },
+                {
+                    text: "The higher the self-inductance of a coil, ______.",
+                    options: [
+                        "the greater the flux produced by it",
+                        "the lower the EMF induced in it",
+                        "the longer the delay in establishing current through it",
+                        "all of these"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 430.7 and motor/transformer inductance rules. Theory: Higher inductance (L) means greater opposition to current change (V = L di/dt), resulting in a longer time constant (τ = L/R) to reach steady-state current."
+                },
+                {
+                    text: "A general term covering an assembly of assemblies of devices for the interruption, control and metering of electric power is called the ______.",
+                    options: [
+                        "power system",
+                        "control system",
+                        "switchgear",
+                        "instrumentation"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Article 100 and 408 definitions. Theory: Switchgear is the collective term for switching, interrupting, control, and metering equipment in power systems."
+                },
+                {
+                    text: "The total resistance of two equal valued resistors in series is ______.",
+                    options: [
+                        "twice as one",
+                        "the sum of one",
+                        "the difference of both",
+                        "none of these"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC Chapter 9 and basic circuit calculations. Theory: Series resistance adds directly: R_total = R1 + R2. For two equal resistors, R_total = 2R."
+                },
+                {
+                    text: "Eddy currents cause an increase in ______.",
+                    options: [
+                        "efficiency",
+                        "coupling between windings",
+                        "core loss",
+                        "usable frequency range"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 450.3 and transformer losses. Theory: Eddy currents are induced circulating currents in the core that produce I²R losses, increasing core (iron) loss and heating."
+                },
+                {
+                    text: "At lagging loads, armature reaction in an alternator is ______.",
+                    options: [
+                        "non-effective",
+                        "demagnetizing",
+                        "cross-magnetizing",
+                        "magnetizing"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 430.7 and generator rules. Theory: At lagging (inductive) loads, armature reaction produces a flux that aids the main field flux, resulting in a magnetizing effect."
+                },
+                {
+                    text: "A ______ is nameplate data that will tell whether or not the motor is allowed to develop more than its rated nameplate horsepower without causing deterioration of its insulation.",
+                    options: [
+                        "power factor",
+                        "service factor",
+                        "reactive factor",
+                        "brake factor"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 430.7(A)(9) requires Service Factor marking on motor nameplates. Theory: Service Factor (e.g., 1.15) indicates the motor can safely handle 115% of rated load continuously without exceeding temperature limits."
+                },
+                {
+                    text: "The process by which a magnetic substance becomes a magnet when it is placed near a magnet is called ______.",
+                    options: [
+                        "electromagnetic induction",
+                        "magnetic reflection",
+                        "magnetic induction",
+                        "influx of density"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC does not directly define, but Article 725 and relays use magnetic induction. Theory: Magnetic induction (or magnetization by induction) occurs when a ferromagnetic material is placed in an external magnetic field and becomes magnetized."
+                },
+                {
+                    text: "Corona occurs between two transmission wires when they ______.",
+                    options: [
+                        "carry DC power",
+                        "are closely spaced",
+                        "are widely spaced",
+                        "have a high potential difference"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 110.27 and high-voltage rules. Theory: Corona discharge happens when the electric field strength exceeds the dielectric strength of air, ionizing it around conductors at high voltage."
+                },
+                {
+                    text: "In a DC circuit, inductance and capacitance are irrelevant in circuit analysis due to ______.",
+                    options: [
+                        "their effect is useless in DC circuits",
+                        "DC supply has no frequency",
+                        "they do not exist in DC circuits",
+                        "none of these"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC calculations in Article 220 assume steady-state DC. Theory: Inductive reactance XL = 2πfL and capacitive reactance XC = 1/(2πfC) both become zero when frequency f = 0 (DC)."
+                },
+                {
+                    text: "An electrical diagram showing the control components rearranged to simplify the tracing of the circuit is a ______ diagram.",
+                    options: [
+                        "ladder",
+                        "schematic",
+                        "pneumatic",
+                        "wiring"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 409.110 and industrial control panel rules. Theory: Ladder diagrams arrange control circuits in a vertical rung format for easy reading of control logic."
+                },
+                {
+                    text: "In motors and transformers, the reason for the thin layer of varnish over the copper coil pattern is to prevent ______.",
+                    options: [
+                        "oxidation",
+                        "eddy currents",
+                        "magnetic flux",
+                        "corrosion"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 430.7 and winding rules. Theory: Varnish (insulating enamel) prevents oxidation (rust) of copper and provides turn-to-turn insulation."
+                },
+                {
+                    text: "A coulomb ______.",
+                    options: [
+                        "is one ampere per second",
+                        "represents a current of one ampere",
+                        "is an extremely large number of charge carriers",
+                        "none of these"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Article 100 definitions indirectly reference charge. Theory: One coulomb ≈ 6.24 × 10¹⁸ electrons; it is the unit of electric charge (Q = I × t)."
+                },
+                {
+                    text: "Power factor is equal to ______.",
+                    options: [
+                        "apparent power",
+                        "true power divided by apparent power",
+                        "imaginary power divided by apparent power",
+                        "none of these"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 220.60 and power calculations. Theory: Power Factor (PF) = Real Power (W) / Apparent Power (VA) = cos θ."
+                },
+                {
+                    text: "Which of the following characterizes inductance?",
+                    options: [
+                        "Tends to oppose changes in voltage",
+                        "Tends to oppose changes in current",
+                        "Tends to oppose DC",
+                        "Opposes all frequencies equally"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 430.7 and motor inductance. Theory: Inductance opposes changes in current (V = L di/dt); it passes DC (zero reactance) but opposes AC."
+                },
+                {
+                    text: "The sum of series voltage drops ______.",
+                    options: [
+                        "equals the average value of all voltage drops",
+                        "equals the applied voltage",
+                        "is usually more than the applied voltage",
+                        "is less than the smallest voltage drop"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC basic circuit rules and Kirchhoff’s Voltage Law. Theory: Kirchhoff’s Voltage Law (KVL): The algebraic sum of all voltage drops in a closed loop equals the applied voltage."
+                },
+                {
+                    text: "The 20/1 ratio on a transformer indicates ______.",
+                    options: [
+                        "the primary current is 20 times higher than the secondary",
+                        "the secondary voltage is 20 times higher than the primary",
+                        "for every 20 turns on the primary, there is one turn on the secondary",
+                        "for every 20 turns on the secondary, there is one turn on the primary"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 450.3 and transformer markings. Theory: Turns ratio = N_primary / N_secondary; a 20:1 ratio means 20 turns on primary for every 1 turn on secondary (step-down voltage)."
+                },
+                {
+                    text: "The physical size of a resistor that determines the ability of a resistor to absorb heat is in ______.",
+                    options: [
+                        "farads",
+                        "volts",
+                        "ohms",
+                        "watts"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 240.4 and resistor power ratings. Theory: Wattage rating indicates power-handling (heat dissipation) capacity; larger physical size allows higher wattage."
+                },
+                {
+                    text: "An advantage of a 240-volt system compared with a 120-volt system of the same wattage is ______.",
+                    options: [
+                        "reduced voltage drop",
+                        "reduced power use",
+                        "large currents",
+                        "lower electrical pressure"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 210.19 and voltage-drop calculations. Theory: For the same power (P = V × I), higher voltage means lower current, which reduces I²R voltage drop and allows smaller conductors."
+                },
+                {
+                    text: "To calculate the VA, one needs to know the ______.",
+                    options: [
+                        "voltage and current",
+                        "impedance and conductance",
+                        "resistance and impedance",
+                        "ohms and resistance"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 220.14 and VA calculations. Theory: Apparent power VA = V × I (for single-phase); it does not require resistance or impedance directly."
+                },
+                {
+                    text: "The greatest voltage drop in a circuit will occur when the ______ the current flow through that part of the circuit.",
+                    options: [
+                        "greater",
+                        "slower",
+                        "faster",
+                        "lower"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 210.19(A) Informational Note on voltage drop. Theory: Voltage drop V_drop = I × R; higher current produces greater voltage drop across the same resistance."
+                },
+                {
+                    text: "Basically all electric motors operate on the principle of repulsion or ______.",
+                    options: [
+                        "magnetism",
+                        "induction",
+                        "resistance",
+                        "capacitance"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 430.7 and motor theory. Theory: Most AC motors (induction motors) operate on the principle of electromagnetic induction; repulsion motors use commutator action."
+                },
+                {
+                    text: "As the power factor of a circuit is increased ______.",
+                    options: [
+                        "reactive power is decreased",
+                        "active power is decreased",
+                        "reactive power is increased",
+                        "both active and reactive power are increased"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 220.60 and power factor correction. Theory: For constant real power (kW), improving PF reduces reactive power (kVAR) while apparent power (kVA) decreases."
+                },
+                {
+                    text: "______ has the highest electrical breakdown strength and longest life over all other materials used for insulation.",
+                    options: [
+                        "Rubber insulation",
+                        "Woven cloth",
+                        "Impregnated paper",
+                        "Thermoplastic"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Table 310.104(A) and insulation properties. Theory: Impregnated paper (used in high-voltage cables) offers superior dielectric strength and longevity compared to rubber or thermoplastics."
+                }
+            ]
+        },
+        {
+            id: "general_5",
+            title: "General Knowledge Exam #5",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "Electrical current is measured in terms of ______.",
+                    options: [
+                        "electron pressure",
+                        "electrons passing a point per second",
+                        "watts",
+                        "resistance"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Article 100 and basic definitions. Theory: Current (I) is the rate of flow of charge — specifically the number of electrons passing a given point per second (1 ampere = 6.24 × 10¹⁸ electrons per second)."
+                },
+                {
+                    text: "Rubber insulation on an electrical conductor would quickly be damaged by continuous contact with ______.",
+                    options: [
+                        "water",
+                        "acid",
+                        "oil",
+                        "alkali"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Table 310.104(A) and insulation properties. Theory: Rubber insulation (especially natural rubber) swells, softens, and deteriorates rapidly when exposed to oils and petroleum products."
+                },
+                {
+                    text: "As compared with solid wire, stranded wire of the same gauge size is ______.",
+                    options: [
+                        "better for higher voltages",
+                        "given a higher ampacity",
+                        "easier to skin",
+                        "larger in total diameter"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Chapter 9, Table 8 and conductor dimensions. Theory: Stranded wire has the same cross-sectional area (same gauge) but occupies more space due to the air gaps between strands, making its overall diameter larger."
+                },
+                {
+                    text: "The resistance of a circuit may vary due to ______.",
+                    options: [
+                        "a loose connection",
+                        "change in voltage",
+                        "change in current",
+                        "induction"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 110.14 and connection rules. Theory: A loose connection increases contact resistance, causing higher voltage drop and heat (I²R loss)."
+                },
+                {
+                    text: "The current will lead the voltage when ______.",
+                    options: [
+                        "inductive reactance exceeds the capacitive reactance in the circuit",
+                        "reactance exceeds the resistance in the circuit",
+                        "resistance exceeds the reactance in the circuit",
+                        "capacitive reactance exceeds the inductive reactance in the circuit"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC motor and capacitor rules (430, 460). Theory: In a capacitive circuit (XC > XL), current leads voltage by up to 90° (ICE mnemonic)."
+                },
+                {
+                    text: "An alternation is ______.",
+                    options: [
+                        "one-half cycle",
+                        "one hertz",
+                        "one alternator",
+                        "two cycles"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC does not define directly, but AC theory in Article 220. Theory: One alternation is one-half of an AC cycle (from zero to peak and back to zero in one polarity)."
+                },
+                {
+                    text: "A stranded wire is given the same size designation as a solid wire if it has the same ______.",
+                    options: [
+                        "weight per foot",
+                        "overall diameter",
+                        "strength",
+                        "cross-sectional area"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Chapter 9, Table 8. Theory: Wire size (AWG) is determined by the total cross-sectional area of the conductor material, not by overall diameter or weight."
+                },
+                {
+                    text: "The proper way to open a knife switch carrying a heavy load is to ______.",
+                    options: [
+                        "open it with care, to avoid damage to the auxiliary blade by the arc",
+                        "open it slowly so that there will not be a flashover at the contacts",
+                        "tie a 5 foot rope on the switch handle and stand clear of the switch",
+                        "open it with a jerk so as to quickly break any arc"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 404.16 and safety practices for switches. Theory: A quick jerk extinguishes the arc rapidly, reducing damage to contacts."
+                },
+                {
+                    text: "Mica is commonly used in electrical construction for ______.",
+                    options: [
+                        "commutator bar separators",
+                        "heater cord insulation",
+                        "strain insulators",
+                        "switchboard panels"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 430.7 and motor construction. Theory: Mica has excellent dielectric strength and heat resistance, making it ideal for insulating commutator segments in DC machines."
+                },
+                {
+                    text: "The main purpose of using a cutting fluid when threading conduit is to ______.",
+                    options: [
+                        "prevent the formation of rust",
+                        "wash away the metal chips",
+                        "improve the finish of the thread",
+                        "prevent the formation of electrolytic pockets"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 344.42 and conduit threading practices. Theory: Cutting fluid cools the die, lubricates, and produces a smoother, cleaner thread finish."
+                },
+                {
+                    text: "A shunt is used to measure ______.",
+                    options: [
+                        "resistance",
+                        "capacitance",
+                        "current",
+                        "wattage"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 110.9 and metering. Theory: A shunt is a low-value precision resistor connected in parallel with an ammeter to extend its current range."
+                },
+                {
+                    text: "A battery operates on the principle of ______.",
+                    options: [
+                        "photo emission",
+                        "triboelectric effect",
+                        "electro chemistry",
+                        "voltaic conductivity"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 480 and battery rules. Theory: Batteries convert chemical energy into electrical energy through electrochemical reactions (redox processes)."
+                },
+                {
+                    text: "When cutting a metal conduit with a hacksaw, the pressure applied to the hacksaw should be on ______.",
+                    options: [
+                        "the return stroke only",
+                        "the forward stroke only",
+                        "both the forward and return stroke equally",
+                        "none of these"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Standard trade practice. Theory: Cutting pressure is applied only on the forward stroke; the return stroke is used to reposition the blade without cutting."
+                },
+                {
+                    text: "The difference of electrical potential between two conductors of a circuit is the ______.",
+                    options: [
+                        "resistance",
+                        "amperage",
+                        "voltage",
+                        "wattage"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Article 100 definition of Voltage. Theory: Voltage (potential difference) is the electrical pressure that causes current to flow."
+                },
+                {
+                    text: "An electron is ______.",
+                    options: [
+                        "a neutron",
+                        "an orbiting particle",
+                        "a proton",
+                        "the smallest part of an atom with a negative charge"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Basic atomic theory referenced in NEC safety rules. Theory: Electrons are negatively charged subatomic particles that orbit the nucleus."
+                },
+                {
+                    text: "The transformer output is measured by ______.",
+                    options: [
+                        "volts",
+                        "amps",
+                        "volt-amps",
+                        "watts"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 450.3 and transformer sizing. Theory: Transformer capacity is rated in volt-amperes (VA) or kilovolt-amperes (kVA) because it accounts for both real and reactive power."
+                },
+                {
+                    text: "To increase the life of an incandescent light bulb you could ______.",
+                    options: [
+                        "use at a higher than rated voltage",
+                        "use at a lower than rated voltage",
+                        "turn off when not in use",
+                        "use at a higher wattage"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 410 and lamp rules. Theory: Operating below rated voltage reduces filament temperature, dramatically increasing bulb life (though light output decreases)."
+                },
+                {
+                    text: "A commutator of a generator should be cleaned with which of the following?",
+                    options: [
+                        "emery cloth",
+                        "graphite",
+                        "a smooth file",
+                        "fine sandpaper"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 430.7 and maintenance practices. Theory: Fine sandpaper removes oxidation and carbon buildup without damaging the commutator surface."
+                },
+                {
+                    text: "A thermocouple will transform ______ into electricity.",
+                    options: [
+                        "current",
+                        "heat",
+                        "work",
+                        "watts"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 725 and sensing devices. Theory: The Seebeck effect converts a temperature difference (heat) into a small DC voltage."
+                },
+                {
+                    text: "Which of the following would be the best metal for a magnet?",
+                    options: [
+                        "steel",
+                        "aluminum",
+                        "lead",
+                        "tin"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC does not specify, but magnetic materials in Article 250. Theory: Steel (especially hardened or alloyed) has high retentivity and is commonly used for permanent magnets."
+                },
+                {
+                    text: "If one complete cycle occurs in 1/30 of a second, the frequency is ______.",
+                    options: [
+                        "30 hertz",
+                        "60 cycle",
+                        "115 cycle",
+                        "60 hertz"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC AC theory and motor nameplates. Theory: Frequency (f) = 1 / T, where T is the period. 1/30 s = 30 Hz."
+                },
+                {
+                    text: "The primary and secondary windings of a transformer always have ______.",
+                    options: [
+                        "a common magnetic circuit",
+                        "the same size wire",
+                        "separate magnetic circuits",
+                        "the same number of turns"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 450.3. Theory: Primary and secondary windings share the same magnetic core (common magnetic circuit) but are electrically isolated."
+                },
+                {
+                    text: "If two equal resistance conductors are connected in parallel, the resistance of the two conductors is equal to ______.",
+                    options: [
+                        "the resistance of one conductor",
+                        "twice the resistance of one conductor",
+                        "one-half the resistance of one conductor",
+                        "the resistance of both conductors"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Chapter 9 and parallel circuit rules. Theory: For two equal resistors in parallel, R_total = R/2."
+                },
+                {
+                    text: "Continually overloading a conductor is a poor practice because it causes ______.",
+                    options: [
+                        "the conductor to melt",
+                        "the insulation to deteriorate",
+                        "the conductor to shrink",
+                        "damage to the raceway"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 310.15 and conductor ampacity rules. Theory: Overloading causes excessive heat (I²R), which degrades insulation over time."
+                },
+                {
+                    text: "A toaster will produce less heat on low voltage because ______.",
+                    options: [
+                        "its total watt output decreases",
+                        "the current will decrease",
+                        "the resistance has not changed",
+                        "all of these"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 422 and heating appliance rules. Theory: Power P = V²/R. Lower voltage reduces power (heat) quadratically while resistance stays constant."
+                }
+            ]
+        },
+        {
+            id: "general_6",
+            title: "General Knowledge Exam #6",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "Ohm's law is ______.",
+                    options: [
+                        "an equation for determining power",
+                        "the relationship between voltage, current and power",
+                        "the relationship between voltage, current and resistance",
+                        "a measurement of wattage losses"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC calculations throughout Articles 210, 220, and 310. Theory: Ohm’s Law states V = I × R (or I = V/R, R = V/I) — the direct relationship between voltage, current, and resistance."
+                },
+                {
+                    text: "If a live conductor is contacted accidentally, the severity of the electrical shock is determined primarily by ______.",
+                    options: [
+                        "the size of the conductor",
+                        "whether the current is DC or AC",
+                        "the current in the conductor",
+                        "the contact resistance"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 110.9 and OSHA/NFPA 70E safety rules. Theory: Shock severity depends mainly on the amount of current flowing through the body; contact resistance (skin, moisture, etc.) determines how much current flows for a given voltage."
+                },
+                {
+                    text: "A solenoid is a/an ______.",
+                    options: [
+                        "relay",
+                        "permanent magnet",
+                        "dynamo",
+                        "electromagnet"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 430.7 and control devices. Theory: A solenoid is a coil of wire that produces a magnetic field when current flows, creating linear mechanical motion (electromagnet with a movable core)."
+                },
+                {
+                    text: "Laminations are used in transformers to prevent ______.",
+                    options: [
+                        "copper loss",
+                        "weight",
+                        "eddy current loss",
+                        "counter EMF"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 450.3 and transformer construction. Theory: Thin insulated laminations break up eddy current paths in the core, greatly reducing eddy current losses and associated heating."
+                },
+                {
+                    text: "If a 120 volt incandescent light bulb is operating at a voltage of 125 volts, the result will be ______.",
+                    options: [
+                        "it may be enough to blow a fuse",
+                        "the bulb won’t be as bright",
+                        "shorter life of the bulb",
+                        "the wattage will be less than rated"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 410.14 and lamp rules. Theory: Higher-than-rated voltage increases filament temperature, causing the bulb to burn brighter but significantly shortening its life."
+                },
+                {
+                    text: "An autotransformer differs from other types of transformers in that ______.",
+                    options: [
+                        "its primary winding is always larger than its secondary winding",
+                        "it can be used only in automobiles",
+                        "its primary and secondary windings are common to each other",
+                        "it must be wound with heavier wire"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 450.3 and 450.9. Theory: An autotransformer has a single winding that serves as both primary and secondary (common part), providing no electrical isolation between input and output."
+                },
+                {
+                    text: "A ______ is used for testing specific gravity.",
+                    options: [
+                        "thermocouple",
+                        "megger",
+                        "hydrometer",
+                        "galvanometer"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 480.7 battery maintenance. Theory: A hydrometer measures the density (specific gravity) of the electrolyte in lead-acid batteries to determine state of charge."
+                },
+                {
+                    text: "A ______ helps prevent arcing in movable contacts.",
+                    options: [
+                        "spring",
+                        "condenser",
+                        "resistor",
+                        "hydrometer"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 404.14 and switch rules. Theory: A condenser (capacitor) connected across contacts absorbs the inductive kick, suppressing arcing and extending contact life."
+                },
+                {
+                    text: "The liquid in a battery is called the ______.",
+                    options: [
+                        "askarel",
+                        "festoon",
+                        "hermetic",
+                        "electrolyte"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 480.2 definitions. Theory: The electrolyte is the conductive liquid (usually sulfuric acid solution) that enables the chemical reaction producing electricity."
+                },
+                {
+                    text: "If the voltage is doubled, the ampacity of a conductor ______.",
+                    options: [
+                        "increases",
+                        "decreases",
+                        "doubles",
+                        "remains the same"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Table 310.16 and ampacity rules. Theory: Ampacity is the maximum safe current a conductor can carry; it is determined by heat dissipation and insulation rating, not directly by system voltage (though voltage affects insulation class)."
+                },
+                {
+                    text: "To control a ceiling light from five different locations, it requires which of the following?",
+                    options: [
+                        "four 3-way switches and one 4-way switch",
+                        "three 4-way switches and two 3-way switches",
+                        "three 3-way switches and two 4-way switches",
+                        "four 4-way switches and one 3-way switch"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 404.2 and switching arrangements. Theory: Two 3-way switches + three 4-way switches allow control from five locations."
+                },
+                {
+                    text: "If the primary of a transformer is 480 volts and secondary is 240/120v, the wire on the ______ is larger.",
+                    options: [
+                        "tertiary",
+                        "secondary",
+                        "primary",
+                        "windings"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 450.3 and transformer sizing. Theory: Lower voltage side carries higher current for the same power (P = V × I), so the secondary requires larger wire."
+                },
+                {
+                    text: "To reverse the rotation of a three-phase motor, you would ______.",
+                    options: [
+                        "reverse all the leads",
+                        "reverse two of the four leads",
+                        "turn it around",
+                        "reverse any two of the three leads"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 430.7 and motor rotation rules. Theory: Swapping any two phase conductors reverses the rotating magnetic field and thus the motor direction."
+                },
+                {
+                    text: "The advantage of cutting a metal rigid conduit with a hacksaw rather than a pipe cutter is ______.",
+                    options: [
+                        "you do not need a vice",
+                        "less reaming is required",
+                        "less energy required in cutting",
+                        "threading oil is not required"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Standard trade practice and NEC 344.42. Theory: A hacksaw cut is cleaner and produces less burr inside the conduit, requiring minimal reaming."
+                },
+                {
+                    text: "The total resistance of four 10 ohm resistors in parallel is ______.",
+                    options: [
+                        "10 ohms",
+                        "2.5 ohms",
+                        "5 ohms",
+                        "4 ohms"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Chapter 9 calculations. Theory: For four equal resistors in parallel, R_total = R / 4 = 10 / 4 = 2.5 Ω."
+                },
+                {
+                    text: "The heating element in a toaster has a ______.",
+                    options: [
+                        "low resistance",
+                        "high resistance",
+                        "high conductivity",
+                        "none of these"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 422 and heating appliances. Theory: High resistance in the nichrome wire produces high I²R heat when current flows."
+                },
+                {
+                    text: "When working near acid storage batteries, extreme care should be taken to guard against sparks, essentially to avoid ______.",
+                    options: [
+                        "overheating the electrolyte",
+                        "an electric shock",
+                        "a short circuit",
+                        "an explosion"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 480.9 and battery safety. Theory: Hydrogen gas released during charging is highly explosive; a spark can ignite it."
+                },
+                {
+                    text: "When voltage and current appear at their zero and peak values at the same time, they are in ______.",
+                    options: [
+                        "motion",
+                        "group",
+                        "phase",
+                        "balance"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC power calculations and AC theory. Theory: When voltage and current are in phase (phase angle = 0°), power factor = 1 (purely resistive circuit)."
+                },
+                {
+                    text: "Solid wire is preferred instead of stranded wire in panel wiring because ______.",
+                    options: [
+                        "costs less than stranded",
+                        "solid will carry more current",
+                        "can be 'shaped' better",
+                        "no derating required for solid"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 310.15 and panel wiring practices. Theory: Solid wire is stiffer and holds its shape better inside panels and enclosures."
+                },
+                {
+                    text: "If the circuit voltage is increased, all else remains the same, only the ______ will change.",
+                    options: [
+                        "resistance",
+                        "current",
+                        "ampacity",
+                        "conductivity"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 210.19 and Ohm’s Law. Theory: For a fixed resistance, I = V/R; increasing voltage increases current proportionally."
+                },
+                {
+                    text: "A common fuse and circuit breaker works on the principal that ______.",
+                    options: [
+                        "voltage develops heat",
+                        "voltage breaks down insulation",
+                        "current develops heat",
+                        "current expands a wire"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 240.4 and overcurrent protection. Theory: Both devices open when excessive current produces enough heat (I²R) to melt the fuse element or trip the breaker."
+                },
+                {
+                    text: "The horsepower rating of a motor ______.",
+                    options: [
+                        "is a measure of motor efficiency",
+                        "is the input to the motor",
+                        "cannot be changed to watts",
+                        "is the output of the motor"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 430.7 nameplate rules. Theory: Horsepower on a motor nameplate is the mechanical output power."
+                },
+                {
+                    text: "A voltmeter is connected in ______ with the load.",
+                    options: [
+                        "series",
+                        "parallel",
+                        "series-parallel",
+                        "series-shunt"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 110.9 metering. Theory: A voltmeter has very high resistance and is connected in parallel across the load to measure voltage drop."
+                },
+                {
+                    text: "To convert AC or DC you will use a ______.",
+                    options: [
+                        "generator",
+                        "rectifier",
+                        "vibrator",
+                        "auto-transformer"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 690 and general conversion rules. Theory: A rectifier (diode bridge) converts AC to DC."
+                },
+                {
+                    text: "A pendant fixture is a/an ______ fixture.",
+                    options: [
+                        "hanging",
+                        "recessed",
+                        "bracket",
+                        "none of these"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 410.2 definitions. Theory: A pendant fixture is suspended from the ceiling by a cord, chain, or stem (hanging type)."
+                }
+            ]
+        },
+        {
+            id: "general_7",
+            title: "General Knowledge Exam #7",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "A multimeter is a combination of ______.",
+                    options: [
+                        "ammeter, ohmmeter and wattmeter",
+                        "voltmeter, ohmmeter and ammeter",
+                        "voltmeter, ammeter and megger",
+                        "voltmeter, wattmeter and ammeter"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 110.9 and test instrument requirements. Theory: A standard multimeter (VOM) combines voltmeter, ohmmeter, and ammeter functions in one unit."
+                },
+                {
+                    text: "The total opposition to current flow in an AC circuit is expressed in ohms and is called ______.",
+                    options: [
+                        "impedance",
+                        "conductance",
+                        "reluctance",
+                        "resistance"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC calculations in Articles 220 and 430. Theory: Impedance (Z) is the total opposition to AC current, combining resistance (R), inductive reactance (XL), and capacitive reactance (XC)."
+                },
+                {
+                    text: "It is best as a safety measure, not to use water to extinguish electrical equipment fires. The main reason is that water ______.",
+                    options: [
+                        "may transmit shock to the user",
+                        "will turn to steam",
+                        "will not put the fire out",
+                        "may damage the wiring"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 110.9 and NFPA 70E safety rules. Theory: Water conducts electricity, creating a path for current that can deliver a severe shock to the person using it."
+                },
+                {
+                    text: "When a current leaves its intended path and returns to the source bypassing the load, the circuit is ______.",
+                    options: [
+                        "open",
+                        "shorted",
+                        "incomplete",
+                        "broken"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 110.9 and 250.4. Theory: A short circuit provides a very low-resistance path that bypasses the load, causing high current flow."
+                },
+                {
+                    text: "The greater the number of free electrons, the better the ______ of a metal.",
+                    options: [
+                        "insulation value",
+                        "resistance",
+                        "voltage drop",
+                        "conductivity"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Chapter 9, Table 8. Theory: Conductivity is directly related to the number of free electrons available to carry current."
+                },
+                {
+                    text: "The most heat is created when current flows through which of the following?",
+                    options: [
+                        "a 10 ohm condenser",
+                        "a 10 ohm inductance coil",
+                        "a 10 ohm resistor",
+                        "heat would be equal"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 310.15 and I²R heating. Theory: Heat (power loss) = I²R. For the same current, a pure resistor converts all electrical energy to heat, while capacitors and inductors store and return energy with minimal heat loss."
+                },
+                {
+                    text: "The ______ angle is the angle between the real power and the apparent power.",
+                    options: [
+                        "lag",
+                        "power factor",
+                        "voltage-current",
+                        "watt"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 220.60 and power calculations. Theory: Power factor = cos θ, where θ is the phase angle between voltage and current (or between real power and apparent power)."
+                },
+                {
+                    text: "The larger the conductor, the ______.",
+                    options: [
+                        "higher the resistance",
+                        "lower the ampacity",
+                        "higher the voltage",
+                        "lower the resistance"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Table 310.16 and Chapter 9. Theory: Larger cross-sectional area reduces resistance (R = ρL/A)."
+                },
+                {
+                    text: "If a 240 volt heater is used on 120 volts, the amount of heat produced will be ______.",
+                    options: [
+                        "twice as great",
+                        "four times as great",
+                        "1/4 as much",
+                        "the same"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 422 and heating load calculations. Theory: Power P = V²/R. Halving voltage quarters the power (heat)."
+                },
+                {
+                    text: "The main difference between a pipe thread and a machine thread is that the pipe thread is ______.",
+                    options: [
+                        "finer",
+                        "longer",
+                        "uneven",
+                        "tapered"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 344.42, 358.42. Theory: NPT (National Pipe Taper) threads are tapered to create a pressure-tight seal."
+                },
+                {
+                    text: "The two kinds of blueprints you will use on the job are ______.",
+                    options: [
+                        "floor plan and one-line diagram",
+                        "schematic and pictorial",
+                        "detail and riser plans",
+                        "one-line diagram and schematic"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 110.22 and electrical plan requirements. Theory: Electricians commonly use one-line diagrams (showing power flow) and schematic diagrams (showing control logic)."
+                },
+                {
+                    text: "Which of the following is a false statement?",
+                    options: [
+                        "Electricity has no weight nor substance.",
+                        "A short circuit has very little resistance.",
+                        "Resistance would be like standing on a water hose.",
+                        "It is easier for electricity to flow through a small wire than a larger one."
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Chapter 9 and basic theory. Theory: Larger conductors have lower resistance, so current flows more easily through larger wires."
+                },
+                {
+                    text: "Conductor resistance varies with which of the following?",
+                    options: [
+                        "voltage",
+                        "current",
+                        "power",
+                        "material"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Chapter 9, Table 8. Theory: Resistance depends on the material (resistivity ρ), length, and cross-sectional area."
+                },
+                {
+                    text: "A parallel connected circuit will have the same ______ at each load.",
+                    options: [
+                        "voltage",
+                        "current",
+                        "resistance",
+                        "wattage"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 210.19 and branch circuit rules. Theory: In parallel, voltage is the same across all branches."
+                },
+                {
+                    text: "In a house, which of the following will be connected series-parallel?",
+                    options: [
+                        "lighting circuits",
+                        "receptacle circuits",
+                        "water heater circuit",
+                        "heating elements in range"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 422.10 and range circuits. Theory: Range heating elements are often wired in series-parallel combinations to achieve different heat settings."
+                },
+                {
+                    text: "The mounting strap on a switch or receptacle is called the ______.",
+                    options: [
+                        "switching mechanism",
+                        "yoke",
+                        "contact device",
+                        "screw holder"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 404.9 and device definitions. Theory: The yoke (or strap) is the metal frame that mounts the device to the box."
+                },
+                {
+                    text: "A leakage of current to ground, caused by worn, frayed or defective insulation, moisture or tools that have deteriorated with abuse or age is known as a ______.",
+                    options: [
+                        "short circuit",
+                        "ground fault",
+                        "leaking wire",
+                        "leaking circuit"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 250.4 and 210.8 GFCI rules. Theory: A ground fault is unintended current flowing from a hot conductor to ground."
+                },
+                {
+                    text: "When removing concentric knockouts from a box to connect a piece of conduit, if the hole is too large for the conduit size, you would use ______ so that the conduit can be securely fastened to the box.",
+                    options: [
+                        "threaded reducing bushing",
+                        "eccentric ring",
+                        "knockout punch",
+                        "reducing washers"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 312.5 and box fill rules. Theory: Reducing washers (or knockout reducers) adapt a larger knockout to a smaller conduit size."
+                },
+                {
+                    text: "A GFCI in a dwelling will trip if the current on the hot or ungrounded conductor and the current on the grounded conductor varies by ______ milliamperes.",
+                    options: [
+                        "1 to 2",
+                        "2.5 to 3",
+                        "4 to 6",
+                        "8 to 12"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 210.8 and GFCI requirements. Theory: Class A GFCIs trip when the ground-fault current reaches 4–6 mA."
+                },
+                {
+                    text: "The ampacity of a conductor is defined as the current in amperes that a conductor can carry continuously under the conditions of use without exceeding its ______ rating.",
+                    options: [
+                        "amp",
+                        "voltage",
+                        "temperature",
+                        "resistance"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 310.15 and Table 310.16. Theory: Ampacity is limited by the temperature rating of the insulation."
+                },
+                {
+                    text: "Grounding is a means for ensuring that a ______ object cannot take on a potential differing from earth potential, which is zero.",
+                    options: [
+                        "metal",
+                        "grounded",
+                        "noninsulated",
+                        "dielectric"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 250.4(A). Theory: Grounding keeps metallic parts at earth potential to prevent dangerous voltage differences."
+                },
+                {
+                    text: "The equipment grounding conductor is the path for the ______ current to travel back to trip the overcurrent device.",
+                    options: [
+                        "ground-fault",
+                        "short-circuit",
+                        "direct",
+                        "lightning"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 250.4(A)(5) and 250.122. Theory: The equipment grounding conductor provides a low-impedance path for ground-fault current."
+                },
+                {
+                    text: "The length of time that a fault current would flow on the equipment grounding conductor would be approximately ______.",
+                    options: [
+                        "1/2 cycle",
+                        "6 seconds",
+                        "60 cycles",
+                        "120 cycles"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 250.4 and overcurrent device operation. Theory: Modern circuit breakers or fuses clear faults in less than one-half cycle (approximately 8.3 ms at 60 Hz)."
+                },
+                {
+                    text: "How shall an elevator driving motor be classified?",
+                    options: [
+                        "Continuous",
+                        "Intermittent",
+                        "Short time",
+                        "Varying"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 430.22 and Article 620. Theory: Elevator motors are classified as intermittent duty because they do not run continuously."
+                },
+                {
+                    text: "What is the force that moves electrons from atom to atom through a closed conducting path?",
+                    options: [
+                        "Flux",
+                        "Resistance",
+                        "Admittance",
+                        "EMF"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Article 100 and basic theory. Theory: Electromotive Force (EMF or voltage) is the force that causes electrons to move."
+                }
+            ]
+        },
+        {
+            id: "general_8",
+            title: "General Knowledge Exam #8",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "If the current going out to the load differs by ___ amperes from the current coming back from the load, the GFCI acts quickly and disconnects the circuit.",
+                    options: [
+                        ".005",
+                        ".050",
+                        ".500",
+                        ".025"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 210.8 and GFCI requirements. Theory: Class A GFCIs trip when the ground-fault current reaches approximately 4–6 mA (0.005 A is too low; 0.050 A = 5 mA is the typical trip threshold)."
+                },
+                {
+                    text: "The difference between the winding temperature of the motor when running and the ambient temperature is called the ___ ___ .",
+                    options: [
+                        "temperature rise",
+                        "service factor",
+                        "code letter",
+                        "ambient temperature"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 430.7(A) and motor nameplate rules. Theory: Temperature rise is the allowable increase in winding temperature above ambient when the motor runs at rated load."
+                },
+                {
+                    text: "A lightning flash is caused by the movement of electrons between the atoms of the atmosphere. The pressure or force that causes those electrons to move is measured in what units?",
+                    options: [
+                        "Magnetic flux",
+                        "Amperes",
+                        "Coulombs",
+                        "Volts"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Article 100 and basic theory. Theory: Voltage (potential difference) is the electrical pressure (EMF) that causes electrons to move."
+                },
+                {
+                    text: "Which of the following statements about the purpose or function of an ohmmeter is TRUE?",
+                    options: [
+                        "An ohmmeter uses the power from the system.",
+                        "An ohmmeter requires its own power.",
+                        "An ohmmeter measures current.",
+                        "An ohmmeter measures amperage."
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 110.9 and test equipment rules. Theory: An ohmmeter contains its own internal battery (power source) to send a small current through the component being tested."
+                },
+                {
+                    text: "All of the following physical characteristics of conductors will affect ampacity EXCEPT _____.",
+                    options: [
+                        "cross-sectional area",
+                        "material",
+                        "temperature",
+                        "number of strands"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Table 310.16 and 310.15. Theory: Ampacity is affected by conductor material, cross-sectional area, temperature, and insulation type. The number of strands affects flexibility and diameter but not ampacity (same circular mil area = same ampacity)."
+                },
+                {
+                    text: "What is any electrical circuit that controls any other circuit through a relay or an equivalent device?",
+                    options: [
+                        "Remote-control circuit",
+                        "Low-voltage circuit",
+                        "Primary circuit",
+                        "Secondary circuit"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC Article 100 and Article 725 definitions. Theory: A remote-control circuit operates relays or contactors that control a higher-power circuit."
+                },
+                {
+                    text: "Some materials readily give up electrons and others accept electrons. What is this the basis for?",
+                    options: [
+                        "A magnocouple",
+                        "A piezometer",
+                        "A photovoltaic cell",
+                        "A thermocouple"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 725 and sensing devices. Theory: The Seebeck effect in a thermocouple is based on two dissimilar metals that readily give up or accept electrons when heated, producing a small voltage."
+                },
+                {
+                    text: "How are fuses rated?",
+                    options: [
+                        "Amperage only",
+                        "Voltage only",
+                        "Both amperage and voltage",
+                        "Amperage, voltage, and wattage"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 240.6 and 240.60. Theory: Fuses are rated by current (amperes) and voltage (they must not be used above their voltage rating)."
+                },
+                {
+                    text: "The power fails and the circuit returns to a safe condition and will not re-energize itself. What is this condition called?",
+                    options: [
+                        "Safe return",
+                        "Fail dead",
+                        "Fail safe",
+                        "Normal safe"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 700 and emergency systems. Theory: Fail-safe design ensures that upon power loss or fault, the system defaults to a safe (de-energized) state."
+                },
+                {
+                    text: "How does a generator produce electricity?",
+                    options: [
+                        "By making electrons",
+                        "By moving a conductor through a magnetic field",
+                        "By moving a magnet through a magnetic field",
+                        "By ozone conversion"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 430.7 and generator rules. Theory: Electromagnetic induction (Faraday’s law) — relative motion between a conductor and magnetic field induces voltage."
+                },
+                {
+                    text: "Copper is often used as an electrical conductor because it ________.",
+                    options: [
+                        "has high resistance at low temperatures",
+                        "has a highly polished surface",
+                        "is able to pass current with little opposition",
+                        "holds insulation together well"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Chapter 9, Table 8. Theory: Copper has very low resistivity, allowing high conductivity with minimal opposition to current flow."
+                },
+                {
+                    text: "If you disconnect and arrange both ends of a three conductor cable, without making any contact between the individual conductors, an indicated ohmic value between the ends of a single conductor would indicate ________.",
+                    options: [
+                        "continuity of the conductor",
+                        "an infinite resistance",
+                        "the presence of a partial ground",
+                        "that the conductor is not short circuited"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC testing practices. Theory: A low resistance reading between both ends of the same conductor confirms continuity (no break)."
+                },
+                {
+                    text: "An instantaneous-trip-type fuse will ________.",
+                    options: [
+                        "open as soon as the load current exceeds its set point",
+                        "allow a preset delay between overcurrent and melting",
+                        "open a circuit by using a time delay element with a magnetic trip",
+                        "reset itself when the overcurrent is corrected"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 240.60. Theory: Instantaneous-trip fuses (or magnetic-only breakers) open immediately when current exceeds the trip setting, with no intentional time delay."
+                },
+                {
+                    text: "The unit \"hertz\" is equivalent to ________.",
+                    options: [
+                        "coulombs",
+                        "revolutions per second",
+                        "revolutions per minute",
+                        "cycles per second"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC motor and AC system rules. Theory: Hertz (Hz) = cycles per second (frequency)."
+                },
+                {
+                    text: "Four lamps are connected in parallel in a single circuit. If one of the lamp burns out, the others will ________.",
+                    options: [
+                        "all go out",
+                        "become dimmer",
+                        "burn with their original intensities",
+                        "become brighter"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 210.19 and parallel circuit rules. Theory: In parallel, each lamp operates independently; failure of one does not affect the voltage or current through the others."
+                },
+                {
+                    text: "A megohmmeter is used to measure ________.",
+                    options: [
+                        "voltage",
+                        "dielectric strength",
+                        "current",
+                        "power"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 110.9 and insulation testing. Theory: A megohmmeter (Megger) applies high DC voltage to measure insulation resistance (dielectric strength)."
+                },
+                {
+                    text: "AC voltmeters are generally calibrated to read the ________.",
+                    options: [
+                        "instantaneous voltage",
+                        "average voltage",
+                        "RMS voltage",
+                        "peak voltage"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC calculations and metering. Theory: AC meters are calibrated in RMS (Root Mean Square) values because they produce the same heating effect as the equivalent DC value."
+                },
+                {
+                    text: "The device that most commonly utilizes the principle of electromagnetic induction is the ________.",
+                    options: [
+                        "diode",
+                        "transformer",
+                        "transistor",
+                        "rheostat"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 450.3. Theory: Transformers operate on mutual induction between primary and secondary windings."
+                },
+                {
+                    text: "The charge of a lead-acid battery is checked with a/an ________.",
+                    options: [
+                        "manometer",
+                        "hydrometer",
+                        "voltmeter",
+                        "ohmmeter"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 480.7. Theory: Specific gravity of the electrolyte (measured with a hydrometer) indicates the state of charge."
+                },
+                {
+                    text: "A galvanometer is an instrument used to measure ________.",
+                    options: [
+                        "thickness of galvanized metal",
+                        "resistance of electrical wiring insulation",
+                        "very small amounts of current or voltage",
+                        "quantity of galvans in an electric circuit"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 110.9 metering. Theory: A galvanometer is a sensitive instrument that detects very small currents (often used in bridges or as the movement in analog meters)."
+                },
+                {
+                    text: "Which of the following statements is true concerning a stepdown transformer in an operating AC power circuit?",
+                    options: [
+                        "Voltage and current will both be increased.",
+                        "Voltage and current will both be decreased.",
+                        "Voltage decreases as current increases.",
+                        "Voltage increases as current decreases."
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 450.3. Theory: In a step-down transformer, secondary voltage is lower and secondary current is higher (power ≈ constant)."
+                },
+                {
+                    text: "Increasing the load to the secondary windings of a transformer will cause a/an ________.",
+                    options: [
+                        "decrease in the primary voltage",
+                        "increase in the primary voltage",
+                        "decrease in the primary current",
+                        "increase in the primary current"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 450.3. Theory: Higher secondary load increases secondary current, which reflects back as increased primary current (P = V × I remains balanced)."
+                },
+                {
+                    text: "Some maintenance employees are given instructions in first-aid. The most likely reason for doing this is to ________.",
+                    options: [
+                        "lower the cost of accidents for the insurance company",
+                        "reduce the medical treatment by the doctor",
+                        "provide temporary emergency treatment in case of an accident",
+                        "eliminate the need for calling a doctor in case of an accident"
+                    ],
+                    correctIndex: 2,
+                    explanation: "General safety practice (OSHA/NFPA 70E). Theory: First-aid training allows immediate response to injuries before professional medical help arrives."
+                },
+                {
+                    text: "When using a multimeter for resistance measurements, it should be calibrated by clipping the loose ends of the leads together and ________.",
+                    options: [
+                        "setting the instrument pointer at \"zero\" ohms",
+                        "adjusting the line voltage to calibrate the instrument",
+                        "plugging each end of one test lead into the plus and minus terminals",
+                        "using a special purpose resistance measuring instrument (a bridge)"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Standard multimeter procedure. Theory: Zeroing the ohmmeter (shorting the leads) compensates for lead resistance and sets the full-scale deflection to zero ohms."
+                },
+                {
+                    text: "In solving series-parallel circuits, generally you would ________.",
+                    options: [
+                        "treat it as a series circuit",
+                        "assume that all loads are equal",
+                        "reduce it to its simplest form",
+                        "treat it as a parallel circuit"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC calculation methods. Theory: Complex circuits are simplified by reducing parallel groups first, then adding series resistances (or vice versa)."
+                }
+            ]
+        },
+        {
+            id: "general_9",
+            title: "General Knowledge Exam #9",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "The voltage of a circuit is best defined as ______.",
+                    options: [
+                        "the potential between two conductors",
+                        "the greatest difference of potential between two conductors",
+                        "the effective difference of potential between two conductors",
+                        "the average RMS difference of potential between any two conductors"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Article 100 definition of Voltage. Theory: Voltage is the greatest potential difference (electrical pressure) between two points in a circuit."
+                },
+                {
+                    text: "A function of a relay is to ______.",
+                    options: [
+                        "turn on another circuit",
+                        "produce thermal electricity",
+                        "limit the flow of electrons",
+                        "create a resistance in the field winding"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 430.83 and Article 725. Theory: A relay is an electrically operated switch that uses a small control current to turn on (or off) a separate higher-power circuit."
+                },
+                {
+                    text: "A dynamo is ______.",
+                    options: [
+                        "a pole line insulator",
+                        "a tool used to test dielectric strength",
+                        "a meter used for checking the R.P.M. of a motor",
+                        "a machine for converting mechanical energy into electrical energy"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 430.7 and generator rules. Theory: A dynamo is a rotating machine that converts mechanical energy into electrical energy via electromagnetic induction."
+                },
+                {
+                    text: "Multiple start buttons in a motor control circuit are connected in ______.",
+                    options: [
+                        "series",
+                        "parallel",
+                        "series-parallel",
+                        "none of these"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 430.74 and control circuit rules. Theory: Start buttons are connected in parallel so that pressing any one of them will energize the motor starter."
+                },
+                {
+                    text: "Silver is used on electrical contacts to ______.",
+                    options: [
+                        "avoid corrosion",
+                        "improve efficiency",
+                        "improve continuity",
+                        "improve appearance"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 404.14 and contact rules. Theory: Silver has extremely low contact resistance and excellent conductivity, ensuring reliable electrical continuity even after many operations."
+                },
+                {
+                    text: "A one-quarter bend in a raceway is equivalent to an angle of ______ degrees.",
+                    options: [
+                        "90",
+                        "45",
+                        "25",
+                        "180"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC Chapter 9, Table 2 and conduit bending rules. Theory: A 90° elbow or one-quarter bend equals a 90-degree change in direction."
+                },
+                {
+                    text: "On a delta three-phase four-wire secondary, how many hot wires may use the common neutral?",
+                    options: [
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 250.26 and 215.2. Theory: In a 3-phase 4-wire delta (high-leg delta), the neutral carries only the unbalanced current from the two phases that are 120 V to neutral; the high-leg phase does not use the neutral."
+                },
+                {
+                    text: "An AC ammeter or voltmeter is calibrated to read RMS values; this means the meter is reading the ______ value.",
+                    options: [
+                        "maximum",
+                        "peak",
+                        "average",
+                        "effective"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC calculations and metering rules. Theory: RMS (Root Mean Square) is also called the effective value because it produces the same heating effect as an equivalent DC value."
+                },
+                {
+                    text: "When two resistances are connected in series, ______.",
+                    options: [
+                        "voltage across them must be the same",
+                        "current in each resistor will be the same",
+                        "there will be no current in the circuit",
+                        "they will become inductive"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 210.19 and basic circuit rules. Theory: In series, the same current flows through all components (Kirchhoff’s Current Law)."
+                },
+                {
+                    text: "Heat is a form of wasted electrical energy dissipated by ______.",
+                    options: [
+                        "inductance",
+                        "capacitance",
+                        "a diode",
+                        "resistance"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 310.15 and I²R losses. Theory: All real conductors have resistance; heat is produced whenever current flows through resistance (P = I²R)."
+                },
+                {
+                    text: "Which of the following can vary with AC but not with DC?",
+                    options: [
+                        "voltage",
+                        "frequency",
+                        "power",
+                        "magnitude"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC AC theory. Theory: Frequency (cycles per second) is a property of alternating current only; DC has zero frequency."
+                },
+                {
+                    text: "An inductor works by ______.",
+                    options: [
+                        "introducing resistance into a circuit",
+                        "charging a piece of wire",
+                        "storing energy as a magnetic field",
+                        "choking off high frequency AC"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 430.7 and inductive reactance. Theory: An inductor stores energy in its magnetic field when current flows and releases it when current changes."
+                },
+                {
+                    text: "A measuring instrument used to measure the diameter of circular mils in a wire is a ______.",
+                    options: [
+                        "wire gauge",
+                        "micrometer",
+                        "millimeter",
+                        "milliammeter"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Chapter 9, Table 8. Theory: A micrometer measures the diameter of a conductor strand to determine circular mil area."
+                },
+                {
+                    text: "An ideal step-up transformer with 100 turns in the primary and 2500 turns in the secondary carries a load of 2 amps in the secondary. The current of the primary winding is ______.",
+                    options: [
+                        "25 amps",
+                        "50 amps",
+                        "250 amps",
+                        "500 amps"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 450.3. Theory: Turns ratio = 2500/100 = 25:1 step-up. Primary current = secondary current × turns ratio = 2 A × 25 = 50 A."
+                },
+                {
+                    text: "When the temperature of a conductor is decreased, the resistance will be ______.",
+                    options: [
+                        "increased",
+                        "steady",
+                        "decreased",
+                        "zero"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Chapter 9, Table 8 notes. Theory: For most metals, resistance decreases as temperature decreases (positive temperature coefficient)."
+                },
+                {
+                    text: "A short circuit can be detected by using ______.",
+                    options: [
+                        "a megger",
+                        "an ammeter",
+                        "an oscilloscope",
+                        "an ohmmeter"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC testing practices. Theory: An ohmmeter shows near-zero resistance (or continuity) between points that should be isolated in a short circuit."
+                },
+                {
+                    text: "Your foreman asked you to measure the insulation resistance of some conductors. To do this you would use a ______.",
+                    options: [
+                        "hydrometer",
+                        "megger",
+                        "bell tester",
+                        "wattmeter"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 110.9. Theory: A megohmmeter (Megger) applies high voltage to measure insulation resistance in megohms."
+                },
+                {
+                    text: "A foreman in charge of a crew of men preparing to work on a low voltage tension circuit should caution them to ______.",
+                    options: [
+                        "work only when the load is zero",
+                        "never work on any circuit alone",
+                        "consider the circuit hot at all times",
+                        "wait until the circuit has been killed"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NFPA 70E and safety rules. Theory: The safest practice is to treat every circuit as live (hot) until proven otherwise with proper testing and lockout/tagout."
+                },
+                {
+                    text: "The term pneumatic refers to ______.",
+                    options: [
+                        "electricity",
+                        "steam",
+                        "air",
+                        "oil"
+                    ],
+                    correctIndex: 2,
+                    explanation: "General terminology. Theory: Pneumatic means operated by or using compressed air."
+                },
+                {
+                    text: "Which of the following locations would most likely require installation of a ground fault circuit interrupter?",
+                    options: [
+                        "living room",
+                        "closet",
+                        "bedroom",
+                        "bathroom"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 210.8(A). Theory: Bathrooms are wet locations requiring GFCI protection for personnel safety."
+                },
+                {
+                    text: "Which of the following is an LL conduit body?",
+                    options: [
+                        "(image a - 90° with one hub on side)",
+                        "(image b - straight with one hub on side)",
+                        "(image c - 90° with hubs in line)",
+                        "(image d - T shape)"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 314.16 and conduit body definitions. Theory: An LL conduit body has a 90° bend with the cover on the long side, allowing access for pulling conductors around one 90° turn."
+                },
+                {
+                    text: "60 cycle frequency travels 180 degrees in how many seconds?",
+                    options: [
+                        "1/60",
+                        "1/120",
+                        "1/180",
+                        "1/30"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Basic AC theory. Theory: One cycle = 360°. 180° is half a cycle. At 60 Hz, time for one cycle = 1/60 s, so half cycle = 1/120 s."
+                },
+                {
+                    text: "Electricity is sold by the kilowatt which is ______ watts.",
+                    options: [
+                        "10,000",
+                        "1000",
+                        "100",
+                        "100,000"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 220.14 and utility billing. Theory: 1 kilowatt = 1000 watts."
+                },
+                {
+                    text: "Three-way switching does not use the following conductor:",
+                    options: [
+                        "ungrounded",
+                        "traveler",
+                        "grounded",
+                        "switch leg"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 404.2. Theory: Three-way switches use two traveler wires; the grounded (neutral) conductor is not switched and is not part of the three-way switching circuit."
+                },
+                {
+                    text: "The electric pressure or electromotive force is measured by the ______.",
+                    options: [
+                        "volt",
+                        "electric meter",
+                        "watt",
+                        "kilowatt"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC Article 100 definition of Voltage. Theory: Voltage is the unit of electromotive force (electrical pressure)."
+                }
+            ]
+        },
+        {
+            id: "general_10",
+            title: "General Knowledge Exam #10",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "Conduit installed in a concrete slab is considered a ______.",
+                    options: [
+                        "damp location",
+                        "moist location",
+                        "wet location",
+                        "dry location"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 300.5 and Table 300.5. Theory: Concrete slabs on grade or below grade are considered wet locations; conduit embedded in them must be suitable for wet locations."
+                },
+                {
+                    text: "Which of the items below is a rotometer?",
+                    options: [
+                        "(image a - round dial gauge with hook)",
+                        "(image b - clamp-on style meter)",
+                        "(image c - screwdriver-like probe with scale)",
+                        "(image d - pen-like probe with tip)"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Trade tool identification. Theory: A rotometer (or rotation meter) is a handheld device used to measure motor RPM by indicating direction and speed of rotation."
+                },
+                {
+                    text: "Since fuses are rated by an amperage and voltage, a fuse will work on ______.",
+                    options: [
+                        "AC only",
+                        "AC or DC",
+                        "DC only",
+                        "any voltage"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 240.60. Theory: Most cartridge fuses are rated for both AC and DC (within their voltage rating), but some are AC-only."
+                },
+                {
+                    text: "The unit of measurement for electrical resistance to current is the ______.",
+                    options: [
+                        "watt",
+                        "ohm",
+                        "volt",
+                        "amp"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Article 100 and basic theory. Theory: The ohm (Ω) is the unit of resistance."
+                },
+                {
+                    text: "A low energy power circuit ______.",
+                    options: [
+                        "is a remote-control circuit",
+                        "is a signal circuit",
+                        "has its power supplied by transformers and batteries",
+                        "none of these"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Article 725. Theory: Class 2 and Class 3 low-energy power circuits are typically powered by transformers or batteries and are limited in voltage and current for safety."
+                },
+                {
+                    text: "S₃ is a symbol used on a drawing to indicate a ______ switch.",
+                    options: [
+                        "flush",
+                        "single-pole",
+                        "four-way",
+                        "three-way"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Standard electrical drafting symbols. Theory: S₃ commonly denotes a three-way switch on plans."
+                },
+                {
+                    text: "Action requiring personal intervention for its control:",
+                    options: [
+                        "controller",
+                        "automatic",
+                        "periodic duty",
+                        "non-automatic"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 430.71 and control definitions. Theory: Non-automatic control requires an operator to initiate or stop the action."
+                },
+                {
+                    text: "The advantage of AC over DC includes which of the following?",
+                    options: [
+                        "better speed control",
+                        "ease of voltage variation",
+                        "lower resistance at higher current",
+                        "impedance is greater"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Basic electrical theory. Theory: AC voltage is easily stepped up or down with transformers, which is a major advantage over DC."
+                },
+                {
+                    text: "A color code is used in multiple-conductor cables. For a 3-conductor cable the colors would be ______.",
+                    options: [
+                        "one black, one red and one white",
+                        "one white, one black and one blue",
+                        "two black and one red",
+                        "two red and one black"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 310.12 and standard cable coloring. Theory: Typical 3-conductor cable uses black, red, and white (or gray) for the grounded conductor."
+                },
+                {
+                    text: "The identified grounded conductor of a lighting circuit is always connected to the screw of a light socket to ______.",
+                    options: [
+                        "reduce the possibility of accidental shock",
+                        "ground the light fixture",
+                        "improve the efficiency of the lamp",
+                        "provide the easiest place to connect the wire"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 410.50. Theory: Connecting the grounded (neutral) conductor to the screw shell reduces shock hazard if the bulb is touched while energized."
+                },
+                {
+                    text: "A ______ box may be weatherproof.",
+                    options: [
+                        "watertight",
+                        "rainproof",
+                        "raintight",
+                        "all of these"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 314.15 and box definitions. Theory: Properly rated boxes can be watertight, rainproof, or raintight depending on the listing."
+                },
+                {
+                    text: "Installing more than three current carrying conductors in the same conduit requires ______.",
+                    options: [
+                        "a larger conduit",
+                        "high heat rated conductors",
+                        "derating of ampacity",
+                        "continuous loading"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 310.15(B)(3)(a). Theory: More than three current-carrying conductors require ampacity derating due to heat buildup."
+                },
+                {
+                    text: "When tightening a screw on a terminal, the end of the conductor should wrap around the screw in the same direction that you are turning the screw so that ______.",
+                    options: [
+                        "when you pull on the conductor, it will tighten",
+                        "the screw will not become loose",
+                        "the conductor will act as a locking nut",
+                        "the conductor will not turn off"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Standard termination practice. Theory: Wrapping clockwise (for right-hand screws) ensures the wire tightens under the screw head when pulled."
+                },
+                {
+                    text: "Determining a positive wire on a single-phase circuit is ______.",
+                    options: [
+                        "possible with a wattmeter",
+                        "possible with an ammeter",
+                        "possible with a voltmeter",
+                        "an impossibility"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Basic DC theory. Theory: On a single-phase circuit without additional reference, you cannot determine polarity with standard meters alone."
+                },
+                {
+                    text: "Piezoelectric is caused by crystals or binding ______.",
+                    options: [
+                        "chemical",
+                        "battery",
+                        "pressure",
+                        "heat"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Basic physics. Theory: The piezoelectric effect generates voltage when certain crystals are subjected to mechanical pressure or stress."
+                },
+                {
+                    text: "The sum of the voltage drop around a circuit is equal to the source voltage is ______.",
+                    options: [
+                        "Kirchhoff's law",
+                        "Ohm's law",
+                        "Nevin's theory",
+                        "Faraday's law"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Basic circuit theory (KVL). Theory: Kirchhoff’s Voltage Law states that the algebraic sum of voltages around a closed loop is zero (equal to the source voltage)."
+                },
+                {
+                    text: "Discoloring of one end of a fuse normally indicates ______.",
+                    options: [
+                        "increased current",
+                        "excessive voltage",
+                        "low resistance",
+                        "poor contact"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 240.60 and fuse maintenance. Theory: Discoloration at one end usually indicates overheating from poor contact or high resistance at the terminal."
+                },
+                {
+                    text: "The Code requires which of the following colors for the equipment grounding conductor?",
+                    options: [
+                        "white or gray",
+                        "green or green with yellow stripes",
+                        "yellow",
+                        "blue with a yellow stripe"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 250.119. Theory: Equipment grounding conductors must be green or green with yellow stripes."
+                },
+                {
+                    text: "The assigned color for the high-leg conductor of a three-phase, 4-wire delta secondary is ______.",
+                    options: [
+                        "red",
+                        "black",
+                        "blue",
+                        "orange"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 110.15 and 215.8. Theory: The high-leg (wild leg) in a 240/120 V delta is orange."
+                },
+                {
+                    text: "The Code rule for maximum 90 degree bends in a conduit between two boxes is four, the most likely reason for the total 360 degree limitation is ______.",
+                    options: [
+                        "it is unsafe",
+                        "it makes pulling the conductors through the conduit too difficult",
+                        "you can damage the galvanized coating on the conduit",
+                        "too many bends require extra wire to be pulled"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Chapter 9, Note 4 to Table 1. Theory: More than 360° total bends makes wire pulling extremely difficult and risks damaging insulation."
+                },
+                {
+                    text: "The correct word to define wiring which is not concealed is ______.",
+                    options: [
+                        "open",
+                        "uncovered",
+                        "exposed",
+                        "bare"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Article 100 definitions. Theory: Exposed wiring is not concealed by building finish."
+                },
+                {
+                    text: "The best thing to cut PVC conduit within a tight area is ______.",
+                    options: [
+                        "a short hacksaw",
+                        "a nylon string",
+                        "a knife",
+                        "a pipe cutter"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Trade practice. Theory: A nylon string (or wire) can be used to saw through PVC in very tight spaces where a hacksaw won't fit."
+                },
+                {
+                    text: "What is the normal taper on a standard conduit thread-cutting die?",
+                    options: [
+                        "1/2\" per foot",
+                        "1/4\" per foot",
+                        "3/8\" per foot",
+                        "3/4\" per foot"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 344.42 and NPT standards. Theory: Standard conduit threads use 3/4 inch taper per foot (NPT taper)."
+                },
+                {
+                    text: "A location classified as ______ may be temporarily subject to dampness and wetness.",
+                    options: [
+                        "dry",
+                        "damp",
+                        "moist",
+                        "wet"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Article 100 definitions. Theory: A damp location is one that is occasionally subject to moisture (e.g., protected exterior locations)."
+                },
+                {
+                    text: "The ______ circuit is that portion of a wiring system beyond the final overcurrent protection.",
+                    options: [
+                        "lighting",
+                        "feeder",
+                        "signal",
+                        "branch"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Article 100 definition of Branch Circuit. Theory: The branch circuit runs from the final overcurrent device to the outlets or loads."
+                }
+            ]
+        },
+        {
+            id: "general_11",
+            title: "General Knowledge Exam #11",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "Which phase is probably open when you test Phase A and Phase B and get a normal reading and test Phase A and C and get a low voltage reading?",
+                    options: [
+                        "Phase A",
+                        "Phase B",
+                        "Phase C",
+                        "None of these"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 430.7 and three-phase motor troubleshooting. Theory: In a wye or delta system, an open phase C will cause low voltage between A-C and B-C while A-B reads normal."
+                },
+                {
+                    text: "The chemical used as the agent in fire extinguishers to fight electrical fires is ______.",
+                    options: [
+                        "CO₂",
+                        "K₂H",
+                        "H₂O",
+                        "L₆"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NFPA 70E and fire safety. Theory: Carbon dioxide (CO₂) is a non-conductive gas commonly used on Class C (electrical) fires."
+                },
+                {
+                    text: "Which of the following will not affect the resistance of a circuit?",
+                    options: [
+                        "Length of the Conductor",
+                        "Diameter of the Conductor",
+                        "Insulation of the Conductor",
+                        "Temperature"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Chapter 9, Table 8. Theory: Insulation type affects voltage rating and ampacity but does not change the DC resistance of the conductor itself."
+                },
+                {
+                    text: "Which of the following is not true?",
+                    options: [
+                        "A fluorescent fixture is more efficient than an incandescent fixture.",
+                        "Room temperature has an affect on the operation of a fluorescent lamp.",
+                        "Fluorescent fixtures have a good power factor with the current leading the voltage.",
+                        "The life of a fluorescent bulb is affected by starting and stopping."
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 410 and lighting theory. Theory: Fluorescent lamps typically have a lagging power factor (inductive ballast), not leading."
+                },
+                {
+                    text: "Special permission is ______.",
+                    options: [
+                        "granted by the electrical foreman on the job",
+                        "verbal permission by the inspector",
+                        "given only once on one blueprint change request",
+                        "the written consent of the authority having jurisdiction"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 90.4 and definitions. Theory: Special permission must be written consent from the Authority Having Jurisdiction (AHJ)."
+                },
+                {
+                    text: "The difference between a neutral and a grounded circuit conductor is ______.",
+                    options: [
+                        "only a neutral will have equal potential to the ungrounded conductor",
+                        "only a neutral's outer covering is white or natural gray",
+                        "only a neutral carries unbalanced current",
+                        "there is no difference"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Article 100 and 250.24. Theory: The neutral carries unbalanced current in normal operation; the equipment grounding conductor carries fault current only."
+                },
+                {
+                    text: "Unity power factor, which means that the current is in phase with the voltage, would be ______.",
+                    options: [
+                        ".50",
+                        ".80",
+                        "0.10",
+                        "1.0"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 220.60 and power calculations. Theory: Power factor = 1.0 (unity) when voltage and current are perfectly in phase (purely resistive load)."
+                },
+                {
+                    text: "Rheostats and potentiometers are types of ______ resistors.",
+                    options: [
+                        "film",
+                        "variable",
+                        "fixed",
+                        "wirewound"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 430.82 and control devices. Theory: Both are adjustable (variable) resistors used for speed control or voltage division."
+                },
+                {
+                    text: "A laminated pole is ______.",
+                    options: [
+                        "one built up of layers or iron sheets, stamped from sheet metal and insulated",
+                        "used in transmission lines over 100kV",
+                        "a pole soaked in creosote",
+                        "found in the western part of the U.S.A."
+                    ],
+                    correctIndex: 0,
+                    explanation: "Motor and generator construction. Theory: Laminated poles reduce eddy current losses in DC machines and transformers."
+                },
+                {
+                    text: "What percentage of the maximum (peak) voltage is the effective (R.M.S.) voltage?",
+                    options: [
+                        "100%",
+                        "70.7%",
+                        "63.7%",
+                        "57.7%"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC calculations and AC theory. Theory: RMS value = Peak × 0.707 for a sine wave."
+                },
+                {
+                    text: "Electrical power is a measure of ______.",
+                    options: [
+                        "work wasted",
+                        "voltage",
+                        "rate at which work is performed",
+                        "total work performed"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 220.14 and basic theory. Theory: Power is the rate of doing work (P = work / time)."
+                },
+                {
+                    text: "To fasten a box to a terra cotta wall you should use which of the following?",
+                    options: [
+                        "wooden plug",
+                        "lag bolt",
+                        "expansion bolt",
+                        "toggle bolt"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Trade practice. Theory: Toggle bolts provide excellent holding power in hollow or fragile materials like terra cotta."
+                },
+                {
+                    text: "The transferring of electrons from one material to another would be ______.",
+                    options: [
+                        "electrochemistry",
+                        "static electricity",
+                        "solar electricity",
+                        "piezoelectricity"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Basic theory. Theory: Static electricity is the buildup and transfer of electrons between materials."
+                },
+                {
+                    text: "A minimum thickness of ______ inch/inches of concrete over conduits and raceways should be used to prevent cracking.",
+                    options: [
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 300.5 and Table 300.5. Theory: Minimum 2 inches of concrete cover is typically required over raceways in slabs to prevent cracking."
+                },
+                {
+                    text: "One of the disadvantages of indenter or crimp connectors is ______.",
+                    options: [
+                        "they must be re-crimped at each annual maintenance inspection",
+                        "that special tools are required to make the joint",
+                        "eventually they will loosen",
+                        "they can only be used for copper conductors"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Trade practice. Theory: Proper crimping requires calibrated tools; incorrect tools lead to poor connections."
+                },
+                {
+                    text: "The symbol for a wye connection is ______.",
+                    options: [
+                        "Σ",
+                        "Δ",
+                        "ø",
+                        "Y"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Standard electrical symbols. Theory: Wye (star) connection is denoted by Y."
+                },
+                {
+                    text: "Which of the following meters is a wattmeter?",
+                    options: [
+                        "I only",
+                        "II only",
+                        "III only",
+                        "I, II or III"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Meter identification (from diagram in book). Theory: A wattmeter measures real power and typically has both voltage and current coils."
+                },
+                {
+                    text: "Something that would effect the ampacity of a conductor would be ______.\nI. voltage   II. amperage   III. length   IV. temperature",
+                    options: [
+                        "I only",
+                        "II only",
+                        "III only",
+                        "IV only"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 310.15. Theory: Conductor ampacity is primarily affected by temperature (and number of conductors)."
+                },
+                {
+                    text: "Which has the highest electrical resistance?",
+                    options: [
+                        "brass",
+                        "iron",
+                        "water",
+                        "paper"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Basic material properties. Theory: Paper (and most insulators) has extremely high resistance compared to metals or even water."
+                },
+                {
+                    text: "Conductor sizes are expressed ______.",
+                    options: [
+                        "only in circular mils",
+                        "in AWG or in circular mils",
+                        "in diameter or area",
+                        "in AWG or millimeters"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Chapter 9, Table 8. Theory: American Wire Gauge (AWG) and circular mils are the standard in the U.S."
+                },
+                {
+                    text: "Oil is used in many large transformers to ______.",
+                    options: [
+                        "prevent breakdown due to friction",
+                        "lubricate the core",
+                        "cool and insulate the transformer",
+                        "lubricate the coils"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 450.3. Theory: Transformer oil provides both dielectric insulation and cooling."
+                },
+                {
+                    text: "Which of the following would be used as a stop button?",
+                    options: [
+                        "(image a - mushroom head red button)",
+                        "(image b - large twist knob)",
+                        "(image c - keyed switch)",
+                        "(image d - enclosed pushbutton station)"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Standard control devices. Theory: A mushroom-head red pushbutton is the industry standard for emergency stop."
+                },
+                {
+                    text: "Receptacles installed on ______ ampere branch circuits shall be of the grounding type.",
+                    options: [
+                        "15 and 20",
+                        "25",
+                        "30",
+                        "40"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 210.7 and 406.4. Theory: All 15- and 20-ampere receptacles must be grounding type."
+                },
+                {
+                    text: "Where conductors carrying alternating current are installed in metal enclosures or metal raceways, they shall be so arranged as to avoid heating the surrounding metal by induction, to accomplish this ______ shall be grouped together.",
+                    options: [
+                        "I only",
+                        "I and II only",
+                        "I and III only",
+                        "I, II and III"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 300.20. Theory: All phase conductors, neutral (where used), and equipment grounding conductors must be grouped to cancel magnetic fields."
+                },
+                {
+                    text: "A steel measuring tape is undesirable for use around electrical equipment. The least important reason is the ______.",
+                    options: [
+                        "danger of entanglement in rotating machines",
+                        "shock hazard",
+                        "short circuit hazard",
+                        "magnetic effect"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Safety practice. Theory: While all are concerns, the magnetic effect (attracting to energized equipment) is usually the least critical compared to shock and short-circuit risks."
+                }
+            ]
+        },
+        {
+            id: "general_12",
+            title: "General Knowledge Exam #12",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "______ is the ability of a material to permit the flow of electrons.",
+                    options: [
+                        "Voltage",
+                        "Current",
+                        "Resistance",
+                        "Conductance"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Article 100 and basic theory. Theory: Conductance is the reciprocal of resistance and measures how easily current flows through a material."
+                },
+                {
+                    text: "Which of the following two wires are grounded wires in a three-wire cable?",
+                    options: [
+                        "red and white",
+                        "white and black",
+                        "bare and red",
+                        "white and bare"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 310.12 and cable color coding. Theory: In a 3-wire cable, the white (or natural gray) is the grounded conductor and the bare is the equipment grounding conductor."
+                },
+                {
+                    text: "A fitting is ______.",
+                    options: [
+                        "part of a wiring system that is intended primarily to perform an electrical function",
+                        "pulling cable into a confined area",
+                        "to be suitable or proper for a device",
+                        "part of a wiring system that is intended primarily to perform a mechanical function"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Article 100 definition of Fitting. Theory: Fittings are primarily mechanical (e.g., couplings, connectors) rather than electrical."
+                },
+                {
+                    text: "The neutral conductor ______.",
+                    options: [
+                        "is always the \"white\" grounded conductor",
+                        "has 70% applied for a household clothes dryer for a branch circuit",
+                        "never applies ampacity corrections",
+                        "carries the unbalanced current"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 220.61 and 310.15. Theory: The neutral carries only the unbalanced current in a multiwire branch circuit."
+                },
+                {
+                    text: "All wiring must be installed so that when completed ______.",
+                    options: [
+                        "it meets the current-carrying requirements of the load",
+                        "it is free of shorts and unintentional grounds",
+                        "it is acceptable to Code compliance authorities",
+                        "it will withstand a hy-pot test"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 110.3 and 110.12. Theory: All installations must ultimately comply with the requirements of the Authority Having Jurisdiction (AHJ) and the NEC."
+                },
+                {
+                    text: "Utilization equipment is equipment which utilizes ______ energy for mechanical, chemical, heating, lighting or similar purposes.",
+                    options: [
+                        "I only",
+                        "II only",
+                        "III only",
+                        "I, II and III"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Article 100 definition of Utilization Equipment. Theory: It covers equipment that uses electrical energy for any practical purpose (mechanical, chemical, heating, lighting, etc.)."
+                },
+                {
+                    text: "Of the following, the best indication of the condition of the charge of a lead acid battery is the ______.",
+                    options: [
+                        "temperature of the electrolyte",
+                        "level of the electrolyte",
+                        "open circuit cell voltage",
+                        "specific gravity"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 480.7. Theory: Specific gravity (measured with a hydrometer) is the most reliable indicator of charge in a lead-acid battery."
+                },
+                {
+                    text: "In general, the most important point to watch in the operation of transformers is the ______.",
+                    options: [
+                        "core loss",
+                        "exciting current",
+                        "temperature",
+                        "primary voltage"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 450.9. Theory: Excessive temperature is the primary cause of transformer insulation failure and reduced life."
+                },
+                {
+                    text: "For maximum safety the magnetic contactors used for reversing the direction of rotation of a motor should be ______.",
+                    options: [
+                        "electrically interlocked",
+                        "mechanically interlocked",
+                        "operated from independent sources",
+                        "mechanically interlocked"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 430.83 and control safety. Theory: Mechanical interlocks prevent both forward and reverse contactors from closing at the same time."
+                },
+                {
+                    text: "Large squirrel cage induction motors are usually started at a voltage considerably lower than the line voltage to ______.",
+                    options: [
+                        "permit starting under full load",
+                        "obtain a low starting speed",
+                        "allow the rotor current to build up gradually",
+                        "avoid excessive starting current"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 430.52 and motor starting. Theory: Reduced-voltage starting limits inrush current on large motors."
+                },
+                {
+                    text: "Which of the following is a motor starter?",
+                    options: [
+                        "(image a - contactor with overloads)",
+                        "(image b - simple contactor)",
+                        "(image c - pushbutton station)",
+                        "(image d - enclosed starter with disconnect)"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Standard motor control devices. Theory: A motor starter includes a contactor plus overload protection."
+                },
+                {
+                    text: "All edges that are invisible should be represented in a drawing by lines that are ______.",
+                    options: [
+                        "dotted",
+                        "curved",
+                        "solid",
+                        "broken"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Standard drafting practice. Theory: Hidden (invisible) edges are shown with dashed or dotted lines."
+                },
+                {
+                    text: "Which of the following is an LB conduit body?",
+                    options: [
+                        "(image a - 90° with cover on back)",
+                        "(image b - 90° with cover on side)",
+                        "(image c - straight with side hub)",
+                        "(image d - T-shape)"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 314.16. Theory: LB conduit bodies have the removable cover on the back of the 90° bend."
+                },
+                {
+                    text: "A device used to pull wires through a conduit is called ______.",
+                    options: [
+                        "wire tong",
+                        "puller",
+                        "fish tape",
+                        "reel"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Trade tools. Theory: Fish tape (or fish wire) is the standard tool for pulling conductors through conduit."
+                },
+                {
+                    text: "In making a resistance test, remember that the resistance of a short circuit is ______.",
+                    options: [
+                        "approximately zero",
+                        "midway between high and low",
+                        "slightly above the midrange",
+                        "infinite"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Basic testing. Theory: A short circuit has near-zero resistance."
+                },
+                {
+                    text: "The hot resistance of an incandescent lamp is approximately ______ times its cold resistance.",
+                    options: [
+                        "4",
+                        "6",
+                        "8",
+                        "10"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Lighting theory. Theory: Tungsten filament resistance increases dramatically when hot (typically 8–10 times higher)."
+                },
+                {
+                    text: "The proper way of measuring an unknown voltage with a multi-tester is to ______.",
+                    options: [
+                        "de-energize the circuit first",
+                        "start measuring at the lowest range of the meter",
+                        "start measuring at the highest range",
+                        "start measuring at the mid range of the meter"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Safe testing practice. Theory: Always start on the highest voltage range to avoid damaging the meter."
+                },
+                {
+                    text: "If a bare live conductor is touched accidentally, the severity of the electric shock is determined primarily by ______.",
+                    options: [
+                        "the size of the wire",
+                        "the amperage flowing in the wire",
+                        "the type of electricity, whether AC or DC",
+                        "the contact resistance between the bare wire and the person at the point of contact"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 110.9 and safety rules. Theory: The amount of current through the body (determined largely by contact resistance) is the main factor in shock severity."
+                },
+                {
+                    text: "An open resistor when checked with an ohmmeter reads ______.",
+                    options: [
+                        "infinite",
+                        "zero",
+                        "low but not zero",
+                        "high but within the tolerance"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Basic testing. Theory: An open resistor shows infinite resistance (OL on digital meters)."
+                },
+                {
+                    text: "Insulating materials have the function of ______.",
+                    options: [
+                        "storing very high currents",
+                        "conducting very large currents",
+                        "preventing a short circuit between the voltage source and the load",
+                        "preventing an open circuit between the voltage source and the load"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Basic theory. Theory: Insulation prevents unintended contact (short circuits) between conductors."
+                },
+                {
+                    text: "A step-up transformer increases ______.",
+                    options: [
+                        "power",
+                        "current",
+                        "frequency",
+                        "voltage"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 450.3. Theory: Step-up transformers increase voltage while decreasing current (power remains approximately the same)."
+                }
+            ]
+        },
+        {
+            id: "general_13",
+            title: "General Knowledge Exam #13",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "A tool used by a lineman to remove insulation from large cables is called a/an ______.",
+                    options: [
+                        "wire gauge",
+                        "lineman's pliers",
+                        "wire stripper",
+                        "electrician's knife"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Trade tool identification. Theory: An electrician's knife (cable knife) is specifically designed for stripping insulation from large cables without damaging the conductor."
+                },
+                {
+                    text: "A/an ______ is a machine used to transform mechanical energy into electrical energy.",
+                    options: [
+                        "transformer",
+                        "electric motor",
+                        "generator",
+                        "rectifier"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 430.7 and basic machines. Theory: A generator converts mechanical energy into electrical energy through electromagnetic induction."
+                },
+                {
+                    text: "A/an ______ is a material with atoms in which the electrons tend to stay in their orbits.",
+                    options: [
+                        "conductor",
+                        "insulator",
+                        "inductor",
+                        "resistor"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Basic theory. Theory: Insulators have atoms with tightly bound electrons that do not move freely, preventing current flow."
+                },
+                {
+                    text: "The resistance of a wire is directly proportional to the ______ and inversely proportional to the cross-sectional area.",
+                    options: [
+                        "resistivity",
+                        "volume",
+                        "length",
+                        "permeability"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Chapter 9, Table 8. Theory: R = ρL/A — resistance increases with length and decreases with cross-sectional area."
+                },
+                {
+                    text: "In magnetic and electric circuit analogy, magnetic flux is the analog of ______.",
+                    options: [
+                        "conductance",
+                        "resistance",
+                        "voltage",
+                        "current"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Basic analogy. Theory: Magnetic flux (Φ) corresponds to electric current (I)."
+                },
+                {
+                    text: "A device that reverses the magnetic field polarity to keep a DC motor rotating is a/an ______.",
+                    options: [
+                        "commutator",
+                        "field coil",
+                        "armature coil",
+                        "solenoid"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 430.7 and DC motor theory. Theory: The commutator reverses current direction in the armature to maintain continuous rotation."
+                },
+                {
+                    text: "A stop switch is wired ______ in a motor circuit.",
+                    options: [
+                        "series",
+                        "series-shunt",
+                        "series-parallel",
+                        "parallel"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 430.74. Theory: Stop buttons are wired in series with the control circuit so that opening any one stops the motor."
+                },
+                {
+                    text: "What type of meter is shown below?",
+                    options: [
+                        "wattmeter",
+                        "ammeter",
+                        "ohmmeter",
+                        "voltmeter"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Meter identification (shunt symbol shown). Theory: The diagram with a shunt indicates an ammeter."
+                },
+                {
+                    text: "An autotransformer has ______.",
+                    options: [
+                        "one coil",
+                        "two coils",
+                        "three coils",
+                        "four coils"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 450.3. Theory: An autotransformer uses a single winding that acts as both primary and secondary."
+                },
+                {
+                    text: "A corroded electrical connection ______.",
+                    options: [
+                        "decreases the voltage drop",
+                        "increases the resistance at the connection",
+                        "increases the ampacity at the connection",
+                        "decreases the resistance of the connection"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 110.14. Theory: Corrosion increases contact resistance, causing higher voltage drop and heat."
+                },
+                {
+                    text: "An AC ammeter or voltmeter is calibrated to read RMS values; this means the meter is reading the ______ value.",
+                    options: [
+                        "maximum",
+                        "peak",
+                        "average",
+                        "effective"
+                    ],
+                    correctIndex: 3,
+                    explanation: "AC theory. Theory: RMS is the effective value that produces the same heating effect as DC."
+                },
+                {
+                    text: "The correct connection for the two 120 volt lights to the single-pole switch would be ______.",
+                    options: [
+                        "(diagram 1-4, 2-6, 3-5-7)",
+                        "(diagram 1-6, 2-5, 3-4-7)",
+                        "(diagram 1-7, 2-5-6, 3-4)",
+                        "(diagram 1-5, 2-6-7, 3-4)"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Standard switching diagram. Theory: The switch must control both hot legs correctly for the two lights."
+                },
+                {
+                    text: "Insulated nonmetallic boxes are made of ______.",
+                    options: [
+                        "polyvinyl chloride",
+                        "bakelite",
+                        "Bower-Barff lacquer",
+                        "all of these"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 314.3. Theory: Common nonmetallic boxes are made of PVC, bakelite, or similar insulating materials."
+                },
+                {
+                    text: "Tungsten-filament lamps can be used on ______.",
+                    options: [
+                        "AC only",
+                        "DC only",
+                        "AC and DC",
+                        "none of these"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Lighting theory. Theory: Incandescent lamps work on both AC and DC."
+                },
+                {
+                    text: "The service conductors between the terminals of the service equipment and a point usually outside the building, clear of building walls, where joined by tap or splice to the service drop is called the ______.",
+                    options: [
+                        "service drop",
+                        "service-entrance conductors",
+                        "service equipment",
+                        "none of these"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Article 100 definition of Service-Entrance Conductors. Theory: They run from the service drop or lateral to the service equipment."
+                },
+                {
+                    text: "In order to prevent a safety hazard, an electrician should never ______.",
+                    options: [
+                        "strike a hardened steel surface with a hardened steel hammer",
+                        "use a soft brass hammer to strike a soft brass surface",
+                        "strike a soft iron surface with a hardened steel hammer",
+                        "use a soft iron hammer to strike a hardened steel surface"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Safety practice. Theory: Striking hardened steel with hardened steel can cause chips or sparks; soft hammer on hard surface is safer."
+                },
+                {
+                    text: "Which of the following machine screws has the smallest diameter?",
+                    options: [
+                        "6-32 x 1\"",
+                        "10-32 x 3/4\"",
+                        "8-32 x 1/2\"",
+                        "10-24 x 3/8\""
+                    ],
+                    correctIndex: 2,
+                    explanation: "Machine screw sizing. Theory: Higher number = larger diameter; 8-32 is smaller than 10-32 or 10-24."
+                },
+                {
+                    text: "A 3Ω, a 6Ω, a 9Ω and a 12Ω resistor are connected in parallel. Which resistor will consume the most power?",
+                    options: [
+                        "3Ω",
+                        "6Ω",
+                        "9Ω",
+                        "12Ω"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Parallel circuit power. Theory: In parallel, power P = V²/R; the smallest resistance consumes the most power."
+                },
+                {
+                    text: "The best way to lay out a 40 foot long straight line on a floor is to ______.",
+                    options: [
+                        "use a steel measuring tape with dark crayon",
+                        "use a long 2 x 4 and a lead pencil",
+                        "use a plumb bob with long string",
+                        "use a chalk line"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Trade practice. Theory: A chalk line provides the straightest, most visible line over long distances."
+                }
+            ]
+        },
+        {
+            id: "general_14",
+            title: "General Knowledge Exam #14",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "The Code considers low voltage to be ______.",
+                    options: [
+                        "480 volts or less",
+                        "1000 volts or less",
+                        "24 volts",
+                        "12 volts"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 725.2 and low-voltage definitions. Theory: Circuits 1000 volts or less are generally considered low voltage for many Code purposes."
+                },
+                {
+                    text: "Stranded wire should be ______ before being placed under a screw head.",
+                    options: [
+                        "tinned",
+                        "twisted together tightly",
+                        "coated with an inhibitor",
+                        "sanded"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 110.14 and termination rules. Theory: Stranded conductors must be twisted tightly to prevent strands from separating under the screw."
+                },
+                {
+                    text: "The total of the following numbers 8 5/8\", 6 1/4\", 7 3/16\" and 5 1/4\" is ______.",
+                    options: [
+                        "27 5/16\"",
+                        "26 1/8\"",
+                        "28 7/8\"",
+                        "none of these"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Basic math. Theory: Adding the fractions: 8 5/8 + 6 1/4 + 7 3/16 + 5 1/4 = 28 7/8\"."
+                },
+                {
+                    text: "A fusestat is different than the ordinary plug fuse because a fusestat ______.",
+                    options: [
+                        "doesn't have threads",
+                        "has left-hand threads",
+                        "has different size threads",
+                        "has an aluminum screw shell"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 240.50. Theory: Fusestats have different thread sizes to prevent over-fusing (Type S fuses)."
+                },
+                {
+                    text: "The symbol ______ usually indicates a(n) ______.",
+                    options: [
+                        "switch",
+                        "receptacle",
+                        "ceiling outlet",
+                        "exhaust fan"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Standard electrical symbols. Theory: The circle with a line through it is the common symbol for a ceiling outlet or lighting fixture."
+                },
+                {
+                    text: "The decimal equivalent of 3/16\" is ______.",
+                    options: [
+                        "0.125",
+                        "0.1875",
+                        "0.5625",
+                        "0.9375"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Basic math. Theory: 3 ÷ 16 = 0.1875."
+                },
+                {
+                    text: "When drilling into a steel I-beam, the most likely cause for breaking a drill bit would be ______.",
+                    options: [
+                        "the drill bit is too dull",
+                        "too slow a drill speed",
+                        "too much pressure on the bit",
+                        "too much cutting oil on bit"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Trade practice. Theory: Excessive pressure is the most common cause of broken drill bits in steel."
+                },
+                {
+                    text: "Before using rubber gloves when working on high voltage equipment, the gloves should be ______.",
+                    options: [
+                        "cleaned inside and out",
+                        "tested to withstand the high voltage",
+                        "oiled inside and out",
+                        "brand new"
+                    ],
+                    correctIndex: 1,
+                    explanation: "OSHA 1910.137 and NFPA 70E. Theory: Rubber insulating gloves must be electrically tested before each use."
+                },
+                {
+                    text: "A/an ______ is a protective device for limiting surge voltages by discharging or by passing surge current, and it also prevents continued flow of follow current while remaining capable of repeating these functions.",
+                    options: [
+                        "surge arrester",
+                        "automatic fuse",
+                        "fuse",
+                        "circuit breaker"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC Article 100 and 280. Theory: A surge arrester (TVSS) is designed to clamp transient voltages."
+                },
+                {
+                    text: "A current limiting overcurrent protective device is a device which will ______ in the faulted circuit.",
+                    options: [
+                        "reduce",
+                        "increase",
+                        "maintain",
+                        "none of these"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 240.2. Theory: Current-limiting devices reduce the let-through energy during a fault."
+                },
+                {
+                    text: "The voltage will lead the current when the ______ in the circuit.",
+                    options: [
+                        "inductive reactance exceeds the capacitive reactance",
+                        "reactance exceeds the resistance in the circuit",
+                        "resistance exceeds the reactance",
+                        "capacitive reactance exceeds the inductive reactance"
+                    ],
+                    correctIndex: 0,
+                    explanation: "AC theory. Theory: In inductive circuits (XL > XC), voltage leads current (ELI)."
+                },
+                {
+                    text: "Which of the following is an Allen head bolt?",
+                    options: [
+                        "(hexagon socket)",
+                        "(slotted)",
+                        "(Phillips)",
+                        "(square)"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Hardware identification. Theory: Allen head (socket head cap screw) has a hexagonal recess."
+                },
+                {
+                    text: "A 1000 watt, 120 volt lamp uses electrical energy at the same rate as a 14.4 ohm resistor on ______.",
+                    options: [
+                        "120 volts",
+                        "115 volts",
+                        "208 volts",
+                        "240 volts"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Power calculation. Theory: P = V²/R → for 1000 W at 120 V, R = 14.4 Ω. At 240 V it would also dissipate 1000 W if resistance is the same (but in practice it's not)."
+                },
+                {
+                    text: "When using compressed air to clean electrical equipment, the air pressure should not exceed 50 pounds. The main reason is higher pressures ______.",
+                    options: [
+                        "may loosen insulating tape",
+                        "introduces a personal hazard to the user",
+                        "may blow dust to surrounding equipment",
+                        "may rupture the air hose"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Safety practice (NFPA 70E). Theory: High-pressure air can drive particles into skin or eyes, creating a hazard."
+                },
+                {
+                    text: "Which of the following is not used to fasten equipment to concrete?",
+                    options: [
+                        "expansion bolt",
+                        "rawl plug",
+                        "lead shield",
+                        "steel bushing"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Trade practice. Theory: Steel bushings are used for conduit protection, not for anchoring."
+                },
+                {
+                    text: "3-way and 4-way switches to operate a light shall have the wiring connected in the ______.",
+                    options: [
+                        "grounded",
+                        "ungrounded",
+                        "identified",
+                        "neutral"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 404.2. Theory: Switching must be done in the ungrounded (hot) conductor(s)."
+                }
+            ]
+        },
+        {
+            id: "general_15",
+            title: "General Knowledge Exam #15",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "______ is the symbol used for the delta connection.",
+                    options: [
+                        "Ω",
+                        "Σ",
+                        "ø",
+                        "Δ"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Standard electrical symbols. Theory: The delta connection is represented by the Greek letter Δ."
+                },
+                {
+                    text: "A switch is a device for ______.",
+                    options: [
+                        "I. making or braking connections",
+                        "II. changing connections",
+                        "III. interruption of circuit under short-circuit conditions"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 404.14 and switch definitions. Theory: A switch is primarily for making or breaking (opening/closing) circuits under normal conditions."
+                },
+                {
+                    text: "One of the essential functions of any switch is to maintain a ______.",
+                    options: [
+                        "good high-resistance contact in the closed position",
+                        "good low-resistance contact in the closed position",
+                        "good low-resistance contact in the open position",
+                        "good high-resistance contact in the open position"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 404.14. Theory: When closed, a switch must have very low contact resistance to minimize heat and voltage drop."
+                },
+                {
+                    text: "Which of the following is a 30 amp receptacle?",
+                    options: [
+                        "(image a - standard duplex)",
+                        "(image b - single receptacle with round ground)",
+                        "(image c - 30A twist-lock or similar)",
+                        "(image d - another configuration)"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 406.3 and receptacle configurations. Theory: 30-amp receptacles have specific slot/ground configurations (often NEMA 5-30 or twist-lock)."
+                },
+                {
+                    text: "When the ground resistance exceeds the allowable value of 25 ohms, the resistance can be reduced by ______.",
+                    options: [
+                        "I. paralleling ground rods",
+                        "II. using a longer ground rod",
+                        "III. using a larger diameter ground rod",
+                        "IV. chemical treatment of the soil"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 250.56. Theory: Paralleling ground rods is a common and effective method to lower total ground resistance."
+                },
+                {
+                    text: "Standard lengths of conduit are in 10 foot lengths. A required feeder raceway is 18 yards in length. How many lengths of 10 foot conduit would you need?",
+                    options: [
+                        "4",
+                        "5",
+                        "6",
+                        "none of these"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Basic math. Theory: 18 yards = 54 feet. 54 ÷ 10 = 5.4 → you need 6 full 10-foot lengths."
+                },
+                {
+                    text: "The term \"open circuit\" means ______.",
+                    options: [
+                        "the wiring is in an open area",
+                        "all parts of the circuit are not in contact",
+                        "the wiring is exposed on a building",
+                        "the circuit has one end exposed"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Basic theory. Theory: An open circuit has a break in the path so current cannot flow."
+                },
+                {
+                    text: "Which of the items below is used to test specific gravity?",
+                    options: [
+                        "(image a - round gauge)",
+                        "(image b - clamp meter)",
+                        "(image c - hydrometer probe)",
+                        "(image d - pen-like tool)"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Battery testing. Theory: A hydrometer measures the specific gravity of battery electrolyte."
+                },
+                {
+                    text: "Conduit should be installed as to prevent the collection of water in it between outlets. The conduit should not have a ______.",
+                    options: [
+                        "low point at an outlet",
+                        "high point at an outlet",
+                        "high point between successive outlets",
+                        "low point between successive outlets"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 300.5 and installation practices. Theory: Conduit runs should slope to prevent water traps; low points between outlets can collect moisture."
+                },
+                {
+                    text: "Brass is an alloy of ______.",
+                    options: [
+                        "zinc and copper",
+                        "lead and copper",
+                        "tin and lead",
+                        "lead and iron"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Material properties. Theory: Brass is primarily copper and zinc."
+                },
+                {
+                    text: "Enclosed knife switches that require the switch to be open before the housing door can be opened are called ______ switches.",
+                    options: [
+                        "release",
+                        "air-break",
+                        "safety",
+                        "service"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 404.6. Theory: Safety switches are designed so the door cannot be opened while the switch is closed."
+                },
+                {
+                    text: "Which of the following is a solenoid?",
+                    options: [
+                        "(image a - cylindrical coil device)",
+                        "(image b - contactor)",
+                        "(image c - relay with armature)",
+                        "(image d - meter movement)"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Basic devices. Theory: A solenoid is an electromagnetic coil that produces linear mechanical motion."
+                },
+                {
+                    text: "A close nipple ______.",
+                    options: [
+                        "is always 1/2\" or less in length",
+                        "has only internal threads",
+                        "has no threads",
+                        "has threads over its entire length"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 344.42 and conduit fittings. Theory: A close nipple is threaded its entire length and is very short."
+                },
+                {
+                    text: "When applying rubber tape to an electrical splice, it would be necessary to ______.",
+                    options: [
+                        "stretch the tape properly during the application",
+                        "apply an adhesive to the splice before applying the tape",
+                        "apply the rubber tape after any other tape",
+                        "apply heat to the tape when installing"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Trade practice. Theory: Rubber (self-fusing) tape must be stretched during wrapping to activate its self-amalgamating properties."
+                },
+                {
+                    text: "A limit switch is used on a piece of machinery to open the circuit when the ______.",
+                    options: [
+                        "current exceeds a preset limit",
+                        "travel reaches a preset limit",
+                        "pressure exceeds a preset limit",
+                        "temperature reaches a preset limit"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Control devices. Theory: A limit switch opens or closes based on the physical position or travel of a machine part."
+                },
+                {
+                    text: "With switches 1 and 2 closed, the combined resistance of the circuit is ______ ohms.",
+                    options: [
+                        "30",
+                        "25",
+                        "10",
+                        "3"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Circuit calculation from diagram. Theory: With SW1 and SW2 closed, the 10Ω and 10Ω branches are in parallel (5Ω), then in series with the 5Ω = 10Ω total."
+                },
+                {
+                    text: "Which of the following is not considered part of a luminaire?",
+                    options: [
+                        "ballast",
+                        "a lampholder",
+                        "lamp or lamps",
+                        "parts designed to position the light source"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 410.2 definition of Luminaire. Theory: A ballast is a separate component; the luminaire includes the housing, lampholder, and lamp."
+                },
+                {
+                    text: "Locknuts are sometimes used in making electrical connections on studs. In these cases, the purpose of the locknuts is to ______.",
+                    options: [
+                        "be able to connect several wires to one stud",
+                        "make it difficult to tamper with the connection",
+                        "make a tighter connection from loosening under vibration",
+                        "prevent the connection from loosening under vibration"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Trade practice. Theory: Locknuts prevent connections from loosening due to vibration."
+                },
+                {
+                    text: "In the course of normal operation the instrument which will be least effective in indicating that a generator may overheat because it is overloaded, is ______.",
+                    options: [
+                        "a wattmeter",
+                        "a voltmeter",
+                        "an ammeter",
+                        "a stator thermocouple"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Metering. Theory: A voltmeter measures voltage and does not directly indicate overload current/heat."
+                },
+                {
+                    text: "Two switches in one box under one face-plate is called a ______.",
+                    options: [
+                        "double-pole switch",
+                        "two-gang switch",
+                        "2-way switch",
+                        "mistake"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 404.9. Theory: Multiple devices under one plate are described as a multi-gang (e.g., two-gang) installation."
+                },
+                {
+                    text: "A conduit body is ______.",
+                    options: [
+                        "a cast fitting such as an FD or FS box",
+                        "a standard 10 foot length of conduit",
+                        "a sealtight enclosure",
+                        "an \"LB\" or \"T\", or similar fitting"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 314.16. Theory: Conduit bodies (LB, LR, LL, T, etc.) are fittings that provide access for pulling and splicing."
+                },
+                {
+                    text: "Where the conductor material is not specified in the Code, the conductors are assumed to be ______.",
+                    options: [
+                        "busbars",
+                        "aluminum",
+                        "copper-clad aluminum",
+                        "copper"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 110.5. Theory: Unless otherwise specified, conductors are assumed to be copper."
+                },
+                {
+                    text: "The voltage lost across a portion of a circuit is called the ______.",
+                    options: [
+                        "power loss",
+                        "power factor",
+                        "voltage drop",
+                        "apparent va"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 210.19(A) Informational Note. Theory: Voltage drop is the reduction in voltage along a conductor due to resistance."
+                },
+                {
+                    text: "In a series circuit ______ is common.",
+                    options: [
+                        "resistance",
+                        "current",
+                        "voltage",
+                        "wattage"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Basic circuit theory. Theory: In series, the same current flows through all components."
+                },
+                {
+                    text: "Batteries supply ______ current.",
+                    options: [
+                        "positive",
+                        "negative",
+                        "direct",
+                        "alternating"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Basic theory. Theory: Batteries produce direct current (DC)."
+                }
+            ]
+        },
+        {
+            id: "general_16",
+            title: "General Knowledge Exam #16",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "Electron flow produced by means of applying pressure to a material is called ______.",
+                    options: [
+                        "photo conduction",
+                        "electrochemistry",
+                        "piezoelectricity",
+                        "thermoelectricity"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Basic physics. Theory: Piezoelectricity generates voltage/electron flow when mechanical pressure is applied to certain crystals."
+                },
+                {
+                    text: "Raceways shall be provided with ______ to compensate for thermal expansion and contraction.",
+                    options: [
+                        "accordion joints",
+                        "thermal fittings",
+                        "expansion joints",
+                        "contro-spansion"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 300.7 and 352.44. Theory: Expansion joints or fittings are required to accommodate thermal movement in raceways."
+                },
+                {
+                    text: "What is the function of a neon glow tester?",
+                    options: [
+                        "I. Determines if circuit is alive",
+                        "II. Determines polarity of DC circuits",
+                        "III. Determines if circuit is AC or DC"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Trade tool. Theory: A neon tester primarily indicates the presence of voltage (live circuit) by glowing."
+                },
+                {
+                    text: "A wattmeter indicates ______.",
+                    options: [
+                        "I. real power",
+                        "II. apparent power if PF is not in unity",
+                        "III. power factor"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 220.60 and metering. Theory: A wattmeter measures real power (watts)."
+                },
+                {
+                    text: "The connection of a ground clamp to a grounding electrode shall be ______.",
+                    options: [
+                        "accessible",
+                        "visible",
+                        "readily accessible",
+                        "in sight"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 250.68. Theory: Ground connections must be readily accessible for inspection and maintenance."
+                },
+                {
+                    text: "The current will lead the voltage when ______.",
+                    options: [
+                        "inductive reactance exceeds the capacitive reactance in the circuit",
+                        "reactance exceeds the resistance in the circuit",
+                        "resistance exceeds the reactance in the circuit",
+                        "capacitive reactance exceeds the inductive reactance in the circuit"
+                    ],
+                    correctIndex: 3,
+                    explanation: "AC theory. Theory: In a capacitive circuit (XC > XL), current leads voltage (ICE mnemonic)."
+                },
+                {
+                    text: "Mandatory rules of the Code are identified by the use of the word ______.",
+                    options: [
+                        "should",
+                        "shall",
+                        "must",
+                        "could"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 90.5. Theory: The word 'shall' indicates a mandatory requirement."
+                },
+                {
+                    text: "Which of the following is not one of the considerations that must be evaluated in judging equipment?",
+                    options: [
+                        "wire-bending and connection space",
+                        "arcing effects",
+                        "longevity",
+                        "electrical insulation"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 110.3. Theory: Longevity is not one of the listed factors for equipment evaluation in the Code."
+                },
+                {
+                    text: "To increase the range of an AC ammeter, which one of the following is most commonly used?",
+                    options: [
+                        "a current transformer",
+                        "a condenser",
+                        "an inductance",
+                        "a straight shunt (not U-shaped)"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Metering practice. Theory: Current transformers (CTs) are the standard method to extend AC ammeter range."
+                },
+                {
+                    text: "If a test lamp lights when placed in series with a condenser and a suitable source of DC, it is a good indication that the condenser is ______.",
+                    options: [
+                        "fully charged",
+                        "short-circuited",
+                        "open-circuited",
+                        "fully discharged"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Capacitor testing. Theory: A shorted capacitor will allow DC current to flow and light the test lamp."
+                },
+                {
+                    text: "Two 500 watt lamps connected in series across a 110 volt line draws 2 amperes. The total power consumed is ______ watts.",
+                    options: [
+                        "50",
+                        "150",
+                        "220",
+                        "1000"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Power calculation. Theory: Total power = 110 V × 2 A = 220 W."
+                },
+                {
+                    text: "The resistance of a copper wire to the flow of electricity ______.",
+                    options: [
+                        "decreases as the length of the wire increases",
+                        "decreases as the diameter of the wire decreases",
+                        "increases as the diameter of the wire increases",
+                        "increases as the length of the wire increases"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Chapter 9, Table 8. Theory: Resistance is directly proportional to length and inversely proportional to cross-sectional area."
+                },
+                {
+                    text: "A type of cable protected by a spiral metal cover is called ______ in the field.",
+                    options: [
+                        "BX",
+                        "greenfield",
+                        "sealtight",
+                        "Romex"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Trade terminology. Theory: Greenfield (flexible metal conduit) is often called by that name in the field."
+                },
+                {
+                    text: "The resistance of a circuit may vary due to ______.",
+                    options: [
+                        "a loose connection",
+                        "change in voltage",
+                        "change in current",
+                        "induction"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 110.14. Theory: Loose connections increase resistance and cause overheating."
+                },
+                {
+                    text: "For voltage and current to be in phase, ______.",
+                    options: [
+                        "I. the circuit impedance has only resistance",
+                        "II. the voltage and current appear at their zero and peak values at the same time"
+                    ],
+                    correctIndex: 3,
+                    explanation: "AC theory. Theory: Purely resistive circuits have voltage and current in phase (zero phase angle)."
+                },
+                {
+                    text: "Continuous duty is ______.",
+                    options: [
+                        "a load where the maximum current is expected to continue for three hours or more",
+                        "a load where the maximum current is expected to continue for one hour or more",
+                        "intermittent operation in which the load conditions are regularly recurrent",
+                        "operation at a substantially constant load for an indefinitely long time"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 430.7 and duty definitions. Theory: Continuous duty means the load runs continuously for long periods without interruption."
+                },
+                {
+                    text: "A ______ is an enclosure designed either for surface or flush mounting and provided with a frame, mat, or trim in which a swinging door or doors are or may be hung.",
+                    options: [
+                        "cabinet",
+                        "panelboard",
+                        "cutout box",
+                        "switchboard"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC Article 100 definition of Cabinet. Theory: Cabinets are enclosures with doors for housing equipment."
+                },
+                {
+                    text: "A 15 ohm resistance carrying 20 amperes of current uses ______ watts of power.",
+                    options: [
+                        "300",
+                        "3000",
+                        "6000",
+                        "none of these"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Power calculation. Theory: P = I²R = 20² × 15 = 6000 W."
+                },
+                {
+                    text: "The most important reason for using a condulet-type fitting in preference to making a bend in a one inch conduit is to ______.",
+                    options: [
+                        "avoid the possible flattening of the conduit when making the bend",
+                        "cut down the amount of conduit needed",
+                        "make a neater job",
+                        "make wire pulling easier"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 344.26 and installation practice. Theory: Condulets provide access for pulling, making wire installation much easier."
+                },
+                {
+                    text: "When skinning a small wire, the insulation should be 'penciled down' rather than cut square to ______.",
+                    options: [
+                        "allow more room for the splice",
+                        "save time in making the splice",
+                        "decrease the danger of nicking the wire",
+                        "prevent the braid from fraying"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Trade practice. Theory: Penciling reduces the chance of cutting into the conductor strands."
+                },
+                {
+                    text: "An overcurrent trip unit of a circuit shall be connected in series with each ______.",
+                    options: [
+                        "transformer",
+                        "grounded conductor",
+                        "overcurrent device",
+                        "ungrounded conductor"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 240.4 and 430.52. Theory: Overcurrent protection must be in the ungrounded (hot) conductor(s)."
+                },
+                {
+                    text: "A rigid conduit connecting to an outlet box should have a ______.",
+                    options: [
+                        "bushing and locknut on the outside",
+                        "bushing on the outside and a locknut on the inside",
+                        "locknut and bushing on the inside",
+                        "locknut on the outside and a bushing on the inside"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 344.46 and 300.4. Theory: Standard practice is bushing inside the box for conductor protection and locknut outside."
+                }
+            ]
+        },
+        {
+            id: "general_17",
+            title: "General Knowledge Exam #17",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "A hickey is ______.",
+                    options: [
+                        "a tool used to bend small sizes of rigid conduit",
+                        "a part of a conduit",
+                        "not used in the electrical trade",
+                        "used only by a plumber"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Trade tool. Theory: A hickey (conduit hickey) is a hand tool specifically used to bend small-diameter rigid metal conduit."
+                },
+                {
+                    text: "Which of the following is a voltmeter?",
+                    options: [
+                        "I only",
+                        "II only",
+                        "III only",
+                        "I, II or III"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Meter identification from diagram. Theory: A voltmeter is always connected in parallel (across) the load or circuit."
+                },
+                {
+                    text: "Of the following ______ is a false statement.",
+                    options: [
+                        "The term kilowatt indicates the measure of power which is all available for work.",
+                        "The term kilovolt-amperes indicate the apparent power made up of an energy component and a wattless or induction component.",
+                        "In an industrial plant, low power factor is usually due to underloaded induction motors.",
+                        "The power factor of a motor is much greater at partial loads than at full load."
+                    ],
+                    correctIndex: 3,
+                    explanation: "Power factor theory. Theory: Induction motors have their best (highest) power factor near full load; it drops significantly at partial loads."
+                },
+                {
+                    text: "A requirement of service that demands operation for alternate intervals of (1) load and no load; or (2) load and rest; or (3) load, no load, and rest is called ______ duty.",
+                    options: [
+                        "variable",
+                        "intermittent",
+                        "short-time",
+                        "periodic"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 430.7 and duty definitions. Theory: Intermittent duty involves alternating periods of load and rest."
+                },
+                {
+                    text: "An outlet where one or more receptacles are installed is called a ______.",
+                    options: [
+                        "multi-outlet assembly",
+                        "receptacle outlet",
+                        "duplex outlet",
+                        "tri-plex outlet"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Article 100 definition. Theory: A receptacle outlet is any outlet where one or more receptacles are installed."
+                },
+                {
+                    text: "A conductor encased within material of composition or thickness not recognized by the Code is a ______ conductor.",
+                    options: [
+                        "coated",
+                        "semi",
+                        "covered",
+                        "fiber optic"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC Article 100 definition of Covered Conductor. Theory: A covered conductor has insulation not recognized by the Code for electrical purposes."
+                },
+                {
+                    text: "Cooling of electrical equipment within enclosures is ______.",
+                    options: [
+                        "the responsibility of the equipment manufacturer",
+                        "not covered by the Code",
+                        "covered by the Code",
+                        "not required"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 110.13 and general requirements. Theory: Proper ventilation and cooling are addressed throughout the Code."
+                },
+                {
+                    text: "Approved is ______.",
+                    options: [
+                        "listed and labeled equipment",
+                        "acceptable to the authority having jurisdiction",
+                        "tested and approved for the purpose by a qualified testing lab",
+                        "UL listed only"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Article 100 definition of Approved. Theory: Approved means acceptable to the AHJ."
+                },
+                {
+                    text: "A system which will automatically furnish lighting and/or power to specified areas and/or equipment when there is a failure of the normal supply is known as a/an ______ system.",
+                    options: [
+                        "fail safe",
+                        "emergency",
+                        "alarm",
+                        "service safe"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Article 700. Theory: Emergency systems automatically supply power upon failure of the normal source."
+                },
+                {
+                    text: "The maximum size fuse to be used in a branch circuit containing no motors depends on the ______.",
+                    options: [
+                        "load",
+                        "wire size",
+                        "voltage",
+                        "switch size"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 240.4. Theory: Overcurrent protection is based on the conductor ampacity (wire size)."
+                },
+                {
+                    text: "The type letter for moisture-resistant thermostat is ______.",
+                    options: [
+                        "RUH",
+                        "THW",
+                        "RHW",
+                        "MHR"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Table 310.104(A). Theory: MHR is the designation for moisture-resistant heat-resistant thermostat wire."
+                },
+                {
+                    text: "On an Edison 3-wire system, some incandescent lamps are observed to be brighter, and others to be dimmer, than normal. What is the most likely trouble?",
+                    options: [
+                        "weak breaker",
+                        "loose fuse",
+                        "poor neutral connection",
+                        "too much voltage drop"
+                    ],
+                    correctIndex: 2,
+                    explanation: "3-wire system troubleshooting. Theory: A poor or open neutral causes voltage imbalance — one leg goes high, the other low."
+                },
+                {
+                    text: "The conductors and equipment for delivering energy from the electricity supply system to the wiring system of the premises served is called the ______.",
+                    options: [
+                        "primary",
+                        "distribution",
+                        "main supply feeder",
+                        "service"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Article 100 definition of Service. Theory: Service conductors and equipment deliver power from the utility to the premises."
+                },
+                {
+                    text: "Concealed is ______.",
+                    options: [
+                        "not readily visible",
+                        "made inaccessible by the structure or finish of the building",
+                        "surrounded by walls",
+                        "attached to the surface"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC Article 100 definition of Concealed. Theory: Concealed wiring is rendered inaccessible by the structure or finish."
+                },
+                {
+                    text: "The term anode refers to ______.",
+                    options: [
+                        "capacitor",
+                        "dynamo",
+                        "rectifier",
+                        "inductor"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Basic electronics. Theory: In a rectifier or diode, the anode is the positive terminal where current enters."
+                },
+                {
+                    text: "A dual voltage motor will run more efficiently ______.",
+                    options: [
+                        "at the lower voltage",
+                        "at the higher voltage",
+                        "the same at either voltage",
+                        "none of these"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Motor theory. Theory: Dual-voltage motors are more efficient and draw less current when connected for the higher voltage."
+                },
+                {
+                    text: "Continuous load is ______.",
+                    options: [
+                        "a load where the maximum current is expected to continue for three hours or more",
+                        "a load where the maximum current is expected to continue for one hour or more",
+                        "intermittent operation in which the load conditions are regularly recurrent",
+                        "operation at a substantially constant load for an indefinitely long time"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC Article 100 definition of Continuous Load. Theory: A continuous load is expected to continue for 3 hours or more."
+                },
+                {
+                    text: "A box contains one grounded and three ungrounded conductors, from one ungrounded to the grounded conductor 208 volts is measured, the other two ungrounded measure 120 volts to the grounded conductor, the system is ______.",
+                    options: [
+                        "delta",
+                        "wye 3-wire",
+                        "wye 4-wire",
+                        "open delta 4-wire"
+                    ],
+                    correctIndex: 2,
+                    explanation: "System identification. Theory: This describes a 120/208V wye 4-wire system (high-leg delta would show 208V on two phases)."
+                },
+                {
+                    text: "The voltage drop in a line can be decreased by ______.",
+                    options: [
+                        "I. increasing the resistance",
+                        "II. increasing the current",
+                        "III. decreasing the load",
+                        "IV. increasing the wire size"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Voltage drop formula. Theory: Voltage drop decreases when wire size is increased or load/current is reduced."
+                },
+                {
+                    text: "A 10 ohm resistance carrying 10 amperes of current uses ______ watts of power.",
+                    options: [
+                        "100",
+                        "20",
+                        "500",
+                        "1000"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Power calculation. Theory: P = I²R = 10² × 10 = 1000 watts."
+                },
+                {
+                    text: "When using a #12-2 with ground, the ground ______ carry current under normal operation.",
+                    options: [
+                        "will",
+                        "will not",
+                        "will sometimes",
+                        "none of these"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 250.24 and grounding rules. Theory: The equipment grounding conductor carries current only during a fault."
+                },
+                {
+                    text: "A transformer is more efficiently utilized when the load has a ______ power factor.",
+                    options: [
+                        "low",
+                        "medium",
+                        "average",
+                        "high"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Transformer theory. Theory: Higher power factor means less reactive current, allowing the transformer to deliver more real power."
+                },
+                {
+                    text: "Connections of conductors to terminal parts must ensure ______.",
+                    options: [
+                        "a good connection without damaging the conductors",
+                        "proper torque values",
+                        "proper bonding",
+                        "proper crimping pressure"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 110.14. Theory: The fundamental requirement is a secure, undamaged connection."
+                },
+                {
+                    text: "Most electric power tools, such as electric drills, come with a third conductor in the power lead which is used to connect the case of the tool to a grounded part of the electric outlet. The purpose for having this extra conductor is to ______.",
+                    options: [
+                        "protect the user of the tool should the winding break down to the case.",
+                        "eliminate sparking between the tool and the material being worked upon.",
+                        "provide for continued operation of the tool should the regular grounded line-wire open.",
+                        "prevent accumulation of a static charge on the case."
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 250.134 and tool grounding. Theory: The equipment grounding conductor provides a low-impedance path to trip the breaker if the case becomes energized."
+                },
+                {
+                    text: "To determine directly whether all finished wire installations possess resistance between conductors, and between conductors and ground, use ______.",
+                    options: [
+                        "set screws",
+                        "shields",
+                        "clamps",
+                        "a megger"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Testing practice. Theory: A megohmmeter (megger) is used to measure insulation resistance."
+                }
+            ]
+        },
+        {
+            id: "general_18",
+            title: "General Knowledge Exam #18",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "To handle a three-phase unbalanced system, balance the system by making all loads equal to the ______ single phase load.",
+                    options: [
+                        "smallest",
+                        "average",
+                        "largest",
+                        "unbalanced"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Three-phase balancing. Theory: To minimize imbalance, all single-phase loads should be sized to the largest phase load."
+                },
+                {
+                    text: "The connection between the grounded circuit conductor and the equipment grounding conductor at the service is called the ______.",
+                    options: [
+                        "equipment bonding jumper",
+                        "main bonding jumper",
+                        "circuit bonding jumper",
+                        "electrode bonding jumper"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 250.24 and Article 100. Theory: The main bonding jumper connects the grounded conductor to the equipment grounding conductor at the service."
+                },
+                {
+                    text: "The purpose of having a rheostat in the field of a DC shunt motor is to ______.",
+                    options: [
+                        "control the speed of the motor",
+                        "minimize the starting current",
+                        "limit the field current to a safe value",
+                        "reduce sparking at the brushes"
+                    ],
+                    correctIndex: 0,
+                    explanation: "DC motor control. Theory: Field rheostat weakens the field flux, increasing motor speed (above base speed)."
+                },
+                {
+                    text: "A conduit coupling is sometimes tightened by using a strap wrench rather than a Stillson wrench. The strap wrench is used when it is important to avoid ______.",
+                    options: [
+                        "crushing the conduit",
+                        "bending the conduit",
+                        "stripping the threads",
+                        "damaging the outside finish"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Trade practice. Theory: Strap wrenches protect the conduit finish and prevent marring."
+                },
+                {
+                    text: "High-voltage cable which is to be installed in underground ducts is generally protected with a ______.",
+                    options: [
+                        "copper outer jacket",
+                        "lead sheath",
+                        "steel wire armor",
+                        "tarred jute covering"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Cable construction. Theory: Lead sheath provides excellent moisture and corrosion protection for underground high-voltage cables."
+                },
+                {
+                    text: "The load side is usually wired to the blades of a knife switch to ______.",
+                    options: [
+                        "prevent blowing the fuse when opening the switch.",
+                        "make the blades dead when the switch is opened.",
+                        "prevent arcing when the switch is opened.",
+                        "allow changing of fuses without opening the switch."
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 404.6 and safety practice. Theory: Load-side connection keeps the blades de-energized when open."
+                },
+                {
+                    text: "The life of insulation used in electrical installations is directly affected by heat. Of the following, the electrical insulation which can least withstand heat is ______.",
+                    options: [
+                        "mica",
+                        "rubber",
+                        "fiberglass",
+                        "enamel"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Insulation properties. Theory: Rubber insulation has the lowest temperature rating and degrades fastest with heat."
+                },
+                {
+                    text: "With respect to a common light bulb, it is correct to state that the ______.",
+                    options: [
+                        "circuit voltage has no effect on the life of the bulb",
+                        "base has a left hand thread",
+                        "filament is made of carbon",
+                        "lower wattage bulb has the higher resistance"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Incandescent lamp theory. Theory: Lower wattage bulbs have higher resistance (P = V²/R)."
+                },
+                {
+                    text: "The factor which will have the least effect on the voltage at the most distant point from the source of supply for a two wire circuit is ______.",
+                    options: [
+                        "whether the supply is 25 cycle or 60 cycle AC",
+                        "the gauge of the circuit wires",
+                        "the amount of load on the circuit",
+                        "the length of the circuit"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Voltage drop factors. Theory: Frequency (25 vs 60 Hz) has negligible effect on voltage drop in a two-wire circuit."
+                },
+                {
+                    text: "You are to check the power factor of a load, you cannot get a power factor meter, you would use ______.",
+                    options: [
+                        "a wattmeter",
+                        "a voltmeter and an ammeter",
+                        "a kilo-watt hour meter",
+                        "an ammeter, a wattmeter and a voltmeter"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Power factor measurement. Theory: PF = W / (V × I) — requires wattmeter, voltmeter, and ammeter."
+                },
+                {
+                    text: "One identifying feature of a squirrel-cage induction motor is that it has no ______.",
+                    options: [
+                        "air gap",
+                        "commutator or slip rings",
+                        "iron core in the rotating part",
+                        "windings on the stationary part"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Motor construction. Theory: Squirrel-cage rotors have no commutator or slip rings."
+                },
+                {
+                    text: "A grounding conductor installed over lightning cables for the purpose of interconnecting the system ground electrodes and providing lightning protection for the cables is called a/an ______.",
+                    options: [
+                        "air terminal",
+                        "ground anchor",
+                        "counterpoise",
+                        "grounding connector rod"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Lightning protection. Theory: A counterpoise is a buried grounding conductor used for lightning protection."
+                },
+                {
+                    text: "A surge of unidirectional polarity is called ______.",
+                    options: [
+                        "corona",
+                        "flashover",
+                        "skin effect",
+                        "impulse"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Surge terminology. Theory: An impulse is a unidirectional surge of short duration."
+                },
+                {
+                    text: "The minimum temperature at which a given liquid gives off vapor in sufficient concentration to form an ignitable mixture is the ______.",
+                    options: [
+                        "absolute temperature",
+                        "kindling temperature",
+                        "flash point",
+                        "heat of fusion"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Fire safety. Theory: Flash point is the lowest temperature at which a liquid produces ignitable vapors."
+                },
+                {
+                    text: "Emergency power panel conductors supplying a building are tapped on ______.",
+                    options: [
+                        "any subfed panel",
+                        "any circuit breaker main",
+                        "any feeder circuit",
+                        "the line side of the service"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 700.12. Theory: Emergency systems are typically connected ahead of the normal service disconnect."
+                },
+                {
+                    text: "The grounding electrode shall be ______.",
+                    options: [
+                        "copper",
+                        "copper-clad aluminum",
+                        "aluminum",
+                        "any of these"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 250.52. Theory: Various materials are permitted for grounding electrodes."
+                },
+                {
+                    text: "A/an ______ is usually made on cables after installation.",
+                    options: [
+                        "ampacity test",
+                        "no-load test",
+                        "copper loss test",
+                        "insulation resistance test"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Cable testing. Theory: Insulation resistance (megger) test is standard after cable installation."
+                },
+                {
+                    text: "When you increase the resistance in a circuit, the flow of electrons will ______.",
+                    options: [
+                        "flow faster",
+                        "be stopped",
+                        "be decreased",
+                        "be constant"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Ohm's Law. Theory: I = E/R — increasing R decreases current."
+                },
+                {
+                    text: "An instrument used for observing voltage or current waveforms is the ______.",
+                    options: [
+                        "synchroscope",
+                        "varmeter",
+                        "multimeter",
+                        "oscilloscope"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Test equipment. Theory: An oscilloscope displays voltage/current waveforms over time."
+                },
+                {
+                    text: "The ideal internal resistance of an ammeter should be ______.",
+                    options: [
+                        "infinity",
+                        "zero",
+                        "equal to the circuit resistance",
+                        "higher than the circuit resistance"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Meter theory. Theory: An ideal ammeter has zero internal resistance so it does not affect the circuit."
+                },
+                {
+                    text: "The power factor of an alternator is determined by its ______.",
+                    options: [
+                        "speed",
+                        "load",
+                        "excitation",
+                        "weight"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Alternator theory. Theory: Power factor is determined by the nature of the load."
+                },
+                {
+                    text: "With respect to the safety value of the insulation on electrical tools, it can be said properly that ______.",
+                    options: [
+                        "it adequately ensures the safety of the user",
+                        "its value is mainly to the untrained electrician helper",
+                        "the insulation provides very little real protection",
+                        "the insulation should not be used as the only protective means"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Safety practice. Theory: Insulation is only one layer; grounding and GFCI protection are also required."
+                },
+                {
+                    text: "A transformer has a turns ratio of 4/1. What is the secondary peak voltage if the primary has an applied voltage of 115?",
+                    options: [
+                        "40.66",
+                        "81.3",
+                        "162.6",
+                        "28.75"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Transformer calculation. Theory: Secondary RMS = 115 / 4 = 28.75 V. Peak = 28.75 × 1.414 ≈ 40.66 V."
+                },
+                {
+                    text: "What is the voltage between points Y and Z?",
+                    options: [
+                        "72 volts",
+                        "120 volts",
+                        "24 volts",
+                        "144 volts"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Circuit analysis from diagram. Theory: Each 12 Ω load draws 2 A. Parallel combination of two 12 Ω = 6 Ω. Total current through the 20 Ω = 6 A. Voltage Y to Z = 6 A × 4 Ω (equivalent) = 24 V."
+                },
+                {
+                    text: "In the sketch above, what is the wattage of the 20 ohm load?",
+                    options: [
+                        "120 watts",
+                        "48 watts",
+                        "144 watts",
+                        "720 watts"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Power calculation. Theory: Current through 20 Ω = 6 A. P = I²R = 6² × 20 = 720 watts."
+                }
+            ]
+        },
+        {
+            id: "general_19",
+            title: "General Knowledge Exam #19",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "The internal resistance of an ideal ammeter should be ______.",
+                    options: [
+                        "high",
+                        "zero",
+                        "infinite",
+                        "equal to the circuit resistance"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Meter theory. Theory: An ideal ammeter has zero internal resistance so it does not affect the measured current."
+                },
+                {
+                    text: "A keeper is used with a ______.",
+                    options: [
+                        "battery",
+                        "magnet",
+                        "transformer",
+                        "relay"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Basic magnetism. Theory: A keeper (soft iron bar) is placed across the poles of a permanent magnet to preserve its strength."
+                },
+                {
+                    text: "A DC series motor has ______ field poles.",
+                    options: [
+                        "one",
+                        "two",
+                        "three",
+                        "four"
+                    ],
+                    correctIndex: 1,
+                    explanation: "DC motor construction. Theory: Series motors typically have two field poles."
+                },
+                {
+                    text: "The most commonly used non-metallic conduit is ______.",
+                    options: [
+                        "rigid non-metallic conduit",
+                        "flexible non-metallic conduit",
+                        "intermediate metallic conduit",
+                        "electrical metallic tubing"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 352. Theory: Rigid PVC (non-metallic) conduit is the most common non-metallic raceway."
+                },
+                {
+                    text: "A device used to connect and disconnect a circuit is called an ______.",
+                    options: [
+                        "interlock",
+                        "interrupter",
+                        "interrupting rating",
+                        "interrupting capacity"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Trade terminology. Theory: An interrupter (switch) is used to open and close circuits."
+                },
+                {
+                    text: "Bimetallic is used in ______.",
+                    options: [
+                        "fuses",
+                        "circuit breakers",
+                        "overloads",
+                        "all of these"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Overcurrent devices. Theory: Bimetallic strips are used in thermal overload relays and some circuit breakers."
+                },
+                {
+                    text: "A voltage of 600 volts or less is considered ______.",
+                    options: [
+                        "high voltage",
+                        "low voltage",
+                        "extra low voltage",
+                        "medium voltage"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC definitions. Theory: 600 volts and below is generally classified as low voltage."
+                },
+                {
+                    text: "The main purpose of a generator is to ______.",
+                    options: [
+                        "produce mechanical power",
+                        "produce heat",
+                        "utilize the electrical energy",
+                        "convert mechanical energy into electrical energy"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Basic machines. Theory: A generator converts mechanical energy into electrical energy."
+                },
+                {
+                    text: "If two equal resistances connected in series across a circuit are now connected in parallel across the same supply, the power produced will be ______ that of the series connection.",
+                    options: [
+                        "one-fourth",
+                        "one-half",
+                        "two times",
+                        "four times"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Power calculation. Theory: Series resistance = 2R, parallel = R/2. Power in parallel is 4 times higher for the same voltage."
+                },
+                {
+                    text: "The current in a capacitor ______.",
+                    options: [
+                        "leads the voltage by 90°",
+                        "lags the voltage by 90°",
+                        "is in phase with the voltage",
+                        "passes a current proportional to the rate of change of voltage"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Capacitor theory. Theory: I = C × dV/dt — current is proportional to the rate of voltage change."
+                },
+                {
+                    text: "Magnetomotive force is measured in ______.",
+                    options: [
+                        "webers",
+                        "ampere-turns",
+                        "gauss",
+                        "oersteds"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Magnetic circuits. Theory: MMF is measured in ampere-turns."
+                },
+                {
+                    text: "The high leg of a 4-wire delta system is the ______ side.",
+                    options: [
+                        "high side",
+                        "low side",
+                        "neutral side",
+                        "grounded side"
+                    ],
+                    correctIndex: 0,
+                    explanation: "High-leg delta. Theory: The high leg (orange) is the phase with 208 V to neutral."
+                },
+                {
+                    text: "The NEC requires all wiring to be ______.",
+                    options: [
+                        "installed in metallic raceways",
+                        "installed in non-metallic raceways",
+                        "copper",
+                        "wiring"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC general requirements. Theory: The Code simply says 'wiring' — it must meet all applicable rules."
+                },
+                {
+                    text: "The opposition to current flow in an AC circuit caused by inductance is called ______.",
+                    options: [
+                        "resistance",
+                        "reactance",
+                        "impedance",
+                        "inductance"
+                    ],
+                    correctIndex: 1,
+                    explanation: "AC theory. Theory: Inductive reactance (XL) opposes current flow in AC circuits."
+                },
+                {
+                    text: "The ability of a capacitor to store an electrical charge is called ______.",
+                    options: [
+                        "elastance",
+                        "capacitance",
+                        "inductance",
+                        "reactance"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Basic theory. Theory: Capacitance is the ability to store charge."
+                },
+                {
+                    text: "A single-pole single-throw switch is commonly called a ______ switch.",
+                    options: [
+                        "three-way",
+                        "four-way",
+                        "toggle switch",
+                        "double-pole switch"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Switch terminology. Theory: A standard wall switch is a SPST toggle switch."
+                },
+                {
+                    text: "In a wye-connected three-phase system, the ______.",
+                    options: [
+                        "phase voltage is equal to line voltage",
+                        "line voltage is equal to 1.732 times phase voltage",
+                        "phase current is equal to line current",
+                        "line current is equal to 1.732 times phase current"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Three-phase systems. Theory: In wye, line voltage = √3 × phase voltage."
+                },
+                {
+                    text: "The ampere-hour capacity of a storage battery is determined by ______.",
+                    options: [
+                        "the size of the plates",
+                        "the number of plates",
+                        "the current capacity of the cells",
+                        "the specific gravity of the electrolyte"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Battery rating. Theory: Ampere-hour rating is based on the current the battery can deliver for a specified time."
+                },
+                {
+                    text: "A method of measuring the diameter of a wire is called ______.",
+                    options: [
+                        "mil",
+                        "circular mil",
+                        "AWG",
+                        "inching"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Trade practice. Theory: 'Inching' refers to using a micrometer or ruler to measure wire diameter in small increments."
+                },
+                {
+                    text: "The inductive reactance of a coil is ______.",
+                    options: [
+                        "directly proportional to frequency",
+                        "inversely proportional to frequency",
+                        "the reciprocal of frequency",
+                        "independent of frequency"
+                    ],
+                    correctIndex: 0,
+                    explanation: "AC theory. Theory: XL = 2πfL — directly proportional to frequency."
+                },
+                {
+                    text: "In an autotransformer ______.",
+                    options: [
+                        "energy is transferred only inductively",
+                        "energy is transferred only conductively",
+                        "energy is transferred both inductively and conductively",
+                        "there is no energy transfer"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Autotransformer theory. Theory: Power is transferred both by conduction (common winding) and induction."
+                },
+                {
+                    text: "The peak value of a sine wave is ______.",
+                    options: [
+                        "0.707 of the RMS value",
+                        "1.414 of the RMS value",
+                        "the average value",
+                        "the maximum value"
+                    ],
+                    correctIndex: 3,
+                    explanation: "AC waveform. Theory: Peak value is the maximum instantaneous value."
+                },
+                {
+                    text: "A test to determine if there is a complete path for current flow is called a ______ test.",
+                    options: [
+                        "resistance",
+                        "continuity",
+                        "insulation",
+                        "voltage"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Testing practice. Theory: Continuity test verifies a complete low-resistance path."
+                },
+                {
+                    text: "The rotating part of a DC motor is called the ______.",
+                    options: [
+                        "stator",
+                        "rotor",
+                        "armature",
+                        "field"
+                    ],
+                    correctIndex: 1,
+                    explanation: "DC machine construction. Theory: The rotor is the rotating part."
+                },
+                {
+                    text: "A device used to measure temperature is a ______.",
+                    options: [
+                        "thermometer",
+                        "thermostat",
+                        "thermocouple",
+                        "thermistor"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Temperature measurement. Theory: A thermocouple generates voltage proportional to temperature difference."
+                }
+            ]
+        },
+        {
+            id: "general_20",
+            title: "General Knowledge Exam #20",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "High voltage is used in long-distance power transmission because ______.",
+                    options: [
+                        "it is easier to regulate than low voltage",
+                        "smaller transformers can be used",
+                        "the electromagnet fields are stronger",
+                        "the I²R losses are lower"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Power transmission theory. Theory: Higher voltage reduces current for the same power, which lowers I²R losses (P_loss = I²R)."
+                },
+                {
+                    text: "A DC generator develops ______ in its armature.",
+                    options: [
+                        "alternating current",
+                        "heat",
+                        "inductance",
+                        "direct current"
+                    ],
+                    correctIndex: 3,
+                    explanation: "DC machine basics. Theory: The armature of a DC generator produces direct current (after commutation)."
+                },
+                {
+                    text: "When thermal overloads are used for the protection of a three-phase motor, their primary purpose is to protect the motor in case of ______.",
+                    options: [
+                        "sustained overload",
+                        "reversal of phase sequence",
+                        "high voltage",
+                        "short circuit between lines"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 430.32. Theory: Thermal overloads protect against sustained overload conditions that cause overheating."
+                },
+                {
+                    text: "A disruptive discharge through the conductor insulation is called a/an ______.",
+                    options: [
+                        "fault",
+                        "short",
+                        "breakdown",
+                        "overload"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Insulation failure. Theory: Dielectric breakdown is the sudden failure of insulation under high voltage stress."
+                },
+                {
+                    text: "An assembly of two pieces of insulating material provided with grooves for holding one or more conductors at a definite spacing from the surface wired over and from each other, and with holes for fastening in position is a ______.",
+                    options: [
+                        "cleat",
+                        "spool insulator",
+                        "split knob",
+                        "rosette"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC Article 100 and wiring methods. Theory: Cleats are used for open wiring on insulators."
+                },
+                {
+                    text: "The disadvantage of a mechanical switch is that it ______.",
+                    options: [
+                        "is costly",
+                        "is operated mechanically",
+                        "has high inertia",
+                        "has a lower corona"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Switch characteristics. Theory: Mechanical switches have moving parts with inertia, limiting high-speed operation."
+                },
+                {
+                    text: "Suppose the primary line voltage fluctuates between 105 volts and 125 volts on a 5/1 step down transformer. The maximum secondary peak voltage would be approximately ______ volts.",
+                    options: [
+                        "88",
+                        "18",
+                        "74",
+                        "35"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Transformer calculation. Theory: Max primary = 125 V. Secondary RMS = 125 / 5 = 25 V. Peak = 25 × 1.414 ≈ 35 V."
+                },
+                {
+                    text: "The force between two electrically charged objects is called ______.",
+                    options: [
+                        "electroscopic force",
+                        "magnetic force",
+                        "eddy currents",
+                        "electrostatic force"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Basic physics. Theory: The force between charges is electrostatic (Coulomb's law)."
+                },
+                {
+                    text: "Transformers are rated in kva instead of kw because ______.",
+                    options: [
+                        "load power factor is often unknown",
+                        "total transformer loss depends on va",
+                        "kw depends on the power factor",
+                        "none of these"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Transformer rating. Theory: kVA rating accounts for apparent power; actual kW depends on power factor."
+                },
+                {
+                    text: "When two resistances are connected in parallel ______.",
+                    options: [
+                        "the current through each must be the same",
+                        "the voltage across each must be the same",
+                        "each must have the same resistance value",
+                        "their combined resistance equals the sum of the individual values"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Parallel circuit rules. Theory: In parallel, voltage is the same across each branch."
+                },
+                {
+                    text: "The main disadvantage of a low power factor is that ______.",
+                    options: [
+                        "heat generated is more than the desired amount",
+                        "current required for a given load power is higher",
+                        "more power is consumed by the load",
+                        "active power developed by a generator exceeds its rated output capacity"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Power factor effects. Theory: Low PF increases current for the same real power, causing higher I²R losses."
+                },
+                {
+                    text: "A ______ has the highest operating efficiency.",
+                    options: [
+                        "converter",
+                        "generator",
+                        "transformer",
+                        "motor"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Efficiency comparison. Theory: Transformers have the highest efficiency (often >98%) because they have no moving parts."
+                },
+                {
+                    text: "If a motor runs but fails to stop even if the stop button is pressed, the cause is probably ______.",
+                    options: [
+                        "the overload contact did not operate",
+                        "the holding circuit interlock was welded",
+                        "the fuse has blown",
+                        "all of these"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Motor control troubleshooting. Theory: A welded holding contact keeps the coil energized even when the stop button is pressed."
+                },
+                {
+                    text: "Overcurrent devices shall not be connected in series with any conductor that is ______.",
+                    options: [
+                        "current carrying",
+                        "intentionally grounded",
+                        "stranded",
+                        "above 250 kcmil"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 240.22. Theory: Overcurrent protection must not be placed in the grounded (neutral) conductor."
+                },
+                {
+                    text: "If the length and area of cross-section of a wire are doubled, then its resistance ______.",
+                    options: [
+                        "remains the same",
+                        "becomes double",
+                        "becomes four times",
+                        "is less"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Resistance formula. Theory: R = ρL/A. Doubling L and A cancels out — resistance stays the same."
+                },
+                {
+                    text: "A good conductor material should have ______ valence electrons.",
+                    options: [
+                        "1",
+                        "4",
+                        "19",
+                        "29"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Atomic theory. Theory: Good conductors (copper, silver) have 1 valence electron."
+                },
+                {
+                    text: "In motor controls, a maintaining contact is a ______ contact.",
+                    options: [
+                        "delay-on",
+                        "delay-off",
+                        "normally closed",
+                        "normally open"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Control circuits. Theory: Maintaining (sealing) contacts are normally open and hold the circuit after the start button is released."
+                }
+            ]
+        },
+        {
+            id: "general_21",
+            title: "General Knowledge Exam #21",
+            timeMinutes: 30,
+            questions: [
+                {
+                    text: "The connection between conductive or inductive metal objects in an element of a lightning protection system to accomplish continuity is ______.",
+                    options: [
+                        "counterpoise",
+                        "bonding",
+                        "interlink",
+                        "connectors"
+                    ],
+                    correctIndex: 1,
+                    explanation: "NEC 250.104 and lightning protection. Theory: Bonding ensures electrical continuity between metallic parts."
+                },
+                {
+                    text: "Overcurrent protection devices in emergency systems shall ______.",
+                    options: [
+                        "not trip the main device",
+                        "clear in steps",
+                        "be coordinated",
+                        "all of these"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 700.28. Theory: Overcurrent devices in emergency systems must be selectively coordinated."
+                },
+                {
+                    text: "A ______ includes any switch or device normally used to start and stop a motor by making and breaking the motor circuit current.",
+                    options: [
+                        "DPDT switch",
+                        "rheostat",
+                        "heater",
+                        "controller"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC Article 430 definition. Theory: A motor controller is any device that starts and stops the motor."
+                },
+                {
+                    text: "If there are no overcurrent protective devices rated 30 amps or less with neutral connection, the panelboard is classified as a/an ______.",
+                    options: [
+                        "appliance panelboard",
+                        "lighting panelboard",
+                        "power panelboard",
+                        "all of these"
+                    ],
+                    correctIndex: 2,
+                    explanation: "NEC 408.36. Theory: Panelboards without small OCPDs connected to the neutral are classified as power panelboards."
+                },
+                {
+                    text: "Overcurrent in transformers affect all of the following EXCEPT ______.",
+                    options: [
+                        "life of the insulation",
+                        "mechanical stresses",
+                        "rise in temperature",
+                        "breather effectiveness"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Transformer protection. Theory: Breather effectiveness is not directly affected by overcurrent; the others are."
+                },
+                {
+                    text: "A relay which prevents holding in an electrically operated device, such as a circuit breaker, while an abnormal condition exists in the circuit is called ______.",
+                    options: [
+                        "locking relay",
+                        "trip-free",
+                        "auxiliary relay",
+                        "shunt relay"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Protective relaying. Theory: A trip-free relay prevents re-energization while a fault persists."
+                },
+                {
+                    text: "The essential condition for parallel operation of two single phase transformers is that they should have the same ______.",
+                    options: [
+                        "polarity",
+                        "percentage impedance",
+                        "kva rating",
+                        "voltage rating"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Transformer paralleling. Theory: Correct polarity is essential to prevent circulating currents."
+                },
+                {
+                    text: "A 10 amp fan with a PF of 80% is connected to a 230 volt source. The power in watts is ______.",
+                    options: [
+                        "2300",
+                        "2175",
+                        "1920",
+                        "1840"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Power calculation. Theory: P = V × I × PF = 230 × 10 × 0.8 = 1840 watts."
+                },
+                {
+                    text: "Sparking between contacts can be reduced by ______.",
+                    options: [
+                        "inserting a capacitor in series with the contacts",
+                        "inserting a resistance in the line",
+                        "inserting a capacitor in parallel with the contacts",
+                        "all of these"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Arc suppression. Theory: RC snubbers (capacitor in parallel with resistor) reduce sparking."
+                },
+                {
+                    text: "Autotransformers used to start large induction motors are frequently called a starting ______.",
+                    options: [
+                        "winder",
+                        "transformer",
+                        "reactor",
+                        "compensator"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Motor starting. Theory: Autotransformer starters are commonly called compensators."
+                },
+                {
+                    text: "The reciprocal of resistance is ______.",
+                    options: [
+                        "reluctance",
+                        "susceptance",
+                        "admittance",
+                        "conductance"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Basic electrical units. Theory: Conductance G = 1/R (unit: siemens)."
+                },
+                {
+                    text: "The switch with the fastest speed of operation is a/an ______ switch.",
+                    options: [
+                        "hydraulic",
+                        "mechanical",
+                        "electromechanical",
+                        "electronic"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Switch types. Theory: Electronic (solid-state) switches have the fastest operation with no mechanical inertia."
+                },
+                {
+                    text: "If you double the voltage in a circuit and cut the resistance in half, the current will become ______.",
+                    options: [
+                        "the same as before",
+                        "twice as great",
+                        "half as great",
+                        "four times as great"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Ohm's Law. Theory: I = V/R. Doubling V and halving R → current becomes 4 times greater."
+                },
+                {
+                    text: "The reason why alternating current can induce voltage is ______.",
+                    options: [
+                        "it has a constant magnetic field",
+                        "it has a stronger magnetic field than direct current",
+                        "it has a varying magnetic field",
+                        "it has a high peak value"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Electromagnetic induction. Theory: A changing (varying) magnetic field induces voltage (Faraday's law)."
+                },
+                {
+                    text: "______ is a term used to express the amount of electrical energy in an electrostatic field.",
+                    options: [
+                        "Coulombs",
+                        "Volts",
+                        "Joules",
+                        "Watts"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Energy units. Theory: Energy stored in a capacitor is measured in joules."
+                },
+                {
+                    text: "Insulation resistance is measured with a/an ______.",
+                    options: [
+                        "ohmmeter",
+                        "megger",
+                        "insulation meter",
+                        "wein bridge"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Testing equipment. Theory: A megger (megohmmeter) is specifically used for high-resistance insulation testing."
+                },
+                {
+                    text: "Inverse-time characteristics of a circuit breaker means ______.",
+                    options: [
+                        "higher fault current, longer time needed to trip",
+                        "lower fault current, longer time needed to trip",
+                        "higher fault current, shorter time needed to trip",
+                        "none of these"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Circuit breaker trip curve. Theory: Inverse-time means higher current = faster trip time."
+                },
+                {
+                    text: "An electrical symbol represented by a rectangle with the letters PB inside is ______.",
+                    options: [
+                        "battery panel",
+                        "push button",
+                        "pull box",
+                        "power bend"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Electrical symbols. Theory: PB stands for Push Button."
+                },
+                {
+                    text: "Which of the following is the best advantage of a DC motor over an AC motor?",
+                    options: [
+                        "It has better speed control",
+                        "It has a higher speed rating",
+                        "It is easier to reverse its speed",
+                        "all of these"
+                    ],
+                    correctIndex: 0,
+                    explanation: "DC vs AC motors. Theory: DC motors offer superior speed control via armature voltage or field weakening."
+                },
+                {
+                    text: "The resistance of a component having no continuity is ______.",
+                    options: [
+                        "infinite resistance",
+                        "no or zero resistance",
+                        "low resistance",
+                        "all of these"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Continuity testing. Theory: No continuity = open circuit = infinite resistance."
+                },
+                {
+                    text: "A shunt for a milliammeter ______.",
+                    options: [
+                        "extends the range and reduces the meter resistance",
+                        "extends the range and increases the meter resistance",
+                        "decreases the range but increases the meter resistance",
+                        "decreases the range but increases the meter resistance"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Meter shunts. Theory: A shunt bypasses most current, extending range while lowering overall resistance."
+                },
+                {
+                    text: "The basic unit of electric charge is the ______.",
+                    options: [
+                        "coulomb",
+                        "ampere hour",
+                        "farad",
+                        "watt hour"
+                    ],
+                    correctIndex: 0,
+                    explanation: "Fundamental units. Theory: The coulomb is the SI unit of electric charge."
+                },
+                {
+                    text: "The property of magnetic materials of retaining magnetism after withdrawal of the magnetizing force is referred to as ______.",
+                    options: [
+                        "resistivity",
+                        "reluctivity",
+                        "retentivity",
+                        "reluctance"
+                    ],
+                    correctIndex: 2,
+                    explanation: "Magnetic properties. Theory: Retentivity (remanence) is the ability to retain magnetism."
+                },
+                {
+                    text: "An open coil has ______.",
+                    options: [
+                        "infinite resistance and inductance",
+                        "zero resistance and infinite inductance",
+                        "zero resistance and inductance",
+                        "infinite resistance and zero inductance"
+                    ],
+                    correctIndex: 3,
+                    explanation: "Coil behavior. Theory: An open coil has infinite resistance (no current) and therefore zero inductance effect."
+                },
+                {
+                    text: "A series circuit with an 8Ω resistance and a 4Ω resistance connected to a 12 volt battery will have a current flow of ______.",
+                    options: [
+                        "1.3 in the larger resistance",
+                        "one ampere in both resistors",
+                        "2.0 amps in both resistors",
+                        "3 amps in the smaller resistor"
+                    ],
+                    correctIndex: 1,
+                    explanation: "Series circuit. Theory: Total R = 12 Ω, I = 12 V / 12 Ω = 1 A (same in both resistors)."
+                }
+            ]
+        },
+        {
             id: "general_22",
             title: "General Knowledge Exam #22",
             timeMinutes: 30,
