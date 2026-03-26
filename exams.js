@@ -253,7 +253,7 @@ const REAL_EXAMS = {
                         "moisture and heat resistant",
                         "moisture resistant and thermoplastic"
                     ],
-                    correctIndex: 1,
+                    correctIndex: 3,
                     explanation: "NEC Table 310.104(A) (formerly 310.104) lists conductor applications: Type TW is Moisture-Resistant Thermoplastic. Theory: The 'T' indicates thermoplastic insulation; 'W' adds moisture resistance for wet locations."
                 },
                 {
