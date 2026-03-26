@@ -1465,8 +1465,8 @@ const REAL_EXAMS = {
                     text: "The advantage of cutting a metal rigid conduit with a hacksaw rather than a pipe cutter is ______.",
                     options: [
                         "you do not need a vice",
-                        "less reaming is required",
                         "less energy required in cutting",
+                        "less reaming is required",
                         "threading oil is not required"
                     ],
                     correctIndex: 2,
