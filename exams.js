@@ -503,7 +503,7 @@ const REAL_EXAMS = {
                         "50Ω"
                     ],
                     correctIndex: 2,
-                    explanation: "NEC Chapter 9, Table 8 (conductor resistance). Theory: R = ρL/A. New R = 5 × (3) / (0.5) = 30 Ω."
+                    explanation: "NEC Chapter 9, Table 8 (conductor resistance). Theory: R = ρL/A. New R = 5 × (3) x(2) = 30 Ω."
                 },
                 {
                     text: "A cell that cannot be recharged is a ______.",
