@@ -1890,7 +1890,7 @@ const REAL_EXAMS = {
                         ".500",
                         ".025"
                     ],
-                    correctIndex: 1,
+                    correctIndex: 0,
                     explanation: "NEC 210.8 and GFCI requirements. Theory: Class A GFCIs trip when the ground-fault current reaches approximately 4–6 mA (0.005 A is too low; 0.050 A = 5 mA is the typical trip threshold)."
                 },
                 {
