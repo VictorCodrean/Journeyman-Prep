@@ -2696,7 +2696,7 @@ const REAL_EXAMS = {
                         "3/8\" per foot",
                         "3/4\" per foot"
                     ],
-                    correctIndex: 2,
+                    correctIndex: 3,
                     explanation: "NEC 344.42 and NPT standards. Theory: Standard conduit threads use 3/4 inch taper per foot (NPT taper)."
                 },
                 {
