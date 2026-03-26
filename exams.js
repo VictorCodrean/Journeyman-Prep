@@ -884,7 +884,7 @@ const REAL_EXAMS = {
                         "wiring"
                     ],
                     correctIndex: 1,
-                    explanation: "NEC 409.110 and industrial control panel rules. Theory: Ladder diagrams arrange control circuits in a vertical rung format for easy reading of control logic."
+                    explanation: "A schematic diagram should be used when designing or troubleshooting an installation. Control components are rearranged to simplify the tracing of the circuit. Line, ladder, or elementary diagrams are other terms used in lieu of a schematic."
                 },
                 {
                     text: "In motors and transformers, the reason for the thin layer of varnish over the copper coil pattern is to prevent ______.",
