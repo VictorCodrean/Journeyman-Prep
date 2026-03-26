@@ -2590,7 +2590,7 @@ const REAL_EXAMS = {
                     explanation: "Standard termination practice. Theory: Wrapping clockwise (for right-hand screws) ensures the wire tightens under the screw head when pulled."
                 },
                 {
-                    text: "DC: Determining a positive wire on a single-phase circuit is ______.",
+                    text: "Determining a positive wire on a single-phase circuit is ______.",
                     options: [
                         "possible with a wattmeter",
                         "possible with an ammeter",
@@ -2598,7 +2598,7 @@ const REAL_EXAMS = {
                         "an impossibility"
                     ],
                     correctIndex: 3,
-                    explanation: "Basic DC theory. Theory: On a single-phase circuit without additional reference, you cannot determine polarity with standard meters alone."
+                    explanation: "Positive means DC and Basic DC theory. Theory: On a single-phase circuit without additional reference, you cannot determine polarity with standard meters alone."
                 },
                 {
                     text: "Piezoelectric is caused by crystals or binding ______.",
