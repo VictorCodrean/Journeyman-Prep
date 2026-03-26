@@ -1311,14 +1311,84 @@
             startTimer();
         }
 
-        function openReview() {
-            // You can expand this later if needed
-            alert("Full detailed review coming soon. Use the 'Missed Questions' group above for now.");
-        }
+        //-- Replace the old openReview / closeReview block with this new code -->//
 
-        function closeReview() {
-            document.getElementById('reviewSection').classList.add('hidden');
-        }
+        function openReview() {
+                const exam = getCurrentExam();
+                if (!exam) {
+                    alert("Cannot load review - exam data not found.");
+                    return;
+                }
+
+                const answers = userAnswers[currentType]?.[currentExamIndex] || {};
+                let html = `
+            <h4 style="margin-bottom: 1.5rem; color: var(--accent);">
+                ${exam.title} — Full Review
+            </h4>
+            `;
+
+                exam.questions.forEach((q, qIndex) => {
+                    const userAns = answers[qIndex];
+                    const isCorrect = userAns === q.correctIndex;
+                    const userLetter = userAns !== undefined ? String.fromCharCode(65 + userAns) : '—';
+
+                    html += `
+            <div class="reviewCard" style="border: 2px solid ${isCorrect ? '#28a745' : '#e11d48'}; margin-bottom: 1.75rem; padding: 1.25rem;">
+                <div style="margin-bottom: 12px;">
+                    <strong>Q${qIndex + 1}.</strong> ${q.text}
+                </div>
+                
+                <div style="margin: 12px 0;">
+                    ${q.options.map((opt, i) => {
+                        let style = '';
+                        let icon = '';
+                        if (i === q.correctIndex) {
+                            style = 'color:#28a745; font-weight: bold;';
+                            icon = ' ✓';
+                        }
+                        if (userAns === i) {
+                            if (!isCorrect) {
+                                style = 'color:#e11d48; font-weight: bold; text-decoration: line-through;';
+                                icon = ' ✕';
+                            } else {
+                                icon = ' ✓';
+                            }
+                        }
+                        return `<div style="${style} padding: 6px 0; line-height: 1.4;">
+                                    ${String.fromCharCode(65 + i)}. ${opt}${icon}
+                                </div>`;
+                    }).join('')}
+                </div>
+
+                <div style="padding: 12px; border-radius: 8px; background: ${isCorrect ? '#28a74522' : '#e11d4822'};">
+                    ${isCorrect
+                            ? `<strong style="color:#28a745;">✓ You answered correctly</strong>`
+                            : `<strong style="color:#e11d48;">✗ You answered incorrectly</strong> (You chose ${userLetter})`
+                        }
+                    <br><br>
+                    <strong>Correct Answer:</strong> ${String.fromCharCode(65 + q.correctIndex)}. ${q.options[q.correctIndex]}
+                    
+                    ${q.explanation ? `
+                    <details style="margin-top: 12px;">
+                        <summary style="color:var(--accent); cursor:pointer; font-weight:500;">Show Explanation</summary>
+                        <p style="margin-top: 8px; color:var(--muted); line-height:1.45;">${q.explanation}</p>
+                    </details>` : ''}
+                </div>
+                </div>`;
+                });
+
+                document.getElementById('reviewContent').innerHTML = html;
+
+                // Switch views
+                document.getElementById('summarySection').classList.add('hidden');
+                document.getElementById('reviewSection').classList.remove('hidden');
+            }
+
+            function closeReview() {
+                document.getElementById('reviewSection').classList.add('hidden');
+                document.getElementById('summarySection').classList.remove('hidden');
+            }
+
         // ====================== FOOTER STATS ======================
             function calculateFooterStats() {
                 let generalTotal = 0, generalCount = 0;
