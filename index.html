@@ -106,6 +106,78 @@
             font-size: 0.95rem;
         }
 
+/* ====================== CELEBRATION STYLES ====================== */
+#summarySection .pass-badge {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: #28a745;
+    text-align: center;
+    margin: 1.5rem 0;
+    animation: passPop 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    text-shadow: 0 0 30px rgba(40, 167, 69, 0.5);
+}
+
+@keyframes passPop {
+    0%   { transform: scale(0.3); }
+    50%  { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+
+.motivational {
+    font-size: 1.35rem;
+    text-align: center;
+    color: #eaeff4;
+    font-weight: 600;
+    margin: 1rem 0 2rem;
+    line-height: 1.4;
+}
+
+.fail-badge {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #e11d48;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+/* ====================== STICKY QUIZ HEADER - CARD STYLE (FULLY VISIBLE PROGRESS BAR) ====================== */
+#quizSection > div[style*="position: sticky"] {
+    background: rgba(26, 31, 46, 0.98) !important;
+    border: 1px solid #2e3245 !important;
+    border-radius: 16px !important;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35) !important;
+    padding: 20px 24px 34px !important;   /* ← extra bottom space */
+    margin-bottom: 1.75rem !important;
+    top: 8px !important;
+}
+
+/* Title + Timer + Pause row */
+#quizSection .row {
+    margin-bottom: 18px !important;
+}
+
+/* Progress bar container */
+#quizSection > div[style*="position: sticky"] > div:last-child {
+    margin-top: 6px !important;
+    background: #1f2538 !important;
+    border-radius: 9999px !important;
+    padding: 3px !important;
+    height: 18px !important;               /* guaranteed space */
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.5);
+}
+
+/* Progress bar fill */
+#progressBar {
+    height: 100% !important;
+    border-radius: 9999px !important;
+}
+
+/* Progress text */
+#progressText {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
         /* ====================== BUTTONS ====================== */
         button.primary {
             padding: 0.75rem 1.25rem;
@@ -289,6 +361,139 @@
         .option input[type="radio"] {
             accent-color: var(--accent);
         }
+
+        /* ====================== MOBILE RESPONSIVENESS ====================== */
+@media (max-width: 768px) {
+    .container { padding: 0.85rem; }
+    header { padding: 1rem 0.75rem; }
+    header h1 { font-size: 1.65rem; }
+
+    .grid, .exam-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.25rem;
+    }
+
+    .card {
+        padding: 1.25rem;
+        border-radius: 12px;
+    }
+
+    /* ── QUIZ STICKY HEADER – NOW PERFECT ON MOBILE ── */
+    #quizSection > div[style*="position: sticky"] {
+        padding: 10px 12px 14px 12px;
+        margin-bottom: 0.75rem;
+    }
+
+    .row {
+        flex-direction: row !important;   /* keep compact horizontal layout */
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    #quizTitle {
+        font-size: 1.1rem;
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .timer {
+        font-size: 1.05rem;
+        white-space: nowrap;
+    }
+
+    #pauseBtn {
+        padding: 6px 14px;
+        font-size: 0.9rem;
+        min-width: 88px;
+        white-space: nowrap;
+    }
+
+    /* Progress bar – cleaner on small screens */
+    #quizSection > div[style*="position: sticky"] > div:last-child {
+        margin-top: 12px;
+        height: 10px;
+    }
+    #progressText {
+        font-size: 0.8rem;
+        right: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    #quizTitle { font-size: 1rem; }
+    .timer { font-size: 1rem; }
+    #pauseBtn {
+        padding: 5px 12px;
+        font-size: 0.85rem;
+        min-width: 80px;
+    }
+    #progressText { font-size: 0.78rem; }
+}
+@media (max-width: 768px) {
+    #quizSection > div[style*="position: sticky"] {
+        padding: 16px 20px 30px !important;   /* still plenty of bottom room */
+        border-radius: 14px !important;
+        margin-bottom: 1.2rem !important;
+    }
+    
+    #quizSection .row {
+        margin-bottom: 14px !important;
+    }
+}
+/* ====================== FOOTER STATS ====================== */
+.footer-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.8rem 2rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.footer-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 110px;
+}
+
+.footer-stat-label {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-stat-value {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.footer-stat-value.pass {
+    color: var(--green);
+}
+
+.footer-stat-value.fail {
+    color: var(--red);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer-stats {
+        gap: 1.2rem 1.5rem;
+    }
+    .footer-stat-value {
+        font-size: 1.2rem;
+    }
+}
+
     </style>
 </head>
 
@@ -419,6 +624,11 @@
         <section id="summarySection" class="section hidden">
             <h3>Exam Summary</h3>
             <div id="summaryContent"></div>
+        
+            <!-- Celebration Canvas -->
+            <canvas id="confettiCanvas"
+                style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; display:none;"></canvas>
+        
             <div class="row" style="margin-top:.75rem;">
                 <button class="primary" onclick="restartExam()">Restart Exam</button>
                 <button class="primary" onclick="returnToLanding()">Back to Home</button>
@@ -427,7 +637,12 @@
         </section>
     </main>
 
-    <footer>Progress & attempts are saved in your browser (localStorage). Clear browser data to reset.</footer>
+<footer>
+    <div id="footerStats" class="footer-stats"></div>
+    <p style="margin: 0; font-size: 0.85rem; color: var(--muted); text-align: center;">
+        Progress &amp; attempts are saved in your browser (localStorage). Clear browser data to reset.
+    </p>
+</footer>
 
     <script src="exams.js"></script>
     <script>
@@ -720,17 +935,10 @@
                     const userAns = answers[i];
                     if (userAns !== undefined) {
                         answeredCount++;
-                        if (userAns === q.correctIndex) {
-                            correctCount++;
-                        } else {
-                            recordMissedQuestion(currentType, currentExamIndex, i, q);
-                        }
+                        if (userAns === q.correctIndex) correctCount++;
+                        else recordMissedQuestion(currentType, currentExamIndex, i, q);
                     } else {
-                        // Optional: record unanswered as missed
                         recordMissedQuestion(currentType, currentExamIndex, i, q);
-                    }
-                    if (currentType !== null) {
-                        localStorage.removeItem(`currentExam_${currentType}_${currentExamIndex}`);
                     }
                 });
 
@@ -738,36 +946,120 @@
                 const passed = percent >= 70;
 
                 let attempt = getAttempts(currentType, currentExamIndex) + 1;
-
                 localStorage.setItem(`attempts_${currentType}_${currentExamIndex}`, attempt);
                 localStorage.setItem(storageKey(currentType, currentExamIndex, attempt), JSON.stringify(answers));
 
-                // Summary with Pass/Fail
-                document.getElementById('summaryContent').innerHTML = `
-        <p style="font-size: 1.4rem; margin: 1rem 0;">
+                // === NEW CELEBRATION LOGIC ===
+                let html = `
+            <p style="font-size: 1.4rem; margin: 1rem 0;">
             <strong>Score:</strong> ${percent}% 
-            <span style="color: ${passed ? 'var(--green)' : 'var(--red)'}; font-weight: bold;">
-                (${passed ? '✅ PASS' : '❌ FAIL'})
-            </span>
-        </p>
-        <p><strong>Correct Answers:</strong> ${correctCount} / ${exam.questions.length}</p>
-        <p><strong>Attempt #${attempt}</strong></p>
-        ${answeredCount < exam.questions.length ?
-                        `<p style="color: var(--warning);">⚠️ ${exam.questions.length - answeredCount} question(s) were left unanswered.</p>` : ''}
-        ${!passed ? `<p style="color: var(--muted);">You need at least 70% to pass.</p>` : ''}
-    `;
+             </p>
+            `;
+
+                if (passed) {
+                    html += `
+            <div class="pass-badge">✅ PASSED</div>
+            <div class="motivational">${getMotivationalMessage(percent)}</div>
+            `;
+                    document.getElementById('confettiCanvas').style.display = 'block';
+                    triggerConfetti();
+                } else {
+                    html += `
+            <div class="fail-badge">❌ NOT PASSED</div>
+            <p style="color: var(--red); font-weight: bold; text-align:center; margin:1rem 0;">You need at least 70% to pass.</p>
+            `;
+                }
+
+                html += `
+            <p><strong>Correct Answers:</strong> ${correctCount} / ${exam.questions.length}</p>
+            <p><strong>Attempt #${attempt}</strong></p>
+            ${answeredCount < exam.questions.length ? `<p style="color: var(--warning);">⚠️ ${exam.questions.length - answeredCount} question(s) were left unanswered.</p>` : ''}
+            `;
+
+                document.getElementById('summaryContent').innerHTML = html;
 
                 document.getElementById('quizSection').classList.add('hidden');
                 document.getElementById('summarySection').classList.remove('hidden');
 
-                // Refresh missed questions and stats
+                // Refresh stats and missed questions
                 renderMissedQuestionsGroup();
                 updateAllStats();
                 createGeneralExamCards();
-            createOpenBookCards();
-            createFinalCards();
+                createOpenBookCards();
+                createFinalCards();
+                updateFooterStats();
+        }
+
+            // ====================== MOTIVATIONAL MESSAGES ======================
+            function getMotivationalMessage(percent) {
+                if (percent >= 95) return "Outstanding! You're exam-ready 🔥";
+                if (percent >= 90) return "Excellent work — top tier performance!";
+                if (percent >= 85) return "Fantastic! You're going to crush the real exam.";
+                if (percent >= 80) return "Strong pass! Keep this momentum going.";
+                if (percent >= 75) return "Solid pass — great job!";
+                return "You passed! Every attempt makes you stronger 💪";
             }
-            function startFreshExam(type, examIndex) {
+
+            // ====================== CONFETTI ANIMATION ======================
+            function triggerConfetti() {
+                const canvas = document.getElementById('confettiCanvas');
+                const ctx = canvas.getContext('2d');
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+
+                let particles = [];
+                const colors = ['#4cc9f0', '#1e90ff', '#28a745', '#ffd166', '#e11d48'];
+
+                class Particle {
+                    constructor() {
+                        this.x = Math.random() * canvas.width;
+                        this.y = Math.random() * canvas.height - canvas.height;
+                        this.size = Math.random() * 12 + 6;
+                        this.speed = Math.random() * 6 + 4;
+                        this.angle = Math.random() * 360;
+                        this.color = colors[Math.floor(Math.random() * colors.length)];
+                        this.rotation = Math.random() * 0.03 - 0.015;
+                    }
+                    update() {
+                        this.y += this.speed;
+                        this.angle += this.rotation;
+                        this.speed += 0.08; // gravity
+                    }
+                    draw() {
+                        ctx.save();
+                        ctx.translate(this.x, this.y);
+                        ctx.rotate(this.angle);
+                        ctx.fillStyle = this.color;
+                        ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
+                        ctx.restore();
+                    }
+                }
+
+                function animate() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    if (particles.length < 280) {
+                        particles.push(new Particle());
+                    }
+                    particles = particles.filter(p => {
+                        p.update();
+                        p.draw();
+                        return p.y < canvas.height + 50;
+                    });
+                    if (particles.length > 0) requestAnimationFrame(animate);
+                    else canvas.style.display = 'none';
+                }
+
+                animate();
+
+                // Auto-hide canvas after 5 seconds
+                setTimeout(() => {
+                    if (canvas.style.display !== 'none') {
+                        canvas.style.display = 'none';
+                    }
+                }, 5000);
+            }
+
+        function startFreshExam(type, examIndex) {
                     if (confirm("This will clear all saved answers for this exam and start fresh.\n\nContinue?")) {
                         localStorage.removeItem(`currentExam_${type}_${examIndex}`);
                         startExam(type, examIndex);   // Now starts completely fresh
@@ -793,6 +1085,7 @@
                 createGeneralExamCards();
             createOpenBookCards();
             createFinalCards();
+            updateFooterStats();
 
                 currentType = null;
                 currentExamIndex = 0;
@@ -993,6 +1286,7 @@
             createFinalCards();
             updateAllStats();
             renderMissedQuestionsGroup();
+            updateFooterStats();
 
             // Add Pause button
             const timerRow = document.querySelector('#quizSection .row');
@@ -1000,7 +1294,6 @@
                 const pauseBtn = document.createElement('button');
                 pauseBtn.id = 'pauseBtn';
                 pauseBtn.className = 'primary';
-                pauseBtn.style.marginLeft = '1rem';
                 pauseBtn.textContent = '⏸ Pause';
                 pauseBtn.onclick = togglePause;
                 timerRow.appendChild(pauseBtn);
@@ -1026,6 +1319,87 @@
         function closeReview() {
             document.getElementById('reviewSection').classList.add('hidden');
         }
-        //Pass/Fail (70% validation like you asked)//
-        //  Progress bar during exam//
+        // ====================== FOOTER STATS ======================
+            function calculateFooterStats() {
+                let generalTotal = 0, generalCount = 0;
+                let openbookTotal = 0, openbookCount = 0;
+                let finalTotal = 0, finalCount = 0;
+
+                let totalAttempts = 0;
+                let passingAttempts = 0;
+                let allScoresSum = 0;
+
+                // Helper to process one category
+                function processCategory(type, examsArray) {
+                    let categorySum = 0;
+                    let categoryCount = 0;
+
+                    examsArray.forEach((_, index) => {
+                        const scores = getLastScores(type, index);
+                        if (scores.length > 0) {
+                            const stats = getBestWorstAvg(scores);
+                            const avg = stats.avg === '-' ? 0 : stats.avg;
+                            categorySum += avg;
+                            categoryCount++;
+
+                            // For overall stats
+                            scores.forEach(score => {
+                                totalAttempts++;
+                                allScoresSum += score;
+                                if (score >= 70) passingAttempts++;
+                            });
+                        }
+                    });
+
+                    return categoryCount ? Math.round(categorySum / categoryCount) : 0;
+                }
+
+                // Calculate each category
+                const generalAvg = processCategory('general', REAL_EXAMS.general);
+                const openbookAvg = processCategory('openbook', REAL_EXAMS.openbook);
+                const finalAvg = processCategory('final', REAL_EXAMS.final);
+
+                // Overall Average
+                const overallAvg = totalAttempts > 0 ? Math.round(allScoresSum / totalAttempts) : 0;
+
+                // Pass Rate
+                const passRate = totalAttempts > 0 ? Math.round((passingAttempts / totalAttempts) * 100) : 0;
+
+                return {
+                    general: generalAvg,
+                    openbook: openbookAvg,
+                    final: finalAvg,
+                    overall: overallAvg,
+                    passRate: passRate
+                };
+            }
+
+            function updateFooterStats() {
+                const stats = calculateFooterStats();
+                const container = document.getElementById('footerStats');
+
+                container.innerHTML = `
+                <div class="footer-stat">
+                    <div class="footer-stat-label">General Knowledge</div>
+                     <div class="footer-stat-value">${stats.general}%</div>
+                </div>
+                <div class="footer-stat">
+                    <div class="footer-stat-label">Open Book</div>
+                    <div class="footer-stat-value">${stats.openbook}%</div>
+                </div>
+                <div class="footer-stat">
+                    <div class="footer-stat-label">Final Exam</div>
+                    <div class="footer-stat-value">${stats.final}%</div>
+                </div>
+                <div class="footer-stat">
+                    <div class="footer-stat-label">Overall Average</div>
+                    <div class="footer-stat-value">${stats.overall}%</div>
+                </div>
+                <div class="footer-stat">
+                    <div class="footer-stat-label">Pass Rate</div>
+                    <div class="footer-stat-value ${stats.passRate >= 70 ? 'pass' : 'fail'}">${stats.passRate}%</div>
+                </div>
+                    `;
+            }
+
     </script>
