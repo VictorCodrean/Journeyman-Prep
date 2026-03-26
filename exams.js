@@ -2590,7 +2590,7 @@ const REAL_EXAMS = {
                     explanation: "Standard termination practice. Theory: Wrapping clockwise (for right-hand screws) ensures the wire tightens under the screw head when pulled."
                 },
                 {
-                    text: "Determining a positive wire on a single-phase circuit is ______.",
+                    text: "DC: Determining a positive wire on a single-phase circuit is ______.",
                     options: [
                         "possible with a wattmeter",
                         "possible with an ammeter",
