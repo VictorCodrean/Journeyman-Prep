@@ -883,7 +883,7 @@ const REAL_EXAMS = {
                         "pneumatic",
                         "wiring"
                     ],
-                    correctIndex: 0,
+                    correctIndex: 1,
                     explanation: "NEC 409.110 and industrial control panel rules. Theory: Ladder diagrams arrange control circuits in a vertical rung format for easy reading of control logic."
                 },
                 {
