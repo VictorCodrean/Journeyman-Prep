@@ -2586,7 +2586,7 @@ const REAL_EXAMS = {
                         "the conductor will act as a locking nut",
                         "the conductor will not turn off"
                     ],
-                    correctIndex: 0,
+                    correctIndex: 3,
                     explanation: "Standard termination practice. Theory: Wrapping clockwise (for right-hand screws) ensures the wire tightens under the screw head when pulled."
                 },
                 {
