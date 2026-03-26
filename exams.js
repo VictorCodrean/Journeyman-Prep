@@ -2729,14 +2729,14 @@ const REAL_EXAMS = {
             timeMinutes: 30,
             questions: [
                 {
-                    text: "Which phase is probably open when you test Phase A and Phase B and get a normal reading and test Phase A and C and get a low voltage reading?",
+                    text: "Which phase is probably open when you test Phase A and Phase B and get a normal reading and test Phase B and C and get a normal reading and test Phase A and C and get a low voltage reading?",
                     options: [
                         "Phase A",
                         "Phase B",
                         "Phase C",
                         "None of these"
                     ],
-                    correctIndex: 2,
+                    correctIndex: 0,
                     explanation: "NEC 430.7 and three-phase motor troubleshooting. Theory: In a wye or delta system, an open phase C will cause low voltage between A-C and B-C while A-B reads normal."
                 },
                 {
