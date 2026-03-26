@@ -2729,7 +2729,7 @@ const REAL_EXAMS = {
             timeMinutes: 30,
             questions: [
                 {
-                    text: "Which phase is probably open when you test Phase A and Phase B and get a normal reading and test Phase B and C and get a normal reading and test Phase A and C and get a low voltage reading?",
+                    text: "Which phase is probably open when you test Phase A and Phase B and get a low voltage, test Phase B and C and get a normal reading,  test Phase A and C and get a low voltage reading?",
                     options: [
                         "Phase A",
                         "Phase B",
