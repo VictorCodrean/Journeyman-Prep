@@ -1718,7 +1718,7 @@ const REAL_EXAMS = {
                         "detail and riser plans",
                         "one-line diagram and schematic"
                     ],
-                    correctIndex: 3,
+                    correctIndex: 0,
                     explanation: "NEC 110.22 and electrical plan requirements. Theory: Electricians commonly use one-line diagrams (showing power flow) and schematic diagrams (showing control logic)."
                 },
                 {
