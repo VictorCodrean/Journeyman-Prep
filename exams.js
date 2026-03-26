@@ -2172,7 +2172,7 @@ const REAL_EXAMS = {
                         "the effective difference of potential between two conductors",
                         "the average RMS difference of potential between any two conductors"
                     ],
-                    correctIndex: 1,
+                    correctIndex: 2,
                     explanation: "NEC Article 100 definition of Voltage. Theory: Voltage is the greatest potential difference (electrical pressure) between two points in a circuit."
                 },
                 {
