@@ -2707,8 +2707,8 @@ const REAL_EXAMS = {
                         "moist",
                         "wet"
                     ],
-                    correctIndex: 1,
-                    explanation: "NEC Article 100 definitions. Theory: A damp location is one that is occasionally subject to moisture (e.g., protected exterior locations)."
+                    correctIndex: 0,
+                    explanation:  "Theory: A dry location is one that is occasionally subject to moisture (e.g., protected exterior locations)."
                 },
                 {
                     text: "The ______ circuit is that portion of a wiring system beyond the final overcurrent protection.",
