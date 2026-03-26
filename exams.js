@@ -2238,7 +2238,7 @@ const REAL_EXAMS = {
                         "3",
                         "4"
                     ],
-                    correctIndex: 2,
+                    correctIndex: 1,
                     explanation: "NEC 250.26 and 215.2. Theory: In a 3-phase 4-wire delta (high-leg delta), the neutral carries only the unbalanced current from the two phases that are 120 V to neutral; the high-leg phase does not use the neutral."
                 },
                 {
