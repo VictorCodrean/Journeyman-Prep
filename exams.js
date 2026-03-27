@@ -3064,7 +3064,7 @@ const REAL_EXAMS = {
                         "it will withstand a hy-pot test"
                     ],
                     correctIndex: 1,
-                    explanation: "NEC 110.3 and 110.12. Theory: All installations must ultimately comply with the requirements of the Authority Having Jurisdiction (AHJ) and the NEC."
+                    explanation: "frees of shorts and safe, NEC 110.3 and 110.12. Theory: All installations must ultimately comply with the requirements of the Authority Having Jurisdiction (AHJ) and the NEC."
                 },
                 {
                     text: "Utilization equipment is equipment which utilizes ______ energy for mechanical, chemical, heating, lighting or similar purposes.",
@@ -3074,7 +3074,7 @@ const REAL_EXAMS = {
                         "III only",
                         "I, II and III"
                     ],
-                    correctIndex: 3,
+                    correctIndex: 1,
                     explanation: "NEC Article 100 definition of Utilization Equipment. Theory: It covers equipment that uses electrical energy for any practical purpose (mechanical, chemical, heating, lighting, etc.)."
                 },
                 {
