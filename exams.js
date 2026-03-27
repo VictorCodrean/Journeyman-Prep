@@ -2970,7 +2970,7 @@ const REAL_EXAMS = {
                     correctIndex: 0,
                     explanation: "Standard control devices. Theory: A mushroom-head red pushbutton is the industry standard for emergency stop."
                 },
-                    {
+                        {
       text: "Receptacles installed on ______ ampere branch circuits shall be of the grounding type.",
       options: [
         "15 and 20",
@@ -2992,7 +2992,6 @@ const REAL_EXAMS = {
       correctIndex: 3,
       explanation: "NEC 300.20. Theory: All phase conductors, neutral (where used), and equipment grounding conductors must be grouped to cancel magnetic fields."
     },
-
                 {
                     text: "A steel measuring tape is undesirable for use around electrical equipment. The least important reason is the ______.",
                     options: [
