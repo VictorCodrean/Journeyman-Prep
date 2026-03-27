@@ -7663,99 +7663,309 @@ const REAL_EXAMS = {
 
     openbook: [
         {
-            id: "openbook_1",
-            title: "Journeyman Open Book Exam #2 (2023 NEC)",
-            timeMinutes: 60,
-            questions: [
+            "id": "openbook_1",
+            "title": "Journeyman Open Book Exam #1",
+            "timeMinutes": 60,
+            "questions": [
                 {
-                    text: "Panelboards shall not be installed in the ______ position.",
-                    options: ["face-up", "prone", "posterior", "transverse"],
-                    correctIndex: 0,
-                    explanation: "408.43 – Panelboards shall be installed in the face-up (vertical) position."
+                    "id": 1,
+                    "text": "Each multiwire branch circuit shall be provided with a means that will simultaneously disconnect all ______. ",
+                    "options": [
+                        "ungrounded",
+                        "neutral",
+                        "equipment grounding",
+                        "grounded"
+                    ],
+                    "correctIndex": 0,
+                    "explanation": "NEC 210.4(B): All ungrounded conductors of a multiwire branch circuit must be disconnected simultaneously."
                 },
                 {
-                    text: "Where two or more branch circuits supply devices or equipment on the same yoke or mounting strap, a means to simultaneously disconnect the ungrounded supply conductors shall be provided at the point at which the branch circuit ______.",
-                    options: ["starts", "terminates", "originates", "separates"],
-                    correctIndex: 2,
-                    explanation: "210.7(B)(2) – The disconnecting means shall be provided at the point at which the branch circuit originates."
+                    "id": 2,
+                    "text": "The connection between the grounded circuit conductor and the equipment grounding conductor, or the supply-side bonding jumper, or both at the service is recognized as the ______. ",
+                    "options": [
+                        "neutral conductor",
+                        "equipment bonding jumper",
+                        "main bonding jumper",
+                        "grounding electrode conductor"
+                    ],
+                    "correctIndex": 2,
+                    "explanation": "NEC Article 100 & 250.28: The Main Bonding Jumper connects the grounded conductor to the equipment grounding conductor at the service."
                 },
                 {
-                    text: "Fastened in place utilization equipment, other than luminaires, that is connected to a branch circuit with other loads shall not exceed ______ of the branch circuit rating.",
-                    options: ["100%", "80%", "75%", "50%"],
-                    correctIndex: 2,
-                    explanation: "210.23(B) – Fixed utilization equipment fastened in place shall not exceed 75% of the branch circuit rating when supplied with other loads."
+                    "id": 3,
+                    "text": "When calculating floor area for branch circuit load calculations, the floor area is measured from the ______ dimensions of the building, dwelling unit, or area involved.",
+                    "options": [
+                        "drawing",
+                        "scale",
+                        "outside",
+                        "inside"
+                    ],
+                    "correctIndex": 2,
+                    "explanation": "NEC 220.12: Floor area is measured from the outside dimensions."
                 },
                 {
-                    text: "GFCI protection shall be provided for lighting outlets not exceeding ______ volts installed in crawl spaces.",
-                    options: ["60", "120", "240", "300"],
-                    correctIndex: 1,
-                    explanation: "210.8(A)(5) – GFCI protection is required for lighting outlets rated 120 volts or less in crawl spaces."
+                    "id": 4,
+                    "text": "NM cable shall be permitted to be laid in notches of wooden studs where the NM cable at those points is protected by a steel plate at least ______ thick to cover the area of the wiring.",
+                    "options": [
+                        "1/16\"",
+                        "3/32\"",
+                        "1/8\"",
+                        "3/16\""
+                    ],
+                    "correctIndex": 0,
+                    "explanation": "NEC 300.4(A)(1) & 334.17: Steel plate protection must be at least 1/16\" thick."
                 },
                 {
-                    text: "The Code requires branch circuits be rated in accordance with the overcurrent protective device. Therefore, which of the following combinations are permitted for lighting branch circuits?",
-                    options: ["20, 25, 35, 40 and 50 amperes", "20, 25, 30, 40 and 50 amperes", "15, 25, 30, 40 and 50 amperes", "10, 15, 20, 30, 40 and 50 amperes"],
-                    correctIndex: 1,
-                    explanation: "210.18 & 210.19 – Lighting branch circuits are generally limited to 15 A or 20 A; higher ratings such as 25–50 A are not permitted for general lighting circuits."
+                    "id": 5,
+                    "text": "A motor control center in an equipment room requires GFCI protected 125-volt, single-phase, 15 or 20 amp rated receptacle outlet within ______ feet.",
+                    "options": [
+                        "25",
+                        "30",
+                        "45",
+                        "50"
+                    ],
+                    "correctIndex": 0,
+                    "explanation": "NEC 210.8(B)(2) or similar equipment room rules require GFCI within 25 feet for servicing."
                 },
                 {
-                    text: "Panelboards in other than dwelling units that are likely to require examination, adjustment, servicing, or maintenance while energized, shall be field or factory marked to warn ______ persons of potential electric arc flash hazards.",
-                    options: ["all", "maintenance", "qualified", "repairmen"],
-                    correctIndex: 2,
-                    explanation: "110.16(B) – Equipment likely to require examination, adjustment, servicing, or maintenance while energized shall be marked to warn qualified persons of potential arc-flash hazards."
+                    "id": 6,
+                    "text": "Alternating current snap switches shall be permitted for control of inductive loads not exceeding ______ of the ampere rating of the switch.",
+                    "options": [
+                        "70%",
+                        "60%",
+                        "50%",
+                        "33%"
+                    ],
+                    "correctIndex": 2,
+                    "explanation": "NEC 404.14(A): AC snap switches for inductive loads are limited to 50% of the ampere rating."
                 },
                 {
-                    text: "Receptacle outlets shall be installed so that no point along the wall line is more than ______ measured horizontally from a receptacle outlet in that space.",
-                    options: ["10\"", "12\"", "18\"", "24\""],
-                    correctIndex: 3,
-                    explanation: "210.52(A)(1) – Receptacles shall be installed so that no point along the floor line of any wall space is more than 24 inches (600 mm) from a receptacle."
+                    "id": 7,
+                    "text": "Other than the required interconnections and control wiring, only those conductors that are intended for termination in a/an ______ section of a switchboard or switchgear shall be located in that section.",
+                    "options": [
+                        "isolated",
+                        "horizontal",
+                        "vertical",
+                        "dual"
+                    ],
+                    "correctIndex": 2,
+                    "explanation": "NEC 408.3(A)(2): Conductors terminate in the vertical section unless otherwise permitted."
                 },
                 {
-                    text: "For temporary holiday lighting, trees shall be permitted for supporting overhead spans of conductors and cables if the overhead wiring is arranged with ______, tension take-up devices, or other approved means to avoid damage from live vegetation.",
-                    options: ["fittings", "cable ties", "strain relief devices", "overhead clamps"],
-                    correctIndex: 2,
-                    explanation: "590.4(J) – Temporary wiring shall be supported and arranged with strain relief devices or other approved means to prevent damage from vegetation."
+                    "id": 8,
+                    "text": "Plate electrodes shall be installed not less than ______ below the surface of the earth.",
+                    "options": [
+                        "2 feet",
+                        "2 1/2 feet",
+                        "3 feet",
+                        "4 feet"
+                    ],
+                    "correctIndex": 1,
+                    "explanation": "NEC 250.53(H): Plate electrodes must be installed at least 2½ feet below grade."
                 },
                 {
-                    text: "At least one 125 volt, single-phase, 15 or 20 amp rated receptacle outlet shall be installed for each 12 linear feet or major fraction thereof of show window area measured horizontally at the maximum width of the show window at its maximum horizontally.",
-                    options: ["10\"", "12\"", "18\"", "24\""],
-                    correctIndex: 0,
-                    explanation: "210.52(C)(3) – At least one receptacle outlet shall be installed for each 12 linear feet (or major fraction) of show window width, measured horizontally at the top."
+                    "id": 9,
+                    "text": "Each grounded conductor shall terminate within the panelboard in a/an ______ terminal that is not also used for another conductor.",
+                    "options": [
+                        "single",
+                        "multiwire",
+                        "dual",
+                        "individual"
+                    ],
+                    "correctIndex": 3,
+                    "explanation": "NEC 408.41: Each grounded conductor terminates in an individual terminal."
                 },
                 {
-                    text: "If festoon lighting is installed without a messenger, the smallest allowable overhead conductor is ______ AWG.",
-                    options: ["#10", "#12", "#14", "#16"],
-                    correctIndex: 1,
-                    explanation: "590.4(G) – Festoon lighting without a messenger wire requires a minimum #12 AWG conductor."
+                    "id": 10,
+                    "text": "In dwelling units, GFCI protection is required for all 15 and 20 ampere, 125 volt receptacles are installed within ______ feet of the outside edge of a bathtub or shower stall.",
+                    "options": [
+                        "4",
+                        "6",
+                        "8",
+                        "12"
+                    ],
+                    "correctIndex": 1,
+                    "explanation": "NEC 210.8(A)(1): GFCI protection within 6 feet of bathtub or shower edge."
                 },
                 {
-                    text: "AFCI protection on all 120 volt, single-phase, 15 and 20 amp branch circuits supplying outlets is required in all of the following locations listed except ______.",
-                    options: ["sunroom, closet, hallway", "parlor, library, den", "bathrooms and garages", "living room, kitchen, laundry"],
-                    correctIndex: 1,
-                    explanation: "210.12(A) – AFCI protection is required in most dwelling unit areas; bathrooms and garages are exempt (210.8(A) exceptions apply)."
+                    "id": 11,
+                    "text": "When normally enclosed live parts are exposed for inspection or servicing, the working space, if in a passageway or general open space, shall be suitably ______. ",
+                    "options": [
+                        "isolated",
+                        "locked",
+                        "guarded",
+                        "insulated"
+                    ],
+                    "correctIndex": 2,
+                    "explanation": "NEC 110.27(B): Exposed live parts must be suitably guarded."
                 },
                 {
-                    text: "What is the ampacity of a #12 THWN conductor installed in an ambient temperature of 86°F if the raceway contains four current-carrying conductors?",
-                    options: ["17.5 A", "20 A", "23 A", "26 A"],
-                    correctIndex: 1,
-                    explanation: "Table 310.16 – #12 THWN = 25 A (90°C column); derate 80% for 4 current-carrying conductors = 20 A."
+                    "id": 12,
+                    "text": "All 125-volt through 250-volt receptacles supplied by single-phase branch circuits rated 150 volts or less to ground in kitchens or areas with a/an ______ and permanent provisions for either food preparation or cooking shall have GFCI protection for personnel.",
+                    "options": [
+                        "sink",
+                        "oven",
+                        "range",
+                        "fryer"
+                    ],
+                    "correctIndex": 0,
+                    "explanation": "NEC 210.8(A)(6): GFCI required near sinks in kitchens."
                 },
                 {
-                    text: "A wall-mounted central vacuum assembly connected to a single receptacle located in an attached garage shall be provided with ______ protection for personnel.",
-                    options: ["LCDI", "GFCI", "AFCI", "both AFCI and GFCI"],
-                    correctIndex: 1,
-                    explanation: "210.8(A)(7) – GFCI protection is required for all 125-volt, single-phase, 15- and 20-amp receptacles in garages."
+                    "id": 13,
+                    "text": "As it relates to load calculations, calculations shall be permitted to be rounded to the nearest whole ampere, with decimal fractions smaller than ______ dropped.",
+                    "options": [
+                        "0.5",
+                        "0.05",
+                        "0.6",
+                        "0.8"
+                    ],
+                    "correctIndex": 0,
+                    "explanation": "Standard rounding practice in NEC load calculations (fractions < 0.5 dropped)."
                 },
                 {
-                    text: "If a disconnecting means is required to be lockable open, it shall be capable of being locked in the open position with the provisions for locking remaining in place with or without the ______ installed.",
-                    options: ["cover", "lock", "switch", "device"],
-                    correctIndex: 0,
-                    explanation: "110.25 – The locking provisions shall remain in place with or without the cover installed."
+                    "id": 14,
+                    "text": "GFCI protection shall be provided for lighting outlets not exceeding ______ volts installed in crawl spaces.",
+                    "options": [
+                        "115",
+                        "120",
+                        "150",
+                        "300"
+                    ],
+                    "correctIndex": 1,
+                    "explanation": "NEC 210.8(A)(5) or related: GFCI for 120V lighting in crawl spaces."
                 },
                 {
-                    text: "In a dwelling bedroom, any wall space ______ or more in width (including space measured around corners) and unbroken along the floor line by doorways and similar openings, fireplaces, and fixed cabinets that do not have countertops or similar work surfaces, shall have at least one receptacle outlet.",
-                    options: ["18\"", "24\"", "30\"", "36\""],
-                    correctIndex: 1,
-                    explanation: "210.52(A)(2)(1) – Any wall space 2 ft (24 in.) or more in width requires at least one receptacle outlet."
+                    "id": 15,
+                    "text": "Each section of equipment that requires rear or side access to make field connections shall be so marked by the manufacturer on the ______. ",
+                    "options": [
+                        "front",
+                        "right side",
+                        "left side",
+                        "rear"
+                    ],
+                    "correctIndex": 0,
+                    "explanation": "NEC 110.34 or equipment marking rules require marking on the front."
+                },
+                {
+                    "id": 16,
+                    "text": "In other than one and two family dwellings, a receptacle outlet for indoor service equipment shall be located within ______ of the service equipment.",
+                    "options": [
+                        "25 feet",
+                        "50 feet",
+                        "75 feet",
+                        "the same room or area"
+                    ],
+                    "correctIndex": 3,
+                    "explanation": "NEC 210.64 or similar: Receptacle in the same room or area as service equipment."
+                },
+                {
+                    "id": 17,
+                    "text": "Insulated conductors used inside switchgear or switchboards are required to be ______. ",
+                    "options": [
+                        "suitable",
+                        "labeled",
+                        "acceptable",
+                        "listed"
+                    ],
+                    "correctIndex": 3,
+                    "explanation": "NEC 110.3(B) and 408.3: Conductors must be listed for the application."
+                },
+                {
+                    "id": 18,
+                    "text": "GFCI protection shall be provided for ______ receptacles.",
+                    "options": [
+                        "equipment requiring servicing",
+                        "permanently installed burglar alarm",
+                        "permanently installed fire alarm",
+                        "industrial laboratories"
+                    ],
+                    "correctIndex": 0,
+                    "explanation": "GFCI required for receptacles serving equipment that requires servicing."
+                },
+                {
+                    "id": 19,
+                    "text": "All lamps for general illumination in temporary wiring installations shall be protected from accidental contact or breakage by a suitable ______ or lampholder with a guard.",
+                    "options": [
+                        "screen",
+                        "luminaire",
+                        "barrier",
+                        "guard"
+                    ],
+                    "correctIndex": 3,
+                    "explanation": "NEC 590.4(D) or 410.16: Lamps protected by guard."
+                },
+                {
+                    "id": 20,
+                    "text": "In addition to the number of 120 volt, single-phase branch circuits required in other areas of a dwelling, at least one additional ______ ampere branch circuit shall be provided to supply the laundry receptacle outlet in the laundry room. The circuit shall have no other outlets.",
+                    "options": [
+                        "15",
+                        "20",
+                        "25",
+                        "30"
+                    ],
+                    "correctIndex": 1,
+                    "explanation": "NEC 210.11(C)(2): Dedicated 20-amp laundry branch circuit."
+                },
+                {
+                    "id": 21,
+                    "text": "Disregarding demand factors, the calculated lighting load for a 5,000 sq.ft. office building is ______ volt-amperes.",
+                    "options": [
+                        "16,500",
+                        "15,400",
+                        "8,000",
+                        "6,500"
+                    ],
+                    "correctIndex": 3,
+                    "explanation": "General lighting load = 5,000 sq ft × 1.3 VA/ft² = 6,500 VA (NEC Table 220.12)."
+                },
+                {
+                    "id": 22,
+                    "text": "Appliance receptacle outlets installed in a dwelling unit for specific appliances, such as laundry equipment, shall be installed within ______ of the intended location of the appliance.",
+                    "options": [
+                        "24\"",
+                        "36\"",
+                        "48\"",
+                        "72\""
+                    ],
+                    "correctIndex": 3,
+                    "explanation": "NEC 210.50(C) or similar: Within 6 feet (72\") of the intended location."
+                },
+                {
+                    "id": 23,
+                    "text": "Decorative lighting and similar accessories used for holiday lighting and similar purposes shall be listed and ______. ",
+                    "options": [
+                        "marked",
+                        "approved",
+                        "labeled",
+                        "stamped"
+                    ],
+                    "correctIndex": 2,
+                    "explanation": "NEC 590.4 or 410: Must be listed and labeled."
+                },
+                {
+                    "id": 24,
+                    "text": "Outlets supplying all pool motors on branch circuits rated 150 volts or less to ground and ______ amperes or less, single or 3 phase, shall be provided with Class A GFCI protection.",
+                    "options": [
+                        "60",
+                        "50",
+                        "40",
+                        "30"
+                    ],
+                    "correctIndex": 0,
+                    "explanation": "NEC 680.21: GFCI for pool motors up to 60 amps."
+                },
+                {
+                    "id": 25,
+                    "text": "Disconnecting means shall be located within sight from, and ______ from air-conditioning or refrigerating equipment.",
+                    "options": [
+                        "serviceable",
+                        "isolated",
+                        "accessible",
+                        "readily accessible"
+                    ],
+                    "correctIndex": 3,
+                    "explanation": "NEC 440.14: Disconnecting means must be readily accessible and within sight."
                 }
             ]
         },
