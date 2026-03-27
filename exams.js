@@ -2970,7 +2970,7 @@ const REAL_EXAMS = {
                     correctIndex: 0,
                     explanation: "Standard control devices. Theory: A mushroom-head red pushbutton is the industry standard for emergency stop."
                 },
-                        {
+                    {
       text: "Receptacles installed on ______ ampere branch circuits shall be of the grounding type.",
       options: [
         "15 and 20",
@@ -2982,7 +2982,7 @@ const REAL_EXAMS = {
       explanation: "NEC 210.7 and 406.4. Theory: All 15- and 20-ampere receptacles must be grounding type."
     },
     {
-       text: "Where conductors carrying alternating current are installed in metal enclosures or metal raceways, they shall be so arranged as to avoid heating the surrounding metal by induction, to accomplish this ______ shall be grouped together.",
+      text: "Where conductors carrying alternating current are installed in metal enclosures or metal raceways, they shall be so arranged as to avoid heating the surrounding metal by induction, to accomplish this ______ shall be grouped together.",
       options: [
         "I only",
         "I and II only",
