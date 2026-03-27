@@ -2982,7 +2982,9 @@ const REAL_EXAMS = {
       explanation: "NEC 210.7 and 406.4. Theory: All 15- and 20-ampere receptacles must be grounding type."
     },
     {
-      text: "Where conductors carrying alternating current are installed in metal enclosures or metal raceways, they shall be so arranged as to avoid heating the surrounding metal by induction, to accomplish this ______ shall be grouped together.",
+      text: "Where conductors carrying alternating current are installed in metal enclosures or metal raceways, they shall be so arranged as to avoid heating the surrounding metal by induction, to accomplish this ______ shall be grouped together: I. all phase conductors
+Il. where used, the neutral
+Ill. all equipment grounding conductors",
       options: [
         "I only",
         "I and II only",
