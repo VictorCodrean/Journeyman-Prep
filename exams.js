@@ -3063,7 +3063,7 @@ const REAL_EXAMS = {
                         "it is acceptable to Code compliance authorities",
                         "it will withstand a hy-pot test"
                     ],
-                    correctIndex: 2,
+                    correctIndex: 1,
                     explanation: "NEC 110.3 and 110.12. Theory: All installations must ultimately comply with the requirements of the Authority Having Jurisdiction (AHJ) and the NEC."
                 },
                 {
