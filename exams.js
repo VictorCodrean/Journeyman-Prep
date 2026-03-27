@@ -2982,7 +2982,7 @@ const REAL_EXAMS = {
       explanation: "NEC 210.7 and 406.4. Theory: All 15- and 20-ampere receptacles must be grounding type."
     },
     {
-      text: "Where conductors carrying alternating current are installed in metal enclosures or metal raceways, they shall be so arranged as to avoid heating the surrounding metal by induction, to accomplish this ______ shall be grouped togethera 1. all phase conductors, 2.where used, the neutral, 3.all equipment grounding conductors",
+       text: "Where conductors carrying alternating current are installed in metal enclosures or metal raceways, they shall be so arranged as to avoid heating the surrounding metal by induction, to accomplish this ______ shall be grouped together.",
       options: [
         "I only",
         "I and II only",
@@ -2992,6 +2992,7 @@ const REAL_EXAMS = {
       correctIndex: 3,
       explanation: "NEC 300.20. Theory: All phase conductors, neutral (where used), and equipment grounding conductors must be grouped to cancel magnetic fields."
     },
+
                 {
                     text: "A steel measuring tape is undesirable for use around electrical equipment. The least important reason is the ______.",
                     options: [
