@@ -2708,7 +2708,7 @@ const REAL_EXAMS = {
                         "wet"
                     ],
                     correctIndex: 0,
-                    explanation:  "Theory: A dry location is one that is occasionally subject to moisture (e.g., protected exterior locations)."
+                    explanation: "Theory: A dry location is one that is occasionally subject to moisture (e.g., protected exterior locations)."
                 },
                 {
                     text: "The ______ circuit is that portion of a wiring system beyond the final overcurrent protection.",
@@ -2970,28 +2970,28 @@ const REAL_EXAMS = {
                     correctIndex: 0,
                     explanation: "Standard control devices. Theory: A mushroom-head red pushbutton is the industry standard for emergency stop."
                 },
-                    {
-      text: "Receptacles installed on ______ ampere branch circuits shall be of the grounding type.",
-      options: [
-        "15 and 20",
-        "25",
-        "30",
-        "40"
-      ],
-      correctIndex: 0,
-      explanation: "NEC 210.7 and 406.4. Theory: All 15- and 20-ampere receptacles must be grounding type."
-    },
-    {
-      text: "Where conductors carrying alternating current are installed in metal enclosures or metal raceways, they shall be so arranged as to avoid heating the surrounding metal by induction, to accomplish this ______ shall be grouped together.",
-      options: [
-        "I only",
-        "I and II only",
-        "I and III only",
-        "I, II and III"
-      ],
-      correctIndex: 3,
-      explanation: "NEC 300.20. Theory: All phase conductors, neutral (where used), and equipment grounding conductors must be grouped to cancel magnetic fields."
-    },
+                {
+                    text: "Receptacles installed on ______ ampere branch circuits shall be of the grounding type.",
+                    options: [
+                        "15 and 20",
+                        "25",
+                        "30",
+                        "40"
+                    ],
+                    correctIndex: 0,
+                    explanation: "NEC 210.7 and 406.4. Theory: All 15- and 20-ampere receptacles must be grounding type."
+                },
+                {
+                    text: "Where conductors carrying alternating current are installed in metal enclosures or metal raceways, they shall be so arranged as to avoid heating the surrounding metal by induction, to accomplish this ______ shall be grouped together.",
+                    options: [
+                        "I only",
+                        "I and II only",
+                        "I and III only",
+                        "I, II and III"
+                    ],
+                    correctIndex: 3,
+                    explanation: "NEC 300.20. Theory: All phase conductors, neutral (where used), and equipment grounding conductors must be grouped to cancel magnetic fields."
+                },
 
                 {
                     text: "A steel measuring tape is undesirable for use around electrical equipment. The least important reason is the ______.",
@@ -5489,8 +5489,8 @@ const REAL_EXAMS = {
                         "inductance",
                         "direct current"
                     ],
-                    "correctIndex": 3,
-                    "explanation": "A DC generator produces direct current in its armature through commutation."
+                    "correctIndex": 0,
+                    "explanation": "A DC generator produces alternating current in its armature through commutation."
                 },
                 {
                     "id": 3,
@@ -6077,7 +6077,7 @@ const REAL_EXAMS = {
                 }
             ]
         },
-{
+        {
             id: "general_22",
             title: "General Knowledge Exam #22",
             timeMinutes: 30,
