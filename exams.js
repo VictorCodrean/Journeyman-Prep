@@ -8336,10 +8336,10 @@ const REAL_EXAMS = {
                 {
                     text: "Where conduits enter a floor-standing switchboard, switchgear or panelboard at the bottom, the conduits, including their end fittings, shall not rise more than ____ inches above the bottom of the enclosure.",
                     options: [
-                        "2",
-                        "3",
-                        "4",
-                        "6"
+                        "2''",
+                        "3''",
+                        "4''",
+                        "6''"
                     ],
                     correctIndex: 1,
                     explanation: "NEC 408.5. Theory: Maximum 3 inches above the bottom enclosure."
@@ -8347,10 +8347,10 @@ const REAL_EXAMS = {
                 {
                     text: "Fuel dispensing systems shall be provided with one or more clearly identified emergency shutoff devices or electrical disconnects. Such disconnects or devices shall be installed in approved locations but not less than 20 feet or more than ____ feet from the fuel dispensing devices that they serve.",
                     options: [
-                        "50",
-                        "75",
-                        "80",
-                        "100"
+                        "50 ft",
+                        "75 ft''",
+                        "80 ft",
+                        "100 ft"
                     ],
                     correctIndex: 3,
                     explanation: "NEC 514.11(A). Theory: Maximum distance is 100 feet from the dispensing devices."
@@ -8358,10 +8358,10 @@ const REAL_EXAMS = {
                 {
                     text: "The ampacity of three #10 THWN-2 conductors installed in a raceway is ____ amps if the ambient temperature is 112°F.",
                     options: [
-                        "31.6",
-                        "34.8",
-                        "35",
-                        "37.2"
+                        "31.6 amps",
+                        "34.8 amps",
+                        "35 amps",
+                        "37.2 amps"
                     ],
                     correctIndex: 1,
                     explanation: "NEC Table 310.16 and correction factor Table 310.15(B)(1)(1). Theory: #10 THWN-2 base 40 A × 0.87 (112°F) = 34.8 A."
@@ -8380,10 +8380,10 @@ const REAL_EXAMS = {
                 {
                     text: "Outlets supplying all permanently installed nonsubmersible pump motors rated 250 volts or less and ____ amperes or less, single- or 3-phase, shall be provided with GFCI protection.",
                     options: [
-                        "60",
-                        "50",
-                        "30",
-                        "20"
+                        "60 amps",
+                        "50 amps",
+                        "30 amps",
+                        "20 amps"
                     ],
                     correctIndex: 0,
                     explanation: "NEC 680.58. Theory: GFCI is required for pumps ≤60 A, 250 V or less."
@@ -8402,10 +8402,10 @@ const REAL_EXAMS = {
                 {
                     text: "In dwelling units, all ____ volt receptacles in locations specified and supplied in single-phase branch circuits rated 150 volts or less to ground shall have GFCI protection for personnel.",
                     options: [
-                        "110-220",
-                        "115-230",
-                        "120-240",
-                        "125-250"
+                        "110-220 volts",
+                        "115-230 volts",
+                        "120-240 volts",
+                        "125-250 volts"
                     ],
                     correctIndex: 3,
                     explanation: "NEC 210.8(A). Theory: 125–250 V is the correct voltage range for dwelling GFCI requirements."
@@ -8413,10 +8413,10 @@ const REAL_EXAMS = {
                 {
                     text: "All 15 or 20 amp, single-phase, 125 volt through 250 volt receptacles located within ____ feet of a fountain edge shall be provided with GFCI protection.",
                     options: [
-                        "20",
-                        "24",
-                        "25",
-                        "30"
+                        "20 ft",
+                        "24 ft",
+                        "25 ft",
+                        "30 ft"
                     ],
                     correctIndex: 0,
                     explanation: "NEC 680.58. Theory: GFCI protection required within 20 feet of fountain edge."
@@ -8436,9 +8436,9 @@ const REAL_EXAMS = {
                     text: "Where a dwelling has a two car attached garage, the Code requires a minimum of ____ receptacle outlet(s) shall be installed in the garage.",
                     options: [
                         "none required",
-                        "one",
-                        "two",
-                        "three"
+                        "one outlet",
+                        "two outlets",
+                        "three outlets"
                     ],
                     correctIndex: 2,
                     explanation: "NEC 210.52(G)(1). Theory: Minimum two receptacles required in attached garage."
@@ -8446,10 +8446,10 @@ const REAL_EXAMS = {
                 {
                     text: "Track lighting where installed in a continuous row, each individual section of not more than ____ feet in length shall have one additional support.",
                     options: [
-                        "4",
-                        "6",
-                        "8",
-                        "12"
+                        "4 feet",
+                        "6 feet",
+                        "8 feet",
+                        "12 feet"
                     ],
                     correctIndex: 0,
                     explanation: "NEC 410.154. Theory: Additional support every 4 feet of track."
@@ -8457,10 +8457,10 @@ const REAL_EXAMS = {
                 {
                     text: "The demand load for a 14 kW range installed in a dwelling unit is ____ kW.",
                     options: [
-                        "8",
-                        "8.4",
-                        "8.8",
-                        "12"
+                        "8 kW",
+                        "8.4 kW",
+                        "8.8 kW",
+                        "12 kW"
                     ],
                     correctIndex: 2,
                     explanation: "NEC Table 220.55. Theory: 8 kW base × 110% = 8.8 kW."
