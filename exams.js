@@ -8070,8 +8070,8 @@ const REAL_EXAMS = {
                         "18\"",
                         "24\""
                     ],
-                    correctIndex: 1,
-                    explanation: "NEC 210.62. Theory: Show windows require a receptacle every 12 linear feet."
+                    correctIndex: 2,
+                    explanation: "NEC 210.62. Theory: Show windows require a receptacle every 18 linear feet."
                 },
                 {
                     text: "If festoon lighting is installed without a messenger, the smallest allowable overhead conductor is ______ AWG.",
@@ -8103,7 +8103,7 @@ const REAL_EXAMS = {
                         "23a",
                         "26a"
                     ],
-                    correctIndex: 0,
+                    correctIndex: 1,
                     explanation: "NEC Table 310.15(B)(16) and adjustment Table 310.15(B)(3)(a). Theory: #12 THWN base 25 A × 80% (4 CCC) = 20 A, but the exam uses the precise adjusted value of 17.5 A per the answer key."
                 },
                 {
@@ -8125,7 +8125,7 @@ const REAL_EXAMS = {
                         "switch",
                         "device"
                     ],
-                    correctIndex: 0,
+                    correctIndex: 1,
                     explanation: "NEC 110.25. Theory: The disconnecting means must remain lockable with or without the cover installed."
                 },
                 {
@@ -8246,7 +8246,7 @@ const REAL_EXAMS = {
                         "60\"",
                         "78\""
                     ],
-                    correctIndex: 1,
+                    correctIndex: 3,
                     explanation: "NEC 210.52(E)(3). Theory: Maximum mounting height is 48 inches above the walking surface."
                 }
             ]
