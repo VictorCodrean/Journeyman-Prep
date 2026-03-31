@@ -7892,7 +7892,7 @@ const REAL_EXAMS = {
                         "barrier",
                         "guard"
                     ],
-                    "correctIndex": 3,
+                    "correctIndex": 1,
                     "explanation": "NEC 590.4(D) or 410.16: Lamps protected by guard."
                 },
                 {
