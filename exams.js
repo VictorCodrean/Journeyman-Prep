@@ -8927,7 +8927,7 @@ const REAL_EXAMS = {
                         "1 1/4\"",
                         "1 1/2\""
                     ],
-                    correctIndex: 3,
+                    correctIndex: 2,
                     explanation: "NEC 300.4(D). Theory: Minimum 1¼-inch clearance from edge of framing."
                 },
                 {
@@ -8982,7 +8982,7 @@ const REAL_EXAMS = {
                         "48\"",
                         "60\""
                     ],
-                    correctIndex: 2,
+                    correctIndex: 0,
                     explanation: "NEC 550.32(F). Theory: Minimum 48 inches."
                 },
                 {
@@ -9187,7 +9187,7 @@ const REAL_EXAMS = {
                         "12'",
                         "22\""
                     ],
-                    correctIndex: 3,
+                    correctIndex: 0,
                     explanation: "NEC 300.5(D)(1). Theory: Minimum 8 feet of protection above grade."
                 },
                 {
@@ -9220,7 +9220,7 @@ const REAL_EXAMS = {
                         "load",
                         "line"
                     ],
-                    correctIndex: 3,
+                    correctIndex: 2,
                     explanation: "NEC 408.39. Theory: Fuses must be on the line side of switches."
                 },
                 {
@@ -10000,7 +10000,7 @@ const REAL_EXAMS = {
                         "Table 1, Chapter 9",
                         "Table 5, Chapter 9"
                     ],
-                    correctIndex: 0,
+                    correctIndex: 2,
                     explanation: "NEC Table 4 (Chapter 9). Theory: Table 4 gives percent fill."
                 },
                 {
@@ -10055,7 +10055,7 @@ const REAL_EXAMS = {
                         "1\"",
                         "2\""
                     ],
-                    correctIndex: 1,
+                    correctIndex: 0,
                     explanation: "NEC 600.4(C). Theory: Minimum ½-inch-high lettering."
                 },
                 {
@@ -10220,7 +10220,7 @@ const REAL_EXAMS = {
                         "lamp or lamps",
                         "parts designed to position the light source"
                     ],
-                    correctIndex: 0,
+                    correctIndex: 1,
                     explanation: "NEC 100 Definitions (Luminaires). Theory: Ballast is not part of the luminaire definition."
                 }
             ]
@@ -10348,7 +10348,7 @@ const REAL_EXAMS = {
                         "150",
                         "300"
                     ],
-                    correctIndex: 3,
+                    correctIndex: 2,
                     explanation: "NEC 810.16(B). Theory: 300 volts to ground clearance for antennas."
                 },
                 {
@@ -10381,7 +10381,7 @@ const REAL_EXAMS = {
                         "20",
                         "30"
                     ],
-                    correctIndex: 1,
+                    correctIndex: 2,
                     explanation: "NEC 660.9. Theory: #18/#16 fixture wires limited to 15 A protection."
                 },
                 {
@@ -10392,7 +10392,7 @@ const REAL_EXAMS = {
                         "40",
                         "70"
                     ],
-                    correctIndex: 2,
+                    correctIndex: 0,
                     explanation: "NEC 310.3(B)(3). Theory: Copper-clad aluminum requires minimum 40% copper by cross-sectional area."
                 },
                 {
@@ -10447,7 +10447,7 @@ const REAL_EXAMS = {
                         "7'",
                         "8'"
                     ],
-                    correctIndex: 3,
+                    correctIndex: 1,
                     explanation: "NEC 210.52(E)(3). Theory: Receptacle not more than 6' 6\" above walking surface (option is maximum height, but question phrasing matches 8' as the code limit in context)."
                 },
                 {
@@ -10469,7 +10469,7 @@ const REAL_EXAMS = {
                         "nonsheilded",
                         "silicone rubber"
                     ],
-                    correctIndex: 3,
+                    correctIndex: 2,
                     explanation: "NEC 300.3(C)(1). Theory: Silicone rubber insulated conductors have special rules."
                 },
                 {
@@ -10520,7 +10520,7 @@ const REAL_EXAMS = {
                         "12",
                         "18"
                     ],
-                    correctIndex: 1,
+                    correctIndex: 0,
                     explanation: "NEC 210.52(E)(3). Theory: Receptacle required within 6 ft horizontally of the dwelling unit."
                 },
                 {
@@ -10531,7 +10531,7 @@ const REAL_EXAMS = {
                         "labeled",
                         "marked"
                     ],
-                    correctIndex: 0,
+                    correctIndex: 1,
                     explanation: "NEC 110.12(A). Theory: Unused openings must be closed with approved means."
                 },
                 {
@@ -10586,7 +10586,7 @@ const REAL_EXAMS = {
                         "20",
                         "16"
                     ],
-                    correctIndex: 0,
+                    correctIndex: 3,
                     explanation: "NEC 225.61. Theory: Bonding required within 25 ft."
                 },
                 {
@@ -10597,7 +10597,7 @@ const REAL_EXAMS = {
                         "600",
                         "1000"
                     ],
-                    correctIndex: 2,
+                    correctIndex: 3,
                     explanation: "NEC 280.21. Theory: SPD limited to circuits 600 V or less."
                 },
                 {
