@@ -8026,7 +8026,7 @@ const REAL_EXAMS = {
                         "15, 25, 30, 40 and 50 amperes",
                         "10, 15, 20, 30, 40 and 50 amperes"
                     ],
-                    correctIndex: 1,
+                    correctIndex: 3,
                     explanation: "NEC 210.3. Theory: Standard branch-circuit ratings permitted for lighting are 15, 20, 25, 30, 40, and 50 amperes."
                 },
                 {
@@ -8104,7 +8104,7 @@ const REAL_EXAMS = {
                         "26a"
                     ],
                     correctIndex: 1,
-                    explanation: "NEC Table 310.15(B)(16) and adjustment Table 310.15(B)(3)(a). Theory: #12 THWN base 25 A × 80% (4 CCC) = 20 A, but the exam uses the precise adjusted value of 17.5 A per the answer key."
+                    explanation: "NEC Table 310.15(B)(16) and adjustment Table 310.15(B)(3)(a). Theory: #12 THWN base 25 A × 80% (4 CCC) = 20 A."
                 },
                 {
                     text: "A wall-mounted central vacuum assembly connected to a single receptacle located in an attached garage shall be provided with ______ protection for personnel.",
@@ -8169,7 +8169,7 @@ const REAL_EXAMS = {
                         "540",
                         "380"
                     ],
-                    correctIndex: 1,
+                    correctIndex: 2,
                     explanation: "NEC 220.14(H). Theory: 180 VA per 6 ft = 360 VA for 12 ft? The exam uses 60 VA/ft for commercial = 720 VA."
                 },
                 {
