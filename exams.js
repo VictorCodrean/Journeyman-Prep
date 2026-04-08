@@ -10508,284 +10508,284 @@ const REAL_EXAMS = {
             ]
         },
         {
-            id: "openbook_11",
-            title: "Journeyman Open Book Exam #11",
-            timeMinutes: 60,
-            questions: [
+            "id": "openbook_11",
+            "title": "2023 Journeyman Open Book Exam #11",
+            "timeMinutes": 60,
+            "questions": [
                 {
-                    text: "Balconies, decks, and porches that are within ______ inches, horizontally, of a dwelling unit shall have one receptacle outlet accessible from the balcony, deck, or porch.",
-                    options: [
+                    "text": "Balconies, decks, and porches that are within ______ inches, horizontally, of a dwelling unit must have one receptacle outlet accessible from the balcony, deck, or porch.",
+                    "options": [
                         "4",
                         "6",
                         "12",
                         "18"
                     ],
-                    correctIndex: 0,
-                    explanation: "NEC 210.52(E)(3). Theory: Receptacle required within 6 ft horizontally of the dwelling unit."
+                    "correctIndex": 0,
+                    "explanation": "NEC 210.52(E)(3). Receptacles are required for balconies/decks within 4 inches of the dwelling unit."
                 },
                 {
-                    text: "Unused openings for circuit breakers and switches shall be closed using approved means that provide protection substantially equivalent to the wall of the enclosure.",
-                    options: [
+                    "text": "Unused openings for circuit breakers and switches shall be closed using ______ closures, or other approved means that provide protection substantially equivalent to the wall of the enclosure.",
+                    "options": [
                         "approved",
                         "identified",
                         "labeled",
                         "marked"
                     ],
-                    correctIndex: 1,
-                    explanation: "NEC 110.12(A). Theory: Unused openings must be closed with approved means."
+                    "correctIndex": 1,
+                    "explanation": "NEC 408.7. Unused openings must be closed with identified closures."
                 },
                 {
-                    text: "A point on the wiring system at which current is taken to supply utilization equipment is an ______.",
-                    options: [
+                    "text": "A point on the wiring system at which current is taken to supply utilization equipment is a/an ______.",
+                    "options": [
                         "outlet",
                         "receptacle",
                         "junction",
                         "dead end"
                     ],
-                    correctIndex: 0,
-                    explanation: "NEC Article 100 Definitions. Theory: Definition of Outlet."
+                    "correctIndex": 0,
+                    "explanation": "NEC Article 100 Definitions. This is the literal definition of an 'Outlet'."
                 },
                 {
-                    text: "In dwelling units, circuits supplying luminaires may not exceed ______ volts, nominal, between conductors.",
-                    options: [
+                    "text": "In dwelling units, circuits supplying luminaires may not exceed ______ volts, nominal, between any two conductors.",
+                    "options": [
                         "120",
                         "220",
                         "230",
                         "240"
                     ],
-                    correctIndex: 0,
-                    explanation: "NEC 210.6(A). Theory: Maximum 120 V nominal for dwelling lighting circuits."
+                    "correctIndex": 0,
+                    "explanation": "NEC 210.6(A). The voltage limit for luminaires in dwellings is 120 volts nominal."
                 },
                 {
-                    text: "Extreme ______ may cause PVC conduit to become brittle, and therefore more susceptible to damage from physical contact.",
-                    options: [
+                    "text": "Extreme ______ may cause PVC conduit to become brittle, and therefore more susceptible to damage from physical contact.",
+                    "options": [
                         "heat",
                         "cold",
                         "sunlight",
                         "moisture"
                     ],
-                    correctIndex: 1,
-                    explanation: "NEC 352.10. Theory: Extreme cold makes PVC brittle."
+                    "correctIndex": 1,
+                    "explanation": "NEC 352.10 Informational Note. Extreme cold can lead to PVC brittleness."
                 },
                 {
-                    text: "In lieu of the GFCI protection required by 210.8 or 590.6(A) GFCI may be placed in the feeder circuit if it is ______.",
-                    options: [
+                    "text": "In lieu of the GFCI protection required by 210.8 or 590.6(A) GFCI may be placed in the feeder circuit if it is ______.",
+                    "options": [
                         "accessible",
                         "readily accessible",
                         "suitable",
                         "approved"
                     ],
-                    correctIndex: 1,
-                    explanation: "NEC 210.8(A) Exception. Theory: Feeder GFCI must be readily accessible."
+                    "correctIndex": 1,
+                    "explanation": "NEC 215.9. Feeder GFCIs must be located in a readily accessible location."
                 },
                 {
-                    text: "Where metal fences are located within ______ feet of the exposed electrical conductors or equipment, the fence shall be bonded to the grounding electrode system with bonding jumpers.",
-                    options: [
+                    "text": "Where metal fences are located within ______ feet of the exposed electrical conductors or equipment, the fence shall be bonded to the grounding electrode system with bonding jumpers.",
+                    "options": [
                         "25",
                         "24",
                         "20",
                         "16"
                     ],
-                    correctIndex: 3,
-                    explanation: "NEC 225.61. Theory: Bonding required within 25 ft."
+                    "correctIndex": 3,
+                    "explanation": "NEC 250.194(A). Bonding is required when conductors are within 16 feet of metal fences."
                 },
                 {
-                    text: "A surge protection device is not permitted for circuits exceeding ______ volts.",
-                    options: [
+                    "text": "A surge protection device is not permitted for circuits exceeding ______ volts.",
+                    "options": [
                         "300",
                         "450",
                         "600",
                         "1000"
                     ],
-                    correctIndex: 3,
-                    explanation: "NEC 280.21. Theory: SPD limited to circuits 600 V or less."
+                    "correctIndex": 3,
+                    "explanation": "NEC 242.12(1). SPDs are not permitted on systems exceeding 1000 volts."
                 },
                 {
-                    text: "A permanent sign shall be attached to the cable tray at intervals not greater than 20 feet. The sign shall read as follows:",
-                    options: [
-                        "CABLE TRAY FOR WELDING CABLES ONLY",
-                        "CABLE TRAY MAXIMUM VOLTAGE 300",
-                        "THE CABLE TRAY PROVIDES SUPPORT AT 6' INTERVALS",
-                        "CABLES SHALL BE LOW VOLTAGE"
-                    ],
-                    correctIndex: 0,
-                    explanation: "NEC 630.42(C). Theory: Cable tray for welding cables only."
-                },
-                {
-                    text: "The individual responsible for starting, stopping, and controlling an amusement or supervising a concession.",
-                    options: [
-                        "Ticket Taker",
-                        "Assistant",
-                        "Operator",
-                        "Manager"
-                    ],
-                    correctIndex: 2,
-                    explanation: "NEC Article 100 Definitions. Theory: Definition of Operator."
-                },
-                {
-                    text: "A commercial building has an opening door in the wall on the second floor through which materials are moved into and out of a storage area located on the second floor. An overhead 120v branch circuit is to be installed from the second floor area of the building to a pole on which a flood-light will be mounted. Which of the following best describes Code requirements for the installation of this branch circuit?",
-                    options: [
-                        "It is not permitted to be installed overhead.",
-                        "It must be at least 3' from the side of the door.",
-                        "It must be at least 3' above the bottom of the door.",
-                        "It must not obstruct entrance to the material handling door and be 3' from the door."
-                    ],
-                    correctIndex: 3,
-                    explanation: "NEC 225.19(D)(1). Theory: Clearance required from doors."
-                },
-                {
-                    text: "Outdoor self-supporting radio and television receiving antennas, such as vertical rods, dishes, etc., shall be located well away from overhead conductors of electric light and power circuits over ______ volts to ground.",
-                    options: [
-                        "30",
-                        "120",
-                        "150",
-                        "300"
-                    ],
-                    correctIndex: 3,
-                    explanation: "NEC 810.16(B). Theory: 300 V clearance."
-                },
-                {
-                    text: "A Class 1 power-limited circuit shall be supplied from a source having a rated output of not more than 30 volts and ______ volt amperes.",
-                    options: [
-                        "1000",
-                        "1200",
-                        "1500",
-                        "2000"
-                    ],
-                    correctIndex: 0,
-                    explanation: "NEC 724.40. Theory: 1000 VA maximum for Class 1."
-                },
-                {
-                    text: "Enclosures that are not over 100 cubic inches in size and which have two conduits supported within three feet on either side of the enclosure and the enclosure does not contain devices or support fixtures shall not be required to have the enclosure supported if the conduits are ______.",
-                    options: [
-                        "rigid nonmetallic conduits",
-                        "threaded into hubs identified for the purpose",
-                        "installed with locknuts inside and outside enclosure",
-                        "shoulders of fittings outside and locknuts inside the box"
-                    ],
-                    correctIndex: 1,
-                    explanation: "NEC 314.23(E). Theory: Conduits must be threaded into identified hubs."
-                },
-                {
-                    text: "Size #18 or #16 fixture wires, and flexible cords shall be permitted for the control and operating circuits of X-ray and auxiliary equipment where protected by not larger than ______ ampere overcurrent devices.",
-                    options: [
-                        "6",
-                        "15",
-                        "20",
-                        "30"
-                    ],
-                    correctIndex: 1,
-                    explanation: "NEC 660.9. Theory: 15 A maximum protection."
-                },
-                {
-                    text: "Conductors drawn from a copper-clad aluminum rod with the copper metallurgically bonded to an aluminum core. The copper forms a minimum of ______ percent of the csa.",
-                    options: [
-                        "10",
-                        "20",
-                        "40",
-                        "70"
-                    ],
-                    correctIndex: 2,
-                    explanation: "NEC 310.3(B)(3). Theory: Minimum 40% copper by cross-sectional area."
-                },
-                {
-                    text: "Concrete, brick or tile walls are considered as being ______.",
-                    options: [
-                        "isolated",
-                        "insulators",
-                        "grounded",
-                        "dry locations"
-                    ],
-                    correctIndex: 2,
-                    explanation: "NEC 110.26(A)(1) cond.2. Theory: Concrete/brick/tile walls are grounded."
-                },
-                {
-                    text: "______ locations are those that are hazardous because of the presence of easily ignitable fibers or flyings.",
-                    options: [
-                        "Class I",
-                        "Class II",
-                        "Class III",
-                        "Class II, division II"
-                    ],
-                    correctIndex: 2,
-                    explanation: "NEC 500.5(D). Theory: Class III locations."
-                },
-                {
-                    text: "An isolated ground receptacle shall be identified by ______.",
-                    options: [
-                        "CO/ALR orange marking on the face of the receptacle",
-                        "a metal faceplate not less than 0.030 inches in thickness",
-                        "a reset type test button on the face of the receptacle",
-                        "an orange triangle located on the face of the receptacle"
-                    ],
-                    correctIndex: 3,
-                    explanation: "NEC 406.3(E). Theory: Orange triangle marking."
-                },
-                {
-                    text: "In a hospital General Care Area, each patient bed location shall be provided with a minimum of ______.",
-                    options: [
-                        "3 single",
-                        "2 single or 1 duplex",
-                        "2 duplex or 4 single",
-                        "4 duplex or 8 single"
-                    ],
-                    correctIndex: 3,
-                    explanation: "NEC 517.18(B)(1). Theory: Minimum 4 duplex or 8 single receptacles."
-                },
-                {
-                    text: "Balconies, decks, and porches that are attached to the dwelling unit and are accessible from inside the dwelling unit shall have at least one receptacle outlet accessible from the balcony, deck, or porch walking surface not be located more than ______ above the balcony, deck, or porch walking surface.",
-                    options: [
-                        "6'",
-                        "6' 6\"",
-                        "7'",
-                        "8'"
-                    ],
-                    correctIndex: 1,
-                    explanation: "NEC 210.52(E)(3). Theory: Maximum 6 ft 6 in height."
-                },
-                {
-                    text: "Energized equipment parts for fire pump installations are required to be located at least ______ inches above floor level.",
-                    options: [
+                    "text": "One or more nonmetallic extensions shall be permitted to run in any direction from an existing outlet, but not on the floor or within ______ from the floor.",
+                    "options": [
+                        "2\"",
                         "6\"",
                         "8\"",
-                        "10\"",
                         "12\""
                     ],
-                    correctIndex: 3,
-                    explanation: "NEC 695.12(D). Theory: Minimum 12 inches above floor."
+                    "correctIndex": 0,
+                    "explanation": "NEC 382.15(A). Nonmetallic extensions cannot be run within 2 inches of the floor."
                 },
                 {
-                    text: "Conductors having ______ insulation and operating at different voltage levels shall not occupy the same enclosure, cable, or raceway.",
-                    options: [
-                        "thermoset",
-                        "flame-retardant",
-                        "nonsheilded",
-                        "silicone rubber"
+                    "text": "In multifamily dwellings, Type NM Cable is permitted in buildings that are permitted to be type(s) ______.",
+                    "options": [
+                        "V",
+                        "III",
+                        "IV",
+                        "all of these"
                     ],
-                    correctIndex: 3,
-                    explanation: "NEC 300.3(C)(1). Theory: Silicone rubber has special separation rules."
+                    "correctIndex": 3,
+                    "explanation": "NEC 334.10(2). NM cable is allowed in Types III, IV, and V construction."
                 },
                 {
-                    text: "In a recreational vehicle park with electrical supply, at least ______ % of the sites shall be equipped with 30 ampere, 125 volt receptacles.",
-                    options: [
-                        "25",
-                        "30",
-                        "40",
-                        "70"
+                    "text": "Power distribution blocks on ______ conductors shall be marked “suitable for use on the line side of service equipment” or equivalent.",
+                    "options": [
+                        "branch circuit",
+                        "grounding",
+                        "service",
+                        "feeder"
                     ],
-                    correctIndex: 3,
-                    explanation: "NEC 551.71(B). Theory: Minimum 70% of sites."
+                    "correctIndex": 2,
+                    "explanation": "NEC 230.46. Distribution blocks on service conductors must have specific line-side marking."
                 },
                 {
-                    text: "The conductor used to connect the grounded circuit of a wiring system to a grounding electrode is the ______.",
-                    options: [
-                        "grounded conductor",
-                        "main bonding jumper",
-                        "bonding jumper",
-                        "grounding conductor"
+                    "text": "A multifamily dwelling is a building that contains ______ or more dwelling units.",
+                    "options": [
+                        "four",
+                        "three",
+                        "two",
+                        "one"
                     ],
-                    correctIndex: 3,
-                    explanation: "NEC Article 100 Definitions. Theory: Grounding Electrode Conductor."
+                    "correctIndex": 1,
+                    "explanation": "NEC Article 100 Definitions. A multifamily dwelling contains three or more units."
+                },
+                {
+                    "text": "The short circuit current rating of emergency system transfer equipment, based on the specific overcurrent protective device type and settings protecting it, shall be ______ on the exterior of the transfer equipment.",
+                    "options": [
+                        "field marked",
+                        "factory marked",
+                        "factory or field marked",
+                        "factory and field marked"
+                    ],
+                    "correctIndex": 0,
+                    "explanation": "NEC 700.5(F). This rating must be field marked."
+                },
+                {
+                    "text": "When sizing a branch circuit for a fixed storage-type water heater with a capacity of 120 gallons or less, the water heater is considered a/an ______.",
+                    "options": [
+                        "varying load",
+                        "intermittent load",
+                        "noncontinuous load",
+                        "continuous load"
+                    ],
+                    "correctIndex": 3,
+                    "explanation": "NEC 422.13. Fixed storage water heaters (120 gal or less) are considered continuous loads."
+                },
+                {
+                    "text": "Ground-fault protection of equipment shall be provided for solidly grounded wye electric services of more than 150 volts to ground but not exceeding 1000 volts phase-to-phase for each service disconnect rated 1000 amperes or more. It must be tested ______.",
+                    "options": [
+                        "by the AHJ",
+                        "as part of the design",
+                        "by the manufacturer",
+                        "when first installed on site"
+                    ],
+                    "correctIndex": 3,
+                    "explanation": "NEC 230.95(C). The GFPE system must be performance tested when first installed on site."
+                },
+                {
+                    "text": "Branch circuits for common areas of a multifamily dwelling shall not be supplied from equipment that supplies an individual ______ or tenant space.",
+                    "options": [
+                        "dwelling unit",
+                        "branch circuit",
+                        "service",
+                        "feeder"
+                    ],
+                    "correctIndex": 0,
+                    "explanation": "NEC 210.25(B). Common area circuits cannot originate from an individual dwelling unit's panelboard."
+                },
+                {
+                    "text": "Pendant conductors longer than 36” shall be twisted together where not cabled in a/an ______ assembly.",
+                    "options": [
+                        "approved",
+                        "listed",
+                        "identified",
+                        "suitable"
+                    ],
+                    "correctIndex": 1,
+                    "explanation": "NEC 410.54(C). Pendants longer than 36\" must be twisted if not part of a listed assembly."
+                },
+                {
+                    "text": "In other than one-and two-family dwelling units, the available fault current and the date of the calculation was performed shall be field marked on the enclosure of ______.",
+                    "options": [
+                        "switchgear",
+                        "panelboards",
+                        "switchboards",
+                        "all of these"
+                    ],
+                    "correctIndex": 3,
+                    "explanation": "NEC 408.6. This marking is required for switchgear, panelboards, and switchboards."
+                },
+                {
+                    "text": "For electric vehicle supply equipment (EVSE), the larger of either the nameplate or ______ VA is used for calculating loads.",
+                    "options": [
+                        "3,600",
+                        "5,000",
+                        "6,000",
+                        "7,200"
+                    ],
+                    "correctIndex": 3,
+                    "explanation": "NEC 220.57. Load calculation uses the larger of the nameplate or 7200 VA."
+                },
+                {
+                    "text": "A ground ring electrode shall be no smaller than ______ copper.",
+                    "options": [
+                        "#8",
+                        "#6",
+                        "#4",
+                        "#2"
+                    ],
+                    "correctIndex": 3,
+                    "explanation": "NEC 250.52(A)(4). A ground ring must be at least #2 copper."
+                },
+                {
+                    "text": "All nonlocking, 15 and 20 amp, 125v through 250v receptacles located in ______ specified in 210.52 and 550.13 must be listed as tamper-resistant.",
+                    "options": [
+                        "dwelling units",
+                        "dwelling unit accessory buildings",
+                        "common areas of multifamily dwellings",
+                        "all of these"
+                    ],
+                    "correctIndex": 3,
+                    "explanation": "NEC 406.12. Tamper-resistant requirements apply to all these dwelling-related areas."
+                },
+                {
+                    "text": "If locating a motor's disconnecting means within sight of the motor would result in an increased hazard, the motor controller may act as the required disconnect if it is ______.",
+                    "options": [
+                        "serviceable",
+                        "accessible",
+                        "lockable",
+                        "readily accessible"
+                    ],
+                    "correctIndex": 2,
+                    "explanation": "NEC 430.102(B)(2) Exception 1. The controller disconnect must be lockable in the open position."
+                },
+                {
+                    "text": "A three-way switch is counted as ______ conductor(s) based on the largest conductor connected to the switch in determining conductor fill in a device box.",
+                    "options": [
+                        "one",
+                        "two",
+                        "three",
+                        "not required to be counted"
+                    ],
+                    "correctIndex": 1,
+                    "explanation": "NEC 314.16(B)(4). Each device yoke counts as a double volume allowance (2) based on the largest conductor."
+                },
+                {
+                    "text": "Dry-type transformers 1,000 volts or less and ______ kVA or less may be installed in hollow spaces of buildings not permanently closed in by the structure.",
+                    "options": [
+                        "50",
+                        "60",
+                        "75",
+                        "115"
+                    ],
+                    "correctIndex": 0,
+                    "explanation": "NEC 450.13(B). Transformers 50 kVA or less are permitted in these spaces."
+                },
+                {
+                    "text": "MI cable shall be supported and secured by staples, straps, hangers, or similar fittings, designed and installed so as not to damage the cable, at intervals not exceeding ______.",
+                    "options": [
+                        "3 feet",
+                        "48\"",
+                        "5 feet",
+                        "6 feet"
+                    ],
+                    "correctIndex": 3,
+                    "explanation": "NEC 332.30. MI cable must be supported at intervals not exceeding 6 feet."
                 }
             ]
         },
