@@ -10927,18 +10927,17 @@ const REAL_EXAMS = {
                     explanation: "NEC 225.26. Theory: Trees not permitted for overhead spans."
                 },
                 {
-                    text: "A/an ______ listed device (b) GFCI (c) AFCI (d) arrester",
-                    options: [
+                    text: "A/an ______ listed shall be installed between a wind-electric system and any loads served by the premises wiring system. "                   options: [
                         "surge protective device",
-                        "luminaires",
-                        "from the lamp and wiring compartment",
-                        "oil, and"
+                        "GFCI",
+                        "AFCI",
+                        "arrester"
                     ],
                     correctIndex: 0,
                     explanation: "NEC 280.21. Theory: Surge protective device."
                 },
                 {
-                    text: "A luminaire in a commercial cooking hood must, among other requirements, exclude ______.",
+                    text: "A luminaire in a commercial cooking hood must, among other requirements, exclude grease oil, and ______ from the lamp and wiring compartment.",
                     options: [
                         "solids",
                         "moisture",
@@ -10949,7 +10948,7 @@ const REAL_EXAMS = {
                     explanation: "NEC 410.10(F). Theory: Exhaust vapors excluded."
                 },
                 {
-                    text: "A device that uses power electronics to convert one form of electrical power to another is known as a/an ______.",
+                    text: "A device that uses power electronics to convert one form of electrical power into another form of electrical power is known as a/an ______.",
                     options: [
                         "solar cell",
                         "wind turbine",
