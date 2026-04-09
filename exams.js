@@ -10927,7 +10927,8 @@ const REAL_EXAMS = {
                     explanation: "NEC 225.26. Theory: Trees not permitted for overhead spans."
                 },
                 {
-                    text: "A/an ______ listed shall be installed between a wind-electric system and any loads served by the premises wiring system. "                   options: [
+                    text: "A/an ______ listed shall be installed between a wind-electric system and any loads served by the premises wiring system. ",
+                    options: [
                         "surge protective device",
                         "GFCI",
                         "AFCI",
