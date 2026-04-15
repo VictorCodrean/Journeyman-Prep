@@ -8063,6 +8063,7 @@ const REAL_EXAMS = {
                     explanation: "NEC 590.4(J). Theory: Strain relief devices are required to prevent damage to conductors from tree movement."
                 },
                 {
+                    id: "9",
                     text: "At least one 125 volt, single-phase, 15 or 20 amp rated receptacle outlet shall be installed for each 12 linear feet or major fraction thereof of show window area measured horizontally at its maximum width.",
                     options: [
                         "10\"",
@@ -10978,7 +10979,7 @@ const REAL_EXAMS = {
                         "15",
                         "12"
                     ],
-                    correctIndex: 1,
+                    correctIndex: 0,
                     explanation: "NEC 690.12. Theory: 30 V limit within 30 seconds."
                 },
                 {
@@ -11033,8 +11034,8 @@ const REAL_EXAMS = {
                         "6'",
                         "10'"
                     ],
-                    correctIndex: 2,
-                    explanation: "NEC 358.30(A) ex.1. Theory: 6 ft permitted."
+                    correctIndex: 1,
+                    explanation: "NEC 358.30(A) ex.1. Theory: 5 ft permitted."
                 },
                 {
                     text: "The minimum size copper equipment grounding conductor required on a motor branch circuit with a 30 amp circuit breaker and #12 copper conductor is ______.",
