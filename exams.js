@@ -6177,7 +6177,7 @@ const REAL_EXAMS = {
                     explanation: "1/R = 1/1 + 1/1 → R_total = 0.5 Ω."
                 },
                 {
-                    text: "The advantage(s) of a 4-wire, three-phase source over a 3-wire, three-phase source is/are",
+                    text: "The advantage(s) of a 4-wire, three-phase source over a 3-wire, three-phase source is/are: I. two voltage levels II. a grounded neutral III. less copper",
                     options: ["I only", "II only", "III only", "I and II"],
                     correctIndex: 3,
                     explanation: "4-wire system provides two voltage levels (line-to-neutral & line-to-line) plus a grounded neutral (NEC 250.24 and 215.2)."
