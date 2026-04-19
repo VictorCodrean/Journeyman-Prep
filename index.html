@@ -48,9 +48,10 @@
             color: var(--muted);
             font-size: 0.95rem;
         }
+
         #progressBar {
-    box-shadow: 0 0 8px rgba(76, 201, 240, 0.6);
-}
+            box-shadow: 0 0 8px rgba(76, 201, 240, 0.6);
+        }
 
         .container {
             padding: 1.25rem;
@@ -106,77 +107,87 @@
             font-size: 0.95rem;
         }
 
-/* ====================== CELEBRATION STYLES ====================== */
-#summarySection .pass-badge {
-    font-size: 3.2rem;
-    font-weight: 900;
-    color: #28a745;
-    text-align: center;
-    margin: 1.5rem 0;
-    animation: passPop 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    text-shadow: 0 0 30px rgba(40, 167, 69, 0.5);
-}
+        /* ====================== CELEBRATION STYLES ====================== */
+        #summarySection .pass-badge {
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: #28a745;
+            text-align: center;
+            margin: 1.5rem 0;
+            animation: passPop 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            text-shadow: 0 0 30px rgba(40, 167, 69, 0.5);
+        }
 
-@keyframes passPop {
-    0%   { transform: scale(0.3); }
-    50%  { transform: scale(1.15); }
-    100% { transform: scale(1); }
-}
+        @keyframes passPop {
+            0% {
+                transform: scale(0.3);
+            }
 
-.motivational {
-    font-size: 1.35rem;
-    text-align: center;
-    color: #eaeff4;
-    font-weight: 600;
-    margin: 1rem 0 2rem;
-    line-height: 1.4;
-}
+            50% {
+                transform: scale(1.15);
+            }
 
-.fail-badge {
-    font-size: 2.8rem;
-    font-weight: 900;
-    color: #e11d48;
-    text-align: center;
-    margin: 1.5rem 0;
-}
+            100% {
+                transform: scale(1);
+            }
+        }
 
-/* ====================== STICKY QUIZ HEADER - CARD STYLE (FULLY VISIBLE PROGRESS BAR) ====================== */
-#quizSection > div[style*="position: sticky"] {
-    background: rgba(26, 31, 46, 0.98) !important;
-    border: 1px solid #2e3245 !important;
-    border-radius: 16px !important;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35) !important;
-    padding: 20px 24px 34px !important;   /* ← extra bottom space */
-    margin-bottom: 1.75rem !important;
-    top: 8px !important;
-}
+        .motivational {
+            font-size: 1.35rem;
+            text-align: center;
+            color: #eaeff4;
+            font-weight: 600;
+            margin: 1rem 0 2rem;
+            line-height: 1.4;
+        }
 
-/* Title + Timer + Pause row */
-#quizSection .row {
-    margin-bottom: 18px !important;
-}
+        .fail-badge {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #e11d48;
+            text-align: center;
+            margin: 1.5rem 0;
+        }
 
-/* Progress bar container */
-#quizSection > div[style*="position: sticky"] > div:last-child {
-    margin-top: 6px !important;
-    background: #1f2538 !important;
-    border-radius: 9999px !important;
-    padding: 3px !important;
-    height: 18px !important;               /* guaranteed space */
-    box-shadow: inset 0 2px 6px rgba(0,0,0,0.5);
-}
+        /* ====================== STICKY QUIZ HEADER - CARD STYLE (FULLY VISIBLE PROGRESS BAR) ====================== */
+        #quizSection>div[style*="position: sticky"] {
+            background: rgba(26, 31, 46, 0.98) !important;
+            border: 1px solid #2e3245 !important;
+            border-radius: 16px !important;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35) !important;
+            padding: 20px 24px 34px !important;
+            /* ← extra bottom space */
+            margin-bottom: 1.75rem !important;
+            top: 8px !important;
+        }
 
-/* Progress bar fill */
-#progressBar {
-    height: 100% !important;
-    border-radius: 9999px !important;
-}
+        /* Title + Timer + Pause row */
+        #quizSection .row {
+            margin-bottom: 18px !important;
+        }
 
-/* Progress text */
-#progressText {
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-}
+        /* Progress bar container */
+        #quizSection>div[style*="position: sticky"]>div:last-child {
+            margin-top: 6px !important;
+            background: #1f2538 !important;
+            border-radius: 9999px !important;
+            padding: 3px !important;
+            height: 18px !important;
+            /* guaranteed space */
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Progress bar fill */
+        #progressBar {
+            height: 100% !important;
+            border-radius: 9999px !important;
+        }
+
+        /* Progress text */
+        #progressText {
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+        }
 
         /* ====================== BUTTONS ====================== */
         button.primary {
@@ -352,148 +363,166 @@
             display: none;
         }
 
-        /* Better spacing for missed questions container */
-        #missedQuestionsContainer {
-            margin-top: 1rem;
-        }
-
         /* Hover effect on option labels */
         .option input[type="radio"] {
             accent-color: var(--accent);
         }
 
         /* ====================== MOBILE RESPONSIVENESS ====================== */
-@media (max-width: 768px) {
-    .container { padding: 0.85rem; }
-    header { padding: 1rem 0.75rem; }
-    header h1 { font-size: 1.65rem; }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0.85rem;
+            }
 
-    .grid, .exam-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.25rem;
-    }
+            header {
+                padding: 1rem 0.75rem;
+            }
 
-    .card {
-        padding: 1.25rem;
-        border-radius: 12px;
-    }
+            header h1 {
+                font-size: 1.65rem;
+            }
 
-    /* ── QUIZ STICKY HEADER – NOW PERFECT ON MOBILE ── */
-    #quizSection > div[style*="position: sticky"] {
-        padding: 10px 12px 14px 12px;
-        margin-bottom: 0.75rem;
-    }
+            .grid,
+            .exam-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 1.25rem;
+            }
 
-    .row {
-        flex-direction: row !important;   /* keep compact horizontal layout */
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-    }
+            .card {
+                padding: 1.25rem;
+                border-radius: 12px;
+            }
 
-    #quizTitle {
-        font-size: 1.1rem;
-        flex: 1 1 auto;
-        min-width: 0;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-    }
+            /* ── QUIZ STICKY HEADER – NOW PERFECT ON MOBILE ── */
+            #quizSection>div[style*="position: sticky"] {
+                padding: 10px 12px 14px 12px;
+                margin-bottom: 0.75rem;
+            }
 
-    .timer {
-        font-size: 1.05rem;
-        white-space: nowrap;
-    }
+            .row {
+                flex-direction: row !important;
+                /* keep compact horizontal layout */
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
 
-    #pauseBtn {
-        padding: 6px 14px;
-        font-size: 0.9rem;
-        min-width: 88px;
-        white-space: nowrap;
-    }
+            #quizTitle {
+                font-size: 1.1rem;
+                flex: 1 1 auto;
+                min-width: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
 
-    /* Progress bar – cleaner on small screens */
-    #quizSection > div[style*="position: sticky"] > div:last-child {
-        margin-top: 12px;
-        height: 10px;
-    }
-    #progressText {
-        font-size: 0.8rem;
-        right: 8px;
-    }
-}
+            .timer {
+                font-size: 1.05rem;
+                white-space: nowrap;
+            }
 
-@media (max-width: 480px) {
-    #quizTitle { font-size: 1rem; }
-    .timer { font-size: 1rem; }
-    #pauseBtn {
-        padding: 5px 12px;
-        font-size: 0.85rem;
-        min-width: 80px;
-    }
-    #progressText { font-size: 0.78rem; }
-}
-@media (max-width: 768px) {
-    #quizSection > div[style*="position: sticky"] {
-        padding: 16px 20px 30px !important;   /* still plenty of bottom room */
-        border-radius: 14px !important;
-        margin-bottom: 1.2rem !important;
-    }
-    
-    #quizSection .row {
-        margin-bottom: 14px !important;
-    }
-}
-/* ====================== FOOTER STATS ====================== */
-.footer-stats {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.8rem 2rem;
-    margin-bottom: 0.75rem;
-    font-size: 0.95rem;
-    color: var(--text);
-}
+            #pauseBtn {
+                padding: 6px 14px;
+                font-size: 0.9rem;
+                min-width: 88px;
+                white-space: nowrap;
+            }
 
-.footer-stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 110px;
-}
+            /* Progress bar – cleaner on small screens */
+            #quizSection>div[style*="position: sticky"]>div:last-child {
+                margin-top: 12px;
+                height: 10px;
+            }
 
-.footer-stat-label {
-    font-size: 0.8rem;
-    color: var(--muted);
-    margin-bottom: 2px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
+            #progressText {
+                font-size: 0.8rem;
+                right: 8px;
+            }
+        }
 
-.footer-stat-value {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: var(--accent);
-}
+        @media (max-width: 480px) {
+            #quizTitle {
+                font-size: 1rem;
+            }
 
-.footer-stat-value.pass {
-    color: var(--green);
-}
+            .timer {
+                font-size: 1rem;
+            }
 
-.footer-stat-value.fail {
-    color: var(--red);
-}
+            #pauseBtn {
+                padding: 5px 12px;
+                font-size: 0.85rem;
+                min-width: 80px;
+            }
 
-/* Mobile */
-@media (max-width: 768px) {
-    .footer-stats {
-        gap: 1.2rem 1.5rem;
-    }
-    .footer-stat-value {
-        font-size: 1.2rem;
-    }
-}
+            #progressText {
+                font-size: 0.78rem;
+            }
+        }
 
+        @media (max-width: 768px) {
+            #quizSection>div[style*="position: sticky"] {
+                padding: 16px 20px 30px !important;
+                /* still plenty of bottom room */
+                border-radius: 14px !important;
+                margin-bottom: 1.2rem !important;
+            }
+
+            #quizSection .row {
+                margin-bottom: 14px !important;
+            }
+        }
+
+        /* ====================== FOOTER STATS ====================== */
+        .footer-stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.8rem 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        .footer-stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 110px;
+        }
+
+        .footer-stat-label {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-stat-value {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .footer-stat-value.pass {
+            color: var(--green);
+        }
+
+        .footer-stat-value.fail {
+            color: var(--red);
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .footer-stats {
+                gap: 1.2rem 1.5rem;
+            }
+
+            .footer-stat-value {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 
@@ -552,57 +581,31 @@
                 </details>
             </div>
             <!-- ==================== MISSED QUESTIONS REVIEW ==================== -->
-            <div class="card">
-                <h2>Missed Questions Review</h2>
-                <p>Questions answered wrong • Grouped 10 per set • Sorted by most missed</p>
 
-                <div style="margin: 1rem 0 1.25rem; display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
-                    <select id="missedFilter" onchange="renderMissedQuestionsGroup()"
-                        style="padding: 0.5rem 0.75rem; background: #1a1f2e; color: var(--text); border: 1px solid #334155; border-radius: 6px; min-width: 160px;">
-                        <option value="all">All Exam Types</option>
-                        <option value="general">General Knowledge</option>
-                        <option value="openbook">Open Book Exams</option>
-                        <option value="final">Final Exam</option>
-                    </select>
-
-                    <button class="primary" onclick="clearAllMissedQuestions()"
-                        style="background: #e11d48; padding: 0.5rem 1rem;">
-                        Clear All Missed Questions
-                    </button>
-                </div>
-
-                <details style="margin-top: 0.25rem;">
-                    <summary
-                        style="font-weight: bold; color: var(--accent); cursor: pointer; list-style: none; padding: 0.75rem 0; font-size: 1.1rem;">
-                        Show / Hide Missed Questions Groups
-                    </summary>
-                    <div id="missedQuestionsContainer" style="margin-top: 1rem; padding: 0.5rem;"></div>
-                </details>
-            </div>
         </section>
 
         <!-- Quiz View -->
         <section id="quizSection" class="section hidden">
-        <!-- Sticky Header with Timer + Smart Progress Bar -->
-        <div
-            style="position: sticky; top: 0; z-index: 100; background: var(--bg); padding: 12px 0 16px 0; margin-bottom: 1rem; border-bottom: 1px solid #334155;">
-            <div class="row">
-                <div id="quizTitle" style="font-weight:600;"></div>
-                <div class="timer" id="timer">Time: 30:00</div>
-            </div>
-        
-            <!-- Smart Progress Bar -->
+            <!-- Sticky Header with Timer + Smart Progress Bar -->
             <div
-                style="margin-top: 14px; background: #334155; border-radius: 9999px; height: 12px; overflow: hidden; position: relative;">
-                <div id="progressBar" style="height: 100%; width: 0%; background: linear-gradient(90deg, #4cc9f0, #1e90ff); 
-                            transition: width 0.4s ease, background 0.4s ease;">
+                style="position: sticky; top: 0; z-index: 100; background: var(--bg); padding: 12px 0 16px 0; margin-bottom: 1rem; border-bottom: 1px solid #334155;">
+                <div class="row">
+                    <div id="quizTitle" style="font-weight:600;"></div>
+                    <div class="timer" id="timer">Time: 30:00</div>
                 </div>
-                <span id="progressText" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); 
+
+                <!-- Smart Progress Bar -->
+                <div
+                    style="margin-top: 14px; background: #334155; border-radius: 9999px; height: 12px; overflow: hidden; position: relative;">
+                    <div id="progressBar" style="height: 100%; width: 0%; background: linear-gradient(90deg, #4cc9f0, #1e90ff); 
+                            transition: width 0.4s ease, background 0.4s ease;">
+                    </div>
+                    <span id="progressText" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); 
                              font-size: 0.85rem; font-weight: 700; color: white; text-shadow: 0 1px 3px rgba(0,0,0,0.7); 
                              pointer-events: none;">
-                </span>
+                    </span>
+                </div>
             </div>
-        </div>
             <div id="quizContent" class="quiz"></div>
             <div class="row" style="margin-top:1.5rem; justify-content: center;">
                 <button class="primary" onclick="submitExam()" style="padding: 0.8rem 2rem; font-size: 1.1rem;">
@@ -624,11 +627,11 @@
         <section id="summarySection" class="section hidden">
             <h3>Exam Summary</h3>
             <div id="summaryContent"></div>
-        
+
             <!-- Celebration Canvas -->
             <canvas id="confettiCanvas"
                 style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:9999; display:none;"></canvas>
-        
+
             <div class="row" style="margin-top:.75rem;">
                 <button class="primary" onclick="restartExam()">Restart Exam</button>
                 <button class="primary" onclick="returnToLanding()">Back to Home</button>
@@ -637,15 +640,24 @@
         </section>
     </main>
 
-<footer>
-    <div id="footerStats" class="footer-stats"></div>
-    <p style="margin: 0; font-size: 0.85rem; color: var(--muted); text-align: center;">
-        Progress &amp; attempts are saved in your browser (localStorage). Clear browser data to reset.
-    </p>
-</footer>
+    <footer>
+        <div id="footerStats" class="footer-stats"></div>
+        <p style="margin: 0; font-size: 0.85rem; color: var(--muted); text-align: center;">
+            Progress &amp; attempts are saved in your browser (localStorage). Clear browser data to reset.
+        </p>
+    </footer>
 
-    <script src="exams.js"></script>
+    <script src="general.js"></script>
+    <script src="openbook.js"></script>
+    <script src="final.js"></script>
+
+
     <script>
+        const REAL_EXAMS = {
+            general: GENERAL_EXAMS,
+            openbook: OPENBOOK_EXAMS,
+            final: FINAL_EXAMS
+        };
         // ====================== STATE ======================
         let totalQuestions = 0;
         let currentType = null;
@@ -656,7 +668,7 @@
         let isPaused = false;
         let wasPausedByBlur = false;
 
-       // Auto-save current exam answers every 5 seconds
+        // Auto-save current exam answers every 5 seconds
         let autoSaveInterval = null;
 
         function startAutoSave() {
@@ -679,7 +691,7 @@
         }
 
         // New: Track missed questions globally
-        let missedQuestions = {}; // key: "general_0_5" → {text, options, correctIndex, explanation, missCount}
+
 
         function storageKey(type, examIndex, attempt) {
             return `testprep_${type}_exam${examIndex + 1}_attempt${attempt}`;
@@ -689,38 +701,11 @@
             return parseInt(localStorage.getItem(`attempts_${type}_${examIndex}`) || '0');
         }
 
-        function loadMissedQuestions() {
-            const saved = localStorage.getItem('missedQuestionsData');
-            if (saved) {
-                missedQuestions = JSON.parse(saved);
-            } else {
-                missedQuestions = {};
-            }
-        }
 
-        function saveMissedQuestions() {
-            localStorage.setItem('missedQuestionsData', JSON.stringify(missedQuestions));
-        }
 
-        function recordMissedQuestion(type, examIndex, qIndex, question) {
-            const key = `${type}_${examIndex}_${qIndex}`;
 
-            // Only record if this exact exam has been attempted at least once
-            const attempts = getAttempts(type, examIndex);
-            if (attempts < 1) return;   // ← This prevents recording from untouched exams
 
-            if (!missedQuestions[key]) {
-                missedQuestions[key] = {
-                    ...question,
-                    missCount: 0,
-                    type: type,
-                    examIndex: examIndex,
-                    qIndex: qIndex
-                };
-            }
-            missedQuestions[key].missCount++;
-            saveMissedQuestions();
-        }
+
 
         function getLastScores(type, examIndex, limit = 10) {
             const attemptCount = getAttempts(type, examIndex);
@@ -738,8 +723,6 @@
                     const userAnswer = answers[qi];
                     if (userAnswer === q.correctIndex) {
                         correct++;
-                    } else if (userAnswer !== undefined) {   // only record actual answered questions
-                        recordMissedQuestion(type, examIndex, qi, q);
                     }
                 });
 
@@ -778,59 +761,59 @@
         }
 
         function startExam(type, examIndex = 0) {
-                currentType = type;
-                currentExamIndex = examIndex;
+            currentType = type;
+            currentExamIndex = examIndex;
 
-                // Initialize userAnswers structure if it doesn't exist
-                if (!userAnswers[currentType]) userAnswers[currentType] = {};
-                if (!userAnswers[currentType][currentExamIndex]) {
-                    userAnswers[currentType][currentExamIndex] = {};
-                }
-
-                // === RESUME SAVED ANSWERS IF THEY EXIST ===
-                const savedKey = `currentExam_${type}_${examIndex}`;
-                const savedAnswers = localStorage.getItem(savedKey);
-
-                if (savedAnswers) {
-                    try {
-                        const parsed = JSON.parse(savedAnswers);
-                        userAnswers[currentType][currentExamIndex] = parsed;
-                        console.log(`Resumed ${Object.keys(parsed).length} saved answers for this exam`);
-                    } catch (e) {
-                        console.warn("Failed to parse saved answers, starting fresh");
-                    }
-                }
-
-                // Set timer
-                if (type === 'final') timeLeftSec = 10800;
-                else if (type === 'openbook') timeLeftSec = 3600;
-                else timeLeftSec = 1800;
-
-                isPaused = false;
-                wasPausedByBlur = false;
-
-                document.getElementById('landing').classList.add('hidden');
-                document.getElementById('quizSection').classList.remove('hidden');
-                window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-
-                renderFullQuiz();
-                startTimer();
-                startAutoSave();        // ← Start auto-saving
+            // Initialize userAnswers structure if it doesn't exist
+            if (!userAnswers[currentType]) userAnswers[currentType] = {};
+            if (!userAnswers[currentType][currentExamIndex]) {
+                userAnswers[currentType][currentExamIndex] = {};
             }
 
+            // === RESUME SAVED ANSWERS IF THEY EXIST ===
+            const savedKey = `currentExam_${type}_${examIndex}`;
+            const savedAnswers = localStorage.getItem(savedKey);
+
+            if (savedAnswers) {
+                try {
+                    const parsed = JSON.parse(savedAnswers);
+                    userAnswers[currentType][currentExamIndex] = parsed;
+                    console.log(`Resumed ${Object.keys(parsed).length} saved answers for this exam`);
+                } catch (e) {
+                    console.warn("Failed to parse saved answers, starting fresh");
+                }
+            }
+
+            // Set timer
+            if (type === 'final') timeLeftSec = 10800;
+            else if (type === 'openbook') timeLeftSec = 3600;
+            else timeLeftSec = 1800;
+
+            isPaused = false;
+            wasPausedByBlur = false;
+
+            document.getElementById('landing').classList.add('hidden');
+            document.getElementById('quizSection').classList.remove('hidden');
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+
+            renderFullQuiz();
+            startTimer();
+            startAutoSave();        // ← Start auto-saving
+        }
+
         function renderFullQuiz() {
-                const exam = getCurrentExam();
-                if (!exam) return;
+            const exam = getCurrentExam();
+            if (!exam) return;
 
-                document.getElementById('quizTitle').textContent = exam.title;
-                const container = document.getElementById('quizContent');
-                container.innerHTML = '';
+            document.getElementById('quizTitle').textContent = exam.title;
+            const container = document.getElementById('quizContent');
+            container.innerHTML = '';
 
-                totalQuestions = exam.questions.length;
+            totalQuestions = exam.questions.length;
 
-                exam.questions.forEach((q, qIndex) => {
-                    const block = document.createElement('div');
-                    block.innerHTML = `
+            exam.questions.forEach((q, qIndex) => {
+                const block = document.createElement('div');
+                block.innerHTML = `
             <div class="question">Q${qIndex + 1}. ${q.text}</div>
             <div class="options">
                 ${q.options.map((opt, i) => `
@@ -843,39 +826,39 @@
             </div>
         `;
 
-                    block.querySelectorAll('input').forEach(inp => {
-                        inp.addEventListener('change', () => {
-                            if (!userAnswers[currentType][currentExamIndex])
-                                userAnswers[currentType][currentExamIndex] = {};
-                            userAnswers[currentType][currentExamIndex][qIndex] = parseInt(inp.value);
-                            updateProgressBar();
-                        });
+                block.querySelectorAll('input').forEach(inp => {
+                    inp.addEventListener('change', () => {
+                        if (!userAnswers[currentType][currentExamIndex])
+                            userAnswers[currentType][currentExamIndex] = {};
+                        userAnswers[currentType][currentExamIndex][qIndex] = parseInt(inp.value);
+                        updateProgressBar();
                     });
-
-                    container.appendChild(block);
                 });
 
-                updateProgressBar();   // Initial call
+                container.appendChild(block);
+            });
+
+            updateProgressBar();   // Initial call
+        }
+        function updateProgressBar() {
+            const answered = Object.keys(userAnswers[currentType]?.[currentExamIndex] || {}).length;
+            const percent = totalQuestions > 0 ? Math.round((answered / totalQuestions) * 100) : 0;
+
+            const progressBar = document.getElementById('progressBar');
+            const progressText = document.getElementById('progressText');
+
+            if (!progressBar) return;
+
+            progressBar.style.width = `${percent}%`;
+            progressText.textContent = `${percent}%`;
+
+            // Change color when reaching 70%+
+            if (percent >= 70) {
+                progressBar.style.background = 'linear-gradient(90deg, #28a745, #4ade80)';   // Green gradient
+            } else {
+                progressBar.style.background = 'linear-gradient(90deg, #4cc9f0, #1e90ff)';   // Original blue
             }
-         function updateProgressBar() {
-                const answered = Object.keys(userAnswers[currentType]?.[currentExamIndex] || {}).length;
-                const percent = totalQuestions > 0 ? Math.round((answered / totalQuestions) * 100) : 0;
-
-                const progressBar = document.getElementById('progressBar');
-                const progressText = document.getElementById('progressText');
-
-                if (!progressBar) return;
-
-                progressBar.style.width = `${percent}%`;
-                progressText.textContent = `${percent}%`;
-
-                // Change color when reaching 70%+
-                if (percent >= 70) {
-                    progressBar.style.background = 'linear-gradient(90deg, #28a745, #4ade80)';   // Green gradient
-                } else {
-                    progressBar.style.background = 'linear-gradient(90deg, #4cc9f0, #1e90ff)';   // Original blue
-                }
-            }
+        }
 
         function startTimer() {
             if (timerInterval) clearInterval(timerInterval);
@@ -922,175 +905,172 @@
         }
 
         function submitExam() {
-                if (timerInterval) clearInterval(timerInterval);
-                stopAutoSave();
+            if (timerInterval) clearInterval(timerInterval);
+            stopAutoSave();
 
-                const exam = getCurrentExam();
-                if (!exam) return;
+            const exam = getCurrentExam();
+            if (!exam) return;
 
-                const answers = userAnswers[currentType]?.[currentExamIndex] || {};
-                let correctCount = 0;
-                let answeredCount = 0;
+            const answers = userAnswers[currentType]?.[currentExamIndex] || {};
+            let correctCount = 0;
+            let answeredCount = 0;
 
-                exam.questions.forEach((q, i) => {
-                    const userAns = answers[i];
-                    if (userAns !== undefined) {
-                        answeredCount++;
-                        if (userAns === q.correctIndex) correctCount++;
-                        else recordMissedQuestion(currentType, currentExamIndex, i, q);
-                    } else {
-                        recordMissedQuestion(currentType, currentExamIndex, i, q);
-                    }
-                });
+            exam.questions.forEach((q, i) => {
+                const userAns = answers[i];
+                if (userAns !== undefined) {
+                    answeredCount++;
+                    if (userAns === q.correctIndex) correctCount++;
+                }
+            });
 
-                const percent = Math.round((correctCount / exam.questions.length) * 100);
-                const passed = percent >= 70;
+            const percent = Math.round((correctCount / exam.questions.length) * 100);
+            const passed = percent >= 70;
 
-                let attempt = getAttempts(currentType, currentExamIndex) + 1;
-                localStorage.setItem(`attempts_${currentType}_${currentExamIndex}`, attempt);
-                localStorage.setItem(storageKey(currentType, currentExamIndex, attempt), JSON.stringify(answers));
+            let attempt = getAttempts(currentType, currentExamIndex) + 1;
+            localStorage.setItem(`attempts_${currentType}_${currentExamIndex}`, attempt);
+            localStorage.setItem(storageKey(currentType, currentExamIndex, attempt), JSON.stringify(answers));
 
-                // === NEW CELEBRATION LOGIC ===
-                let html = `
+            // === NEW CELEBRATION LOGIC ===
+            let html = `
             <p style="font-size: 1.4rem; margin: 1rem 0;">
             <strong>Score:</strong> ${percent}% 
              </p>
             `;
 
-                if (passed) {
-                    html += `
+            if (passed) {
+                html += `
             <div class="pass-badge">✅ PASSED</div>
             <div class="motivational">${getMotivationalMessage(percent)}</div>
             `;
-                    document.getElementById('confettiCanvas').style.display = 'block';
-                    triggerConfetti();
-                } else {
-                    html += `
+                document.getElementById('confettiCanvas').style.display = 'block';
+                triggerConfetti();
+            } else {
+                html += `
             <div class="fail-badge">❌ NOT PASSED</div>
             <p style="color: var(--red); font-weight: bold; text-align:center; margin:1rem 0;">You need at least 70% to pass.</p>
             `;
-                }
+            }
 
-                html += `
+            html += `
             <p><strong>Correct Answers:</strong> ${correctCount} / ${exam.questions.length}</p>
             <p><strong>Attempt #${attempt}</strong></p>
             ${answeredCount < exam.questions.length ? `<p style="color: var(--warning);">⚠️ ${exam.questions.length - answeredCount} question(s) were left unanswered.</p>` : ''}
             `;
 
-                document.getElementById('summaryContent').innerHTML = html;
+            document.getElementById('summaryContent').innerHTML = html;
 
-                document.getElementById('quizSection').classList.add('hidden');
-                document.getElementById('summarySection').classList.remove('hidden');
+            document.getElementById('quizSection').classList.add('hidden');
+            document.getElementById('summarySection').classList.remove('hidden');
 
-                // Refresh stats and missed questions
-                renderMissedQuestionsGroup();
-                updateAllStats();
-                createGeneralExamCards();
-                createOpenBookCards();
-                createFinalCards();
-                updateFooterStats();
+            // Refresh stats and missed questions
+
+            updateAllStats();
+            createGeneralExamCards();
+            createOpenBookCards();
+            createFinalCards();
+            updateFooterStats();
         }
 
-            // ====================== MOTIVATIONAL MESSAGES ======================
-            function getMotivationalMessage(percent) {
-                if (percent >= 95) return "Outstanding! You're exam-ready 🔥";
-                if (percent >= 90) return "Excellent work — top tier performance!";
-                if (percent >= 85) return "Fantastic! You're going to crush the real exam.";
-                if (percent >= 80) return "Strong pass! Keep this momentum going.";
-                if (percent >= 75) return "Solid pass — great job!";
-                return "You passed! Every attempt makes you stronger 💪";
+        // ====================== MOTIVATIONAL MESSAGES ======================
+        function getMotivationalMessage(percent) {
+            if (percent >= 95) return "Outstanding! You're exam-ready 🔥";
+            if (percent >= 90) return "Excellent work — top tier performance!";
+            if (percent >= 85) return "Fantastic! You're going to crush the real exam.";
+            if (percent >= 80) return "Strong pass! Keep this momentum going.";
+            if (percent >= 75) return "Solid pass — great job!";
+            return "You passed! Every attempt makes you stronger 💪";
+        }
+
+        // ====================== CONFETTI ANIMATION ======================
+        function triggerConfetti() {
+            const canvas = document.getElementById('confettiCanvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            let particles = [];
+            const colors = ['#4cc9f0', '#1e90ff', '#28a745', '#ffd166', '#e11d48'];
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height - canvas.height;
+                    this.size = Math.random() * 12 + 6;
+                    this.speed = Math.random() * 6 + 4;
+                    this.angle = Math.random() * 360;
+                    this.color = colors[Math.floor(Math.random() * colors.length)];
+                    this.rotation = Math.random() * 0.03 - 0.015;
+                }
+                update() {
+                    this.y += this.speed;
+                    this.angle += this.rotation;
+                    this.speed += 0.08; // gravity
+                }
+                draw() {
+                    ctx.save();
+                    ctx.translate(this.x, this.y);
+                    ctx.rotate(this.angle);
+                    ctx.fillStyle = this.color;
+                    ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
+                    ctx.restore();
+                }
             }
 
-            // ====================== CONFETTI ANIMATION ======================
-            function triggerConfetti() {
-                const canvas = document.getElementById('confettiCanvas');
-                const ctx = canvas.getContext('2d');
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-
-                let particles = [];
-                const colors = ['#4cc9f0', '#1e90ff', '#28a745', '#ffd166', '#e11d48'];
-
-                class Particle {
-                    constructor() {
-                        this.x = Math.random() * canvas.width;
-                        this.y = Math.random() * canvas.height - canvas.height;
-                        this.size = Math.random() * 12 + 6;
-                        this.speed = Math.random() * 6 + 4;
-                        this.angle = Math.random() * 360;
-                        this.color = colors[Math.floor(Math.random() * colors.length)];
-                        this.rotation = Math.random() * 0.03 - 0.015;
-                    }
-                    update() {
-                        this.y += this.speed;
-                        this.angle += this.rotation;
-                        this.speed += 0.08; // gravity
-                    }
-                    draw() {
-                        ctx.save();
-                        ctx.translate(this.x, this.y);
-                        ctx.rotate(this.angle);
-                        ctx.fillStyle = this.color;
-                        ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
-                        ctx.restore();
-                    }
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                if (particles.length < 280) {
+                    particles.push(new Particle());
                 }
-
-                function animate() {
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    if (particles.length < 280) {
-                        particles.push(new Particle());
-                    }
-                    particles = particles.filter(p => {
-                        p.update();
-                        p.draw();
-                        return p.y < canvas.height + 50;
-                    });
-                    if (particles.length > 0) requestAnimationFrame(animate);
-                    else canvas.style.display = 'none';
-                }
-
-                animate();
-
-                // Auto-hide canvas after 5 seconds
-                setTimeout(() => {
-                    if (canvas.style.display !== 'none') {
-                        canvas.style.display = 'none';
-                    }
-                }, 5000);
+                particles = particles.filter(p => {
+                    p.update();
+                    p.draw();
+                    return p.y < canvas.height + 50;
+                });
+                if (particles.length > 0) requestAnimationFrame(animate);
+                else canvas.style.display = 'none';
             }
+
+            animate();
+
+            // Auto-hide canvas after 5 seconds
+            setTimeout(() => {
+                if (canvas.style.display !== 'none') {
+                    canvas.style.display = 'none';
+                }
+            }, 5000);
+        }
 
         function startFreshExam(type, examIndex) {
-                    if (confirm("This will clear all saved answers for this exam and start fresh.\n\nContinue?")) {
-                        localStorage.removeItem(`currentExam_${type}_${examIndex}`);
-                        startExam(type, examIndex);   // Now starts completely fresh
-                    }
-                }
+            if (confirm("This will clear all saved answers for this exam and start fresh.\n\nContinue?")) {
+                localStorage.removeItem(`currentExam_${type}_${examIndex}`);
+                startExam(type, examIndex);   // Now starts completely fresh
+            }
+        }
 
         function returnToLanding() {
-                stopAutoSave();                    // ← Add this
-                if (timerInterval) clearInterval(timerInterval);
+            stopAutoSave();                    // ← Add this
+            if (timerInterval) clearInterval(timerInterval);
 
-                // Optional: clear temporary currentExam save when going back to home
-                if (currentType !== null) {
-                    localStorage.removeItem(`currentExam_${currentType}_${currentExamIndex}`);
-                }
+            // Optional: clear temporary currentExam save when going back to home
+            if (currentType !== null) {
+                localStorage.removeItem(`currentExam_${currentType}_${currentExamIndex}`);
+            }
 
-                document.getElementById('quizSection').classList.add('hidden');
-                document.getElementById('summarySection').classList.add('hidden');
-                document.getElementById('reviewSection').classList.add('hidden');
-                document.getElementById('landing').classList.remove('hidden');
+            document.getElementById('quizSection').classList.add('hidden');
+            document.getElementById('summarySection').classList.add('hidden');
+            document.getElementById('reviewSection').classList.add('hidden');
+            document.getElementById('landing').classList.remove('hidden');
 
-                updateAllStats();
-                renderMissedQuestionsGroup();
-                createGeneralExamCards();
+            updateAllStats();
+
+            createGeneralExamCards();
             createOpenBookCards();
             createFinalCards();
             updateFooterStats();
 
-                currentType = null;
-                currentExamIndex = 0;
-            }
+            currentType = null;
+            currentExamIndex = 0;
+        }
 
         function updateAllStats() {
             REAL_EXAMS.general.forEach((_, i) => updateSingleStats('general', i, `generalStats_${i}`));
@@ -1098,77 +1078,9 @@
             REAL_EXAMS.final.forEach((_, i) => updateSingleStats('final', i, `finalStats_${i}`));
         }
         // ====================== MISSED QUESTIONS GROUP (Fixed Layout + 10 per group) ======================
-        function renderMissedQuestionsGroup() {
-            const container = document.getElementById('missedQuestionsContainer');
-            const filterType = document.getElementById('missedFilter').value;
 
-            if (!container) return;
-            container.innerHTML = '';
-
-            let allMisses = Object.values(missedQuestions)
-                .sort((a, b) => b.missCount - a.missCount);
-
-            // Apply filter
-            if (filterType !== 'all') {
-                allMisses = allMisses.filter(miss => miss.type === filterType);
-            }
-
-            if (allMisses.length === 0) {
-                container.innerHTML = `<p style="color:var(--muted); font-style:italic; text-align:center; padding: 2rem 1rem;">
-                ${filterType === 'all' ? 'No missed questions recorded yet.' : `No missed questions in ${filterType} exams.`}
-                <br><br>Keep practicing!
-            </p>`;
-                return;
-            }
-
-            const groupSize = 10;
-            const totalGroups = Math.ceil(allMisses.length / groupSize);
-
-            for (let g = 0; g < totalGroups; g++) {
-                const start = g * groupSize + 1;
-                const end = Math.min(start + groupSize - 1, allMisses.length);
-                const groupQuestions = allMisses.slice((g * groupSize), (g * groupSize) + groupSize);
-
-                const groupDiv = document.createElement('div');
-                groupDiv.style.marginBottom = '1.25rem';
-
-                let html = `
-                <details style="background: rgba(26, 31, 46, 0.95); border: 1px solid #334155; border-radius: 10px; overflow: hidden;">
-                    <summary style="font-weight: bold; color: var(--accent); cursor: pointer; padding: 0.85rem 1rem; font-size: 1.05rem; background: rgba(17, 24, 39, 0.8);">
-                        Missed Questions Group ${g + 1} (${start}–${end})
-                        <span style="float:right; color:#e11d48; font-size:0.9rem;">
-                            ${groupQuestions.length} questions
-                        </span>
-                    </summary>
-                    <div style="padding: 1rem;">
-            `;
-
-                groupQuestions.forEach(miss => {
-                    html += `
-                    <div class="reviewCard" style="margin-bottom: 1rem; background: #0b1220; border: 1px solid #2e3245;">
-                        <strong style="color:#e11d48;">Missed ${miss.missCount} time${miss.missCount > 1 ? 's' : ''}</strong>
-                        <span style="margin-left: 12px; font-size: 0.85rem; color: var(--muted);">
-                            (${miss.type.toUpperCase()} #${miss.examIndex + 1})
-                        </span><br>
-                        <div style="margin: 10px 0; font-weight: 600; line-height: 1.4;">${miss.text}</div>
-                        <div style="color:#28a745; font-weight: bold; margin-bottom: 8px;">
-                            Correct: ${String.fromCharCode(65 + miss.correctIndex)}. ${miss.options[miss.correctIndex]}
-                        </div>
-                        <details>
-                            <summary style="color:var(--accent); cursor:pointer; font-size: 0.95rem;">Show Explanation</summary>
-                            <p style="margin: 10px 0 0; color:var(--muted); line-height: 1.45;">${miss.explanation}</p>
-                        </details>
-                    </div>
-                `;
-                });
-
-                html += `</div></details>`;
-                groupDiv.innerHTML = html;
-                container.appendChild(groupDiv);
-            }
-        }
         // ====================== CREATE CARDS ======================
-     function createGeneralExamCards() {
+        function createGeneralExamCards() {
             const container = document.getElementById('generalCardsContainer');
             container.innerHTML = '';
 
@@ -1202,7 +1114,7 @@
             });
         }
 
-       function createOpenBookCards() {
+        function createOpenBookCards() {
             const container = document.getElementById('openbookCardsContainer');
             container.innerHTML = '';
 
@@ -1237,17 +1149,17 @@
         }
 
         function createFinalCards() {
-                const container = document.getElementById('finalCardsContainer');
-                container.innerHTML = '';
+            const container = document.getElementById('finalCardsContainer');
+            container.innerHTML = '';
 
-                REAL_EXAMS.final.forEach((exam, index) => {
-                    const savedKey = `currentExam_final_${index}`;
-                    const hasSave = localStorage.getItem(savedKey) !== null;
+            REAL_EXAMS.final.forEach((exam, index) => {
+                const savedKey = `currentExam_final_${index}`;
+                const hasSave = localStorage.getItem(savedKey) !== null;
 
-                    const card = document.createElement('div');
-                    card.className = 'card';
+                const card = document.createElement('div');
+                card.className = 'card';
 
-                    card.innerHTML = `
+                card.innerHTML = `
             <h3 style="margin: 0.5rem 0;">${exam.title}</h3>
             <p style="color: var(--muted); font-size: 0.9rem; margin: 0.5rem 0 1rem;">
                 ${exam.questions.length} questions • 180 min
@@ -1266,27 +1178,18 @@
             </button>` : ''}
         `;
 
-                    container.appendChild(card);
-                });
-            }
-
-        function clearAllMissedQuestions() {
-            if (confirm("Are you sure you want to clear ALL missed questions history?\n\nThis cannot be undone.")) {
-                missedQuestions = {};
-                localStorage.removeItem('missedQuestionsData');
-                renderMissedQuestionsGroup();
-                alert("Missed questions history has been cleared.");
-            }
+                container.appendChild(card);
+            });
         }
 
         // ====================== INIT ======================
         document.addEventListener('DOMContentLoaded', () => {
-            loadMissedQuestions();
+
             createGeneralExamCards();
             createOpenBookCards();
             createFinalCards();
             updateAllStats();
-            renderMissedQuestionsGroup();
+
             updateFooterStats();
 
             // Add Pause button
@@ -1316,25 +1219,25 @@
         //-- Replace the old openReview / closeReview block with this new code -->//
 
         function openReview() {
-                const exam = getCurrentExam();
-                if (!exam) {
-                    alert("Cannot load review - exam data not found.");
-                    return;
-                }
+            const exam = getCurrentExam();
+            if (!exam) {
+                alert("Cannot load review - exam data not found.");
+                return;
+            }
 
-                const answers = userAnswers[currentType]?.[currentExamIndex] || {};
-                let html = `
+            const answers = userAnswers[currentType]?.[currentExamIndex] || {};
+            let html = `
             <h4 style="margin-bottom: 1.5rem; color: var(--accent);">
                 ${exam.title} — Full Review
             </h4>
             `;
 
-                exam.questions.forEach((q, qIndex) => {
-                    const userAns = answers[qIndex];
-                    const isCorrect = userAns === q.correctIndex;
-                    const userLetter = userAns !== undefined ? String.fromCharCode(65 + userAns) : '—';
+            exam.questions.forEach((q, qIndex) => {
+                const userAns = answers[qIndex];
+                const isCorrect = userAns === q.correctIndex;
+                const userLetter = userAns !== undefined ? String.fromCharCode(65 + userAns) : '—';
 
-                    html += `
+                html += `
             <div class="reviewCard" style="border: 2px solid ${isCorrect ? '#28a745' : '#e11d48'}; margin-bottom: 1.75rem; padding: 1.25rem;">
                 <div style="margin-bottom: 12px;">
                     <strong>Q${qIndex + 1}.</strong> ${q.text}
@@ -1342,31 +1245,31 @@
                 
                 <div style="margin: 12px 0;">
                     ${q.options.map((opt, i) => {
-                        let style = '';
-                        let icon = '';
-                        if (i === q.correctIndex) {
-                            style = 'color:#28a745; font-weight: bold;';
+                    let style = '';
+                    let icon = '';
+                    if (i === q.correctIndex) {
+                        style = 'color:#28a745; font-weight: bold;';
+                        icon = ' ✓';
+                    }
+                    if (userAns === i) {
+                        if (!isCorrect) {
+                            style = 'color:#e11d48; font-weight: bold; text-decoration: line-through;';
+                            icon = ' ✕';
+                        } else {
                             icon = ' ✓';
                         }
-                        if (userAns === i) {
-                            if (!isCorrect) {
-                                style = 'color:#e11d48; font-weight: bold; text-decoration: line-through;';
-                                icon = ' ✕';
-                            } else {
-                                icon = ' ✓';
-                            }
-                        }
-                        return `<div style="${style} padding: 6px 0; line-height: 1.4;">
+                    }
+                    return `<div style="${style} padding: 6px 0; line-height: 1.4;">
                                     ${String.fromCharCode(65 + i)}. ${opt}${icon}
                                 </div>`;
-                    }).join('')}
+                }).join('')}
                 </div>
 
                 <div style="padding: 12px; border-radius: 8px; background: ${isCorrect ? '#28a74522' : '#e11d4822'};">
                     ${isCorrect
-                            ? `<strong style="color:#28a745;">✓ You answered correctly</strong>`
-                            : `<strong style="color:#e11d48;">✗ You answered incorrectly</strong> (You chose ${userLetter})`
-                        }
+                        ? `<strong style="color:#28a745;">✓ You answered correctly</strong>`
+                        : `<strong style="color:#e11d48;">✗ You answered incorrectly</strong> (You chose ${userLetter})`
+                    }
                     <br><br>
                     <strong>Correct Answer:</strong> ${String.fromCharCode(65 + q.correctIndex)}. ${q.options[q.correctIndex]}
                     
@@ -1377,80 +1280,80 @@
                     </details>` : ''}
                 </div>
                 </div>`;
-                });
+            });
 
-                document.getElementById('reviewContent').innerHTML = html;
+            document.getElementById('reviewContent').innerHTML = html;
 
-                // Switch views
-                document.getElementById('summarySection').classList.add('hidden');
-                document.getElementById('reviewSection').classList.remove('hidden');
-            }
+            // Switch views
+            document.getElementById('summarySection').classList.add('hidden');
+            document.getElementById('reviewSection').classList.remove('hidden');
+        }
 
-            function closeReview() {
-                document.getElementById('reviewSection').classList.add('hidden');
-                document.getElementById('summarySection').classList.remove('hidden');
-            }
+        function closeReview() {
+            document.getElementById('reviewSection').classList.add('hidden');
+            document.getElementById('summarySection').classList.remove('hidden');
+        }
 
         // ====================== FOOTER STATS ======================
-            function calculateFooterStats() {
-                let generalTotal = 0, generalCount = 0;
-                let openbookTotal = 0, openbookCount = 0;
-                let finalTotal = 0, finalCount = 0;
+        function calculateFooterStats() {
+            let generalTotal = 0, generalCount = 0;
+            let openbookTotal = 0, openbookCount = 0;
+            let finalTotal = 0, finalCount = 0;
 
-                let totalAttempts = 0;
-                let passingAttempts = 0;
-                let allScoresSum = 0;
+            let totalAttempts = 0;
+            let passingAttempts = 0;
+            let allScoresSum = 0;
 
-                // Helper to process one category
-                function processCategory(type, examsArray) {
-                    let categorySum = 0;
-                    let categoryCount = 0;
+            // Helper to process one category
+            function processCategory(type, examsArray) {
+                let categorySum = 0;
+                let categoryCount = 0;
 
-                    examsArray.forEach((_, index) => {
-                        const scores = getLastScores(type, index);
-                        if (scores.length > 0) {
-                            const stats = getBestWorstAvg(scores);
-                            const avg = stats.avg === '-' ? 0 : stats.avg;
-                            categorySum += avg;
-                            categoryCount++;
+                examsArray.forEach((_, index) => {
+                    const scores = getLastScores(type, index);
+                    if (scores.length > 0) {
+                        const stats = getBestWorstAvg(scores);
+                        const avg = stats.avg === '-' ? 0 : stats.avg;
+                        categorySum += avg;
+                        categoryCount++;
 
-                            // For overall stats
-                            scores.forEach(score => {
-                                totalAttempts++;
-                                allScoresSum += score;
-                                if (score >= 70) passingAttempts++;
-                            });
-                        }
-                    });
+                        // For overall stats
+                        scores.forEach(score => {
+                            totalAttempts++;
+                            allScoresSum += score;
+                            if (score >= 70) passingAttempts++;
+                        });
+                    }
+                });
 
-                    return categoryCount ? Math.round(categorySum / categoryCount) : 0;
-                }
-
-                // Calculate each category
-                const generalAvg = processCategory('general', REAL_EXAMS.general);
-                const openbookAvg = processCategory('openbook', REAL_EXAMS.openbook);
-                const finalAvg = processCategory('final', REAL_EXAMS.final);
-
-                // Overall Average
-                const overallAvg = totalAttempts > 0 ? Math.round(allScoresSum / totalAttempts) : 0;
-
-                // Pass Rate
-                const passRate = totalAttempts > 0 ? Math.round((passingAttempts / totalAttempts) * 100) : 0;
-
-                return {
-                    general: generalAvg,
-                    openbook: openbookAvg,
-                    final: finalAvg,
-                    overall: overallAvg,
-                    passRate: passRate
-                };
+                return categoryCount ? Math.round(categorySum / categoryCount) : 0;
             }
 
-            function updateFooterStats() {
-                const stats = calculateFooterStats();
-                const container = document.getElementById('footerStats');
+            // Calculate each category
+            const generalAvg = processCategory('general', REAL_EXAMS.general);
+            const openbookAvg = processCategory('openbook', REAL_EXAMS.openbook);
+            const finalAvg = processCategory('final', REAL_EXAMS.final);
 
-                container.innerHTML = `
+            // Overall Average
+            const overallAvg = totalAttempts > 0 ? Math.round(allScoresSum / totalAttempts) : 0;
+
+            // Pass Rate
+            const passRate = totalAttempts > 0 ? Math.round((passingAttempts / totalAttempts) * 100) : 0;
+
+            return {
+                general: generalAvg,
+                openbook: openbookAvg,
+                final: finalAvg,
+                overall: overallAvg,
+                passRate: passRate
+            };
+        }
+
+        function updateFooterStats() {
+            const stats = calculateFooterStats();
+            const container = document.getElementById('footerStats');
+
+            container.innerHTML = `
                 <div class="footer-stat">
                     <div class="footer-stat-label">General Knowledge</div>
                      <div class="footer-stat-value">${stats.general}%</div>
@@ -1472,6 +1375,6 @@
                     <div class="footer-stat-value ${stats.passRate >= 70 ? 'pass' : 'fail'}">${stats.passRate}%</div>
                 </div>
                     `;
-            }
+        }
 
     </script>
